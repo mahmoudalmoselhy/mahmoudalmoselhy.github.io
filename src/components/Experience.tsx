@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Calendar, MapPin, ExternalLink } from 'lucide-react';
+import { Calendar, MapPin } from 'lucide-react';
 
 export const Experience = () => {
   const experiences = [
@@ -42,11 +42,11 @@ export const Experience = () => {
   ];
 
   return (
-    <section className="py-20 px-6">
+    <section className="py-20 px-6 bg-black/10">
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-5xl font-bold text-white mb-6">
-            Professional <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Experience</span>
+            Professional <span className="bg-gradient-to-r from-red-500 to-blue-600 bg-clip-text text-transparent">Experience</span>
           </h2>
         </div>
         
@@ -54,13 +54,13 @@ export const Experience = () => {
           {experiences.map((exp, index) => (
             <div 
               key={index}
-              className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 hover:bg-white/15 transition-all duration-500 hover:scale-102 hover:shadow-2xl"
+              className="bg-black/30 backdrop-blur-lg rounded-2xl p-8 hover:bg-black/50 transition-all duration-500 hover:scale-102 hover:shadow-2xl border border-blue-500/20 hover:border-blue-500/40"
               style={{ animationDelay: `${index * 300}ms` }}
             >
               <div className="flex flex-col md:flex-row justify-between items-start mb-6">
                 <div>
                   <h3 className="text-2xl font-bold text-white mb-2">{exp.role}</h3>
-                  <h4 className="text-xl text-blue-400 font-semibold mb-2">{exp.company}</h4>
+                  <h4 className="text-xl text-red-400 font-semibold mb-2">{exp.company}</h4>
                   <div className="flex items-center space-x-4 text-gray-300">
                     <div className="flex items-center space-x-2">
                       <Calendar className="w-4 h-4" />
@@ -77,7 +77,7 @@ export const Experience = () => {
               <ul className="space-y-3">
                 {exp.responsibilities.map((resp, respIndex) => (
                   <li key={respIndex} className="flex items-start space-x-3 text-gray-300">
-                    <div className="w-2 h-2 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full mt-2 flex-shrink-0"></div>
+                    <div className="w-2 h-2 bg-gradient-to-r from-red-500 to-blue-600 rounded-full mt-2 flex-shrink-0"></div>
                     <span className="leading-relaxed">{resp}</span>
                   </li>
                 ))}
