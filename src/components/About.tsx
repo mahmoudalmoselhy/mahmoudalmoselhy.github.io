@@ -22,26 +22,26 @@ export const About = () => {
   ];
 
   return (
-    <section className="py-20 px-6">
+    <section className="py-20 px-6 bg-white/5">
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-5xl font-bold text-white mb-6">
-            About <span className="bg-gradient-to-r from-red-500 to-blue-600 bg-clip-text text-transparent">Me</span>
+            About <span className="bg-gradient-to-r from-red-400 to-blue-500 bg-clip-text text-transparent">Me</span>
           </h2>
         </div>
         
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {highlights.map((item, index) => (
             <div 
               key={index}
-              className="bg-black/30 backdrop-blur-lg rounded-2xl p-8 hover:bg-black/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl border border-red-500/20 hover:border-red-500/40"
+              className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl border border-red-400/30 hover:border-red-400/50"
               style={{ animationDelay: `${index * 200}ms` }}
             >
-              <div className="w-16 h-16 bg-gradient-to-r from-red-600 to-blue-700 rounded-full flex items-center justify-center mb-6 mx-auto">
+              <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-blue-600 rounded-full flex items-center justify-center mb-6 mx-auto">
                 <item.icon className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-white mb-4 text-center">{item.title}</h3>
-              <p className="text-gray-300 text-center leading-relaxed">{item.description}</p>
+              <p className="text-gray-200 text-center leading-relaxed">{item.description}</p>
             </div>
           ))}
         </div>
