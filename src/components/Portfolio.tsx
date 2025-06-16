@@ -103,11 +103,11 @@ export const Portfolio = () => {
   };
 
   return (
-    <section className="py-20 px-6 bg-blue-500/20">
+    <section className="py-20 px-6 bg-gradient-to-br from-gray-900 via-black to-gray-800">
       <div className="container mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-5xl font-bold text-white mb-6">
-            My <span className="bg-gradient-to-r from-red-400 to-blue-500 bg-clip-text text-transparent">Portfolio</span>
+          <h2 className="text-5xl font-bold text-white mb-6 text-center">
+            Top <span className="bg-gradient-to-r from-red-400 to-blue-500 bg-clip-text text-transparent">Work</span>
           </h2>
           <p className="text-gray-100 text-lg max-w-3xl mx-auto">
             A showcase of my diverse content creation work across multiple platforms and industries
@@ -122,7 +122,11 @@ export const Portfolio = () => {
                 <p className="text-gray-200 text-lg">{section.description}</p>
               </div>
               
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className={`grid gap-6 ${
+                section.items.length === 2 
+                  ? 'md:grid-cols-2 max-w-4xl mx-auto' 
+                  : 'md:grid-cols-2 lg:grid-cols-3'
+              }`}>
                 {section.items.map((item, itemIndex) => {
                   const Icon = getIcon(item.type);
                   return (

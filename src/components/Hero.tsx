@@ -5,21 +5,12 @@ import { ArrowDown, Linkedin, Mail, MapPin } from 'lucide-react';
 export const Hero = () => {
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
-      {/* Arabic decorations - faded */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-10 left-10 text-6xl font-bold text-red-200 opacity-10 select-none">العربية</div>
-        <div className="absolute top-20 right-20 text-4xl font-bold text-blue-200 opacity-10 select-none">الكتابة</div>
-        <div className="absolute bottom-20 left-20 text-5xl font-bold text-red-200 opacity-10 select-none">الإبداع</div>
-        <div className="absolute bottom-32 right-32 text-3xl font-bold text-blue-200 opacity-10 select-none">المحتوى</div>
-        <div className="absolute top-1/2 left-5 text-4xl font-bold text-red-200 opacity-10 select-none rotate-90">التقنية</div>
-        <div className="absolute top-1/3 right-5 text-4xl font-bold text-blue-200 opacity-10 select-none -rotate-90">الرقمي</div>
-      </div>
-      
-      {/* Animated background elements - bright Barcelona colors */}
+      {/* Animated background elements - Barcelona colors with black shades */}
       <div className="absolute inset-0">
         <div className="absolute top-20 left-20 w-72 h-72 bg-red-400 rounded-full mix-blend-multiply filter blur-xl opacity-40 animate-pulse"></div>
         <div className="absolute top-40 right-20 w-96 h-96 bg-blue-400 rounded-full mix-blend-multiply filter blur-xl opacity-40 animate-pulse animation-delay-1000"></div>
-        <div className="absolute bottom-20 left-1/2 w-80 h-80 bg-red-500 rounded-full mix-blend-multiply filter blur-xl opacity-40 animate-pulse animation-delay-2000"></div>
+        <div className="absolute bottom-20 left-1/2 w-80 h-80 bg-gray-800 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-pulse animation-delay-2000"></div>
+        <div className="absolute top-1/2 right-10 w-64 h-64 bg-black rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
       </div>
       
       <div className="container mx-auto px-6 relative z-10">
@@ -70,7 +61,7 @@ export const Hero = () => {
               >
                 <Linkedin className="w-5 h-5" />
                 <span>LinkedIn</span>
-              </a>
+              </div>
             </div>
           </div>
           
