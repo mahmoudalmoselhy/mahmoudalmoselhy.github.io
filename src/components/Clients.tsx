@@ -8,11 +8,11 @@ export const Clients = () => {
       logo: "/lovable-uploads/66dec386-84b2-43af-b57b-a9919a4a9926.png"
     },
     {
-      name: "AV",
+      name: "Devolum",
       logo: "/lovable-uploads/453d7ce1-407f-46fe-884b-05af41e99c14.png"
     },
     {
-      name: "Orange Company",
+      name: "HSI",
       logo: "/lovable-uploads/03735d6c-6d4c-4ddf-9c0f-f0bdb61a6bb8.png"
     },
     {
@@ -28,19 +28,19 @@ export const Clients = () => {
       logo: "/lovable-uploads/c8892c9f-d780-4825-a3b1-b1e017d5bd62.png"
     },
     {
-      name: "S Company",
+      name: "Saabeel",
       logo: "/lovable-uploads/93f2b810-f780-4736-a0b8-e5d6fea5babb.png"
     },
     {
-      name: "Shafa",
+      name: "Shefaa",
       logo: "/lovable-uploads/7e6d1a1b-60ce-445d-9c6a-26cc95a62421.png"
     },
     {
-      name: "Red Black Circle",
+      name: "3arrafni",
       logo: "/lovable-uploads/8cd0ad5b-d116-4da8-a678-fabadb04760b.png"
     },
     {
-      name: "Education Logo",
+      name: "International Students",
       logo: "/lovable-uploads/0b6b1991-3ad0-4aea-aff4-ff458ada5d61.png"
     }
   ];
@@ -50,7 +50,7 @@ export const Clients = () => {
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-5xl font-bold text-white mb-6 animate-fade-in">
-            Our <span className="bg-gradient-to-r from-red-500 via-blue-500 to-red-600 bg-clip-text text-transparent animate-gradient">Accounts</span>
+            <span className="bg-gradient-to-r from-red-500 via-blue-500 to-red-600 bg-clip-text text-transparent animate-gradient">Accounts</span>
           </h2>
           <p className="text-gray-300 text-lg max-w-3xl mx-auto animate-fade-in animation-delay-1000">
             Trusted partnerships with leading brands and organizations across various industries
@@ -62,7 +62,7 @@ export const Clients = () => {
           {clients.map((client, index) => (
             <div
               key={index}
-              className="group relative bg-gradient-to-br from-white/15 to-white/5 backdrop-blur-xl rounded-3xl p-8 hover:from-white/25 hover:to-white/15 transition-all duration-500 hover:scale-110 hover:shadow-2xl hover:shadow-red-500/20 border border-white/20 hover:border-blue-500/50 w-full h-36 flex items-center justify-center overflow-hidden"
+              className="group relative bg-transparent backdrop-blur-xl rounded-3xl p-8 hover:bg-white/10 transition-all duration-500 hover:scale-110 hover:shadow-2xl hover:shadow-red-500/20 border border-white/20 hover:border-blue-500/50 w-full h-36 flex items-center justify-center overflow-hidden"
               style={{
                 animationDelay: `${index * 100}ms`
               }}
@@ -85,9 +85,6 @@ export const Clients = () => {
                   {client.name}
                 </p>
               </div>
-              
-              {/* Corner accent */}
-              <div className="absolute top-0 right-0 w-8 h-8 bg-gradient-to-br from-red-500 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-bl-xl rounded-tr-3xl"></div>
             </div>
           ))}
         </div>
