@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { ExternalLink, FileText, Youtube } from 'lucide-react';
+import { ExternalLink } from 'lucide-react';
 
 export const Portfolio = () => {
   const portfolioSections = [
@@ -12,31 +12,31 @@ export const Portfolio = () => {
           title: "Samsung Galaxy Watch 4 Review",
           description: "5000+ word comprehensive review (27 hours of writing)",
           link: "https://www.3arrafni.com/samsung-galaxy-watch-4-review/",
-          type: "article"
+          logo: "/lovable-uploads/93f2b810-f780-4736-a0b8-e5d6fea5babb.png"
         },
         {
           title: "Honey Scam Explained",
           description: "Technical news article with detailed explanations",
           link: "https://www.3arrafni.com/honey-scam-explained/",
-          type: "article"
+          logo: "/lovable-uploads/93f2b810-f780-4736-a0b8-e5d6fea5babb.png"
         },
         {
           title: "Samsung Galaxy Buds FE Review",
           description: "First personal photography experience for product review",
           link: "https://www.3arrafni.com/samsung-galaxy-buds-fe-review/",
-          type: "article"
+          logo: "/lovable-uploads/93f2b810-f780-4736-a0b8-e5d6fea5babb.png"
         },
         {
           title: "UGREEN Nexode 65W GaN Charging Station",
           description: "Product review with original photography",
           link: "https://www.3arrafni.com/ugreen-nexode-65w-gan-charging-station/",
-          type: "article"
+          logo: "/lovable-uploads/93f2b810-f780-4736-a0b8-e5d6fea5babb.png"
         },
         {
           title: "Black Myth: Wukong Review",
           description: "Gaming review exploring new content territory",
           link: "https://www.3arrafni.com/black-myth-wukong-review/",
-          type: "article"
+          logo: "/lovable-uploads/93f2b810-f780-4736-a0b8-e5d6fea5babb.png"
         }
       ]
     },
@@ -48,13 +48,13 @@ export const Portfolio = () => {
           title: "ExVar YouTube Scripts",
           description: "Script writing for Lamees El-Husseini's diverse video content",
           link: "https://youtube.com/playlist?list=PLsMyTdtr0IJlgBBuxRdba1NkyHHUpQPgm",
-          type: "video"
+          logo: "/lovable-uploads/453d7ce1-407f-46fe-884b-05af41e99c14.png"
         },
         {
           title: "Revieology Channel Scripts",
           description: "Script writing for review-focused YouTube content",
           link: "https://www.youtube.com/playlist?list=PLvHCxZoUkHSaflZiicOpeOcBvr84u50Fk",
-          type: "video"
+          logo: "/lovable-uploads/8cd0ad5b-d116-4da8-a678-fabadb04760b.png"
         }
       ]
     },
@@ -66,48 +66,30 @@ export const Portfolio = () => {
           title: "Tourism Companies Campaign",
           description: "Targeted advertising for travel and tourism businesses",
           link: "https://www.facebook.com/menusbee/posts/pfbid0sUPtVyCZPXH1ZZ17tpsSgv4WrG6Stwq83AoKDZQ2zdkmTrcS7RacRqEcJejE1u1Ll",
-          type: "social"
+          logo: "/lovable-uploads/c8892c9f-d780-4825-a3b1-b1e017d5bd62.png"
         },
         {
           title: "Cafes & Restaurants Campaign",
           description: "Food service industry social media strategy",
           link: "https://www.facebook.com/menusbee/posts/pfbid0gYKbwHD5H4hGLoJtoYVAAfk7iunBid9G5MAHLG1ny47PYHEqmP8p7GhZGn3tatV8l",
-          type: "social"
+          logo: "/lovable-uploads/c8892c9f-d780-4825-a3b1-b1e017d5bd62.png"
         },
         {
           title: "Butcher Shops Campaign",
           description: "Specialized campaign for meat retailers",
           link: "https://www.facebook.com/menusbee/posts/pfbid02yBxPnp34eVP5aZzVK2YCUAUEiMAUotMTFx31mb39QP6h7XqYYMSVRxCtqZCRCgCal",
-          type: "social"
+          logo: "/lovable-uploads/c8892c9f-d780-4825-a3b1-b1e017d5bd62.png"
         }
       ]
     }
   ];
-
-  const getIcon = (type: string) => {
-    switch (type) {
-      case 'article': return FileText;
-      case 'video': return Youtube;
-      case 'social': return ExternalLink;
-      default: return FileText;
-    }
-  };
-
-  const getTypeColor = (type: string) => {
-    switch (type) {
-      case 'article': return 'from-red-600 to-red-800';
-      case 'video': return 'from-blue-600 to-blue-800';
-      case 'social': return 'from-red-500 to-blue-600';
-      default: return 'from-gray-600 to-gray-800';
-    }
-  };
 
   return (
     <section className="py-20 px-6 bg-black/20">
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-5xl font-bold text-white mb-6">
-            My <span className="bg-gradient-to-r from-red-500 to-blue-600 bg-clip-text text-transparent">Portfolio</span>
+            Top <span className="bg-gradient-to-r from-red-500 to-blue-600 bg-clip-text text-transparent">Work</span>
           </h2>
           <p className="text-gray-300 text-lg max-w-3xl mx-auto">
             A showcase of my diverse content creation work across multiple platforms and industries
@@ -124,7 +106,6 @@ export const Portfolio = () => {
               
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {section.items.map((item, itemIndex) => {
-                  const Icon = getIcon(item.type);
                   return (
                     <a
                       key={itemIndex}
@@ -133,8 +114,12 @@ export const Portfolio = () => {
                       rel="noopener noreferrer"
                       className="group bg-black/40 backdrop-blur-lg rounded-2xl p-6 hover:bg-black/60 transition-all duration-300 hover:scale-105 hover:shadow-2xl border border-red-500/20 hover:border-red-500/40"
                     >
-                      <div className={`w-12 h-12 bg-gradient-to-r ${getTypeColor(item.type)} rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                        <Icon className="w-6 h-6 text-white" />
+                      <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 p-2">
+                        <img
+                          src={item.logo}
+                          alt={item.title}
+                          className="w-full h-full object-contain"
+                        />
                       </div>
                       
                       <h4 className="text-lg font-semibold text-white mb-3 group-hover:text-red-400 transition-colors duration-300">
