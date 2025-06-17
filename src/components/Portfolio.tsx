@@ -85,26 +85,26 @@ export const Portfolio = () => {
   ];
 
   return (
-    <section className="py-20 px-6 bg-black/20">
-      <div className="container mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-5xl font-bold text-white mb-6">
+    <section className="py-12 md:py-20 px-4 md:px-6 bg-black/20">
+      <div className="container mx-auto max-w-7xl">
+        <div className="text-center mb-12 md:mb-16">
+          <h2 className="text-3xl md:text-5xl font-bold text-white mb-4 md:mb-6">
             Top <span className="bg-gradient-to-r from-red-500 to-blue-600 bg-clip-text text-transparent">Work</span>
           </h2>
-          <p className="text-gray-300 text-lg max-w-3xl mx-auto">
+          <p className="text-gray-300 text-sm md:text-lg max-w-3xl mx-auto px-4">
             A showcase of my diverse content creation work across multiple platforms and industries
           </p>
         </div>
 
-        <div className="space-y-16">
+        <div className="space-y-12 md:space-y-16">
           {portfolioSections.map((section, sectionIndex) => (
-            <div key={sectionIndex} className="space-y-8">
-              <div className="text-center">
-                <h3 className="text-3xl font-bold text-white mb-4">{section.title}</h3>
-                <p className="text-gray-400 text-lg">{section.description}</p>
+            <div key={sectionIndex} className="space-y-6 md:space-y-8">
+              <div className="text-center px-4">
+                <h3 className="text-xl md:text-3xl font-bold text-white mb-2 md:mb-4">{section.title}</h3>
+                <p className="text-gray-400 text-sm md:text-lg">{section.description}</p>
               </div>
               
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
                 {section.items.map((item, itemIndex) => {
                   return (
                     <a
@@ -112,9 +112,9 @@ export const Portfolio = () => {
                       href={item.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="group bg-black/40 backdrop-blur-lg rounded-2xl p-6 hover:bg-black/60 transition-all duration-300 hover:scale-105 hover:shadow-2xl border border-red-500/20 hover:border-red-500/40"
+                      className="group bg-black/40 backdrop-blur-lg rounded-xl md:rounded-2xl p-4 md:p-6 hover:bg-black/60 transition-all duration-300 hover:scale-105 hover:shadow-xl border border-red-500/20 hover:border-red-500/40"
                     >
-                      <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 p-2">
+                      <div className="w-10 h-10 md:w-12 md:h-12 bg-white rounded-full flex items-center justify-center mb-3 md:mb-4 group-hover:scale-110 transition-transform duration-300 p-2">
                         <img
                           src={item.logo}
                           alt={item.title}
@@ -122,17 +122,17 @@ export const Portfolio = () => {
                         />
                       </div>
                       
-                      <h4 className="text-lg font-semibold text-white mb-3 group-hover:text-red-400 transition-colors duration-300">
+                      <h4 className="text-base md:text-lg font-semibold text-white mb-2 md:mb-3 group-hover:text-red-400 transition-colors duration-300 line-clamp-2">
                         {item.title}
                       </h4>
                       
-                      <p className="text-gray-400 text-sm leading-relaxed mb-4">
+                      <p className="text-gray-400 text-xs md:text-sm leading-relaxed mb-3 md:mb-4 line-clamp-3">
                         {item.description}
                       </p>
                       
-                      <div className="flex items-center text-blue-400 text-sm font-medium group-hover:text-blue-300 transition-colors duration-300">
+                      <div className="flex items-center text-blue-400 text-xs md:text-sm font-medium group-hover:text-blue-300 transition-colors duration-300">
                         <span>View Work</span>
-                        <ExternalLink className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                        <ExternalLink className="w-3 h-3 md:w-4 md:h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
                       </div>
                     </a>
                   );
