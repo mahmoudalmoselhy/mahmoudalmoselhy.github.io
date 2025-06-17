@@ -12,31 +12,31 @@ export const Portfolio = () => {
           title: "Samsung Galaxy Watch 4 Review",
           description: "5000+ word comprehensive review (27 hours of writing)",
           link: "https://www.3arrafni.com/samsung-galaxy-watch-4-review/",
-          logo: "/lovable-uploads/93f2b810-f780-4736-a0b8-e5d6fea5babb.png"
+          logo: "/lovable-uploads/693924e3-2bc0-456b-8afe-d100ef0390f8.png"
         },
         {
           title: "Honey Scam Explained",
           description: "Technical news article with detailed explanations",
           link: "https://www.3arrafni.com/honey-scam-explained/",
-          logo: "/lovable-uploads/93f2b810-f780-4736-a0b8-e5d6fea5babb.png"
+          logo: "/lovable-uploads/693924e3-2bc0-456b-8afe-d100ef0390f8.png"
         },
         {
           title: "Samsung Galaxy Buds FE Review",
           description: "First personal photography experience for product review",
           link: "https://www.3arrafni.com/samsung-galaxy-buds-fe-review/",
-          logo: "/lovable-uploads/93f2b810-f780-4736-a0b8-e5d6fea5babb.png"
+          logo: "/lovable-uploads/693924e3-2bc0-456b-8afe-d100ef0390f8.png"
         },
         {
           title: "UGREEN Nexode 65W GaN Charging Station",
           description: "Product review with original photography",
           link: "https://www.3arrafni.com/ugreen-nexode-65w-gan-charging-station/",
-          logo: "/lovable-uploads/93f2b810-f780-4736-a0b8-e5d6fea5babb.png"
+          logo: "/lovable-uploads/693924e3-2bc0-456b-8afe-d100ef0390f8.png"
         },
         {
           title: "Black Myth: Wukong Review",
           description: "Gaming review exploring new content territory",
           link: "https://www.3arrafni.com/black-myth-wukong-review/",
-          logo: "/lovable-uploads/93f2b810-f780-4736-a0b8-e5d6fea5babb.png"
+          logo: "/lovable-uploads/693924e3-2bc0-456b-8afe-d100ef0390f8.png"
         }
       ]
     },
@@ -48,13 +48,13 @@ export const Portfolio = () => {
           title: "ExVar YouTube Scripts",
           description: "Script writing for Lamees El-Husseini's diverse video content",
           link: "https://youtube.com/playlist?list=PLsMyTdtr0IJlgBBuxRdba1NkyHHUpQPgm",
-          logo: "/lovable-uploads/453d7ce1-407f-46fe-884b-05af41e99c14.png"
+          logo: "/lovable-uploads/106b69a1-42a2-4bf5-9caa-e9f4a854f21a.png"
         },
         {
           title: "Revieology Channel Scripts",
           description: "Script writing for review-focused YouTube content",
           link: "https://www.youtube.com/playlist?list=PLvHCxZoUkHSaflZiicOpeOcBvr84u50Fk",
-          logo: "/lovable-uploads/8cd0ad5b-d116-4da8-a678-fabadb04760b.png"
+          logo: "/lovable-uploads/b53bf9e1-ad4a-433a-984c-7c8fb6a6187d.png"
         }
       ]
     },
