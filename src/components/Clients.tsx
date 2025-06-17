@@ -8,12 +8,12 @@ export const Clients = () => {
       logo: "/lovable-uploads/66dec386-84b2-43af-b57b-a9919a4a9926.png"
     },
     {
-      name: "Devolum",
-      logo: "/lovable-uploads/5c0db5f7-a5f3-4457-8196-53c84e02d489.png"
+      name: "AV",
+      logo: "/lovable-uploads/453d7ce1-407f-46fe-884b-05af41e99c14.png"
     },
     {
-      name: "HSI",
-      logo: "/lovable-uploads/c3f3c2de-2f22-4e91-b82a-3188bef94cfb.png"
+      name: "Orange Company",
+      logo: "/lovable-uploads/03735d6c-6d4c-4ddf-9c0f-f0bdb61a6bb8.png"
     },
     {
       name: "Dr. Omar Elmetwally Clinic",
@@ -28,20 +28,20 @@ export const Clients = () => {
       logo: "/lovable-uploads/c8892c9f-d780-4825-a3b1-b1e017d5bd62.png"
     },
     {
-      name: "Saabeel",
+      name: "S Company",
       logo: "/lovable-uploads/93f2b810-f780-4736-a0b8-e5d6fea5babb.png"
     },
     {
-      name: "Shefaa",
+      name: "Shafa",
       logo: "/lovable-uploads/7e6d1a1b-60ce-445d-9c6a-26cc95a62421.png"
     },
     {
-      name: "3arrafni",
-      logo: "/lovable-uploads/693924e3-2bc0-456b-8afe-d100ef0390f8.png"
+      name: "Red Black Circle",
+      logo: "/lovable-uploads/8cd0ad5b-d116-4da8-a678-fabadb04760b.png"
     },
     {
-      name: "International Students",
-      logo: "/lovable-uploads/ba97edae-2f28-4db4-9b9d-9f340b675667.png"
+      name: "Education Logo",
+      logo: "/lovable-uploads/0b6b1991-3ad0-4aea-aff4-ff458ada5d61.png"
     }
   ];
 
@@ -50,7 +50,7 @@ export const Clients = () => {
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-5xl font-bold text-white mb-6 animate-fade-in">
-            <span className="bg-gradient-to-r from-red-500 via-blue-500 to-red-600 bg-clip-text text-transparent animate-gradient">Accounts</span>
+            Our <span className="bg-gradient-to-r from-red-500 via-blue-500 to-red-600 bg-clip-text text-transparent animate-gradient">Accounts</span>
           </h2>
           <p className="text-gray-300 text-lg max-w-3xl mx-auto animate-fade-in animation-delay-1000">
             Trusted partnerships with leading brands and organizations across various industries
@@ -75,8 +75,7 @@ export const Clients = () => {
                 <img
                   src={client.logo}
                   alt={client.name}
-                  className="max-w-full max-h-full object-contain filter brightness-90 group-hover:brightness-110 transition-all duration-500 group-hover:scale-105 bg-transparent"
-                  style={{ backgroundColor: 'transparent' }}
+                  className="max-w-full max-h-full object-contain filter brightness-90 group-hover:brightness-110 transition-all duration-500 group-hover:scale-105"
                 />
               </div>
               
@@ -86,6 +85,9 @@ export const Clients = () => {
                   {client.name}
                 </p>
               </div>
+              
+              {/* Corner accent */}
+              <div className="absolute top-0 right-0 w-8 h-8 bg-gradient-to-br from-red-500 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-bl-xl rounded-tr-3xl"></div>
             </div>
           ))}
         </div>
