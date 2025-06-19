@@ -10,7 +10,7 @@ export const Portfolio = () => {
       <div className="container mx-auto max-w-7xl">
         <div className="text-center mb-12 md:mb-16">
           <h2 className="text-3xl md:text-5xl font-bold text-white mb-4 md:mb-6">
-            Top <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Work</span>
+            Top <span className="bg-gradient-to-r from-cyan-400 via-teal-500 to-cyan-600 bg-clip-text text-transparent">Work</span>
           </h2>
           <p className="text-slate-300 text-sm md:text-lg max-w-3xl mx-auto px-4">
             A showcase of my diverse content creation work across multiple platforms and industries
