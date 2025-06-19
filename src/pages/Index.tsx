@@ -11,7 +11,7 @@ import { Contact } from '@/components/Contact';
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-red-900 to-blue-900">
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-amber-900 to-orange-900">
       <Hero />
       <About />
       <Experience />

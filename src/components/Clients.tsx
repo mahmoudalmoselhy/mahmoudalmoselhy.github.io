@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 export const Clients = () => {
@@ -58,29 +57,29 @@ export const Clients = () => {
   ];
 
   return (
-    <section className="py-12 md:py-20 px-4 md:px-6 bg-gradient-to-br from-white/5 via-blue-900/10 to-red-900/5">
+    <section className="py-12 md:py-20 px-4 md:px-6 bg-gradient-to-br from-white/5 via-orange-900/10 to-amber-900/5">
       <div className="container mx-auto max-w-7xl">
         <div className="text-center mb-12 md:mb-16">
           <h2 className="text-3xl md:text-5xl font-bold text-white mb-4 md:mb-6 animate-fade-in">
-            <span className="bg-gradient-to-r from-red-500 via-blue-500 to-red-600 bg-clip-text text-transparent animate-gradient">Accounts</span>
+            <span className="bg-gradient-to-r from-amber-400 via-orange-500 to-amber-600 bg-clip-text text-transparent animate-gradient">Accounts</span>
           </h2>
           <p className="text-gray-300 text-sm md:text-lg max-w-3xl mx-auto animate-fade-in animation-delay-1000 px-4">
             Trusted partnerships with leading brands and organizations across various industries
           </p>
-          <div className="w-16 md:w-24 h-1 bg-gradient-to-r from-red-500 to-blue-600 mx-auto mt-4 md:mt-6 rounded-full animate-scale-in animation-delay-2000"></div>
+          <div className="w-16 md:w-24 h-1 bg-gradient-to-r from-amber-500 to-orange-600 mx-auto mt-4 md:mt-6 rounded-full animate-scale-in animation-delay-2000"></div>
         </div>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3 md:gap-6 items-center justify-items-center">
           {clients.map((client, index) => (
             <div
               key={index}
-              className="group relative bg-white/5 backdrop-blur-sm rounded-2xl md:rounded-3xl p-4 md:p-6 hover:bg-white/15 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-red-500/10 border border-white/10 hover:border-blue-500/30 w-full aspect-square flex items-center justify-center overflow-hidden"
+              className="group relative bg-white/5 backdrop-blur-sm rounded-2xl md:rounded-3xl p-4 md:p-6 hover:bg-white/15 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-amber-500/10 border border-white/10 hover:border-orange-500/30 w-full aspect-square flex items-center justify-center overflow-hidden"
               style={{
                 animationDelay: `${index * 50}ms`
               }}
             >
               {/* Subtle animated background glow */}
-              <div className="absolute inset-0 bg-gradient-to-br from-red-500/5 via-transparent to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl md:rounded-3xl"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-amber-500/5 via-transparent to-orange-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl md:rounded-3xl"></div>
               
               {/* Logo container */}
               <div className="relative z-10 w-full h-full flex items-center justify-center p-2">
@@ -106,7 +105,7 @@ export const Clients = () => {
           {[...Array(5)].map((_, i) => (
             <div
               key={i}
-              className={`w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-gradient-to-r from-red-500 to-blue-600 animate-pulse`}
+              className={`w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-gradient-to-r from-amber-500 to-orange-600 animate-pulse`}
               style={{ animationDelay: `${i * 200}ms` }}
             ></div>
           ))}
