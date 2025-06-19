@@ -26,7 +26,7 @@ export const About = () => {
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-5xl font-bold text-white mb-6">
-            About <span className="bg-gradient-to-r from-red-400 to-blue-500 bg-clip-text text-transparent">Me</span>
+            About <span className="bg-gradient-to-r from-amber-200 to-teal-400 bg-clip-text text-transparent">Me</span>
           </h2>
         </div>
         
@@ -34,11 +34,11 @@ export const About = () => {
           {highlights.map((item, index) => (
             <div 
               key={index}
-              className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl border border-red-400/30 hover:border-red-400/50"
+              className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl border border-teal-400/30 hover:border-amber-300/50"
               style={{ animationDelay: `${index * 200}ms` }}
             >
-              <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-blue-600 rounded-full flex items-center justify-center mb-6 mx-auto">
-                <item.icon className="w-8 h-8 text-white" />
+              <div className="w-16 h-16 bg-gradient-to-r from-amber-200 to-cyan-600 rounded-full flex items-center justify-center mb-6 mx-auto">
+                <item.icon className="w-8 h-8 text-slate-900" />
               </div>
               <h3 className="text-xl font-semibold text-white mb-4 text-center">{item.title}</h3>
               <p className="text-gray-200 text-center leading-relaxed">{item.description}</p>

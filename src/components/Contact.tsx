@@ -8,7 +8,7 @@ export const Contact = () => {
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-5xl font-bold text-white mb-6">
-            Let's <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Connect</span>
+            Let's <span className="bg-gradient-to-r from-amber-200 to-teal-400 bg-clip-text text-transparent">Connect</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
             Ready to create powerful content that drives results? Let's discuss your next project.
@@ -22,31 +22,31 @@ export const Contact = () => {
                 <h3 className="text-2xl font-semibold text-white mb-8">Get In Touch</h3>
                 <div className="space-y-6">
                   <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 bg-gradient-to-r from-blue-400 to-purple-600 rounded-full flex items-center justify-center">
+                    <div className="w-12 h-12 bg-gradient-to-r from-teal-400 to-cyan-600 rounded-full flex items-center justify-center">
                       <Mail className="w-6 h-6 text-white" />
                     </div>
                     <div>
                       <p className="text-gray-400 text-sm">Email</p>
-                      <a href="mailto:mahmoudalmoselhy@gmail.com" className="text-white hover:text-blue-400 transition-colors">
+                      <a href="mailto:mahmoudalmoselhy@gmail.com" className="text-white hover:text-teal-400 transition-colors">
                         mahmoudalmoselhy@gmail.com
                       </a>
                     </div>
                   </div>
                   
                   <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 bg-gradient-to-r from-blue-400 to-purple-600 rounded-full flex items-center justify-center">
+                    <div className="w-12 h-12 bg-gradient-to-r from-teal-400 to-cyan-600 rounded-full flex items-center justify-center">
                       <Phone className="w-6 h-6 text-white" />
                     </div>
                     <div>
                       <p className="text-gray-400 text-sm">Phone</p>
-                      <a href="tel:+201121529292" className="text-white hover:text-blue-400 transition-colors">
+                      <a href="tel:+201121529292" className="text-white hover:text-teal-400 transition-colors">
                         +20 112 152 9292
                       </a>
                     </div>
                   </div>
                   
                   <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 bg-gradient-to-r from-blue-400 to-purple-600 rounded-full flex items-center justify-center">
+                    <div className="w-12 h-12 bg-gradient-to-r from-teal-400 to-cyan-600 rounded-full flex items-center justify-center">
                       <MapPin className="w-6 h-6 text-white" />
                     </div>
                     <div>
@@ -56,7 +56,7 @@ export const Contact = () => {
                   </div>
                   
                   <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 bg-gradient-to-r from-blue-400 to-purple-600 rounded-full flex items-center justify-center">
+                    <div className="w-12 h-12 bg-gradient-to-r from-teal-400 to-cyan-600 rounded-full flex items-center justify-center">
                       <Linkedin className="w-6 h-6 text-white" />
                     </div>
                     <div>
@@ -65,7 +65,7 @@ export const Contact = () => {
                         href="https://linkedin.com/in/mahmoudalmoselhy" 
                         target="_blank" 
                         rel="noopener noreferrer"
-                        className="text-white hover:text-blue-400 transition-colors flex items-center space-x-1"
+                        className="text-white hover:text-teal-400 transition-colors flex items-center space-x-1"
                       >
                         <span>mahmoudalmoselhy</span>
                         <ExternalLink className="w-4 h-4" />
@@ -79,23 +79,23 @@ export const Contact = () => {
                 <h4 className="text-xl font-semibold text-white mb-6">What I Offer</h4>
                 <ul className="space-y-4 text-gray-300">
                   <li className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full mt-2"></div>
+                    <div className="w-2 h-2 bg-gradient-to-r from-amber-200 to-teal-400 rounded-full mt-2"></div>
                     <span>Content Strategy & Planning</span>
                   </li>
                   <li className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full mt-2"></div>
+                    <div className="w-2 h-2 bg-gradient-to-r from-amber-200 to-teal-400 rounded-full mt-2"></div>
                     <span>SEO Optimization & Analysis</span>
                   </li>
                   <li className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full mt-2"></div>
+                    <div className="w-2 h-2 bg-gradient-to-r from-amber-200 to-teal-400 rounded-full mt-2"></div>
                     <span>Team Leadership & Training</span>
                   </li>
                   <li className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full mt-2"></div>
+                    <div className="w-2 h-2 bg-gradient-to-r from-amber-200 to-teal-400 rounded-full mt-2"></div>
                     <span>Content Creation & Copywriting</span>
                   </li>
                   <li className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full mt-2"></div>
+                    <div className="w-2 h-2 bg-gradient-to-r from-amber-200 to-teal-400 rounded-full mt-2"></div>
                     <span>Performance Analytics & Reporting</span>
                   </li>
                 </ul>

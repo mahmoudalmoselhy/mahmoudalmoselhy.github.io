@@ -41,7 +41,7 @@ export const Skills = () => {
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-5xl font-bold text-white mb-6">
-            My <span className="bg-gradient-to-r from-red-400 to-blue-500 bg-clip-text text-transparent">Skills</span>
+            My <span className="bg-gradient-to-r from-amber-200 to-teal-400 bg-clip-text text-transparent">Skills</span>
           </h2>
         </div>
         
@@ -49,10 +49,10 @@ export const Skills = () => {
           {skillCategories.map((category, index) => (
             <div 
               key={index}
-              className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 hover:bg-white/20 transition-all duration-500 hover:scale-105 hover:shadow-2xl group border border-blue-400/30 hover:border-blue-400/50"
+              className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 hover:bg-white/20 transition-all duration-500 hover:scale-105 hover:shadow-2xl group border border-teal-400/30 hover:border-amber-300/50"
               style={{ animationDelay: `${index * 150}ms` }}
             >
-              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-red-600 rounded-full flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">
+              <div className="w-16 h-16 bg-gradient-to-r from-teal-400 to-cyan-600 rounded-full flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">
                 <category.icon className="w-8 h-8 text-white" />
               </div>
               
@@ -61,7 +61,7 @@ export const Skills = () => {
               <div className="space-y-2">
                 {category.skills.map((skill, skillIndex) => (
                   <div key={skillIndex} className="text-gray-200 text-center">
-                    <span className="inline-block bg-white/10 rounded-full px-3 py-1 text-sm hover:bg-red-500/30 transition-colors duration-300 border border-red-400/20">
+                    <span className="inline-block bg-white/10 rounded-full px-3 py-1 text-sm hover:bg-amber-200/30 transition-colors duration-300 border border-teal-400/20">
                       {skill}
                     </span>
                   </div>

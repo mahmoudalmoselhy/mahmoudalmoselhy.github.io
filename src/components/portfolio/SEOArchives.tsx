@@ -28,7 +28,7 @@ export const SEOArchives = ({ archives }: SEOArchivesProps) => {
             href={archive.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="group bg-slate-800/50 backdrop-blur-lg rounded-xl md:rounded-2xl p-6 md:p-8 hover:bg-slate-700/60 transition-all duration-300 hover:scale-105 hover:shadow-xl border border-cyan-500/20 hover:border-cyan-400/40"
+            className="group bg-slate-800/50 backdrop-blur-lg rounded-xl md:rounded-2xl p-6 md:p-8 hover:bg-slate-700/60 transition-all duration-300 hover:scale-105 hover:shadow-xl border border-teal-500/20 hover:border-amber-300/40"
           >
             <div className="w-16 h-16 md:w-20 md:h-20 bg-white rounded-full flex items-center justify-center mb-4 md:mb-6 group-hover:scale-110 transition-transform duration-300 p-3 mx-auto">
               <img
@@ -38,7 +38,7 @@ export const SEOArchives = ({ archives }: SEOArchivesProps) => {
               />
             </div>
             
-            <h4 className="text-lg md:text-xl font-semibold text-white mb-3 md:mb-4 group-hover:text-cyan-400 transition-colors duration-300 text-center">
+            <h4 className="text-lg md:text-xl font-semibold text-white mb-3 md:mb-4 group-hover:text-teal-300 transition-colors duration-300 text-center">
               {archive.title}
             </h4>
             
@@ -46,7 +46,7 @@ export const SEOArchives = ({ archives }: SEOArchivesProps) => {
               {archive.description}
             </p>
             
-            <div className="flex items-center justify-center text-blue-400 text-sm md:text-base font-medium group-hover:text-blue-300 transition-colors duration-300">
+            <div className="flex items-center justify-center text-teal-400 text-sm md:text-base font-medium group-hover:text-amber-300 transition-colors duration-300">
               <span>View Archive</span>
               <ExternalLink className="w-4 h-4 md:w-5 md:h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
             </div>
