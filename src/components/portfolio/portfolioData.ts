@@ -200,6 +200,60 @@ export const portfolioSections = [
         description: "Specialized campaign for meat retailers",
         link: "https://www.facebook.com/menusbee/posts/pfbid02yBxPnp34eVP5aZzVK2YCUAUEiMAUotMTFx31mb39QP6h7XqYYMSVRxCtqZCRCgCal",
         logo: "/lovable-uploads/c8892c9f-d780-4825-a3b1-b1e017d5bd62.png"
+      },
+      {
+        title: "Business Promotion Campaign",
+        description: "Strategic business promotion and marketing campaign",
+        link: "https://www.facebook.com/share/p/19J24XMdu4/",
+        logo: "/lovable-uploads/c8892c9f-d780-4825-a3b1-b1e017d5bd62.png"
+      },
+      {
+        title: "Digital Marketing Strategy",
+        description: "Comprehensive digital marketing approach for businesses",
+        link: "https://www.facebook.com/menusbee/posts/pfbid02moagYrwRaNxLrF6LQzTdy2eP9NqPWoYA5RzRvvuKx2KcaTUG36Jhmj16LJZEYJ2xl",
+        logo: "/lovable-uploads/c8892c9f-d780-4825-a3b1-b1e017d5bd62.png"
+      },
+      {
+        title: "Brand Visibility Campaign",
+        description: "Enhanced brand visibility through targeted social media",
+        link: "https://www.facebook.com/menusbee/posts/pfbid02d974q9mGJxWVwJVGGUhi2hAe7LmiTcjFhuPvB8GtKQrWZcNBVk6ovt56CEHgpHbpl",
+        logo: "/lovable-uploads/c8892c9f-d780-4825-a3b1-b1e017d5bd62.png"
+      },
+      {
+        title: "Customer Engagement Campaign",
+        description: "Building customer relationships through social media",
+        link: "https://www.facebook.com/share/p/16SmfZfReK/",
+        logo: "/lovable-uploads/c8892c9f-d780-4825-a3b1-b1e017d5bd62.png"
+      },
+      {
+        title: "Market Expansion Strategy",
+        description: "Strategic approach to expanding market reach",
+        link: "https://www.facebook.com/share/p/1696ahYCzP/",
+        logo: "/lovable-uploads/c8892c9f-d780-4825-a3b1-b1e017d5bd62.png"
+      },
+      {
+        title: "Community Building Initiative",
+        description: "Building strong business communities through social media",
+        link: "https://www.facebook.com/share/p/1Dkkr1VrtT/",
+        logo: "/lovable-uploads/c8892c9f-d780-4825-a3b1-b1e017d5bd62.png"
+      },
+      {
+        title: "Local Business Support Campaign",
+        description: "Supporting local businesses through targeted campaigns",
+        link: "https://www.facebook.com/share/p/1C9e7h1pCx/",
+        logo: "/lovable-uploads/c8892c9f-d780-4825-a3b1-b1e017d5bd62.png"
+      },
+      {
+        title: "Industry-Specific Marketing",
+        description: "Tailored marketing solutions for specific industries",
+        link: "https://www.facebook.com/share/p/16Z3SRTBLg/",
+        logo: "/lovable-uploads/c8892c9f-d780-4825-a3b1-b1e017d5bd62.png"
+      },
+      {
+        title: "Cross-Platform Campaign Management",
+        description: "Multi-platform social media campaign coordination",
+        link: "https://www.facebook.com/menusbee/posts/pfbid0WiUtAsWQ9J3Uacjcd3iLtZWQkx3ic8LkFCgVGenSWioL2vMiGqGns5HHygXa4timl",
+        logo: "/lovable-uploads/c8892c9f-d780-4825-a3b1-b1e017d5bd62.png"
       }
     ]
   },
