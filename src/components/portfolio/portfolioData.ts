@@ -1,4 +1,3 @@
-
 export const portfolioSections = [
   {
     title: "Content Writing - 3arrafni.com",
@@ -33,6 +32,132 @@ export const portfolioSections = [
         description: "Gaming review exploring new content territory",
         link: "https://www.3arrafni.com/black-myth-wukong-review/",
         logo: "/lovable-uploads/693924e3-2bc0-456b-8afe-d100ef0390f8.png"
+      },
+      {
+        title: "UGREEN Nexode PowerBank 200W",
+        description: "Comprehensive powerbank review and testing",
+        link: "https://www.3arrafni.com/ugreen-nexode-powerbank-200w/",
+        logo: "/lovable-uploads/693924e3-2bc0-456b-8afe-d100ef0390f8.png"
+      },
+      {
+        title: "ChatGPT Explained",
+        description: "In-depth explanation of AI technology and applications",
+        link: "https://www.3arrafni.com/chatgpt-explained/",
+        logo: "/lovable-uploads/693924e3-2bc0-456b-8afe-d100ef0390f8.png"
+      },
+      {
+        title: "How COVID-19 Affected E-Commerce",
+        description: "Analysis of pandemic impact on digital commerce",
+        link: "https://www.3arrafni.com/how-covid-19-affected-e-commerce/",
+        logo: "/lovable-uploads/693924e3-2bc0-456b-8afe-d100ef0390f8.png"
+      },
+      {
+        title: "How AI Helps Content Creators",
+        description: "Exploring AI tools and their impact on content creation",
+        link: "https://www.3arrafni.com/how-ai-helps-content-creators/",
+        logo: "/lovable-uploads/693924e3-2bc0-456b-8afe-d100ef0390f8.png"
+      },
+      {
+        title: "Prompt Engineering Explained",
+        description: "Guide to effective AI prompt creation and optimization",
+        link: "https://www.3arrafni.com/prompt-engineering-explained/",
+        logo: "/lovable-uploads/693924e3-2bc0-456b-8afe-d100ef0390f8.png"
+      },
+      {
+        title: "UGREEN Nexode Pro Revision",
+        description: "Updated review of UGREEN's professional charging solution",
+        link: "https://www.3arrafni.com/ugreen-nexode-pro-revision/",
+        logo: "/lovable-uploads/693924e3-2bc0-456b-8afe-d100ef0390f8.png"
+      },
+      {
+        title: "UGREEN HiTune Max5 Review",
+        description: "Comprehensive audio device review and testing",
+        link: "https://www.3arrafni.com/ugreen-hitune-max5-review/",
+        logo: "/lovable-uploads/693924e3-2bc0-456b-8afe-d100ef0390f8.png"
+      },
+      {
+        title: "GameSir X2 Pro Review",
+        description: "Gaming controller review for mobile gaming",
+        link: "https://www.3arrafni.com/gamesir-x2-pro-review/",
+        logo: "/lovable-uploads/693924e3-2bc0-456b-8afe-d100ef0390f8.png"
+      },
+      {
+        title: "Rapoo MT750L Mouse Review",
+        description: "Professional mouse review with detailed testing",
+        link: "https://www.3arrafni.com/rapoo-mt750l-mouse-review/",
+        logo: "/lovable-uploads/693924e3-2bc0-456b-8afe-d100ef0390f8.png"
+      },
+      {
+        title: "Honor Magic Watch 2 Review",
+        description: "Smartwatch review with comprehensive feature analysis",
+        link: "https://www.3arrafni.com/honor-magic-watch-2-review/",
+        logo: "/lovable-uploads/693924e3-2bc0-456b-8afe-d100ef0390f8.png"
+      },
+      {
+        title: "Gaomon S620 Graphic Tablet Review",
+        description: "Digital art tablet review for creative professionals",
+        link: "https://www.3arrafni.com/gaomon-s620-graphic-tablet-review/",
+        logo: "/lovable-uploads/693924e3-2bc0-456b-8afe-d100ef0390f8.png"
+      }
+    ]
+  },
+  {
+    title: "Android World Articles",
+    description: "Mobile technology and Android-focused content writing",
+    items: [
+      {
+        title: "Android Technology Article",
+        description: "Latest Android developments and mobile tech insights",
+        link: "https://www.androidworld9.com/87528/",
+        logo: "/lovable-uploads/e1d8ea68-6c79-4ca8-8729-ca7d400d103a.png"
+      },
+      {
+        title: "Mobile Innovation Coverage",
+        description: "Comprehensive mobile technology analysis",
+        link: "https://www.androidworld9.com/87308/",
+        logo: "/lovable-uploads/e1d8ea68-6c79-4ca8-8729-ca7d400d103a.png"
+      },
+      {
+        title: "Android Feature Analysis",
+        description: "In-depth analysis of Android features and updates",
+        link: "https://www.androidworld9.com/45890/",
+        logo: "/lovable-uploads/e1d8ea68-6c79-4ca8-8729-ca7d400d103a.png"
+      },
+      {
+        title: "Mobile Security Insights",
+        description: "Android security features and privacy analysis",
+        link: "https://www.androidworld9.com/42376/",
+        logo: "/lovable-uploads/e1d8ea68-6c79-4ca8-8729-ca7d400d103a.png"
+      },
+      {
+        title: "App Development Trends",
+        description: "Latest trends in Android app development",
+        link: "https://www.androidworld9.com/42329/",
+        logo: "/lovable-uploads/e1d8ea68-6c79-4ca8-8729-ca7d400d103a.png"
+      },
+      {
+        title: "Android OS Updates",
+        description: "Coverage of Android operating system updates",
+        link: "https://www.androidworld9.com/42203/",
+        logo: "/lovable-uploads/e1d8ea68-6c79-4ca8-8729-ca7d400d103a.png"
+      },
+      {
+        title: "Mobile Hardware Reviews",
+        description: "Android device hardware analysis and reviews",
+        link: "https://www.androidworld9.com/41684/",
+        logo: "/lovable-uploads/e1d8ea68-6c79-4ca8-8729-ca7d400d103a.png"
+      },
+      {
+        title: "Android Ecosystem Analysis",
+        description: "Comprehensive analysis of the Android ecosystem",
+        link: "https://www.androidworld9.com/41551/",
+        logo: "/lovable-uploads/e1d8ea68-6c79-4ca8-8729-ca7d400d103a.png"
+      },
+      {
+        title: "Mobile Technology Trends",
+        description: "Emerging trends in mobile technology landscape",
+        link: "https://www.androidworld9.com/40030/",
+        logo: "/lovable-uploads/e1d8ea68-6c79-4ca8-8729-ca7d400d103a.png"
       }
     ]
   },
@@ -77,9 +202,46 @@ export const portfolioSections = [
         logo: "/lovable-uploads/c8892c9f-d780-4825-a3b1-b1e017d5bd62.png"
       }
     ]
+  },
+  {
+    title: "Lecce Social Media Content",
+    description: "Creative social media campaigns and content creation",
+    items: [
+      {
+        title: "Brand Awareness Campaign",
+        description: "Strategic social media content for brand visibility",
+        link: "https://www.facebook.com/share/p/16f7QEfVF4/",
+        logo: "/lovable-uploads/693924e3-2bc0-456b-8afe-d100ef0390f8.png"
+      },
+      {
+        title: "Engagement Campaign",
+        description: "Interactive social media content to boost engagement",
+        link: "https://www.facebook.com/share/p/16RdYQQR2K/",
+        logo: "/lovable-uploads/693924e3-2bc0-456b-8afe-d100ef0390f8.png"
+      },
+      {
+        title: "Product Showcase Campaign",
+        description: "Visual content creation for product promotion",
+        link: "https://www.facebook.com/share/p/12MnJq4FKrH/",
+        logo: "/lovable-uploads/693924e3-2bc0-456b-8afe-d100ef0390f8.png"
+      },
+      {
+        title: "Community Building Campaign",
+        description: "Social media strategy for community engagement",
+        link: "https://www.facebook.com/share/p/1AmJ7uKYfq/",
+        logo: "/lovable-uploads/693924e3-2bc0-456b-8afe-d100ef0390f8.png"
+      },
+      {
+        title: "Content Strategy Campaign",
+        description: "Comprehensive content strategy and implementation",
+        link: "https://www.facebook.com/share/p/1Dwk3mVRL8/",
+        logo: "/lovable-uploads/693924e3-2bc0-456b-8afe-d100ef0390f8.png"
+      }
+    ]
   }
 ];
 
+// ... keep existing code (seoArchives)
 export const seoArchives = [
   {
     title: "3arrafni.com Archive",
