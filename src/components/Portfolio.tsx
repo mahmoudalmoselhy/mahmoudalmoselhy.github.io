@@ -5,6 +5,14 @@ import { SEOArchives } from './portfolio/SEOArchives';
 import { portfolioSections, seoArchives } from './portfolio/portfolioData';
 
 export const Portfolio = () => {
+  // Define specific grid layouts for each section
+  const sectionGridLayouts = [
+    "grid-cols-2 sm:grid-cols-3 lg:grid-cols-4", // Content Writing - 3arrafni.com: 4x4 grid
+    "grid-cols-1 sm:grid-cols-2", // Script Writing: 2x1 grid
+    "grid-cols-2 sm:grid-cols-3 lg:grid-cols-4", // Social Media Campaigns - Menusbee: 4x3 grid
+    "grid-cols-2 sm:grid-cols-3 lg:grid-cols-5", // Lecce Social Media Content: 5x1 grid
+  ];
+
   return (
     <section className="py-12 md:py-20 px-4 md:px-6 bg-slate-900/40">
       <div className="container mx-auto max-w-7xl">
@@ -24,6 +32,7 @@ export const Portfolio = () => {
               title={section.title}
               description={section.description}
               items={section.items}
+              gridClassName={sectionGridLayouts[sectionIndex]}
             />
           ))}
 

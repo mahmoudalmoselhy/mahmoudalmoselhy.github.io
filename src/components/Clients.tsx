@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 export const Clients = () => {
@@ -82,7 +81,7 @@ export const Clients = () => {
           <div className="w-16 md:w-24 h-1 bg-gradient-to-r from-amber-200 to-cyan-600 mx-auto mt-4 md:mt-6 rounded-full animate-scale-in animation-delay-2000"></div>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3 md:gap-6 items-center justify-items-center">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-6 items-center justify-items-center">
           {clients.map((client, index) => (
             <div
               key={index}

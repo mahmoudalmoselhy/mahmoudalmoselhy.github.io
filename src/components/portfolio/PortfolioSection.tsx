@@ -13,9 +13,10 @@ interface PortfolioSectionProps {
   title: string;
   description: string;
   items: PortfolioSectionItem[];
+  gridClassName?: string;
 }
 
-export const PortfolioSection = ({ title, description, items }: PortfolioSectionProps) => {
+export const PortfolioSection = ({ title, description, items, gridClassName = "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3" }: PortfolioSectionProps) => {
   return (
     <div className="space-y-6 md:space-y-8">
       <div className="text-center px-4">
@@ -23,7 +24,7 @@ export const PortfolioSection = ({ title, description, items }: PortfolioSection
         <p className="text-teal-300 text-sm md:text-lg">{description}</p>
       </div>
       
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+      <div className={`grid ${gridClassName} gap-4 md:gap-6`}>
         {items.map((item, itemIndex) => (
           <PortfolioItem
             key={itemIndex}
