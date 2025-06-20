@@ -1,3 +1,4 @@
+
 import React from 'react';
 
 export const Clients = () => {
@@ -53,6 +54,18 @@ export const Clients = () => {
     {
       name: "SAFA Student Services",
       logo: "/lovable-uploads/5f845450-ce56-4116-9df2-14701f0412bc.png"
+    },
+    {
+      name: "FTI - Fintech Indicator",
+      logo: "/lovable-uploads/a9650bae-ee96-448c-af28-54bb60a5b98c.png"
+    },
+    {
+      name: "SIAI - Systems Innovation for Artificial Intelligence",
+      logo: "/lovable-uploads/44db3aeb-8aa0-45e3-895d-9ae051699228.png"
+    },
+    {
+      name: "El-Bahkery",
+      logo: "/lovable-uploads/c08f2423-1b5a-4e94-ab0d-311133f1c61e.png"
     }
   ];
 
