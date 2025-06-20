@@ -262,34 +262,34 @@ export const portfolioSections = [
     description: "Creative social media campaigns and content creation",
     items: [
       {
-        title: "Brand Awareness Campaign",
-        description: "Strategic social media content for brand visibility",
+        title: "UCL Final Competition",
+        description: "UEFA Champions League final competition coverage",
         link: "https://www.facebook.com/share/p/16f7QEfVF4/",
-        logo: "/lovable-uploads/693924e3-2bc0-456b-8afe-d100ef0390f8.png"
+        logo: "/lovable-uploads/684b33f4-7836-42a3-810a-395f2e74a0da.png"
       },
       {
-        title: "Engagement Campaign",
-        description: "Interactive social media content to boost engagement",
+        title: "El Classico Copa Del Ray final",
+        description: "El Classico Copa del Rey final social media coverage",
         link: "https://www.facebook.com/share/p/16RdYQQR2K/",
-        logo: "/lovable-uploads/693924e3-2bc0-456b-8afe-d100ef0390f8.png"
+        logo: "/lovable-uploads/684b33f4-7836-42a3-810a-395f2e74a0da.png"
       },
       {
-        title: "Product Showcase Campaign",
-        description: "Visual content creation for product promotion",
+        title: "Egypt's Derby",
+        description: "Egyptian football derby social media campaign",
         link: "https://www.facebook.com/share/p/12MnJq4FKrH/",
-        logo: "/lovable-uploads/693924e3-2bc0-456b-8afe-d100ef0390f8.png"
+        logo: "/lovable-uploads/684b33f4-7836-42a3-810a-395f2e74a0da.png"
       },
       {
-        title: "Community Building Campaign",
-        description: "Social media strategy for community engagement",
+        title: "Me time with Lecce",
+        description: "Personal time and lifestyle content with Lecce brand",
         link: "https://www.facebook.com/share/p/1AmJ7uKYfq/",
-        logo: "/lovable-uploads/693924e3-2bc0-456b-8afe-d100ef0390f8.png"
+        logo: "/lovable-uploads/684b33f4-7836-42a3-810a-395f2e74a0da.png"
       },
       {
-        title: "Content Strategy Campaign",
-        description: "Comprehensive content strategy and implementation",
+        title: "Egypt's Derby",
+        description: "Another Egyptian football derby social media campaign",
         link: "https://www.facebook.com/share/p/1Dwk3mVRL8/",
-        logo: "/lovable-uploads/693924e3-2bc0-456b-8afe-d100ef0390f8.png"
+        logo: "/lovable-uploads/684b33f4-7836-42a3-810a-395f2e74a0da.png"
       }
     ]
   }
