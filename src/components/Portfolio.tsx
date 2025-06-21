@@ -7,10 +7,11 @@ import { portfolioSections, seoArchives } from './portfolio/portfolioData';
 export const Portfolio = () => {
   // Define specific grid layouts for each section
   const sectionGridLayouts = [
-    "grid-cols-2 sm:grid-cols-3 lg:grid-cols-4", // Content Writing - 3arrafni.com: 4x4 grid
-    "grid-cols-1 sm:grid-cols-2", // Script Writing: 2x1 grid
-    "grid-cols-2 sm:grid-cols-3 lg:grid-cols-4", // Social Media Campaigns - Menusbee: 4x3 grid
-    "grid-cols-2 sm:grid-cols-3 lg:grid-cols-5", // Lecce Social Media Content: 5x1 grid
+    "grid-cols-2 sm:grid-cols-3 lg:grid-cols-4", // Content Writing - 3arrafni.com: 4-column grid
+    "grid-cols-1 sm:grid-cols-2", // Script Writing: 2-column grid (1 col mobile, 2 larger screens)
+    "grid-cols-2 sm:grid-cols-3 lg:grid-cols-4", // Social Media Campaigns - Menusbee: 4-column grid
+    "grid-cols-2 sm:grid-cols-3 lg:grid-cols-5", // Lecce Social Media Content: 5-column grid
+    "grid-cols-2 sm:grid-cols-3 lg:grid-cols-3", // Android World Articles: 3-column grid
   ];
 
   return (
