@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { ArrowDown, Linkedin, Mail, MapPin } from 'lucide-react';
+import { ArrowDown, Linkedin, Mail, MessageCircle } from 'lucide-react';
 
 export const Hero = () => {
   return (
@@ -34,8 +34,8 @@ export const Hero = () => {
                 <span>mahmoudalmoselhy@gmail.com</span>
               </div>
               <div className="flex items-center space-x-2">
-                <MapPin className="w-5 h-5 text-teal-400" />
-                <span>Cairo, Egypt</span>
+                <MessageCircle className="w-5 h-5 text-teal-400" />
+                <span>+20 112 152 9292</span>
               </div>
             </div>
             
