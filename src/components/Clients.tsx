@@ -69,32 +69,32 @@ export const Clients = () => {
   ];
 
   return (
-    <section className="py-12 md:py-20 px-4 md:px-6 bg-gradient-to-br from-white/5 via-teal-900/10 to-cyan-900/5">
-      <div className="container mx-auto max-w-7xl">
-        <div className="text-center mb-12 md:mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold text-white mb-4 md:mb-6 animate-fade-in">
+    <section className="py-8 md:py-12 px-4 md:px-6 bg-gradient-to-br from-white/5 via-teal-900/10 to-cyan-900/5">
+      <div className="container mx-auto max-w-6xl">
+        <div className="text-center mb-8 md:mb-12">
+          <h2 className="text-2xl md:text-4xl font-bold text-white mb-3 md:mb-4 animate-fade-in">
             <span className="bg-gradient-to-r from-amber-200 via-teal-400 to-cyan-600 bg-clip-text text-transparent animate-gradient">Accounts</span>
           </h2>
-          <p className="text-gray-300 text-sm md:text-lg max-w-3xl mx-auto animate-fade-in animation-delay-1000 px-4">
+          <p className="text-gray-300 text-sm md:text-base max-w-2xl mx-auto animate-fade-in animation-delay-1000 px-4">
             Trusted partnerships with leading brands and organizations across various industries
           </p>
-          <div className="w-16 md:w-24 h-1 bg-gradient-to-r from-amber-200 to-cyan-600 mx-auto mt-4 md:mt-6 rounded-full animate-scale-in animation-delay-2000"></div>
+          <div className="w-12 md:w-16 h-1 bg-gradient-to-r from-amber-200 to-cyan-600 mx-auto mt-3 md:mt-4 rounded-full animate-scale-in animation-delay-2000"></div>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-6 items-center justify-items-center">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-2 md:gap-4 items-center justify-items-center">
           {clients.map((client, index) => (
             <div
               key={index}
-              className="group relative bg-white/5 backdrop-blur-sm rounded-2xl md:rounded-3xl p-4 md:p-6 hover:bg-white/15 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-teal-500/10 border border-white/10 hover:border-teal-500/30 w-full aspect-square flex items-center justify-center overflow-hidden"
+              className="group relative bg-white/5 backdrop-blur-sm rounded-xl md:rounded-2xl p-3 md:p-4 hover:bg-white/15 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-teal-500/10 border border-white/10 hover:border-teal-500/30 w-full aspect-square flex items-center justify-center overflow-hidden"
               style={{
                 animationDelay: `${index * 50}ms`
               }}
             >
               {/* Subtle animated background glow */}
-              <div className="absolute inset-0 bg-gradient-to-br from-teal-500/5 via-transparent to-cyan-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl md:rounded-3xl"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-teal-500/5 via-transparent to-cyan-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl md:rounded-2xl"></div>
               
               {/* Logo container */}
-              <div className="relative z-10 w-full h-full flex items-center justify-center p-2">
+              <div className="relative z-10 w-full h-full flex items-center justify-center p-1.5 md:p-2">
                 <img
                   src={client.logo}
                   alt={client.name}
@@ -103,7 +103,7 @@ export const Clients = () => {
               </div>
               
               {/* Hover overlay with client name */}
-              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 via-black/60 to-transparent p-2 md:p-3 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 rounded-b-2xl md:rounded-b-3xl">
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 via-black/60 to-transparent p-2 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 rounded-b-xl md:rounded-b-2xl">
                 <p className="text-white text-xs font-medium text-center truncate">
                   {client.name}
                 </p>
@@ -113,11 +113,11 @@ export const Clients = () => {
         </div>
         
         {/* Decorative elements */}
-        <div className="flex justify-center mt-8 md:mt-16 space-x-1 md:space-x-2">
+        <div className="flex justify-center mt-6 md:mt-10 space-x-1">
           {[...Array(5)].map((_, i) => (
             <div
               key={i}
-              className={`w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-gradient-to-r from-amber-200 to-cyan-600 animate-pulse`}
+              className={`w-1 h-1 md:w-1.5 md:h-1.5 rounded-full bg-gradient-to-r from-amber-200 to-cyan-600 animate-pulse`}
               style={{ animationDelay: `${i * 200}ms` }}
             ></div>
           ))}
