@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Trophy, Award, Star } from 'lucide-react';
+import { Trophy, Award, Star, ExternalLink } from 'lucide-react';
 
 export const Awards = () => {
   const awards = [
@@ -19,10 +19,22 @@ export const Awards = () => {
   ];
 
   const courses = [
-    "SEO Basics - Udemy",
-    "What Is Generative AI - LinkedIn Learning",
-    "Using AI as Your SEO Assistant - LinkedIn Learning",
-    "Storytelling and Content Creation to Transform Your Personal Brand - LinkedIn Learning"
+    {
+      title: "SEO Basics - Udemy",
+      link: "https://drive.google.com/file/d/1g3_nU7xunN2eUbj54CJLC1490RuyoG4_/view?usp=drive_link"
+    },
+    {
+      title: "What Is Generative AI - LinkedIn Learning",
+      link: "https://drive.google.com/file/d/1R9Kbw-fmEEZjpkegQEmqzrKvr3ysilg_/view?usp=drive_link"
+    },
+    {
+      title: "Using AI as Your SEO Assistant - LinkedIn Learning",
+      link: "https://drive.google.com/file/d/1WrZvzBsJnxlJPwMO29qosQFg7nuesGwF/view?usp=drive_link"
+    },
+    {
+      title: "Storytelling and Content Creation to Transform Your Personal Brand - LinkedIn Learning",
+      link: "https://drive.google.com/file/d/1d18Up4gGy6_PXZi3cuhtN6Sr3fwsYI1v/view?usp=drive_link"
+    }
   ];
 
   return (
@@ -70,12 +82,18 @@ export const Awards = () => {
             </h3>
             <div className="space-y-4">
               {courses.map((course, index) => (
-                <div 
+                <a
                   key={index}
-                  className="bg-white/10 backdrop-blur-lg rounded-xl p-4 hover:bg-white/20 transition-all duration-300 hover:scale-102 border border-teal-400/30"
+                  href={course.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-white/10 backdrop-blur-lg rounded-xl p-4 hover:bg-white/20 transition-all duration-300 hover:scale-102 border border-teal-400/30 block group"
                 >
-                  <p className="text-gray-200">{course}</p>
-                </div>
+                  <div className="flex items-center justify-between">
+                    <p className="text-gray-200 group-hover:text-white transition-colors">{course.title}</p>
+                    <ExternalLink className="w-4 h-4 text-teal-400 opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0 ml-2" />
+                  </div>
+                </a>
               ))}
             </div>
           </div>

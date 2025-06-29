@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { ArrowDown, Linkedin, Mail, MessageCircle } from 'lucide-react';
+import { ArrowDown, Linkedin, Mail, MessageCircle, FileText } from 'lucide-react';
 
 export const Hero = () => {
   return (
@@ -60,6 +60,15 @@ export const Hero = () => {
               >
                 <Linkedin className="w-5 h-5" />
                 <span>LinkedIn</span>
+              </a>
+              <a 
+                href="https://drive.google.com/file/d/1CyGAxOd57PlaGx7E1ITqiMcf1Zk5M498/view?usp=sharing" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="border-2 border-amber-300 text-amber-300 px-8 py-4 rounded-full font-semibold text-lg hover:bg-amber-300 hover:text-slate-900 transform transition-all duration-300 flex items-center justify-center space-x-2"
+              >
+                <FileText className="w-5 h-5" />
+                <span>CV</span>
               </a>
             </div>
           </div>
