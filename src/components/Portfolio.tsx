@@ -18,9 +18,19 @@ export const Portfolio = () => {
     <section className="py-12 md:py-20 px-4 md:px-6 bg-slate-900/40">
       <div className="container mx-auto max-w-7xl">
         <div className="text-center mb-12 md:mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold text-white mb-4 md:mb-6">
-            Top <span className="bg-gradient-to-r from-amber-200 via-teal-400 to-cyan-600 bg-clip-text text-transparent">Work</span>
-          </h2>
+          <div className="flex flex-col items-center mb-6">
+            <div className="relative mb-4">
+              <div className="absolute inset-0 bg-gradient-to-r from-amber-200 to-cyan-600 rounded-full blur-md opacity-30 scale-110"></div>
+              <img 
+                src="/lovable-uploads/45b256f3-6cbd-4bbc-b16e-0c4039fc89ef.png"
+                alt="Mahmoud AlMoselhy"
+                className="relative w-20 h-20 md:w-24 md:h-24 object-cover rounded-full border-2 border-white/20 shadow-lg"
+              />
+            </div>
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-4 md:mb-6">
+              Top <span className="bg-gradient-to-r from-amber-200 via-teal-400 to-cyan-600 bg-clip-text text-transparent">Work</span>
+            </h2>
+          </div>
           <p className="text-slate-300 text-sm md:text-lg max-w-3xl mx-auto px-4">
             A showcase of my diverse content creation work across multiple platforms and industries
           </p>
