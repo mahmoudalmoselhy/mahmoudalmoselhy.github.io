@@ -65,7 +65,13 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				// Custom gradient colors for enhanced light mode
+				'gradient-start': 'hsl(var(--gradient-start))',
+				'gradient-middle': 'hsl(var(--gradient-middle))',
+				'gradient-end': 'hsl(var(--gradient-end))',
+				'shadow-light': 'hsl(var(--shadow-light))',
+				'shadow-medium': 'hsl(var(--shadow-medium))'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

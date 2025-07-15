@@ -8,51 +8,60 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Light mode - Enhanced beautiful theme */
+    --background: 0 0% 98%;
+    --foreground: 240 10% 3.9%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 240 10% 3.9%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 240 10% 3.9%;
 
-    --primary: 222.2 47.4% 11.2%;
+    /* Primary brand colors with better contrast */
+    --primary: 220 38% 15%;
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Secondary with subtle warmth */
+    --secondary: 47 100% 97%;
+    --secondary-foreground: 240 10% 3.9%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Muted backgrounds with subtle tint */
+    --muted: 220 14% 96%;
+    --muted-foreground: 240 3.8% 46.1%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Accent with teal inspiration */
+    --accent: 180 100% 96%;
+    --accent-foreground: 180 100% 10%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* Softer borders */
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 220 38% 15%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
-    --sidebar-background: 0 0% 98%;
-
+    /* Enhanced sidebar colors */
+    --sidebar-background: 220 14% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
+    --sidebar-primary: 220 38% 15%;
     --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
+    --sidebar-accent: 180 100% 96%;
+    --sidebar-accent-foreground: 180 100% 10%;
     --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 180 90% 50%;
 
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Custom gradient colors for beautiful effects */
+    --gradient-start: 45 100% 88%;
+    --gradient-middle: 180 100% 85%;
+    --gradient-end: 200 100% 85%;
+    
+    /* Shadow colors */
+    --shadow-light: 220 13% 85%;
+    --shadow-medium: 220 13% 75%;
   }
 
   .dark {
@@ -102,6 +111,33 @@
   body {
     @apply bg-background text-foreground font-advercase;
   }
+}
+
+/* Light mode specific enhancements */
+.light-glass {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid hsl(var(--border));
+  box-shadow: 0 8px 32px hsl(var(--shadow-light) / 0.1);
+}
+
+.light-card-hover:hover {
+  box-shadow: 0 20px 40px hsl(var(--shadow-medium) / 0.15);
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
+}
+
+.light-gradient-bg {
+  background: linear-gradient(135deg, 
+    hsl(var(--gradient-start)) 0%, 
+    hsl(var(--gradient-middle)) 50%, 
+    hsl(var(--gradient-end)) 100%);
+}
+
+.light-subtle-pattern {
+  background-image: 
+    radial-gradient(circle at 1px 1px, hsl(var(--border) / 0.3) 1px, transparent 0);
+  background-size: 20px 20px;
 }
 
 /* Custom animations and effects */
