@@ -69,13 +69,13 @@ export const Clients = () => {
   ];
 
   return (
-    <section className="py-6 md:py-8 px-4 md:px-6 bg-gradient-to-br from-white/5 via-teal-900/10 to-cyan-900/5">
+    <section className="py-6 md:py-8 px-4 md:px-6 bg-muted/10">
       <div className="container mx-auto max-w-5xl">
         <div className="text-center mb-6 md:mb-8">
-          <h2 className="text-2xl md:text-3xl font-bold text-white mb-2 md:mb-3 animate-fade-in">
+          <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-2 md:mb-3 animate-fade-in">
             <span className="bg-gradient-to-r from-amber-200 via-teal-400 to-cyan-600 bg-clip-text text-transparent animate-gradient">Accounts</span>
           </h2>
-          <p className="text-gray-300 text-sm max-w-xl mx-auto animate-fade-in animation-delay-1000 px-4">
+          <p className="text-muted-foreground text-sm max-w-xl mx-auto animate-fade-in animation-delay-1000 px-4">
             Trusted partnerships with leading brands and organizations across various industries
           </p>
           <div className="w-10 md:w-12 h-1 bg-gradient-to-r from-amber-200 to-cyan-600 mx-auto mt-2 md:mt-3 rounded-full animate-scale-in animation-delay-2000"></div>
@@ -85,13 +85,13 @@ export const Clients = () => {
           {clients.map((client, index) => (
             <div
               key={index}
-              className="group relative bg-white/5 backdrop-blur-sm rounded-lg md:rounded-xl p-2 md:p-3 hover:bg-white/15 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-teal-500/10 border border-white/10 hover:border-teal-500/30 w-full aspect-square flex items-center justify-center overflow-hidden"
+              className="group relative bg-card/30 backdrop-blur-sm rounded-lg md:rounded-xl p-2 md:p-3 hover:bg-card/50 transition-all duration-300 hover:scale-105 hover:shadow-lg border border-border hover:border-accent w-full aspect-square flex items-center justify-center overflow-hidden"
               style={{
                 animationDelay: `${index * 50}ms`
               }}
             >
               {/* Subtle animated background glow */}
-              <div className="absolute inset-0 bg-gradient-to-br from-teal-500/5 via-transparent to-cyan-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg md:rounded-xl"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-accent/10 via-transparent to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg md:rounded-xl"></div>
               
               {/* Logo container */}
               <div className="relative z-10 w-full h-full flex items-center justify-center p-1">
@@ -103,8 +103,8 @@ export const Clients = () => {
               </div>
               
               {/* Hover overlay with client name */}
-              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 via-black/60 to-transparent p-1.5 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 rounded-b-lg md:rounded-b-xl">
-                <p className="text-white text-xs font-medium text-center truncate">
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-background/90 via-background/60 to-transparent p-1.5 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 rounded-b-lg md:rounded-b-xl">
+                <p className="text-foreground text-xs font-medium text-center truncate">
                   {client.name}
                 </p>
               </div>

@@ -15,7 +15,7 @@ export const Portfolio = () => {
   ];
 
   return (
-    <section className="py-12 md:py-20 px-4 md:px-6 bg-slate-900/40 relative overflow-hidden">
+    <section className="py-12 md:py-20 px-4 md:px-6 bg-muted/20 relative overflow-hidden">
       {/* Blended photo background element */}
       <div className="absolute top-20 right-10 md:right-20 opacity-10 pointer-events-none">
         <div className="relative">
@@ -30,10 +30,10 @@ export const Portfolio = () => {
       
       <div className="container mx-auto max-w-7xl relative z-10">
         <div className="text-center mb-12 md:mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold text-white mb-4 md:mb-6">
+          <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-4 md:mb-6">
             Top <span className="bg-gradient-to-r from-amber-200 via-teal-400 to-cyan-600 bg-clip-text text-transparent">Work</span>
           </h2>
-          <p className="text-slate-300 text-sm md:text-lg max-w-3xl mx-auto px-4">
+          <p className="text-muted-foreground text-sm md:text-lg max-w-3xl mx-auto px-4">
             A showcase of my diverse content creation work across multiple platforms and industries
           </p>
         </div>

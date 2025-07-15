@@ -38,10 +38,10 @@ export const Awards = () => {
   ];
 
   return (
-    <section className="py-20 px-6 bg-white/10">
+    <section className="py-20 px-6 bg-muted/20">
       <div className="container mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-5xl font-bold text-white mb-6">
+          <h2 className="text-5xl font-bold text-foreground mb-6">
             Awards & <span className="bg-gradient-to-r from-amber-200 to-teal-400 bg-clip-text text-transparent">Learning</span>
           </h2>
         </div>
@@ -49,24 +49,24 @@ export const Awards = () => {
         <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
           {/* Awards Section */}
           <div>
-            <h3 className="text-2xl font-semibold text-white mb-8 flex items-center justify-center md:justify-start">
-              <Trophy className="w-6 h-6 mr-3 text-amber-300" />
+            <h3 className="text-2xl font-semibold text-foreground mb-8 flex items-center justify-center md:justify-start">
+              <Trophy className="w-6 h-6 mr-3 text-amber-400" />
               Awards & Recognition
             </h3>
             <div className="space-y-6">
               {awards.map((award, index) => (
                 <div 
                   key={index}
-                  className="bg-white/10 backdrop-blur-lg rounded-xl p-6 hover:bg-white/20 transition-all duration-300 hover:scale-105 border border-teal-400/30"
+                  className="bg-card/50 backdrop-blur-lg rounded-xl p-6 hover:bg-card/70 transition-all duration-300 hover:scale-105 border border-border"
                 >
                   <div className="flex items-start space-x-4">
                     <div className="w-12 h-12 bg-gradient-to-r from-amber-200 to-cyan-600 rounded-full flex items-center justify-center flex-shrink-0">
-                      <award.icon className="w-6 h-6 text-slate-900" />
+                      <award.icon className="w-6 h-6 text-background" />
                     </div>
                     <div>
-                      <h4 className="text-lg font-semibold text-white mb-2">{award.title}</h4>
-                      <p className="text-teal-300 font-medium">{award.organization}</p>
-                      <p className="text-gray-300 text-sm mt-1">{award.date}</p>
+                      <h4 className="text-lg font-semibold text-foreground mb-2">{award.title}</h4>
+                      <p className="text-teal-400 font-medium">{award.organization}</p>
+                      <p className="text-muted-foreground text-sm mt-1">{award.date}</p>
                     </div>
                   </div>
                 </div>
@@ -76,7 +76,7 @@ export const Awards = () => {
           
           {/* Courses Section */}
           <div>
-            <h3 className="text-2xl font-semibold text-white mb-8 flex items-center justify-center md:justify-start">
+            <h3 className="text-2xl font-semibold text-foreground mb-8 flex items-center justify-center md:justify-start">
               <Star className="w-6 h-6 mr-3 text-teal-400" />
               Professional Development
             </h3>
@@ -87,10 +87,10 @@ export const Awards = () => {
                   href={course.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-white/10 backdrop-blur-lg rounded-xl p-4 hover:bg-white/20 transition-all duration-300 hover:scale-102 border border-teal-400/30 block group"
+                  className="bg-card/50 backdrop-blur-lg rounded-xl p-4 hover:bg-card/70 transition-all duration-300 hover:scale-102 border border-border block group"
                 >
                   <div className="flex items-center justify-between">
-                    <p className="text-gray-200 group-hover:text-white transition-colors">{course.title}</p>
+                    <p className="text-muted-foreground group-hover:text-foreground transition-colors">{course.title}</p>
                     <ExternalLink className="w-4 h-4 text-teal-400 opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0 ml-2" />
                   </div>
                 </a>
