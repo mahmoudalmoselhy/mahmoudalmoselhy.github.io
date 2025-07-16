@@ -8,39 +8,39 @@
 
 @layer base {
   :root {
-    /* Light mode - Enhanced beautiful theme */
-    --background: 0 0% 98%;
-    --foreground: 240 10% 3.9%;
+    /* Light mode - Readable with soft gray background */
+    --background: 210 20% 95%;
+    --foreground: 220 13% 18%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 240 10% 3.9%;
+    --card: 0 0% 98%;
+    --card-foreground: 220 13% 18%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 3.9%;
+    --popover: 0 0% 98%;
+    --popover-foreground: 220 13% 18%;
 
-    /* Primary brand colors with better contrast */
-    --primary: 220 38% 15%;
+    /* Primary brand colors with strong contrast */
+    --primary: 220 38% 20%;
     --primary-foreground: 210 40% 98%;
 
-    /* Secondary with subtle warmth */
-    --secondary: 47 100% 97%;
-    --secondary-foreground: 240 10% 3.9%;
+    /* Secondary with good readability */
+    --secondary: 210 40% 90%;
+    --secondary-foreground: 220 13% 18%;
 
-    /* Muted backgrounds with subtle tint */
-    --muted: 220 14% 96%;
-    --muted-foreground: 240 3.8% 46.1%;
+    /* Muted backgrounds with better contrast */
+    --muted: 210 40% 88%;
+    --muted-foreground: 220 13% 35%;
 
-    /* Accent with teal inspiration */
-    --accent: 180 100% 96%;
-    --accent-foreground: 180 100% 10%;
+    /* Accent with better contrast */
+    --accent: 210 40% 85%;
+    --accent-foreground: 220 38% 25%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    /* Softer borders */
-    --border: 220 13% 91%;
-    --input: 220 13% 91%;
-    --ring: 220 38% 15%;
+    /* Defined borders for readability */
+    --border: 220 13% 80%;
+    --input: 220 13% 80%;
+    --ring: 220 38% 20%;
 
     --radius: 0.75rem;
 
