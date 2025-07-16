@@ -16,22 +16,15 @@ export const Portfolio = () => {
 
   return (
     <section className="py-12 md:py-20 px-4 md:px-6 bg-muted/20 relative overflow-hidden">
-      {/* Blended photo background element */}
-      <div className="absolute top-20 right-10 md:right-20 opacity-10 pointer-events-none">
-        <div className="relative">
-          <img 
-            src="/lovable-uploads/45b256f3-6cbd-4bbc-b16e-0c4039fc89ef.png"
-            alt=""
-            className="w-80 h-80 md:w-96 md:h-96 object-cover rounded-full blur-sm mix-blend-overlay"
-          />
-          <div className="absolute inset-0 bg-gradient-to-br from-amber-200/20 via-teal-400/20 to-cyan-600/20 rounded-full"></div>
-        </div>
+      {/* Subtle geometric pattern background */}
+      <div className="absolute inset-0 opacity-[0.02] pointer-events-none">
+        <div className="absolute inset-0 light-subtle-pattern"></div>
       </div>
       
       <div className="container mx-auto max-w-7xl relative z-10">
         <div className="text-center mb-12 md:mb-16">
           <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-4 md:mb-6">
-            Top <span className="bg-gradient-to-r from-amber-200 via-teal-400 to-cyan-600 bg-clip-text text-transparent">Work</span>
+            Top <span className="bg-gradient-to-r from-gradient-start via-gradient-middle to-gradient-end bg-clip-text text-transparent animate-gradient">Work</span>
           </h2>
           <p className="text-muted-foreground text-sm md:text-lg max-w-3xl mx-auto px-4">
             A showcase of my diverse content creation work across multiple platforms and industries

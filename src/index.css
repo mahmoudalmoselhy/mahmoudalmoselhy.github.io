@@ -55,9 +55,9 @@
     --sidebar-ring: 180 90% 50%;
 
     /* Custom gradient colors for beautiful effects */
-    --gradient-start: 45 100% 88%;
-    --gradient-middle: 180 100% 85%;
-    --gradient-end: 200 100% 85%;
+    --gradient-start: 45 100% 75%;
+    --gradient-middle: 180 100% 70%;
+    --gradient-end: 200 100% 65%;
     
     /* Shadow colors */
     --shadow-light: 220 13% 85%;
