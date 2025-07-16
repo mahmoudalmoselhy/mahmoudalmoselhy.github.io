@@ -19,11 +19,11 @@ export const Hero = () => {
       </div>
       
       <div className="container mx-auto px-6 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left side - Text content */}
-          <div className="text-center lg:text-left animate-fade-in">
+        <div className="flex justify-center items-center">
+          {/* Centered content */}
+          <div className="text-center animate-fade-in max-w-4xl">
             <h1 className="text-5xl md:text-7xl font-bold text-foreground mb-6">
-              <span className="bg-gradient-to-r from-amber-200 via-teal-400 to-cyan-600 bg-clip-text text-transparent animate-pulse">
+              <span className="bg-gradient-to-r from-gradient-start via-gradient-middle to-gradient-end bg-clip-text text-transparent animate-gradient">
                 Mahmoud
               </span>
               <br />
@@ -34,27 +34,27 @@ export const Hero = () => {
               Content Team Leader & SEO Specialist
             </p>
             
-            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start space-y-4 sm:space-y-0 sm:space-x-6 text-muted-foreground mb-8">
+            <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 text-muted-foreground mb-8">
               <div className="flex items-center space-x-2">
-                <Mail className="w-5 h-5 text-amber-400" />
+                <Mail className="w-5 h-5 text-primary" />
                 <span>mahmoudalmoselhy@gmail.com</span>
               </div>
               <div className="flex items-center space-x-2">
-                <MessageCircle className="w-5 h-5 text-teal-400" />
+                <MessageCircle className="w-5 h-5 text-accent-foreground" />
                 <span>+20 112 152 9292</span>
               </div>
             </div>
             
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto lg:mx-0 mb-8 leading-relaxed">
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-8 leading-relaxed">
               "Like Albus Dumbledore said: 'words in my humble opinion are the most inexhaustible source of magic' 
               I do believe in the power of words where a man can invent a whole new world just with his pencil. 
               Working for 13 years now as a content creator."
             </p>
             
-            <div className="flex flex-col sm:flex-row justify-center lg:justify-start space-y-4 sm:space-y-0 sm:space-x-6">
+            <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
               <a 
                 href="#contact" 
-                className="bg-gradient-to-r from-amber-200 to-teal-400 text-background px-8 py-4 rounded-full font-semibold text-lg hover:scale-105 transform transition-all duration-300 shadow-lg hover:shadow-xl"
+                className="bg-gradient-to-r from-gradient-start to-gradient-middle text-background px-8 py-4 rounded-full font-semibold text-lg hover:scale-105 transform transition-all duration-300 shadow-lg hover:shadow-xl light-card-hover"
               >
                 Get In Touch
               </a>
@@ -62,7 +62,7 @@ export const Hero = () => {
                 href="https://linkedin.com/in/mahmoudalmoselhy" 
                 target="_blank"
                 rel="noopener noreferrer"
-                className="border-2 border-teal-400 text-teal-400 px-8 py-4 rounded-full font-semibold text-lg hover:bg-teal-400 hover:text-background transform transition-all duration-300 flex items-center justify-center space-x-2"
+                className="border-2 border-accent-foreground text-accent-foreground px-8 py-4 rounded-full font-semibold text-lg hover:bg-accent-foreground hover:text-background transform transition-all duration-300 flex items-center justify-center space-x-2"
               >
                 <Linkedin className="w-5 h-5" />
                 <span>LinkedIn</span>
@@ -71,23 +71,11 @@ export const Hero = () => {
                 href="https://drive.google.com/file/d/1CyGAxOd57PlaGx7E1ITqiMcf1Zk5M498/view?usp=sharing" 
                 target="_blank"
                 rel="noopener noreferrer"
-                className="border-2 border-amber-300 text-amber-300 px-8 py-4 rounded-full font-semibold text-lg hover:bg-amber-300 hover:text-background transform transition-all duration-300 flex items-center justify-center space-x-2"
+                className="border-2 border-primary text-primary px-8 py-4 rounded-full font-semibold text-lg hover:bg-primary hover:text-primary-foreground transform transition-all duration-300 flex items-center justify-center space-x-2"
               >
                 <FileText className="w-5 h-5" />
                 <span>CV</span>
               </a>
-            </div>
-          </div>
-          
-          {/* Right side - Photo */}
-          <div className="flex justify-center lg:justify-end animate-fade-in">
-            <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-amber-200 to-cyan-600 rounded-full blur-lg opacity-30 scale-110"></div>
-              <img 
-                src="/lovable-uploads/45b256f3-6cbd-4bbc-b16e-0c4039fc89ef.png"
-                alt="Mahmoud AlMoselhy"
-                className="relative w-80 h-80 md:w-96 md:h-96 object-cover rounded-full border-4 border-border shadow-2xl hover:scale-105 transition-transform duration-300"
-              />
             </div>
           </div>
         </div>
