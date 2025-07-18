@@ -24,8 +24,8 @@ export const Hero = () => {
           {/* Profile Image */}
           <div className="order-1 lg:order-2 animate-scale-in">
             <div className="relative">
-              <div className="w-80 h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-gradient-to-r from-gradient-start to-gradient-end p-1 bg-gradient-to-r from-gradient-start to-gradient-end">
-                <div className="w-full h-full rounded-full overflow-hidden bg-background">
+              <div className="w-80 h-96 lg:w-96 lg:h-[500px] rounded-2xl overflow-hidden border-4 border-gradient-to-r from-gradient-start to-gradient-end p-1 bg-gradient-to-r from-gradient-start to-gradient-end shadow-2xl">
+                <div className="w-full h-full rounded-xl overflow-hidden bg-background">
                   <img 
                     src="/lovable-uploads/acd4617b-aabd-46fe-9dbb-a619a771fdfc.png" 
                     alt="Mahmoud AlMoselhy - Content Team Leader & SEO Specialist"
@@ -36,6 +36,7 @@ export const Hero = () => {
               {/* Decorative elements */}
               <div className="absolute -top-4 -right-4 w-8 h-8 bg-gradient-to-r from-gradient-start to-gradient-middle rounded-full animate-pulse"></div>
               <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-gradient-to-r from-gradient-middle to-gradient-end rounded-full animate-pulse animation-delay-1000"></div>
+              <div className="absolute top-1/2 -left-6 w-4 h-4 bg-gradient-to-r from-gradient-end to-gradient-start rounded-full animate-pulse animation-delay-2000"></div>
             </div>
           </div>
 
