@@ -2,6 +2,7 @@
 import React from 'react';
 import { ArrowDown, Linkedin, Mail, MessageCircle, FileText } from 'lucide-react';
 import { ThemeToggle } from '@/components/ThemeToggle';
+import { Link } from 'react-router-dom';
 
 export const Hero = () => {
   return (
@@ -67,15 +68,13 @@ export const Hero = () => {
                 <Linkedin className="w-5 h-5" />
                 <span>LinkedIn</span>
               </a>
-              <a 
-                href="https://drive.google.com/file/d/1CyGAxOd57PlaGx7E1ITqiMcf1Zk5M498/view?usp=sharing" 
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                to="/cv"
                 className="border-2 border-primary text-primary px-8 py-4 rounded-full font-semibold text-lg hover:bg-primary hover:text-primary-foreground transform transition-all duration-300 flex items-center justify-center space-x-2"
               >
                 <FileText className="w-5 h-5" />
-                <span>CV</span>
-              </a>
+                <span>View CV</span>
+              </Link>
             </div>
           </div>
         </div>
