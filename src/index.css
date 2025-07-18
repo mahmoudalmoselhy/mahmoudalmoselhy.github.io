@@ -8,60 +8,60 @@
 
 @layer base {
   :root {
-    /* Light mode - Readable with soft gray background */
-    --background: 210 20% 95%;
-    --foreground: 220 13% 10%;
+    /* Light mode - Clean and modern */
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
 
-    --card: 0 0% 98%;
-    --card-foreground: 220 13% 10%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
 
-    --popover: 0 0% 98%;
-    --popover-foreground: 220 13% 10%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
 
-    /* Primary brand colors with strong contrast */
-    --primary: 220 38% 20%;
+    /* Primary brand colors */
+    --primary: 221.2 83.2% 53.3%;
     --primary-foreground: 210 40% 98%;
 
-    /* Secondary with good readability */
-    --secondary: 210 40% 90%;
-    --secondary-foreground: 220 13% 8%;
+    /* Secondary with subtle contrast */
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 240 5.9% 10%;
 
-    /* Muted backgrounds with better contrast */
-    --muted: 210 40% 88%;
-    --muted-foreground: 220 13% 20%;
+    /* Muted backgrounds */
+    --muted: 210 40% 96%;
+    --muted-foreground: 240 3.8% 46.1%;
 
-    /* Accent with better contrast */
-    --accent: 210 40% 85%;
-    --accent-foreground: 220 38% 15%;
+    /* Accent colors */
+    --accent: 210 40% 96%;
+    --accent-foreground: 240 5.9% 10%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    /* Defined borders for readability */
-    --border: 220 13% 80%;
-    --input: 220 13% 80%;
-    --ring: 220 38% 20%;
+    /* Clean borders */
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221.2 83.2% 53.3%;
 
     --radius: 0.75rem;
 
     /* Enhanced sidebar colors */
-    --sidebar-background: 220 14% 98%;
+    --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 220 38% 15%;
+    --sidebar-primary: 221.2 83.2% 53.3%;
     --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 180 100% 96%;
-    --sidebar-accent-foreground: 180 100% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 180 90% 50%;
+    --sidebar-accent: 210 40% 96%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 214.3 31.8% 91.4%;
+    --sidebar-ring: 221.2 83.2% 53.3%;
 
-    /* Custom gradient colors for beautiful effects */
-    --gradient-start: 45 100% 75%;
-    --gradient-middle: 180 100% 70%;
-    --gradient-end: 200 100% 65%;
+    /* Beautiful gradient colors */
+    --gradient-start: 221.2 83.2% 53.3%;
+    --gradient-middle: 262.1 83.3% 57.8%;
+    --gradient-end: 270 95.2% 75.3%;
     
-    /* Shadow colors */
-    --shadow-light: 220 13% 85%;
-    --shadow-medium: 220 13% 75%;
+    /* Subtle shadow colors */
+    --shadow-light: 220 13% 91%;
+    --shadow-medium: 220 13% 85%;
   }
 
   .dark {
