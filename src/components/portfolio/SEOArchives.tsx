@@ -28,9 +28,9 @@ export const SEOArchives = ({ archives }: SEOArchivesProps) => {
             href={archive.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="group light-glass rounded-xl md:rounded-2xl p-6 md:p-8 light-card-hover hover:scale-105 transition-all duration-300 border border-border/50 hover:border-primary/70 bg-card/80 hover:bg-card"
+            className="group liquid-glass liquid-glass-hover rounded-3xl p-6 md:p-8 cursor-pointer transform"
           >
-            <div className="w-16 h-16 md:w-20 md:h-20 bg-primary/10 rounded-full flex items-center justify-center mb-4 md:mb-6 group-hover:scale-110 transition-transform duration-300 p-3 mx-auto border border-border">
+            <div className="w-16 h-16 md:w-20 md:h-20 liquid-button rounded-full flex items-center justify-center mb-4 md:mb-6 group-hover:scale-110 transition-transform duration-500 p-3 mx-auto">
               <img
                 src={archive.logo}
                 alt={archive.title}
@@ -38,17 +38,17 @@ export const SEOArchives = ({ archives }: SEOArchivesProps) => {
               />
             </div>
             
-            <h4 className="text-lg md:text-xl font-semibold text-foreground mb-3 md:mb-4 group-hover:text-primary transition-colors duration-300 text-center">
+            <h4 className="text-lg md:text-xl font-semibold text-foreground mb-3 md:mb-4 group-hover:text-primary transition-all duration-500 text-center">
               {archive.title}
             </h4>
             
-            <p className="text-muted-foreground text-sm md:text-base leading-relaxed mb-4 md:mb-6 text-center">
+            <p className="text-muted-foreground text-sm md:text-base leading-relaxed mb-4 md:mb-6 text-center transition-colors duration-500">
               {archive.description}
             </p>
             
-            <div className="flex items-center justify-center text-accent-foreground text-sm md:text-base font-medium group-hover:text-primary transition-colors duration-300">
+            <div className="flex items-center justify-center text-accent-foreground text-sm md:text-base font-medium group-hover:text-primary transition-all duration-500">
               <span>View Archive</span>
-              <ExternalLink className="w-4 h-4 md:w-5 md:h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+              <ExternalLink className="w-4 h-4 md:w-5 md:h-5 ml-2 group-hover:translate-x-1 group-hover:scale-110 transition-all duration-500" />
             </div>
           </a>
         ))}
