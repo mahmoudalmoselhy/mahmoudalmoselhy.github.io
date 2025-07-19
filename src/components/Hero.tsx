@@ -20,28 +20,9 @@ export const Hero = () => {
       </div>
       
       <div className="container mx-auto px-6 relative z-10">
-        <div className="flex flex-col lg:flex-row justify-center items-center gap-12 lg:gap-16">
-          {/* Profile Image */}
-          <div className="order-1 lg:order-2 animate-scale-in">
-            <div className="relative">
-              <div className="w-80 h-96 lg:w-96 lg:h-[500px] rounded-2xl overflow-hidden shadow-2xl backdrop-blur-sm bg-gradient-to-br from-background/50 to-muted/30">
-                <img 
-                  src="/lovable-uploads/acd4617b-aabd-46fe-9dbb-a619a771fdfc.png" 
-                  alt="Mahmoud AlMoselhy - Content Team Leader & SEO Specialist"
-                  className="w-full h-full object-cover object-center mix-blend-multiply dark:mix-blend-normal opacity-90 hover:opacity-100 transition-opacity duration-300"
-                />
-                {/* Subtle overlay for better blending */}
-                <div className="absolute inset-0 bg-gradient-to-br from-gradient-start/10 via-transparent to-gradient-end/10 pointer-events-none"></div>
-              </div>
-              {/* Floating decorative elements */}
-              <div className="absolute -top-6 -right-6 w-12 h-12 bg-gradient-to-r from-gradient-start/30 to-gradient-middle/30 rounded-full animate-pulse blur-sm"></div>
-              <div className="absolute -bottom-6 -left-6 w-8 h-8 bg-gradient-to-r from-gradient-middle/30 to-gradient-end/30 rounded-full animate-pulse animation-delay-1000 blur-sm"></div>
-              <div className="absolute top-1/4 -left-8 w-6 h-6 bg-gradient-to-r from-gradient-end/30 to-gradient-start/30 rounded-full animate-pulse animation-delay-2000 blur-sm"></div>
-            </div>
-          </div>
-
+        <div className="flex justify-center items-center">
           {/* Text content */}
-          <div className="text-center lg:text-left animate-fade-in max-w-2xl order-2 lg:order-1">
+          <div className="text-center animate-fade-in max-w-4xl">
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6">
               <span className="bg-gradient-to-r from-gradient-start via-gradient-middle to-gradient-end bg-clip-text text-transparent animate-gradient">
                 Mahmoud
