@@ -15,7 +15,7 @@ export const Portfolio = () => {
   ];
 
   return (
-    <section className="py-12 md:py-20 px-4 md:px-6 bg-muted/20 relative overflow-hidden">
+    <section className="py-12 md:py-20 px-4 md:px-6 relative overflow-hidden">
       {/* Subtle geometric pattern background */}
       <div className="absolute inset-0 opacity-[0.02] pointer-events-none">
         <div className="absolute inset-0 light-subtle-pattern"></div>
