@@ -36,28 +36,95 @@ const featuredWorks: FeaturedWork[] = [
 
 export const FeaturedWorkStack = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isStackScrolling, setIsStackScrolling] = useState(false);
+  const [scrollDirection, setScrollDirection] = useState<'down' | 'up'>('down');
 
   useEffect(() => {
-    const handleScroll = () => {
+    let lastScrollY = window.scrollY;
+
+    const handleWheel = (e: WheelEvent) => {
       const stackElement = document.getElementById('featured-stack');
       if (!stackElement) return;
       
       const rect = stackElement.getBoundingClientRect();
-      const elementTop = rect.top;
-      const elementHeight = rect.height;
       const windowHeight = window.innerHeight;
+      const stackCenter = rect.top + rect.height / 2;
+      const screenCenter = windowHeight / 2;
       
-      // Calculate progress when element is in viewport
-      if (elementTop <= windowHeight && elementTop >= -elementHeight) {
-        const scrollProgress = Math.max(0, (windowHeight - elementTop) / (windowHeight + elementHeight));
-        const newIndex = Math.floor(scrollProgress * featuredWorks.length);
-        setCurrentIndex(Math.min(newIndex, featuredWorks.length - 1));
+      // Check if stack is centered (within a tolerance)
+      const isCentered = Math.abs(stackCenter - screenCenter) < 50;
+      
+      const wheelDirection = e.deltaY > 0 ? 'down' : 'up';
+      setScrollDirection(wheelDirection);
+
+      if (isCentered && !isStackScrolling) {
+        // Start stack scrolling when stack is centered
+        setIsStackScrolling(true);
+        e.preventDefault();
+        return;
+      }
+
+      if (isStackScrolling) {
+        e.preventDefault();
+        
+        if (wheelDirection === 'down') {
+          // Scrolling down through stack
+          if (currentIndex < featuredWorks.length - 1) {
+            setCurrentIndex(prev => prev + 1);
+          } else {
+            // Reached last card, allow page scroll to resume
+            setIsStackScrolling(false);
+            // Allow this scroll event to continue
+            setTimeout(() => {
+              window.scrollBy(0, e.deltaY);
+            }, 0);
+          }
+        } else {
+          // Scrolling up through stack
+          if (currentIndex > 0) {
+            setCurrentIndex(prev => prev - 1);
+          } else {
+            // Reached first card, allow page scroll to resume
+            setIsStackScrolling(false);
+            // Allow this scroll event to continue
+            setTimeout(() => {
+              window.scrollBy(0, e.deltaY);
+            }, 0);
+          }
+        }
       }
     };
 
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      const direction = currentScrollY > lastScrollY ? 'down' : 'up';
+      setScrollDirection(direction);
+      lastScrollY = currentScrollY;
+
+      // Reset stack scrolling if user scrolls away from center
+      if (isStackScrolling) {
+        const stackElement = document.getElementById('featured-stack');
+        if (stackElement) {
+          const rect = stackElement.getBoundingClientRect();
+          const windowHeight = window.innerHeight;
+          const stackCenter = rect.top + rect.height / 2;
+          const screenCenter = windowHeight / 2;
+          
+          if (Math.abs(stackCenter - screenCenter) > 100) {
+            setIsStackScrolling(false);
+          }
+        }
+      }
+    };
+
+    window.addEventListener('wheel', handleWheel, { passive: false });
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    
+    return () => {
+      window.removeEventListener('wheel', handleWheel);
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [currentIndex, isStackScrolling]);
 
   return (
     <div id="featured-stack" className="relative h-[500px] md:h-[600px] flex items-center justify-center mb-12 w-full">
