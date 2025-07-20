@@ -36,63 +36,36 @@ const featuredWorks: FeaturedWork[] = [
 
 export const FeaturedWorkStack = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [isScrollLocked, setIsScrollLocked] = useState(false);
 
   useEffect(() => {
-    const handleScroll = (e: Event) => {
+    const handleWheel = (e: WheelEvent) => {
       const stackElement = document.getElementById('featured-stack');
       if (!stackElement) return;
       
       const rect = stackElement.getBoundingClientRect();
-      const elementTop = rect.top;
-      const elementHeight = rect.height;
-      const windowHeight = window.innerHeight;
+      const isInStack = rect.top <= window.innerHeight * 0.7 && rect.bottom >= window.innerHeight * 0.3;
       
-      // Check if stack is in viewport
-      const isInViewport = elementTop <= windowHeight * 0.5 && elementTop >= -elementHeight * 0.5;
-      
-      if (isInViewport && !isScrollLocked) {
-        // Start scroll lock when entering the stack area
-        setIsScrollLocked(true);
-        e.preventDefault();
-        return false;
-      }
-      
-      if (isScrollLocked) {
+      if (isInStack) {
         e.preventDefault();
         
-        // Handle manual scrolling through cards
-        if (e instanceof WheelEvent) {
-          const delta = e.deltaY > 0 ? 1 : -1;
-          const newIndex = Math.max(0, Math.min(featuredWorks.length - 1, currentIndex + delta));
-          
-          setCurrentIndex(newIndex);
-          
-          // Release scroll lock when reaching the last card and scrolling down
-          if (newIndex === featuredWorks.length - 1 && delta > 0) {
-            setTimeout(() => {
-              setIsScrollLocked(false);
-            }, 300);
-          }
-        }
-        
-        return false;
+        const delta = e.deltaY > 0 ? 1 : -1;
+        setCurrentIndex(prev => {
+          const newIndex = Math.max(0, Math.min(featuredWorks.length - 1, prev + delta));
+          return newIndex;
+        });
       }
     };
 
-    // Add both scroll and wheel listeners
-    window.addEventListener('scroll', handleScroll, { passive: false });
-    window.addEventListener('wheel', handleScroll, { passive: false });
+    window.addEventListener('wheel', handleWheel, { passive: false });
     
     return () => {
-      window.removeEventListener('scroll', handleScroll);
-      window.removeEventListener('wheel', handleScroll);
+      window.removeEventListener('wheel', handleWheel);
     };
-  }, [currentIndex, isScrollLocked]);
+  }, []);
 
   return (
-    <div id="featured-stack" className="relative h-[400px] md:h-[500px] flex items-center justify-center mb-12 w-full">
-      <div className="relative w-full h-full max-w-4xl">
+    <div id="featured-stack" className="relative h-[500px] md:h-[600px] flex items-center justify-center mb-12 w-full">
+      <div className="relative w-full h-full max-w-5xl">
         {featuredWorks.map((work, index) => (
           <a
             key={index}
@@ -103,17 +76,17 @@ export const FeaturedWorkStack = () => {
               index === currentIndex 
                 ? 'z-20 transform-none opacity-100 scale-100' 
                 : index < currentIndex
-                ? 'z-10 transform translate-y-[-30px] opacity-40 scale-95'
-                : 'z-0 transform translate-y-[30px] opacity-20 scale-90'
+                ? 'z-10 transform translate-y-[-30px] opacity-40 scale-98'
+                : 'z-0 transform translate-y-[30px] opacity-20 scale-95'
             }`}
           >
             <div className="relative h-full w-full rounded-2xl overflow-hidden shadow-2xl group-hover:shadow-3xl transition-all duration-500">
               <img 
                 src={work.image} 
                 alt={work.title}
-                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                className="w-full h-full object-contain bg-muted group-hover:scale-105 transition-transform duration-700"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-8">
                 <h3 className="text-white font-bold text-xl md:text-3xl mb-4 transform group-hover:translate-y-[-8px] transition-transform duration-500">
                   {work.title}
