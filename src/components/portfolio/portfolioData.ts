@@ -1,37 +1,38 @@
-// Featured work data for the scrollable stack
-export const featuredWorks = [
-  {
-    title: "Samsung Galaxy Watch 4 Review",
-    image: "/lovable-uploads/47946a00-0211-44f2-aae7-1d202d244307.png",
-    link: "https://www.3arrafni.com/samsung-galaxy-watch-4-review/"
-  },
-  {
-    title: "Honey Scam Explained", 
-    image: "/lovable-uploads/1eab8214-630c-40cb-ac39-89f3397f0edc.png",
-    link: "https://www.3arrafni.com/honey-scam-explained/"
-  },
-  {
-    title: "Samsung Galaxy Buds FE Review",
-    image: "/lovable-uploads/57e60077-65f6-48a5-bd9f-1c39c2955188.png", 
-    link: "https://www.3arrafni.com/samsung-galaxy-buds-fe-review/"
-  },
-  {
-    title: "UGREEN Nexode 65W GaN Charging Station",
-    image: "/lovable-uploads/ef3c0378-d232-4daa-906d-98670f8f1499.png",
-    link: "https://www.3arrafni.com/ugreen-nexode-65w-gan-charging-station/"
-  },
-  {
-    title: "Black Myth Wukong Review",
-    image: "/lovable-uploads/db4a486f-bc67-4588-bf22-fb3dec874964.png",
-    link: "https://www.3arrafni.com/black-myth-wukong-review/"
-  }
-];
-
 export const portfolioSections = [
   {
     title: "Content Writing - 3arrafni.com",
     description: "Leading NVIDIA MENA news translation and tech content creation",
     items: [
+      {
+        title: "Samsung Galaxy Watch 4 Review",
+        description: "5000+ word comprehensive review (27 hours of writing)",
+        link: "https://www.3arrafni.com/samsung-galaxy-watch-4-review/",
+        logo: "/lovable-uploads/693924e3-2bc0-456b-8afe-d100ef0390f8.png"
+      },
+      {
+        title: "Honey Scam Explained",
+        description: "Technical news article with detailed explanations",
+        link: "https://www.3arrafni.com/honey-scam-explained/",
+        logo: "/lovable-uploads/693924e3-2bc0-456b-8afe-d100ef0390f8.png"
+      },
+      {
+        title: "Samsung Galaxy Buds FE Review",
+        description: "First personal photography experience for product review",
+        link: "https://www.3arrafni.com/samsung-galaxy-buds-fe-review/",
+        logo: "/lovable-uploads/693924e3-2bc0-456b-8afe-d100ef0390f8.png"
+      },
+      {
+        title: "UGREEN Nexode 65W GaN Charging Station",
+        description: "Product review with original photography",
+        link: "https://www.3arrafni.com/ugreen-nexode-65w-gan-charging-station/",
+        logo: "/lovable-uploads/693924e3-2bc0-456b-8afe-d100ef0390f8.png"
+      },
+      {
+        title: "Black Myth: Wukong Review",
+        description: "Gaming review exploring new content territory",
+        link: "https://www.3arrafni.com/black-myth-wukong-review/",
+        logo: "/lovable-uploads/693924e3-2bc0-456b-8afe-d100ef0390f8.png"
+      },
       {
         title: "UGREEN Nexode PowerBank 200W",
         description: "Comprehensive powerbank review and testing",
