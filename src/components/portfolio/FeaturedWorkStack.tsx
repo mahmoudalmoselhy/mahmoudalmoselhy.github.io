@@ -38,34 +38,30 @@ export const FeaturedWorkStack = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
-    const handleWheel = (e: WheelEvent) => {
+    const handleScroll = () => {
       const stackElement = document.getElementById('featured-stack');
       if (!stackElement) return;
       
       const rect = stackElement.getBoundingClientRect();
-      const isInStack = rect.top <= window.innerHeight * 0.7 && rect.bottom >= window.innerHeight * 0.3;
+      const elementTop = rect.top;
+      const elementHeight = rect.height;
+      const windowHeight = window.innerHeight;
       
-      if (isInStack) {
-        e.preventDefault();
-        
-        const delta = e.deltaY > 0 ? 1 : -1;
-        setCurrentIndex(prev => {
-          const newIndex = Math.max(0, Math.min(featuredWorks.length - 1, prev + delta));
-          return newIndex;
-        });
+      // Calculate progress when element is in viewport
+      if (elementTop <= windowHeight && elementTop >= -elementHeight) {
+        const scrollProgress = Math.max(0, (windowHeight - elementTop) / (windowHeight + elementHeight));
+        const newIndex = Math.floor(scrollProgress * featuredWorks.length);
+        setCurrentIndex(Math.min(newIndex, featuredWorks.length - 1));
       }
     };
 
-    window.addEventListener('wheel', handleWheel, { passive: false });
-    
-    return () => {
-      window.removeEventListener('wheel', handleWheel);
-    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
     <div id="featured-stack" className="relative h-[500px] md:h-[600px] flex items-center justify-center mb-12 w-full">
-      <div className="relative w-full h-full max-w-5xl">
+      <div className="relative w-full h-full">
         {featuredWorks.map((work, index) => (
           <a
             key={index}
@@ -84,7 +80,7 @@ export const FeaturedWorkStack = () => {
               <img 
                 src={work.image} 
                 alt={work.title}
-                className="w-full h-full object-contain bg-muted group-hover:scale-105 transition-transform duration-700"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-8">
@@ -95,20 +91,6 @@ export const FeaturedWorkStack = () => {
               </div>
             </div>
           </a>
-        ))}
-      </div>
-      
-      {/* Scroll indicator */}
-      <div className="absolute right-6 top-1/2 transform -translate-y-1/2 flex flex-col space-y-3">
-        {featuredWorks.map((_, index) => (
-          <div
-            key={index}
-            className={`w-3 h-12 rounded-full transition-all duration-500 ${
-              index === currentIndex 
-                ? 'bg-gradient-to-b from-gradient-start to-gradient-end scale-110' 
-                : 'bg-muted-foreground/40 scale-100'
-            }`}
-          />
         ))}
       </div>
     </div>
