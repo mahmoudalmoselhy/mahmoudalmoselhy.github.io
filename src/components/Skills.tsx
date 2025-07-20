@@ -41,7 +41,7 @@ export const Skills = () => {
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-5xl font-bold text-foreground mb-6">
-            My <span className="bg-gradient-to-r from-amber-200 to-teal-400 bg-clip-text text-transparent">Skills</span>
+            My <span className="bg-gradient-to-r from-gradient-start to-gradient-end bg-clip-text text-transparent">Skills</span>
           </h2>
         </div>
         
@@ -52,7 +52,7 @@ export const Skills = () => {
               className="bg-card/50 backdrop-blur-lg rounded-2xl p-8 hover:bg-card/70 transition-all duration-500 hover:scale-105 hover:shadow-2xl group border border-border hover:border-accent"
               style={{ animationDelay: `${index * 150}ms` }}
             >
-              <div className="w-16 h-16 bg-gradient-to-r from-teal-400 to-cyan-600 rounded-full flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">
+              <div className="w-16 h-16 bg-gradient-to-r from-gradient-start to-gradient-end rounded-full flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">
                 <category.icon className="w-8 h-8 text-white" />
               </div>
               

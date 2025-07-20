@@ -45,7 +45,7 @@ export const Experience = () => {
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-5xl font-bold text-foreground mb-6">
-            Professional <span className="bg-gradient-to-r from-amber-200 to-cyan-600 bg-clip-text text-transparent">Experience</span>
+            Professional <span className="bg-gradient-to-r from-gradient-start to-gradient-end bg-clip-text text-transparent">Experience</span>
           </h2>
         </div>
         
@@ -59,7 +59,7 @@ export const Experience = () => {
               <div className="flex flex-col md:flex-row justify-between items-start mb-6">
                 <div>
                   <h3 className="text-2xl font-bold text-foreground mb-2">{exp.role}</h3>
-                  <h4 className="text-xl text-teal-400 font-semibold mb-2">{exp.company}</h4>
+                  <h4 className="text-xl text-primary font-semibold mb-2">{exp.company}</h4>
                   <div className="flex items-center space-x-4 text-muted-foreground">
                     <div className="flex items-center space-x-2">
                       <Calendar className="w-4 h-4" />
@@ -76,7 +76,7 @@ export const Experience = () => {
               <ul className="space-y-3">
                 {exp.responsibilities.map((resp, respIndex) => (
                   <li key={respIndex} className="flex items-start space-x-3 text-muted-foreground">
-                    <div className="w-2 h-2 bg-gradient-to-r from-amber-200 to-cyan-600 rounded-full mt-2 flex-shrink-0"></div>
+                    <div className="w-2 h-2 bg-gradient-to-r from-gradient-start to-gradient-end rounded-full mt-2 flex-shrink-0"></div>
                     <span className="leading-relaxed">{resp}</span>
                   </li>
                 ))}
