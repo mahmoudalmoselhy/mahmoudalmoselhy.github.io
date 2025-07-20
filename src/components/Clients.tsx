@@ -73,12 +73,12 @@ export const Clients = () => {
       <div className="container mx-auto max-w-5xl">
         <div className="text-center mb-6 md:mb-8">
           <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-2 md:mb-3 animate-fade-in">
-            <span className="bg-gradient-to-r from-amber-200 via-teal-400 to-cyan-600 bg-clip-text text-transparent animate-gradient">Accounts</span>
+            <span className="bg-gradient-to-r from-gradient-start via-gradient-middle to-gradient-end bg-clip-text text-transparent animate-gradient">Accounts</span>
           </h2>
           <p className="text-muted-foreground text-sm max-w-xl mx-auto animate-fade-in animation-delay-1000 px-4">
             Trusted partnerships with leading brands and organizations across various industries
           </p>
-          <div className="w-10 md:w-12 h-1 bg-gradient-to-r from-amber-200 to-cyan-600 mx-auto mt-2 md:mt-3 rounded-full animate-scale-in animation-delay-2000"></div>
+          <div className="w-10 md:w-12 h-1 bg-gradient-to-r from-gradient-start to-gradient-end mx-auto mt-2 md:mt-3 rounded-full animate-scale-in animation-delay-2000"></div>
         </div>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 md:gap-3 items-center justify-items-center">
@@ -117,7 +117,7 @@ export const Clients = () => {
           {[...Array(5)].map((_, i) => (
             <div
               key={i}
-              className={`w-1 h-1 rounded-full bg-gradient-to-r from-amber-200 to-cyan-600 animate-pulse`}
+              className={`w-1 h-1 rounded-full bg-gradient-to-r from-gradient-start to-gradient-end animate-pulse`}
               style={{ animationDelay: `${i * 200}ms` }}
             ></div>
           ))}
