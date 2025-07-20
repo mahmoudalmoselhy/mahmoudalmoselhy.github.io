@@ -36,9 +36,10 @@ const featuredWorks: FeaturedWork[] = [
 
 export const FeaturedWorkStack = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isScrollLocked, setIsScrollLocked] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
+    const handleScroll = (e: Event) => {
       const stackElement = document.getElementById('featured-stack');
       if (!stackElement) return;
       
@@ -47,17 +48,47 @@ export const FeaturedWorkStack = () => {
       const elementHeight = rect.height;
       const windowHeight = window.innerHeight;
       
-      // Calculate progress when element is in viewport
-      if (elementTop <= windowHeight && elementTop >= -elementHeight) {
-        const scrollProgress = Math.max(0, (windowHeight - elementTop) / (windowHeight + elementHeight));
-        const newIndex = Math.floor(scrollProgress * featuredWorks.length);
-        setCurrentIndex(Math.min(newIndex, featuredWorks.length - 1));
+      // Check if stack is in viewport
+      const isInViewport = elementTop <= windowHeight * 0.5 && elementTop >= -elementHeight * 0.5;
+      
+      if (isInViewport && !isScrollLocked) {
+        // Start scroll lock when entering the stack area
+        setIsScrollLocked(true);
+        e.preventDefault();
+        return false;
+      }
+      
+      if (isScrollLocked) {
+        e.preventDefault();
+        
+        // Handle manual scrolling through cards
+        if (e instanceof WheelEvent) {
+          const delta = e.deltaY > 0 ? 1 : -1;
+          const newIndex = Math.max(0, Math.min(featuredWorks.length - 1, currentIndex + delta));
+          
+          setCurrentIndex(newIndex);
+          
+          // Release scroll lock when reaching the last card and scrolling down
+          if (newIndex === featuredWorks.length - 1 && delta > 0) {
+            setTimeout(() => {
+              setIsScrollLocked(false);
+            }, 300);
+          }
+        }
+        
+        return false;
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    // Add both scroll and wheel listeners
+    window.addEventListener('scroll', handleScroll, { passive: false });
+    window.addEventListener('wheel', handleScroll, { passive: false });
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('wheel', handleScroll);
+    };
+  }, [currentIndex, isScrollLocked]);
 
   return (
     <div id="featured-stack" className="relative h-[400px] md:h-[500px] flex items-center justify-center mb-12 w-full">
