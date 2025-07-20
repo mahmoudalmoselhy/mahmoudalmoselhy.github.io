@@ -36,95 +36,62 @@ const featuredWorks: FeaturedWork[] = [
 
 export const FeaturedWorkStack = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [isStackScrolling, setIsStackScrolling] = useState(false);
-  const [scrollDirection, setScrollDirection] = useState<'down' | 'up'>('down');
 
   useEffect(() => {
-    let lastScrollY = window.scrollY;
-
-    const handleWheel = (e: WheelEvent) => {
+    const handleScroll = () => {
       const stackElement = document.getElementById('featured-stack');
       if (!stackElement) return;
       
       const rect = stackElement.getBoundingClientRect();
       const windowHeight = window.innerHeight;
-      const stackCenter = rect.top + rect.height / 2;
-      const screenCenter = windowHeight / 2;
       
-      // Check if stack is centered (within a tolerance)
-      const isCentered = Math.abs(stackCenter - screenCenter) < 50;
+      // Calculate if stack is in viewport
+      const stackTop = rect.top;
+      const stackBottom = rect.bottom;
+      const isInViewport = stackTop < windowHeight && stackBottom > 0;
       
-      const wheelDirection = e.deltaY > 0 ? 'down' : 'up';
-      setScrollDirection(wheelDirection);
-
-      if (isCentered && !isStackScrolling) {
-        // Start stack scrolling when stack is centered
-        setIsStackScrolling(true);
-        e.preventDefault();
-        return;
-      }
-
-      if (isStackScrolling) {
-        e.preventDefault();
+      if (isInViewport) {
+        // Calculate scroll progress through the stack area
+        const viewportCenter = windowHeight / 2;
+        const stackCenter = stackTop + rect.height / 2;
+        const distanceFromCenter = Math.abs(stackCenter - viewportCenter);
+        const maxDistance = windowHeight / 2 + rect.height / 2;
         
-        if (wheelDirection === 'down') {
-          // Scrolling down through stack
-          if (currentIndex < featuredWorks.length - 1) {
-            setCurrentIndex(prev => prev + 1);
-          } else {
-            // Reached last card, allow page scroll to resume
-            setIsStackScrolling(false);
-            // Allow this scroll event to continue
-            setTimeout(() => {
-              window.scrollBy(0, e.deltaY);
-            }, 0);
-          }
-        } else {
-          // Scrolling up through stack
-          if (currentIndex > 0) {
-            setCurrentIndex(prev => prev - 1);
-          } else {
-            // Reached first card, allow page scroll to resume
-            setIsStackScrolling(false);
-            // Allow this scroll event to continue
-            setTimeout(() => {
-              window.scrollBy(0, e.deltaY);
-            }, 0);
-          }
-        }
-      }
-    };
-
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-      const direction = currentScrollY > lastScrollY ? 'down' : 'up';
-      setScrollDirection(direction);
-      lastScrollY = currentScrollY;
-
-      // Reset stack scrolling if user scrolls away from center
-      if (isStackScrolling) {
-        const stackElement = document.getElementById('featured-stack');
-        if (stackElement) {
-          const rect = stackElement.getBoundingClientRect();
-          const windowHeight = window.innerHeight;
-          const stackCenter = rect.top + rect.height / 2;
-          const screenCenter = windowHeight / 2;
+        // When stack is near center, calculate card index based on relative position
+        if (distanceFromCenter < maxDistance) {
+          const progressThroughStack = Math.max(0, Math.min(1, 
+            (viewportCenter - stackTop) / rect.height
+          ));
           
-          if (Math.abs(stackCenter - screenCenter) > 100) {
-            setIsStackScrolling(false);
+          // Map progress to card index
+          const newIndex = Math.floor(progressThroughStack * featuredWorks.length);
+          const clampedIndex = Math.max(0, Math.min(featuredWorks.length - 1, newIndex));
+          
+          if (clampedIndex !== currentIndex) {
+            setCurrentIndex(clampedIndex);
           }
         }
       }
     };
 
-    window.addEventListener('wheel', handleWheel, { passive: false });
-    window.addEventListener('scroll', handleScroll);
+    // Use requestAnimationFrame for smoother updates
+    let ticking = false;
+    const smoothHandleScroll = () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          handleScroll();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+
+    window.addEventListener('scroll', smoothHandleScroll, { passive: true });
     
     return () => {
-      window.removeEventListener('wheel', handleWheel);
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('scroll', smoothHandleScroll);
     };
-  }, [currentIndex, isStackScrolling]);
+  }, [currentIndex]);
 
   return (
     <div 
