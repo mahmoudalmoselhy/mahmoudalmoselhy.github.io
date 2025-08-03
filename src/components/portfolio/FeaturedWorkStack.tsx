@@ -47,6 +47,8 @@ export const FeaturedWorkStack = () => {
     setCurrentIndex(prev => prev < featuredWorks.length - 1 ? prev + 1 : 0);
   };
 
+  // Disabled scroll-based navigation for manual control only
+  /*
   useEffect(() => {
     const handleScroll = () => {
       const stackElement = document.getElementById('featured-stack');
@@ -102,6 +104,7 @@ export const FeaturedWorkStack = () => {
       window.removeEventListener('scroll', smoothHandleScroll);
     };
   }, [currentIndex]);
+  */
 
   return (
     <div 
@@ -182,25 +185,25 @@ export const FeaturedWorkStack = () => {
         })}
       </div>
       
-      {/* Navigation arrows at bottom left */}
-      <div className="absolute bottom-6 left-6 flex gap-2 z-40">
+      {/* Navigation arrows at bottom right */}
+      <div className="absolute bottom-4 right-4 md:bottom-6 md:right-6 flex gap-2 md:gap-3 z-40">
         <Button
-          variant="secondary"
+          variant="outline"
           size="icon"
           onClick={goToPrevious}
-          className="bg-background/80 backdrop-blur-sm hover:bg-background/90 border border-border/50"
+          className="h-12 w-12 md:h-14 md:w-14 bg-background/95 backdrop-blur-md hover:bg-primary hover:text-primary-foreground border-2 border-primary/20 hover:border-primary shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
           aria-label="Previous work"
         >
-          <ChevronLeft className="h-5 w-5" />
+          <ChevronLeft className="h-6 w-6 md:h-7 md:w-7" />
         </Button>
         <Button
-          variant="secondary"
+          variant="outline"
           size="icon"
           onClick={goToNext}
-          className="bg-background/80 backdrop-blur-sm hover:bg-background/90 border border-border/50"
+          className="h-12 w-12 md:h-14 md:w-14 bg-background/95 backdrop-blur-md hover:bg-primary hover:text-primary-foreground border-2 border-primary/20 hover:border-primary shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
           aria-label="Next work"
         >
-          <ChevronRight className="h-5 w-5" />
+          <ChevronRight className="h-6 w-6 md:h-7 md:w-7" />
         </Button>
       </div>
     </div>
