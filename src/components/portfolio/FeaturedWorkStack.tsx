@@ -36,72 +36,60 @@ const featuredWorks: FeaturedWork[] = [
 
 export const FeaturedWorkStack = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [isScrollHijacked, setIsScrollHijacked] = useState(false);
-  const [stackScrollProgress, setStackScrollProgress] = useState(0);
 
   useEffect(() => {
-    let accumulatedDelta = 0;
-    const SCROLL_THRESHOLD = 100; // How much scroll needed to change cards
-
-    const handleWheel = (e: WheelEvent) => {
+    const handleScroll = () => {
       const stackElement = document.getElementById('featured-stack');
       if (!stackElement) return;
       
       const rect = stackElement.getBoundingClientRect();
       const windowHeight = window.innerHeight;
       
-      // Check if stack is fully visible in viewport
-      const isFullyVisible = rect.top <= 100 && rect.bottom >= windowHeight - 100;
+      // Calculate if stack is in viewport
+      const stackTop = rect.top;
+      const stackBottom = rect.bottom;
+      const isInViewport = stackTop < windowHeight && stackBottom > 0;
       
-      if (isFullyVisible) {
-        // Hijack scrolling when stack is fully visible
-        e.preventDefault();
-        setIsScrollHijacked(true);
+      if (isInViewport) {
+        // Calculate scroll progress through the stack area
+        const viewportCenter = windowHeight / 2;
+        const stackCenter = stackTop + rect.height / 2;
+        const distanceFromCenter = Math.abs(stackCenter - viewportCenter);
+        const maxDistance = windowHeight / 2 + rect.height / 2;
         
-        // Accumulate scroll delta
-        accumulatedDelta += e.deltaY;
-        
-        // Calculate which card should be active based on accumulated scroll
-        const cardProgress = accumulatedDelta / SCROLL_THRESHOLD;
-        const targetIndex = Math.max(0, Math.min(featuredWorks.length - 1, Math.floor(cardProgress)));
-        
-        // Update progress for smooth transitions
-        const progress = Math.max(0, Math.min(featuredWorks.length - 1, cardProgress));
-        setStackScrollProgress(progress);
-        
-        if (targetIndex !== currentIndex) {
-          setCurrentIndex(targetIndex);
-        }
-        
-        // Allow normal scrolling to resume after going through all cards
-        if (cardProgress >= featuredWorks.length - 1 && e.deltaY > 0) {
-          // Scrolling down past last card - resume normal scrolling
-          setIsScrollHijacked(false);
-          accumulatedDelta = (featuredWorks.length - 1) * SCROLL_THRESHOLD;
+        // When stack is near center, calculate card index based on relative position
+        if (distanceFromCenter < maxDistance) {
+          const progressThroughStack = Math.max(0, Math.min(1, 
+            (viewportCenter - stackTop) / rect.height
+          ));
           
-          // Manually scroll the page
-          window.scrollBy(0, e.deltaY);
-        } else if (cardProgress <= 0 && e.deltaY < 0) {
-          // Scrolling up past first card - resume normal scrolling
-          setIsScrollHijacked(false);
-          accumulatedDelta = 0;
+          // Map progress to card index
+          const newIndex = Math.floor(progressThroughStack * featuredWorks.length);
+          const clampedIndex = Math.max(0, Math.min(featuredWorks.length - 1, newIndex));
           
-          // Manually scroll the page
-          window.scrollBy(0, e.deltaY);
+          if (clampedIndex !== currentIndex) {
+            setCurrentIndex(clampedIndex);
+          }
         }
-      } else {
-        // Reset when stack is not fully visible
-        setIsScrollHijacked(false);
-        accumulatedDelta = currentIndex * SCROLL_THRESHOLD;
-        setStackScrollProgress(currentIndex);
       }
     };
 
-    // Use passive: false to allow preventDefault
-    window.addEventListener('wheel', handleWheel, { passive: false });
+    // Use requestAnimationFrame for smoother updates
+    let ticking = false;
+    const smoothHandleScroll = () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          handleScroll();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+
+    window.addEventListener('scroll', smoothHandleScroll, { passive: true });
     
     return () => {
-      window.removeEventListener('wheel', handleWheel);
+      window.removeEventListener('scroll', smoothHandleScroll);
     };
   }, [currentIndex]);
 
