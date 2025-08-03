@@ -36,11 +36,10 @@ const featuredWorks: FeaturedWork[] = [
 
 export const FeaturedWorkStack = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [isScrollHijacked, setIsScrollHijacked] = useState(false);
 
   useEffect(() => {
     let accumulatedDelta = 0;
-    const SCROLL_THRESHOLD = 100; // Amount of scroll needed to advance one card
+    const SCROLL_THRESHOLD = 50; // Reduced threshold for better responsiveness
 
     const handleWheel = (e: WheelEvent) => {
       const stackElement = document.getElementById('featured-stack');
@@ -49,13 +48,13 @@ export const FeaturedWorkStack = () => {
       const rect = stackElement.getBoundingClientRect();
       const windowHeight = window.innerHeight;
       
-      // Check if stack is fully visible
-      const isFullyVisible = rect.top <= 0 && rect.bottom >= windowHeight;
+      // Check if stack is fully visible (top is at or above viewport top, bottom is at or below viewport bottom)
+      const isFullyVisible = rect.top <= 50 && rect.bottom >= windowHeight - 50; // Small buffer
       
       if (isFullyVisible) {
-        // Hijack scroll when stack is fully visible
+        // Prevent normal scrolling
         e.preventDefault();
-        setIsScrollHijacked(true);
+        e.stopPropagation();
         
         // Accumulate scroll delta
         accumulatedDelta += e.deltaY;
@@ -70,48 +69,38 @@ export const FeaturedWorkStack = () => {
             accumulatedDelta = 0; // Reset accumulator
           } else {
             // We've reached the end of the stack, allow normal scrolling
-            setIsScrollHijacked(false);
             accumulatedDelta = 0;
             
-            // Manually scroll the page
-            if (newIndex < 0) {
-              // Scroll up
-              window.scrollBy(0, -50);
-            } else {
-              // Scroll down
-              window.scrollBy(0, 50);
-            }
+            // Re-enable normal scrolling by not preventing default
+            setTimeout(() => {
+              if (newIndex < 0) {
+                // Scroll up
+                window.scrollBy({ top: -100, behavior: 'smooth' });
+              } else {
+                // Scroll down  
+                window.scrollBy({ top: 100, behavior: 'smooth' });
+              }
+            }, 100);
           }
         }
-      } else {
-        // Normal scrolling when stack is not fully visible
-        setIsScrollHijacked(false);
-        accumulatedDelta = 0;
       }
+      // If not fully visible, allow normal scrolling (don't prevent default)
     };
 
-    const handleScroll = () => {
-      const stackElement = document.getElementById('featured-stack');
-      if (!stackElement) return;
-      
-      const rect = stackElement.getBoundingClientRect();
-      const windowHeight = window.innerHeight;
-      
-      // Reset hijack state when stack is not fully visible
-      const isFullyVisible = rect.top <= 0 && rect.bottom >= windowHeight;
-      if (!isFullyVisible) {
-        setIsScrollHijacked(false);
-        accumulatedDelta = 0;
-      }
-    };
-
-    // Use passive: false for wheel to allow preventDefault
+    // Attach to the stack element specifically for better control
+    const stackElement = document.getElementById('featured-stack');
+    if (stackElement) {
+      stackElement.addEventListener('wheel', handleWheel, { passive: false });
+    }
+    
+    // Also attach to window as fallback
     window.addEventListener('wheel', handleWheel, { passive: false });
-    window.addEventListener('scroll', handleScroll, { passive: true });
     
     return () => {
+      if (stackElement) {
+        stackElement.removeEventListener('wheel', handleWheel);
+      }
       window.removeEventListener('wheel', handleWheel);
-      window.removeEventListener('scroll', handleScroll);
     };
   }, [currentIndex]);
 
