@@ -38,69 +38,58 @@ export const FeaturedWorkStack = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
-    let accumulatedDelta = 0;
-    const SCROLL_THRESHOLD = 50; // Reduced threshold for better responsiveness
-
-    const handleWheel = (e: WheelEvent) => {
+    const handleScroll = () => {
       const stackElement = document.getElementById('featured-stack');
       if (!stackElement) return;
       
       const rect = stackElement.getBoundingClientRect();
       const windowHeight = window.innerHeight;
       
-      // Check if stack is fully visible (top is at or above viewport top, bottom is at or below viewport bottom)
-      const isFullyVisible = rect.top <= 50 && rect.bottom >= windowHeight - 50; // Small buffer
+      // Calculate if stack is in viewport
+      const stackTop = rect.top;
+      const stackBottom = rect.bottom;
+      const isInViewport = stackTop < windowHeight && stackBottom > 0;
       
-      if (isFullyVisible) {
-        // Prevent normal scrolling
-        e.preventDefault();
-        e.stopPropagation();
+      if (isInViewport) {
+        // Calculate scroll progress through the stack area
+        const viewportCenter = windowHeight / 2;
+        const stackCenter = stackTop + rect.height / 2;
+        const distanceFromCenter = Math.abs(stackCenter - viewportCenter);
+        const maxDistance = windowHeight / 2 + rect.height / 2;
         
-        // Accumulate scroll delta
-        accumulatedDelta += e.deltaY;
-        
-        if (Math.abs(accumulatedDelta) >= SCROLL_THRESHOLD) {
-          const direction = accumulatedDelta > 0 ? 1 : -1;
-          const newIndex = currentIndex + direction;
+        // When stack is near center, calculate card index based on relative position
+        if (distanceFromCenter < maxDistance) {
+          const progressThroughStack = Math.max(0, Math.min(1, 
+            (viewportCenter - stackTop) / rect.height
+          ));
           
-          // Check if we can advance/retreat in the stack
-          if (newIndex >= 0 && newIndex < featuredWorks.length) {
-            setCurrentIndex(newIndex);
-            accumulatedDelta = 0; // Reset accumulator
-          } else {
-            // We've reached the end of the stack, allow normal scrolling
-            accumulatedDelta = 0;
-            
-            // Re-enable normal scrolling by not preventing default
-            setTimeout(() => {
-              if (newIndex < 0) {
-                // Scroll up
-                window.scrollBy({ top: -100, behavior: 'smooth' });
-              } else {
-                // Scroll down  
-                window.scrollBy({ top: 100, behavior: 'smooth' });
-              }
-            }, 100);
+          // Map progress to card index
+          const newIndex = Math.floor(progressThroughStack * featuredWorks.length);
+          const clampedIndex = Math.max(0, Math.min(featuredWorks.length - 1, newIndex));
+          
+          if (clampedIndex !== currentIndex) {
+            setCurrentIndex(clampedIndex);
           }
         }
       }
-      // If not fully visible, allow normal scrolling (don't prevent default)
     };
 
-    // Attach to the stack element specifically for better control
-    const stackElement = document.getElementById('featured-stack');
-    if (stackElement) {
-      stackElement.addEventListener('wheel', handleWheel, { passive: false });
-    }
-    
-    // Also attach to window as fallback
-    window.addEventListener('wheel', handleWheel, { passive: false });
+    // Use requestAnimationFrame for smoother updates
+    let ticking = false;
+    const smoothHandleScroll = () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          handleScroll();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+
+    window.addEventListener('scroll', smoothHandleScroll, { passive: true });
     
     return () => {
-      if (stackElement) {
-        stackElement.removeEventListener('wheel', handleWheel);
-      }
-      window.removeEventListener('wheel', handleWheel);
+      window.removeEventListener('scroll', smoothHandleScroll);
     };
   }, [currentIndex]);
 
