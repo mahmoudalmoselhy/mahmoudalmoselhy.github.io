@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 
 interface FeaturedWork {
   title: string;
@@ -36,6 +38,14 @@ const featuredWorks: FeaturedWork[] = [
 
 export const FeaturedWorkStack = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+
+  const goToPrevious = () => {
+    setCurrentIndex(prev => prev > 0 ? prev - 1 : featuredWorks.length - 1);
+  };
+
+  const goToNext = () => {
+    setCurrentIndex(prev => prev < featuredWorks.length - 1 ? prev + 1 : 0);
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -170,6 +180,28 @@ export const FeaturedWorkStack = () => {
             </a>
           );
         })}
+      </div>
+      
+      {/* Navigation arrows at bottom left */}
+      <div className="absolute bottom-6 left-6 flex gap-2 z-40">
+        <Button
+          variant="secondary"
+          size="icon"
+          onClick={goToPrevious}
+          className="bg-background/80 backdrop-blur-sm hover:bg-background/90 border border-border/50"
+          aria-label="Previous work"
+        >
+          <ChevronLeft className="h-5 w-5" />
+        </Button>
+        <Button
+          variant="secondary"
+          size="icon"
+          onClick={goToNext}
+          className="bg-background/80 backdrop-blur-sm hover:bg-background/90 border border-border/50"
+          aria-label="Next work"
+        >
+          <ChevronRight className="h-5 w-5" />
+        </Button>
       </div>
     </div>
   );
