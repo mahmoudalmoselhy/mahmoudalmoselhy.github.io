@@ -47,6 +47,18 @@ export const FeaturedWorkStack = () => {
     setCurrentIndex(prev => prev < featuredWorks.length - 1 ? prev + 1 : 0);
   };
 
+  const handlePreviousClick = (e: React.MouseEvent | React.TouchEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    goToPrevious();
+  };
+
+  const handleNextClick = (e: React.MouseEvent | React.TouchEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    goToNext();
+  };
+
   // Disabled scroll-based navigation for manual control only
   /*
   useEffect(() => {
@@ -187,24 +199,26 @@ export const FeaturedWorkStack = () => {
       
       {/* Navigation arrows at bottom right */}
       <div className="absolute bottom-4 right-4 md:bottom-6 md:right-6 flex gap-2 md:gap-3 z-40">
-        <Button
-          variant="outline"
-          size="icon"
-          onClick={goToPrevious}
-          className="h-12 w-12 md:h-14 md:w-14 bg-background/95 backdrop-blur-md hover:bg-primary hover:text-primary-foreground border-2 border-primary/20 hover:border-primary shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
+        <button
+          type="button"
+          onClick={handlePreviousClick}
+          onTouchEnd={handlePreviousClick}
+          className="h-14 w-14 md:h-16 md:w-16 bg-background/95 backdrop-blur-md hover:bg-primary hover:text-primary-foreground border-2 border-primary/20 hover:border-primary shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 rounded-md flex items-center justify-center touch-manipulation active:scale-95"
           aria-label="Previous work"
+          style={{ touchAction: 'manipulation' }}
         >
-          <ChevronLeft className="h-6 w-6 md:h-7 md:w-7" />
-        </Button>
-        <Button
-          variant="outline"
-          size="icon"
-          onClick={goToNext}
-          className="h-12 w-12 md:h-14 md:w-14 bg-background/95 backdrop-blur-md hover:bg-primary hover:text-primary-foreground border-2 border-primary/20 hover:border-primary shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
+          <ChevronLeft className="h-7 w-7 md:h-8 md:w-8" />
+        </button>
+        <button
+          type="button"
+          onClick={handleNextClick}
+          onTouchEnd={handleNextClick}
+          className="h-14 w-14 md:h-16 md:w-16 bg-background/95 backdrop-blur-md hover:bg-primary hover:text-primary-foreground border-2 border-primary/20 hover:border-primary shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 rounded-md flex items-center justify-center touch-manipulation active:scale-95"
           aria-label="Next work"
+          style={{ touchAction: 'manipulation' }}
         >
-          <ChevronRight className="h-6 w-6 md:h-7 md:w-7" />
-        </Button>
+          <ChevronRight className="h-7 w-7 md:h-8 md:w-8" />
+        </button>
       </div>
     </div>
   );
