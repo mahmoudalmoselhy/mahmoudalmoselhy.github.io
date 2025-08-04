@@ -197,9 +197,33 @@ export const FeaturedWorkStack = () => {
             );
           })}
         </div>
+        
+        {/* Desktop navigation arrows - inside stack container */}
+        <div className="absolute bottom-6 right-6 hidden md:flex gap-3 z-40">
+          <button
+            type="button"
+            onClick={handlePreviousClick}
+            onTouchEnd={handlePreviousClick}
+            className="h-16 w-16 bg-background/95 backdrop-blur-md hover:bg-primary hover:text-primary-foreground border-2 border-primary/20 hover:border-primary shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 rounded-md flex items-center justify-center touch-manipulation active:scale-95"
+            aria-label="Previous work"
+            style={{ touchAction: 'manipulation' }}
+          >
+            <ChevronLeft className="h-8 w-8" />
+          </button>
+          <button
+            type="button"
+            onClick={handleNextClick}
+            onTouchEnd={handleNextClick}
+            className="h-16 w-16 bg-background/95 backdrop-blur-md hover:bg-primary hover:text-primary-foreground border-2 border-primary/20 hover:border-primary shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 rounded-md flex items-center justify-center touch-manipulation active:scale-95"
+            aria-label="Next work"
+            style={{ touchAction: 'manipulation' }}
+          >
+            <ChevronRight className="h-8 w-8" />
+          </button>
+        </div>
       </div>
       
-      {/* Navigation arrows - under stack on mobile, bottom right on desktop */}
+      {/* Mobile navigation arrows - under stack */}
       <div className="flex justify-center mt-6 md:hidden">
         <div className="flex gap-3">
           <button
@@ -225,31 +249,6 @@ export const FeaturedWorkStack = () => {
         </div>
       </div>
 
-      {/* Desktop navigation arrows - bottom right */}
-      <div className="hidden md:block">
-        <div className="absolute bottom-6 right-6 flex gap-3 z-40" style={{ transform: 'translateY(-600px)' }}>
-          <button
-            type="button"
-            onClick={handlePreviousClick}
-            onTouchEnd={handlePreviousClick}
-            className="h-16 w-16 bg-background/95 backdrop-blur-md hover:bg-primary hover:text-primary-foreground border-2 border-primary/20 hover:border-primary shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 rounded-md flex items-center justify-center touch-manipulation active:scale-95"
-            aria-label="Previous work"
-            style={{ touchAction: 'manipulation' }}
-          >
-            <ChevronLeft className="h-8 w-8" />
-          </button>
-          <button
-            type="button"
-            onClick={handleNextClick}
-            onTouchEnd={handleNextClick}
-            className="h-16 w-16 bg-background/95 backdrop-blur-md hover:bg-primary hover:text-primary-foreground border-2 border-primary/20 hover:border-primary shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 rounded-md flex items-center justify-center touch-manipulation active:scale-95"
-            aria-label="Next work"
-            style={{ touchAction: 'manipulation' }}
-          >
-            <ChevronRight className="h-8 w-8" />
-          </button>
-        </div>
-      </div>
     </div>
   );
 };
