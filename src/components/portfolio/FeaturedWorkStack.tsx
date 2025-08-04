@@ -121,7 +121,7 @@ export const FeaturedWorkStack = () => {
   return (
     <div 
       id="featured-stack" 
-      className="relative h-[500px] md:h-[600px] flex items-center justify-center mb-12 w-full"
+      className="relative h-[580px] md:h-[600px] flex items-center justify-center mb-12 w-full"
       style={{ perspective: '1000px' }}
     >
       <div className="relative w-full h-full" style={{ transformStyle: 'preserve-3d' }}>
@@ -198,7 +198,7 @@ export const FeaturedWorkStack = () => {
       </div>
       
       {/* Navigation arrows - under stack on mobile, bottom right on desktop */}
-      <div className="absolute bottom-[-80px] left-1/2 transform -translate-x-1/2 md:bottom-6 md:right-6 md:left-auto md:transform-none flex gap-2 md:gap-3 z-40">
+      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 md:bottom-6 md:right-6 md:left-auto md:transform-none flex gap-2 md:gap-3 z-40">
         <button
           type="button"
           onClick={handlePreviousClick}
