@@ -197,8 +197,8 @@ export const FeaturedWorkStack = () => {
         })}
       </div>
       
-      {/* Navigation arrows at bottom right */}
-      <div className="absolute bottom-4 right-4 md:bottom-6 md:right-6 flex gap-2 md:gap-3 z-40">
+      {/* Navigation arrows - under stack on mobile, bottom right on desktop */}
+      <div className="absolute bottom-[-80px] left-1/2 transform -translate-x-1/2 md:bottom-6 md:right-6 md:left-auto md:transform-none flex gap-2 md:gap-3 z-40">
         <button
           type="button"
           onClick={handlePreviousClick}
