@@ -81,35 +81,62 @@ export const Clients = () => {
           <div className="w-10 md:w-12 h-1 bg-gradient-to-r from-gradient-start to-gradient-end mx-auto mt-2 md:mt-3 rounded-full animate-scale-in animation-delay-2000"></div>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 md:gap-3 items-center justify-items-center">
-          {clients.map((client, index) => (
-            <div
-              key={index}
-              className="group relative bg-card/30 backdrop-blur-sm rounded-lg md:rounded-xl p-2 md:p-3 hover:bg-card/50 transition-all duration-300 hover:scale-105 hover:shadow-lg border border-border hover:border-accent w-full aspect-square flex items-center justify-center overflow-hidden"
-              style={{
-                animationDelay: `${index * 50}ms`
-              }}
-            >
-              {/* Subtle animated background glow */}
-              <div className="absolute inset-0 bg-gradient-to-br from-accent/10 via-transparent to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg md:rounded-xl"></div>
-              
-              {/* Logo container */}
-              <div className="relative z-10 w-full h-full flex items-center justify-center p-1">
-                <img
-                  src={client.logo}
-                  alt={client.name}
-                  className="max-w-full max-h-full object-contain filter brightness-90 group-hover:brightness-110 transition-all duration-300"
-                />
+        {/* Infinite scrolling slider */}
+        <div className="overflow-hidden relative">
+          <div className="flex animate-infinite-scroll hover:animate-pause">
+            {/* First set of clients */}
+            {clients.map((client, index) => (
+              <div
+                key={`first-${index}`}
+                className="group relative bg-card/30 backdrop-blur-sm rounded-lg md:rounded-xl p-2 md:p-3 hover:bg-card/50 transition-all duration-300 hover:scale-105 hover:shadow-lg border border-border hover:border-accent flex-shrink-0 w-32 md:w-40 h-24 md:h-32 mx-2 flex items-center justify-center overflow-hidden"
+              >
+                {/* Subtle animated background glow */}
+                <div className="absolute inset-0 bg-gradient-to-br from-accent/10 via-transparent to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg md:rounded-xl"></div>
+                
+                {/* Logo container */}
+                <div className="relative z-10 w-full h-full flex items-center justify-center p-1">
+                  <img
+                    src={client.logo}
+                    alt={client.name}
+                    className="max-w-full max-h-full object-contain filter brightness-90 group-hover:brightness-110 transition-all duration-300"
+                  />
+                </div>
+                
+                {/* Hover overlay with client name */}
+                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-background/90 via-background/60 to-transparent p-1.5 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 rounded-b-lg md:rounded-b-xl">
+                  <p className="text-foreground text-xs font-medium text-center truncate">
+                    {client.name}
+                  </p>
+                </div>
               </div>
-              
-              {/* Hover overlay with client name */}
-              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-background/90 via-background/60 to-transparent p-1.5 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 rounded-b-lg md:rounded-b-xl">
-                <p className="text-foreground text-xs font-medium text-center truncate">
-                  {client.name}
-                </p>
+            ))}
+            {/* Second set of clients for seamless loop */}
+            {clients.map((client, index) => (
+              <div
+                key={`second-${index}`}
+                className="group relative bg-card/30 backdrop-blur-sm rounded-lg md:rounded-xl p-2 md:p-3 hover:bg-card/50 transition-all duration-300 hover:scale-105 hover:shadow-lg border border-border hover:border-accent flex-shrink-0 w-32 md:w-40 h-24 md:h-32 mx-2 flex items-center justify-center overflow-hidden"
+              >
+                {/* Subtle animated background glow */}
+                <div className="absolute inset-0 bg-gradient-to-br from-accent/10 via-transparent to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg md:rounded-xl"></div>
+                
+                {/* Logo container */}
+                <div className="relative z-10 w-full h-full flex items-center justify-center p-1">
+                  <img
+                    src={client.logo}
+                    alt={client.name}
+                    className="max-w-full max-h-full object-contain filter brightness-90 group-hover:brightness-110 transition-all duration-300"
+                  />
+                </div>
+                
+                {/* Hover overlay with client name */}
+                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-background/90 via-background/60 to-transparent p-1.5 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 rounded-b-lg md:rounded-b-xl">
+                  <p className="text-foreground text-xs font-medium text-center truncate">
+                    {client.name}
+                  </p>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
         
         {/* Decorative elements */}
