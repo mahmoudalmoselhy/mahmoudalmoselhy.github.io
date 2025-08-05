@@ -25,10 +25,10 @@ export const Hero = () => {
           <div className="flex-shrink-0">
             <div className="relative w-64 h-80 md:w-72 md:h-96 lg:w-80 lg:h-[500px] rounded-3xl overflow-hidden liquid-glass">
               <img
-                src="/lovable-uploads/de9a419d-4ed6-4b97-9dbe-59ad7bbca483.png"
+                src="/lovable-uploads/504d32e0-6560-4ee8-938f-660d9a49b785.png"
                 alt="Mahmoud AlMoselhy"
-                className="w-full h-full object-cover object-center scale-120 hover:scale-115 transition-transform duration-700"
-                style={{ objectPosition: '50% 15%' }}
+                className="w-full h-full object-cover object-center scale-110 hover:scale-105 transition-transform duration-700"
+                style={{ objectPosition: '50% 30%' }}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
             </div>
