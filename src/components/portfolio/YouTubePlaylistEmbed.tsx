@@ -27,7 +27,7 @@ export const YouTubePlaylistEmbed = ({ title, description, playlistUrl, logo }: 
   const embedUrl = `https://www.youtube.com/embed/videoseries?list=${playlistId}&rel=0&showinfo=0&modestbranding=1`;
 
   return (
-    <div className="group liquid-glass liquid-glass-hover rounded-3xl p-4 md:p-6 transform">
+    <div className="group liquid-glass liquid-glass-hover rounded-3xl p-6 md:p-8 transform">
       <div className="flex items-center mb-3 md:mb-4">
         <div className="w-8 h-8 md:w-10 md:h-10 liquid-button rounded-full flex items-center justify-center mr-3 group-hover:scale-110 transition-transform duration-500 p-1.5">
           <img
@@ -43,7 +43,7 @@ export const YouTubePlaylistEmbed = ({ title, description, playlistUrl, logo }: 
         </div>
       </div>
 
-      <div className="aspect-video rounded-2xl overflow-hidden mb-3 md:mb-4 bg-background/50">
+      <div className="aspect-video rounded-2xl overflow-hidden mb-4 md:mb-6 bg-background/50 h-64 md:h-80 lg:h-96">
         <iframe
           src={embedUrl}
           title={title}

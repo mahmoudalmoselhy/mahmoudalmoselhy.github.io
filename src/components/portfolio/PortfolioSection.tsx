@@ -25,7 +25,8 @@ export const PortfolioSection = ({ title, description, items, gridClassName = "g
         <p className="text-muted-foreground text-sm md:text-lg">{description}</p>
       </div>
       
-      <div className={`grid ${gridClassName} gap-4 md:gap-6`}>
+      <div className="w-full max-w-none">
+        <div className={`grid ${title.includes('Script Writing') ? 'grid-cols-1 lg:grid-cols-2' : gridClassName} gap-4 md:gap-6`}>
         {items.map((item, itemIndex) => {
           // Check if the link is a YouTube playlist
           const isYouTubePlaylist = item.link.includes('youtube.com/playlist') || item.link.includes('youtu.be/playlist');
@@ -52,6 +53,7 @@ export const PortfolioSection = ({ title, description, items, gridClassName = "g
             />
           );
         })}
+        </div>
       </div>
     </div>
   );
