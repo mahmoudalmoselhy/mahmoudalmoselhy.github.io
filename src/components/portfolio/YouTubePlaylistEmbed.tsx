@@ -43,7 +43,7 @@ export const YouTubePlaylistEmbed = ({ title, description, playlistUrl, logo }: 
         </div>
       </div>
 
-      <div className="aspect-video rounded-2xl overflow-hidden mb-4 md:mb-6 bg-background/50 h-64 md:h-80 lg:h-96">
+      <div className="aspect-video rounded-2xl overflow-hidden mb-4 md:mb-6 bg-background/50">
         <iframe
           src={embedUrl}
           title={title}
