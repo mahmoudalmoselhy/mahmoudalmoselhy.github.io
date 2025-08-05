@@ -20,9 +20,22 @@ export const Hero = () => {
       </div>
       
       <div className="container mx-auto px-6 relative z-10">
-        <div className="flex justify-center items-center">
+        <div className="flex flex-col lg:flex-row justify-center items-center gap-12 lg:gap-16">
+          {/* Profile Image */}
+          <div className="flex-shrink-0">
+            <div className="relative w-64 h-80 md:w-72 md:h-96 lg:w-80 lg:h-[500px] rounded-3xl overflow-hidden liquid-glass">
+              <img
+                src="/lovable-uploads/02911fa8-d13e-4c66-85b1-630c84f2ce70.png"
+                alt="Mahmoud AlMoselhy"
+                className="w-full h-full object-cover object-center scale-110 hover:scale-105 transition-transform duration-700"
+                style={{ objectPosition: '50% 30%' }}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+            </div>
+          </div>
+          
           {/* Text content */}
-          <div className="text-center animate-fade-in max-w-4xl">
+          <div className="text-center lg:text-left animate-fade-in max-w-2xl">
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6">
               <span className="bg-gradient-to-r from-gradient-start via-gradient-middle to-gradient-end bg-clip-text text-transparent animate-gradient">
                 Mahmoud
