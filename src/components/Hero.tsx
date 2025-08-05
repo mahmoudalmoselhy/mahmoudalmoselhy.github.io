@@ -27,8 +27,8 @@ export const Hero = () => {
               <img
                 src="/lovable-uploads/de9a419d-4ed6-4b97-9dbe-59ad7bbca483.png"
                 alt="Mahmoud AlMoselhy"
-                className="w-full h-full object-cover object-center scale-110 hover:scale-105 transition-transform duration-700"
-                style={{ objectPosition: '50% 30%' }}
+                className="w-full h-full object-cover object-center scale-120 hover:scale-115 transition-transform duration-700"
+                style={{ objectPosition: '50% 15%' }}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
             </div>
