@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { PortfolioItem } from './PortfolioItem';
+import { YouTubePlaylistEmbed } from './YouTubePlaylistEmbed';
 
 interface PortfolioSectionItem {
   title: string;
@@ -25,15 +26,32 @@ export const PortfolioSection = ({ title, description, items, gridClassName = "g
       </div>
       
       <div className={`grid ${gridClassName} gap-4 md:gap-6`}>
-        {items.map((item, itemIndex) => (
-          <PortfolioItem
-            key={itemIndex}
-            title={item.title}
-            description={item.description}
-            link={item.link}
-            logo={item.logo}
-          />
-        ))}
+        {items.map((item, itemIndex) => {
+          // Check if the link is a YouTube playlist
+          const isYouTubePlaylist = item.link.includes('youtube.com/playlist') || item.link.includes('youtu.be/playlist');
+          
+          if (isYouTubePlaylist) {
+            return (
+              <YouTubePlaylistEmbed
+                key={itemIndex}
+                title={item.title}
+                description={item.description}
+                playlistUrl={item.link}
+                logo={item.logo}
+              />
+            );
+          }
+          
+          return (
+            <PortfolioItem
+              key={itemIndex}
+              title={item.title}
+              description={item.description}
+              link={item.link}
+              logo={item.logo}
+            />
+          );
+        })}
       </div>
     </div>
   );
