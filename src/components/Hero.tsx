@@ -1,97 +1,88 @@
 
 import React from 'react';
-import { Linkedin, Mail, MessageCircle, FileText } from 'lucide-react';
-import { ThemeToggle } from '@/components/ThemeToggle';
+import { Linkedin, Mail, MapPin } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
 
 export const Hero = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-background via-muted/30 to-background">
-      {/* Theme Toggle */}
-      <div className="absolute top-6 right-6 z-20">
-        <ThemeToggle />
-      </div>
-      
-      {/* Animated background elements */}
-      <div className="absolute inset-0">
-        <div className="absolute top-20 left-20 w-72 h-72 bg-primary/20 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-pulse dark:mix-blend-lighten"></div>
-        <div className="absolute top-40 right-20 w-96 h-96 bg-accent/30 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-pulse animation-delay-1000 dark:mix-blend-lighten"></div>
-        <div className="absolute bottom-20 left-1/2 w-80 h-80 bg-secondary/20 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-pulse animation-delay-2000 dark:mix-blend-lighten"></div>
+    <section className="min-h-screen flex items-center justify-center relative pt-20 pb-12">
+      {/* Gradient background orbs */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-primary/20 to-transparent rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-gradient-to-l from-accent/20 to-transparent rounded-full blur-3xl animate-pulse animation-delay-1000"></div>
       </div>
       
       <div className="container mx-auto px-6 relative z-10">
-        <div className="flex flex-col lg:flex-row justify-center items-center gap-12 lg:gap-16">
+        <div className="max-w-4xl mx-auto text-center">
           {/* Profile Image */}
-          <div className="flex-shrink-0">
-            <div className="relative w-64 h-80 md:w-72 md:h-96 lg:w-80 lg:h-[500px] rounded-3xl overflow-hidden liquid-glass">
+          <div className="flex justify-center mb-8">
+            <div className="relative w-32 h-32 rounded-full overflow-hidden glass-card">
               <img
                 src="/lovable-uploads/504d32e0-6560-4ee8-938f-660d9a49b785.png"
                 alt="Mahmoud AlMoselhy"
-                className="w-full h-full object-cover object-center scale-110 hover:scale-105 transition-transform duration-700"
-                style={{ objectPosition: '50% 30%' }}
+                className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
             </div>
           </div>
           
-          {/* Text content */}
-          <div className="text-center lg:text-left animate-fade-in max-w-2xl">
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6">
-              <span className="bg-gradient-to-r from-gradient-start via-gradient-middle to-gradient-end bg-clip-text text-transparent animate-gradient">
-                Mahmoud
-              </span>
-              <br />
-              <span className="text-foreground">AlMoselhy</span>
+          {/* Main Heading */}
+          <div className="space-y-6 mb-8">
+            <h1 className="text-5xl md:text-7xl font-bold">
+              <span className="block mb-2">Hello there!</span>
+              <span className="gradient-text">Mahmoud here!</span>
             </h1>
             
-            <p className="text-lg md:text-xl text-muted-foreground mb-4 font-light">
-              Content Team Leader & SEO Specialist
+            <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              I'm a passionate Content Team Leader who crafts digital experiences with a perfect blend of creativity and functionality. With an eye for detail and a love for clean, user-friendly content, I bring websites to life that not only look stunning but also deliver seamless and enjoyable user journeys.
             </p>
-            
-            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start space-y-4 sm:space-y-0 sm:space-x-6 text-muted-foreground mb-6">
-              <div className="flex items-center space-x-2">
-                <Mail className="w-5 h-5 text-primary" />
-                <span className="text-sm md:text-base">mahmoudalmoselhy@gmail.com</span>
+          </div>
+          
+          {/* CTA Button */}
+          <div className="mb-12">
+            <Button
+              asChild
+              size="lg"
+              className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 rounded-full text-lg font-semibold"
+            >
+              <Link to="#about">More about Me →</Link>
+            </Button>
+          </div>
+          
+          {/* Location and Contact Grid */}
+          <div className="grid md:grid-cols-2 gap-8 max-w-2xl mx-auto">
+            {/* Location Card */}
+            <div className="glass-card p-6 text-left">
+              <div className="flex items-center gap-3 mb-4">
+                <MapPin className="w-5 h-5 text-gradient-accent" />
+                <h3 className="font-semibold text-lg">Location</h3>
               </div>
-              <div className="flex items-center space-x-2">
-                <MessageCircle className="w-5 h-5 text-accent-foreground" />
-                <span className="text-sm md:text-base">+20 112 152 9292</span>
-              </div>
+              <p className="text-muted-foreground">Cairo, Egypt</p>
             </div>
             
-            <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto lg:mx-0 mb-8 leading-relaxed">
+            {/* Contact Card */}
+            <div className="glass-card p-6 text-left">
+              <div className="flex items-center gap-3 mb-4">
+                <Mail className="w-5 h-5 text-primary" />
+                <h3 className="font-semibold text-lg">Contact</h3>
+              </div>
+              <div className="space-y-2 text-sm text-muted-foreground">
+                <p>mahmoudalmoselhy@gmail.com</p>
+                <p>+20 112 152 9292</p>
+              </div>
+            </div>
+          </div>
+          
+          {/* Quote */}
+          <div className="mt-12 max-w-3xl mx-auto">
+            <blockquote className="text-lg md:text-xl text-muted-foreground italic leading-relaxed">
               "Like Albus Dumbledore said: 'words in my humble opinion are the most inexhaustible source of magic' 
               I do believe in the power of words where a man can invent a whole new world just with his pencil. 
               Working for 13 years now as a content creator."
-            </p>
-            
-            <div className="flex flex-col sm:flex-row justify-center lg:justify-start space-y-4 sm:space-y-0 sm:space-x-4">
-              <a 
-                href="#contact" 
-                className="bg-gradient-to-r from-gradient-start to-gradient-middle text-background px-6 py-3 rounded-full font-semibold hover:scale-105 transform transition-all duration-300 shadow-lg hover:shadow-xl"
-              >
-                Get In Touch
-              </a>
-              <a 
-                href="https://linkedin.com/in/mahmoudalmoselhy" 
-                target="_blank"
-                rel="noopener noreferrer"
-                className="border-2 border-accent-foreground text-accent-foreground px-6 py-3 rounded-full font-semibold hover:bg-accent-foreground hover:text-background transform transition-all duration-300 flex items-center justify-center space-x-2"
-              >
-                <Linkedin className="w-5 h-5" />
-                <span>LinkedIn</span>
-              </a>
-              <Link
-                to="/cv"
-                className="border-2 border-primary text-primary px-6 py-3 rounded-full font-semibold hover:bg-primary hover:text-primary-foreground transform transition-all duration-300 flex items-center justify-center space-x-2"
-              >
-                <FileText className="w-5 h-5" />
-                <span>View CV</span>
-              </Link>
-            </div>
+            </blockquote>
           </div>
         </div>
-        
       </div>
     </section>
   );
