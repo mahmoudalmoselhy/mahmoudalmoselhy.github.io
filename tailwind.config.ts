@@ -102,12 +102,36 @@ export default {
 					'100%': {
 						transform: 'translateX(calc(-50% - 0.5rem))'
 					}
+				},
+				'step-scroll': {
+					'0%': {
+						transform: 'translateX(0)'
+					},
+					'16.66%': {
+						transform: 'translateX(calc(-1 * (8rem + 1rem)))'
+					},
+					'33.32%': {
+						transform: 'translateX(calc(-2 * (8rem + 1rem)))'
+					},
+					'49.98%': {
+						transform: 'translateX(calc(-3 * (8rem + 1rem)))'
+					},
+					'66.64%': {
+						transform: 'translateX(calc(-4 * (8rem + 1rem)))'
+					},
+					'83.3%': {
+						transform: 'translateX(calc(-5 * (8rem + 1rem)))'
+					},
+					'100%': {
+						transform: 'translateX(calc(-6 * (8rem + 1rem)))'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'infinite-scroll': 'infinite-scroll 30s linear infinite',
+				'step-scroll': 'step-scroll 18s ease-in-out infinite',
 				'pause': 'none'
 			}
 		}

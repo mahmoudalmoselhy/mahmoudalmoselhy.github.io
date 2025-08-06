@@ -83,7 +83,7 @@ export const Clients = () => {
 
         {/* Infinite scrolling slider */}
         <div className="overflow-hidden relative">
-          <div className="flex animate-infinite-scroll hover:animate-pause">
+          <div className="flex animate-step-scroll">
             {/* First set of clients */}
             {clients.map((client, index) => (
               <div
