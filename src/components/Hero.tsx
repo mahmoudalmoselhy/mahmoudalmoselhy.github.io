@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { ArrowDown, Linkedin, Mail, MessageCircle, FileText } from 'lucide-react';
+import { Linkedin, Mail, MessageCircle, FileText } from 'lucide-react';
 import { ThemeToggle } from '@/components/ThemeToggle';
 import { Link } from 'react-router-dom';
 
@@ -92,9 +92,6 @@ export const Hero = () => {
           </div>
         </div>
         
-        <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <ArrowDown className="w-6 h-6 text-muted-foreground" />
-        </div>
       </div>
     </section>
   );
