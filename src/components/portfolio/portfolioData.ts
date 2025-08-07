@@ -43,7 +43,7 @@ export const portfolioSections = [
         description: "Updated review of UGREEN's professional charging solution",
         link: "https://www.3arrafni.com/ugreen-nexode-pro-revision/",
         logo: "/lovable-uploads/693924e3-2bc0-456b-8afe-d100ef0390f8.png",
-        thumbnail: "/lovable-uploads/c99d7313-a992-4af7-8105-eed067ae947d.png"
+        thumbnail: "/lovable-uploads/12221f49-094b-4d12-8745-4478abe90134.png"
       },
       {
         title: "UGREEN HiTune Max5 Review",
