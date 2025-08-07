@@ -11,6 +11,9 @@ interface PortfolioSectionItem {
   link: string;
   logo: string;
   skills?: string[]; // optional skills for badges
+  thumbnail?: string;
+  client?: string;
+  date?: string; // ISO date for age
 }
 
 interface PortfolioSectionProps {
@@ -47,6 +50,9 @@ export const PortfolioSection = ({ title, description, items, gridClassName = "g
               description={item.description}
               link={item.link}
               logo={item.logo}
+              thumbnail={item.thumbnail}
+              client={item.client}
+              date={item.date}
               skills={item.skills}
             />
           ))}
