@@ -165,6 +165,20 @@ export const portfolioSections = [
     description: "Complete campaign management targeting diverse business sectors",
     items: [
       {
+        title: "Menusbee Group Ordering Campaign Video",
+        description: "Ad campaign showcasing how Menusbee transforms food service and pricing through a real group food ordering use case—choosing a restaurant because it’s on Menusbee. Followed by a voice-over highlighting why Menusbee is great.",
+        link: "https://www.facebook.com/share/r/1ACc2AKjBo/",
+        logo: "/lovable-uploads/c8892c9f-d780-4825-a3b1-b1e017d5bd62.png",
+        embed: "facebook-video",
+        responsibilities: [
+          "Leading brainstorming group",
+          "Writing full script",
+          "Producing full vision of the video including motion and style",
+          "Choosing, training, and recording voice over",
+          "Working with video editor to get the final cut"
+        ]
+      },
+      {
         title: "Tourism Companies Campaign",
         description: "Targeted advertising for travel and tourism businesses",
         link: "https://www.facebook.com/menusbee/posts/pfbid0sUPtVyCZPXH1ZZ17tpsSgv4WrG6Stwq83AoKDZQ2zdkmTrcS7RacRqEcJejE1u1Ll",

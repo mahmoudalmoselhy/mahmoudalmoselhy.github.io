@@ -1,6 +1,7 @@
 
 import React, { useState } from 'react';
 import { YouTubePlaylistEmbed } from './YouTubePlaylistEmbed';
+import { FacebookVideoEmbed } from './FacebookVideoEmbed';
 import { PortfolioCard } from './PortfolioCard';
 import { Button } from '../ui/button';
 import { Link } from 'react-router-dom';
@@ -14,6 +15,8 @@ interface PortfolioSectionItem {
   thumbnail?: string;
   client?: string;
   date?: string; // ISO date for age
+  embed?: string;
+  responsibilities?: string[];
 }
 
 interface PortfolioSectionProps {
@@ -46,16 +49,17 @@ export const PortfolioSection = ({ title, description, items, gridClassName = "g
     }
   }
 
-  const nonPlaylistItems = items
-    .filter((item) => !isYouTubePlaylist(item.link))
-    .map((item) => ({
-      ...item,
-      thumbnail: item.thumbnail || undefined, // PortfolioCard will auto-screenshot when missing
-      skills: item.skills && item.skills.length ? item.skills : getDefaultTags(item.link, title)
-    }))
+const nonPlaylistItems = items
+  .filter((item) => !isYouTubePlaylist(item.link) && item.embed !== 'facebook-video')
+  .map((item) => ({
+    ...item,
+    thumbnail: item.thumbnail || undefined, // PortfolioCard will auto-screenshot when missing
+    skills: item.skills && item.skills.length ? item.skills : getDefaultTags(item.link, title)
+  }))
 
-  const playlistItems = items.filter((item) => isYouTubePlaylist(item.link))
-  const visibleContentItems = showAll ? nonPlaylistItems : nonPlaylistItems.slice(0, limit)
+const playlistItems = items.filter((item) => isYouTubePlaylist(item.link))
+const facebookEmbeds = items.filter((item) => item.embed === 'facebook-video')
+const visibleContentItems = showAll ? nonPlaylistItems : nonPlaylistItems.slice(0, limit)
 
   return (
     <section className="space-y-6 md:space-y-8">
@@ -65,7 +69,18 @@ export const PortfolioSection = ({ title, description, items, gridClassName = "g
       </header>
       
       <div className="w-full max-w-none">
-        <div className={`grid ${title.includes('Script Writing') ? 'grid-cols-1 lg:grid-cols-2' : gridClassName} gap-4 md:gap-6`}>
+<div className={`grid ${title.includes('Script Writing') ? 'grid-cols-1 lg:grid-cols-2' : gridClassName} gap-4 md:gap-6`}>
+          {facebookEmbeds.map((item, itemIndex) => (
+            <FacebookVideoEmbed
+              key={`fb-${itemIndex}-${item.title}`}
+              title={item.title}
+              description={item.description}
+              videoUrl={item.link}
+              logo={item.logo}
+              responsibilities={item.responsibilities}
+            />
+          ))}
+
           {visibleContentItems.map((item, itemIndex) => (
             <PortfolioCard
               key={`card-${itemIndex}-${item.title}`}
