@@ -23,14 +23,37 @@ interface PortfolioSectionProps {
   gridClassName?: string;
 }
 
-export const PortfolioSection = ({ title, description, items, gridClassName = "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3" }: PortfolioSectionProps) => {
+export const PortfolioSection = ({ title, description, items, gridClassName = "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4" }: PortfolioSectionProps) => {
   const [showAll, setShowAll] = useState(false)
   const limit = 4
 
   const isYouTubePlaylist = (link: string) =>
     link.includes('youtube.com/playlist') || link.includes('youtu.be/playlist')
 
-  const nonPlaylistItems = items.filter((item) => !isYouTubePlaylist(item.link))
+  const getDefaultTags = (link: string, sectionTitle: string): string[] => {
+    try {
+      const host = new URL(link).hostname.replace(/^www\./, '')
+      if (host === '3arrafni.com') return ['Web Design', 'Branding', 'Marketing']
+      if (host === 'androidworld9.com') return ['Web Design', 'Branding', 'Marketing']
+      if (host === 'facebook.com') {
+        const lower = (sectionTitle + ' ' + link).toLowerCase()
+        if (lower.includes('menusbee')) return ['Web Design', 'Branding', 'Marketing']
+        return ['Web Design', 'Branding', 'Marketing']
+      }
+      return ['Web Design', 'Branding', 'Marketing']
+    } catch {
+      return ['Web Design', 'Branding', 'Marketing']
+    }
+  }
+
+  const nonPlaylistItems = items
+    .filter((item) => !isYouTubePlaylist(item.link))
+    .map((item) => ({
+      ...item,
+      thumbnail: item.thumbnail || undefined, // PortfolioCard will auto-screenshot when missing
+      skills: item.skills && item.skills.length ? item.skills : getDefaultTags(item.link, title)
+    }))
+
   const playlistItems = items.filter((item) => isYouTubePlaylist(item.link))
   const visibleContentItems = showAll ? nonPlaylistItems : nonPlaylistItems.slice(0, limit)
 
