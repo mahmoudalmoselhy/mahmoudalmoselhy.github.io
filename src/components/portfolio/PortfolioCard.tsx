@@ -16,7 +16,10 @@ interface PortfolioCardProps {
 }
 
 export const PortfolioCard = ({ title, description, link, logo, thumbnail, client, date, skills = [] }: PortfolioCardProps) => {
-  const imageSrc = thumbnail || logo
+  const buildScreenshotUrl = (u: string) =>
+    `https://image.thum.io/get/width/1200/crop/800/noanimate/${encodeURIComponent(u)}`
+
+  const imageSrc = thumbnail || buildScreenshotUrl(link)
 
   const formatAge = (iso?: string) => {
     if (!iso) return null
@@ -50,6 +53,11 @@ export const PortfolioCard = ({ title, description, link, logo, thumbnail, clien
               alt={`${title} thumbnail`}
               loading="lazy"
               className="w-full h-full object-cover"
+              onError={(e) => {
+                try {
+                  (e.currentTarget as HTMLImageElement).src = logo || '/placeholder.svg'
+                } catch {}
+              }}
             />
           </AspectRatio>
         </div>

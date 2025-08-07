@@ -8,23 +8,39 @@ const isYouTubePlaylist = (link: string) =>
 const Projects = () => {
   const grouped = useMemo(() => {
     const all = portfolioSections
-      .flatMap((section) => section.items)
+      .flatMap((section) => section.items.map((item) => ({ ...item, __section: section.title })))
       .filter((item) => !isYouTubePlaylist(item.link))
       .map((item: any) => {
-        let derivedClient: string | undefined = item.client
-        if (!derivedClient) {
+        const sectionTitle = String(item.__section || '')
+        let clientName: string | undefined = item.client
+
+        if (!clientName) {
           try {
             const url = new URL(item.link)
-            derivedClient = url.hostname.replace(/^www\./, '').split('.')[0]
+            const host = url.hostname.replace(/^www\./, '')
+            if (host === '3arrafni.com') clientName = '3arrafni'
+            else if (host === 'androidworld9.com') clientName = 'Android World'
+            else if (host === 'facebook.com') {
+              const lowerLink = item.link.toLowerCase()
+              const lowerSection = sectionTitle.toLowerCase()
+              if (lowerLink.includes('menusbee') || lowerSection.includes('menusbee')) {
+                clientName = 'Menus Bee (From facebook)'
+              } else {
+                clientName = 'Lecce (From facebook)'
+              }
+            } else {
+              clientName = host.split('.')[0]
+            }
           } catch {
-            derivedClient = 'Other'
+            clientName = 'Other'
           }
         }
+
+        const { __section, ...rest } = item
         return {
-          ...item,
-          client: derivedClient || 'Other',
-          // ensure thumbnail exists
-          thumbnail: item.thumbnail || item.logo,
+          ...rest,
+          client: clientName || 'Other',
+          // do not force thumbnails to logos; PortfolioCard will generate screenshots when missing
         }
       })
 
