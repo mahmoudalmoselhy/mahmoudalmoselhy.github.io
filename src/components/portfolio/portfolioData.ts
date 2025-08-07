@@ -7,67 +7,78 @@ export const portfolioSections = [
         title: "UGREEN Nexode PowerBank 200W",
         description: "Comprehensive powerbank review and testing",
         link: "https://www.3arrafni.com/ugreen-nexode-powerbank-200w/",
-        logo: "/lovable-uploads/693924e3-2bc0-456b-8afe-d100ef0390f8.png"
+        logo: "/lovable-uploads/693924e3-2bc0-456b-8afe-d100ef0390f8.png",
+        thumbnail: "/lovable-uploads/c99d7313-a992-4af7-8105-eed067ae947d.png"
       },
       {
         title: "ChatGPT Explained",
         description: "In-depth explanation of AI technology and applications",
         link: "https://www.3arrafni.com/chatgpt-explained/",
-        logo: "/lovable-uploads/693924e3-2bc0-456b-8afe-d100ef0390f8.png"
+        logo: "/lovable-uploads/693924e3-2bc0-456b-8afe-d100ef0390f8.png",
+        thumbnail: "/lovable-uploads/b54c9048-d47b-4ec9-9f05-b78a53275ec5.png"
       },
       {
         title: "How COVID-19 Affected E-Commerce",
         description: "Analysis of pandemic impact on digital commerce",
         link: "https://www.3arrafni.com/how-covid-19-affected-e-commerce/",
-        logo: "/lovable-uploads/693924e3-2bc0-456b-8afe-d100ef0390f8.png"
+        logo: "/lovable-uploads/693924e3-2bc0-456b-8afe-d100ef0390f8.png",
+        thumbnail: "/lovable-uploads/9aad2f40-223a-4b80-a2ff-f5b96d6a214a.png"
       },
       {
         title: "How AI Helps Content Creators",
         description: "Exploring AI tools and their impact on content creation",
         link: "https://www.3arrafni.com/how-ai-helps-content-creators/",
-        logo: "/lovable-uploads/693924e3-2bc0-456b-8afe-d100ef0390f8.png"
+        logo: "/lovable-uploads/693924e3-2bc0-456b-8afe-d100ef0390f8.png",
+        thumbnail: "/lovable-uploads/dad15bdd-7f3a-448f-9ee8-a10691e69287.png"
       },
       {
         title: "Prompt Engineering Explained",
         description: "Guide to effective AI prompt creation and optimization",
         link: "https://www.3arrafni.com/prompt-engineering-explained/",
-        logo: "/lovable-uploads/693924e3-2bc0-456b-8afe-d100ef0390f8.png"
+        logo: "/lovable-uploads/693924e3-2bc0-456b-8afe-d100ef0390f8.png",
+        thumbnail: "/lovable-uploads/9cdf90dc-d7b1-4d0e-b313-fd804a1b5c41.png"
       },
       {
         title: "UGREEN Nexode Pro Revision",
         description: "Updated review of UGREEN's professional charging solution",
         link: "https://www.3arrafni.com/ugreen-nexode-pro-revision/",
-        logo: "/lovable-uploads/693924e3-2bc0-456b-8afe-d100ef0390f8.png"
+        logo: "/lovable-uploads/693924e3-2bc0-456b-8afe-d100ef0390f8.png",
+        thumbnail: "/lovable-uploads/c99d7313-a992-4af7-8105-eed067ae947d.png"
       },
       {
         title: "UGREEN HiTune Max5 Review",
         description: "Comprehensive audio device review and testing",
         link: "https://www.3arrafni.com/ugreen-hitune-max5-review/",
-        logo: "/lovable-uploads/693924e3-2bc0-456b-8afe-d100ef0390f8.png"
+        logo: "/lovable-uploads/693924e3-2bc0-456b-8afe-d100ef0390f8.png",
+        thumbnail: "/lovable-uploads/d0216ca5-bceb-4f66-9e10-fcfd35a3156d.png"
       },
       {
         title: "GameSir X2 Pro Review",
         description: "Gaming controller review for mobile gaming",
         link: "https://www.3arrafni.com/gamesir-x2-pro-review/",
-        logo: "/lovable-uploads/693924e3-2bc0-456b-8afe-d100ef0390f8.png"
+        logo: "/lovable-uploads/693924e3-2bc0-456b-8afe-d100ef0390f8.png",
+        thumbnail: "/lovable-uploads/2ab8ad8d-23cb-4603-8fea-c58c068ac9f4.png"
       },
       {
         title: "Rapoo MT750L Mouse Review",
         description: "Professional mouse review with detailed testing",
         link: "https://www.3arrafni.com/rapoo-mt750l-mouse-review/",
-        logo: "/lovable-uploads/693924e3-2bc0-456b-8afe-d100ef0390f8.png"
+        logo: "/lovable-uploads/693924e3-2bc0-456b-8afe-d100ef0390f8.png",
+        thumbnail: "/lovable-uploads/d8b65cbe-c61f-4aab-9a3b-97f6bd0c0dd0.png"
       },
       {
         title: "Honor Magic Watch 2 Review",
         description: "Smartwatch review with comprehensive feature analysis",
         link: "https://www.3arrafni.com/honor-magic-watch-2-review/",
-        logo: "/lovable-uploads/693924e3-2bc0-456b-8afe-d100ef0390f8.png"
+        logo: "/lovable-uploads/693924e3-2bc0-456b-8afe-d100ef0390f8.png",
+        thumbnail: "/lovable-uploads/0103d0f2-a16b-4914-b6d3-f52d4094b187.png"
       },
       {
         title: "Gaomon S620 Graphic Tablet Review",
         description: "Digital art tablet review for creative professionals",
         link: "https://www.3arrafni.com/gaomon-s620-graphic-tablet-review/",
-        logo: "/lovable-uploads/693924e3-2bc0-456b-8afe-d100ef0390f8.png"
+        logo: "/lovable-uploads/693924e3-2bc0-456b-8afe-d100ef0390f8.png",
+        thumbnail: "/lovable-uploads/0e791a4f-e229-4dbe-bcfa-b6f0611a89d3.png"
       }
     ]
   },
