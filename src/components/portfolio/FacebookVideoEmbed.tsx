@@ -9,7 +9,9 @@ interface FacebookVideoEmbedProps {
 }
 
 export const FacebookVideoEmbed = ({ title, description, videoUrl, logo, responsibilities = [] }: FacebookVideoEmbedProps) => {
-  const embedUrl = `https://www.facebook.com/plugins/video.php?href=${encodeURIComponent(videoUrl)}&show_text=false&width=1280&height=720`;
+  const embedUrl = videoUrl.includes('facebook.com/plugins/video.php')
+    ? videoUrl
+    : `https://www.facebook.com/plugins/video.php?href=${encodeURIComponent(videoUrl)}&show_text=false&width=1280&height=720`;
 
   return (
     <div className="group liquid-glass liquid-glass-hover rounded-3xl p-6 md:p-8 transform">

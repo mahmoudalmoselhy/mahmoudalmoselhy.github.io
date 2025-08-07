@@ -167,7 +167,7 @@ export const portfolioSections = [
       {
         title: "Menusbee Group Ordering Campaign Video",
         description: "Ad campaign showcasing how Menusbee transforms food service and pricing through a real group food ordering use case—choosing a restaurant because it’s on Menusbee. Followed by a voice-over highlighting why Menusbee is great.",
-        link: "https://www.facebook.com/share/r/1ACc2AKjBo/",
+        link: "https://www.facebook.com/reel/1291760139289174/",
         logo: "/lovable-uploads/c8892c9f-d780-4825-a3b1-b1e017d5bd62.png",
         embed: "facebook-video",
         responsibilities: [
