@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { YouTubePlaylistEmbed } from './YouTubePlaylistEmbed';
 import { PortfolioCard } from './PortfolioCard';
 import { Button } from '../ui/button';
+import { Link } from 'react-router-dom';
 
 interface PortfolioSectionItem {
   title: string;
@@ -63,12 +64,8 @@ export const PortfolioSection = ({ title, description, items, gridClassName = "g
 
         {nonPlaylistItems.length > limit && (
           <div className="mt-4 md:mt-6 flex justify-center">
-            <Button
-              variant="secondary"
-              onClick={() => setShowAll((v) => !v)}
-              aria-label={showAll ? 'Show less projects' : 'Show all projects'}
-            >
-              {showAll ? 'Show Less' : 'Show All'}
+            <Button asChild variant="secondary" aria-label="Show all projects">
+              <Link to="/projects">Show All</Link>
             </Button>
           </div>
         )}

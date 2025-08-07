@@ -23,7 +23,7 @@ export const PortfolioCard = ({ title, description, link, logo, skills = [] }: P
     >
       <article className="liquid-glass liquid-glass-hover rounded-3xl overflow-hidden transition-shadow duration-300">
         <div className="w-full">
-          <AspectRatio ratio={16 / 9}>
+          <AspectRatio ratio={2}>
             <img
               src={logo}
               alt={`${title} thumbnail`}
