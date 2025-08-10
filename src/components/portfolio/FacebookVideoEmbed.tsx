@@ -17,7 +17,7 @@ export const FacebookVideoEmbed = ({ title, description, videoUrl, logo, respons
     <article className="group liquid-glass liquid-glass-hover rounded-3xl p-6 md:p-8 transform md:col-span-full">
       <div className="grid gap-4 md:gap-6 md:grid-cols-5 items-start">
         {/* Left: Video */}
-        <div className="md:col-span-3">
+        <div className="md:col-span-2">
           <div className="rounded-2xl overflow-hidden bg-background/50">
             <div className="aspect-video">
               <iframe
@@ -33,25 +33,22 @@ export const FacebookVideoEmbed = ({ title, description, videoUrl, logo, respons
         </div>
 
         {/* Right: Text content */}
-        <aside className="md:col-span-2">
-          <div className="flex items-center mb-3 md:mb-4">
-            <div className="w-8 h-8 md:w-10 md:h-10 liquid-button rounded-full flex items-center justify-center mr-3 group-hover:scale-110 transition-transform duration-500 p-1.5">
-              <img src={logo} alt={`${title} logo`} className="w-full h-full object-contain" />
-            </div>
-            <h4 className="text-sm md:text-base font-semibold text-foreground group-hover:text-primary transition-all duration-500 line-clamp-1">
+        <aside className="md:col-span-3">
+          <header className="mb-3 md:mb-4">
+            <h3 className="text-base md:text-xl lg:text-2xl font-semibold text-foreground group-hover:text-primary transition-all duration-500 line-clamp-2">
               {title}
-            </h4>
-          </div>
+            </h3>
+          </header>
 
-          <div className="space-y-3">
-            <p className="text-muted-foreground text-xs md:text-sm leading-relaxed">
+          <div className="space-y-4">
+            <p className="text-foreground/90 text-sm md:text-base lg:text-lg leading-relaxed">
               {description}
             </p>
 
             {responsibilities.length > 0 && (
-              <section aria-label="Responsibilities">
-                <h5 className="text-foreground text-xs md:text-sm font-semibold mb-1">Responsibilities</h5>
-                <ul className="list-disc list-inside text-muted-foreground text-xs md:text-sm space-y-1">
+              <section aria-label="Responsibilities" className="space-y-2">
+                <h4 className="text-foreground text-sm md:text-base lg:text-lg font-semibold">Responsibilities</h4>
+                <ul className="list-disc list-inside text-muted-foreground text-sm md:text-base lg:text-lg space-y-1.5">
                   {responsibilities.map((item, idx) => (
                     <li key={idx}>{item}</li>
                   ))}
