@@ -14,11 +14,11 @@ export const FacebookVideoEmbed = ({ title, description, videoUrl, logo, respons
     : `https://www.facebook.com/plugins/video.php?href=${encodeURIComponent(videoUrl)}&show_text=false&width=1280&height=720`;
 
   return (
-    <article className="group liquid-glass liquid-glass-hover rounded-3xl p-6 md:p-8 transform md:col-span-full">
-      <div className="grid gap-4 md:gap-6 md:grid-cols-5 items-start">
+    <article className="group liquid-glass liquid-glass-hover rounded-3xl p-6 md:p-8 transform col-span-full md:col-span-full">
+      <div className="grid grid-cols-5 gap-4 md:gap-6 items-start">
         {/* Left: Video */}
-        <div className="md:col-span-3">
-          <div className="rounded-xl md:rounded-2xl overflow-hidden bg-background/50 max-w-md mx-auto md:max-w-none">
+        <div className="col-span-3 md:col-span-3">
+          <div className="rounded-xl md:rounded-2xl overflow-hidden bg-background/50">
             <div className="aspect-video">
               <iframe
                 src={embedUrl}
@@ -33,7 +33,7 @@ export const FacebookVideoEmbed = ({ title, description, videoUrl, logo, respons
         </div>
 
         {/* Right: Text content */}
-        <aside className="md:col-span-2 mt-4 md:mt-0">
+        <aside className="col-span-2 md:col-span-2">
           <div className="flex items-center mb-3 md:mb-4">
             <div className="w-8 h-8 md:w-10 md:h-10 liquid-button rounded-full flex items-center justify-center mr-3 group-hover:scale-110 transition-transform duration-500 p-1.5">
               <img src={logo} alt={`${title} logo`} className="w-full h-full object-contain" />
