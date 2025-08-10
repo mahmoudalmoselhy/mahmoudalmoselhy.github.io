@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 interface FacebookVideoEmbedProps {
@@ -7,12 +7,44 @@ interface FacebookVideoEmbedProps {
   videoUrl: string;
   logo: string;
   responsibilities?: string[];
+  accessToken?: string; // Optional: Facebook Graph API token to fetch video dimensions
 }
 
-export const FacebookVideoEmbed = ({ title, description, videoUrl, logo, responsibilities = [] }: FacebookVideoEmbedProps) => {
+export const FacebookVideoEmbed = ({ title, description, videoUrl, logo, responsibilities = [], accessToken }: FacebookVideoEmbedProps) => {
   const embedUrl = videoUrl.includes('facebook.com/plugins/video.php')
     ? videoUrl
     : `https://www.facebook.com/plugins/video.php?href=${encodeURIComponent(videoUrl)}&show_text=false&width=1280&height=720`;
+
+  const [aspect, setAspect] = useState<number>(16 / 9);
+
+  const extractVideoId = (url: string): string | null => {
+    try {
+      let u = url;
+      if (u.includes('plugins/video.php')) {
+        const parsed = new URL(u);
+        const href = parsed.searchParams.get('href');
+        if (href) u = href;
+      }
+      const match = u.match(/videos\/(\d+)/);
+      return match ? match[1] : null;
+    } catch {
+      return null;
+    }
+  };
+
+  useEffect(() => {
+    if (!accessToken) return;
+    const id = extractVideoId(videoUrl);
+    if (!id) return;
+    fetch(`https://graph.facebook.com/v20.0/${id}?fields=width,height&access_token=${accessToken}`)
+      .then(res => res.json())
+      .then(data => {
+        if (data?.width && data?.height) {
+          setAspect(data.width / data.height);
+        }
+      })
+      .catch(() => {});
+  }, [videoUrl, accessToken]);
 
   return (
     <article className="group liquid-glass liquid-glass-hover rounded-3xl p-6 md:p-8 transform col-span-full md:col-span-full">
@@ -22,7 +54,7 @@ export const FacebookVideoEmbed = ({ title, description, videoUrl, logo, respons
           <div className="rounded-xl md:rounded-2xl overflow-hidden bg-background/50">
             {/* Mobile: vertical (9:16) with safe max height */}
             <div className="md:hidden max-h-[calc(100svh-120px)]">
-              <AspectRatio ratio={9 / 16}>
+              <AspectRatio ratio={aspect}>
                 <iframe
                   src={embedUrl}
                   title={title}
@@ -35,7 +67,7 @@ export const FacebookVideoEmbed = ({ title, description, videoUrl, logo, respons
             </div>
             {/* Desktop: 16:9 */}
             <div className="hidden md:block">
-              <AspectRatio ratio={16 / 9}>
+              <AspectRatio ratio={aspect}>
                 <iframe
                   src={embedUrl}
                   title={title}
