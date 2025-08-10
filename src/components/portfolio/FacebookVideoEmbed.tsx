@@ -19,7 +19,7 @@ export const FacebookVideoEmbed = ({ title, description, videoUrl, logo, respons
         {/* Left: Video */}
         <div className="md:col-span-3">
           <div className="rounded-xl md:rounded-2xl overflow-hidden bg-background/50">
-            <div className="aspect-video">
+            <div className="h-[100dvh] md:aspect-video">
               <iframe
                 src={embedUrl}
                 title={title}
