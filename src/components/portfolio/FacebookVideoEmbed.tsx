@@ -15,9 +15,9 @@ export const FacebookVideoEmbed = ({ title, description, videoUrl, logo, respons
 
   return (
     <article className="group liquid-glass liquid-glass-hover rounded-3xl p-6 md:p-8 transform col-span-full md:col-span-full">
-      <div className="grid grid-cols-5 gap-4 md:gap-6 items-start">
+      <div className="grid gap-4 md:gap-6 md:grid-cols-5 items-start">
         {/* Left: Video */}
-        <div className="col-span-3 md:col-span-3">
+        <div className="md:col-span-3">
           <div className="rounded-xl md:rounded-2xl overflow-hidden bg-background/50">
             <div className="aspect-video">
               <iframe
@@ -33,7 +33,7 @@ export const FacebookVideoEmbed = ({ title, description, videoUrl, logo, respons
         </div>
 
         {/* Right: Text content */}
-        <aside className="col-span-2 md:col-span-2">
+        <aside className="md:col-span-2 mt-4 md:mt-0">
           <div className="flex items-center mb-3 md:mb-4">
             <div className="w-8 h-8 md:w-10 md:h-10 liquid-button rounded-full flex items-center justify-center mr-3 group-hover:scale-110 transition-transform duration-500 p-1.5">
               <img src={logo} alt={`${title} logo`} className="w-full h-full object-contain" />
@@ -43,7 +43,7 @@ export const FacebookVideoEmbed = ({ title, description, videoUrl, logo, respons
             </h4>
           </div>
 
-          <div className="space-y-4 md:space-y-5">
+          <div className="grid grid-cols-2 gap-3 md:block">
             <p className="text-muted-foreground text-sm md:text-base leading-relaxed">
               {description}
             </p>
