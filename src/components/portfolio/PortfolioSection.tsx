@@ -70,40 +70,79 @@ const visibleContentItems = showAll ? nonPlaylistItems : nonPlaylistItems.slice(
       
       <div className="w-full max-w-none">
 <div className={`grid ${title.includes('Script Writing') ? 'grid-cols-1 lg:grid-cols-2' : gridClassName} gap-4 md:gap-6`}>
-          {facebookEmbeds.map((item, itemIndex) => (
-            <FacebookVideoEmbed
-              key={`fb-${itemIndex}-${item.title}`}
-              title={item.title}
-              description={item.description}
-              videoUrl={item.link}
-              logo={item.logo}
-              responsibilities={item.responsibilities}
-            />
-          ))}
+          {title === 'Android World Articles' ? (
+            <>
+              {visibleContentItems.map((item, itemIndex) => (
+                <a
+                  key={`awa-${itemIndex}-${item.title}`}
+                  href={item.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group block overflow-hidden rounded-2xl border border-border bg-card hover:shadow-md transition-shadow duration-300"
+                >
+                  <div className="relative w-full aspect-[16/9] overflow-hidden">
+                    <img
+                      src={item.thumbnail || item.logo}
+                      alt={`${item.title} thumbnail`}
+                      loading="lazy"
+                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.02]"
+                    />
+                  </div>
+                  <div className="p-4">
+                    <div className="flex flex-wrap gap-2 mb-2">
+                      {(item.skills || []).map((tag, i) => (
+                        <span
+                          key={i}
+                          className="text-[10px] md:text-xs px-2 py-1 bg-muted text-muted-foreground rounded-full"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                    <h3 className="text-sm md:text-base font-semibold mb-1 text-foreground line-clamp-2">{item.title}</h3>
+                    <p className="text-xs md:text-sm text-muted-foreground line-clamp-3">{item.description}</p>
+                  </div>
+                </a>
+              ))}
+            </>
+          ) : (
+            <>
+              {facebookEmbeds.map((item, itemIndex) => (
+                <FacebookVideoEmbed
+                  key={`fb-${itemIndex}-${item.title}`}
+                  title={item.title}
+                  description={item.description}
+                  videoUrl={item.link}
+                  logo={item.logo}
+                  responsibilities={item.responsibilities}
+                />
+              ))}
 
-          {visibleContentItems.map((item, itemIndex) => (
-            <PortfolioCard
-              key={`card-${itemIndex}-${item.title}`}
-              title={item.title}
-              description={item.description}
-              link={item.link}
-              logo={item.logo}
-              thumbnail={item.thumbnail}
-              client={item.client}
-              date={item.date}
-              skills={item.skills}
-            />
-          ))}
+              {visibleContentItems.map((item, itemIndex) => (
+                <PortfolioCard
+                  key={`card-${itemIndex}-${item.title}`}
+                  title={item.title}
+                  description={item.description}
+                  link={item.link}
+                  logo={item.logo}
+                  thumbnail={item.thumbnail}
+                  client={item.client}
+                  date={item.date}
+                  skills={item.skills}
+                />
+              ))}
 
-          {playlistItems.map((item, itemIndex) => (
-            <YouTubePlaylistEmbed
-              key={`yt-${itemIndex}-${item.title}`}
-              title={item.title}
-              description={item.description}
-              playlistUrl={item.link}
-              logo={item.logo}
-            />
-          ))}
+              {playlistItems.map((item, itemIndex) => (
+                <YouTubePlaylistEmbed
+                  key={`yt-${itemIndex}-${item.title}`}
+                  title={item.title}
+                  description={item.description}
+                  playlistUrl={item.link}
+                  logo={item.logo}
+                />
+              ))}
+            </>
+          )}
         </div>
 
         {nonPlaylistItems.length > limit && (
