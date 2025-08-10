@@ -1,4 +1,5 @@
 import React from 'react';
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 interface FacebookVideoEmbedProps {
   title: string;
@@ -19,15 +20,31 @@ export const FacebookVideoEmbed = ({ title, description, videoUrl, logo, respons
         {/* Left: Video */}
         <div className="md:col-span-3">
           <div className="rounded-xl md:rounded-2xl overflow-hidden bg-background/50">
-            <div className="h-[100dvh] md:aspect-video">
-              <iframe
-                src={embedUrl}
-                title={title}
-                className="w-full h-full border-0"
-                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-                allowFullScreen
-                loading="lazy"
-              />
+            {/* Mobile: vertical (9:16) with safe max height */}
+            <div className="md:hidden max-h-[calc(100svh-120px)]">
+              <AspectRatio ratio={9 / 16}>
+                <iframe
+                  src={embedUrl}
+                  title={title}
+                  className="w-full h-full border-0"
+                  allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                  allowFullScreen
+                  loading="lazy"
+                />
+              </AspectRatio>
+            </div>
+            {/* Desktop: 16:9 */}
+            <div className="hidden md:block">
+              <AspectRatio ratio={16 / 9}>
+                <iframe
+                  src={embedUrl}
+                  title={title}
+                  className="w-full h-full border-0"
+                  allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                  allowFullScreen
+                  loading="lazy"
+                />
+              </AspectRatio>
             </div>
           </div>
         </div>
