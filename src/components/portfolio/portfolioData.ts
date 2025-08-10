@@ -87,58 +87,60 @@ export const portfolioSections = [
     description: "Mobile technology and Android-focused content writing",
     items: [
       {
-        title: "Android Technology Article",
-        description: "Latest Android developments and mobile tech insights",
+        title: "S-Pen vs Apple Pencil",
+        description: "S-Pen vs Apple Pencil",
         link: "https://www.androidworld9.com/87528/",
-        logo: "/lovable-uploads/e1d8ea68-6c79-4ca8-8729-ca7d400d103a.png"
+        logo: "/lovable-uploads/e1d8ea68-6c79-4ca8-8729-ca7d400d103a.png",
+        thumbnail: "/lovable-uploads/39ba7b72-cb9c-43c6-8e40-56cd9c3d0e5a.png",
+        skills: ["Technology", "Blog posting", "Comparison"]
       },
       {
-        title: "Mobile Innovation Coverage",
-        description: "Comprehensive mobile technology analysis",
+        title: "Wear OS vs watchOS",
+        description: "Wear OS vs watchOS",
         link: "https://www.androidworld9.com/87308/",
-        logo: "/lovable-uploads/e1d8ea68-6c79-4ca8-8729-ca7d400d103a.png"
+        logo: "/lovable-uploads/e1d8ea68-6c79-4ca8-8729-ca7d400d103a.png",
+        thumbnail: "/lovable-uploads/d469745f-a6e7-4108-a186-f061d8512275.png",
+        skills: ["Technology", "Blog posting", "Comparison"]
       },
       {
-        title: "Android Feature Analysis",
-        description: "In-depth analysis of Android features and updates",
-        link: "https://www.androidworld9.com/45890/",
-        logo: "/lovable-uploads/e1d8ea68-6c79-4ca8-8729-ca7d400d103a.png"
-      },
-      {
-        title: "Mobile Security Insights",
-        description: "Android security features and privacy analysis",
+        title: "Honor Magic Watch 2 Review",
+        description: "Honor Magic Watch 2 Review",
         link: "https://www.androidworld9.com/42376/",
-        logo: "/lovable-uploads/e1d8ea68-6c79-4ca8-8729-ca7d400d103a.png"
+        logo: "/lovable-uploads/e1d8ea68-6c79-4ca8-8729-ca7d400d103a.png",
+        thumbnail: "/lovable-uploads/a6b8da18-6129-4bd7-bcf8-0fc13af66c42.png",
+        skills: ["Technology", "Blog posting", "Comparison", "Tech revision"]
       },
       {
-        title: "App Development Trends",
-        description: "Latest trends in Android app development",
+        title: "Samsung Ecosystem Explained",
+        description: "Samsung Ecosystem Explained",
         link: "https://www.androidworld9.com/42329/",
-        logo: "/lovable-uploads/e1d8ea68-6c79-4ca8-8729-ca7d400d103a.png"
+        logo: "/lovable-uploads/e1d8ea68-6c79-4ca8-8729-ca7d400d103a.png",
+        thumbnail: "/lovable-uploads/8bbcab6e-e829-4a5e-ab9f-b1253b95c954.png",
+        skills: ["Technology", "Blog posting", "Tech revision"]
       },
       {
-        title: "Android OS Updates",
-        description: "Coverage of Android operating system updates",
+        title: "Studying Elon Musk",
+        description: "Studying Elon Musk",
         link: "https://www.androidworld9.com/42203/",
-        logo: "/lovable-uploads/e1d8ea68-6c79-4ca8-8729-ca7d400d103a.png"
+        logo: "/lovable-uploads/e1d8ea68-6c79-4ca8-8729-ca7d400d103a.png",
+        thumbnail: "/lovable-uploads/7b7434e1-5681-432c-a3bf-71e619cfb5a0.png",
+        skills: ["Economy", "Researching"]
       },
       {
-        title: "Mobile Hardware Reviews",
-        description: "Android device hardware analysis and reviews",
-        link: "https://www.androidworld9.com/41684/",
-        logo: "/lovable-uploads/e1d8ea68-6c79-4ca8-8729-ca7d400d103a.png"
-      },
-      {
-        title: "Android Ecosystem Analysis",
-        description: "Comprehensive analysis of the Android ecosystem",
+        title: "Use Tablets in your school",
+        description: "Use Tablets in your school",
         link: "https://www.androidworld9.com/41551/",
-        logo: "/lovable-uploads/e1d8ea68-6c79-4ca8-8729-ca7d400d103a.png"
+        logo: "/lovable-uploads/e1d8ea68-6c79-4ca8-8729-ca7d400d103a.png",
+        thumbnail: "/lovable-uploads/d95cf745-3cd4-444a-9163-ac60596ebef4.png",
+        skills: ["Technology", "Blog posting", "Use cases"]
       },
       {
-        title: "Mobile Technology Trends",
-        description: "Emerging trends in mobile technology landscape",
+        title: "Samsung Galaxy Tab S7 FE Review",
+        description: "Samsung Galaxy Tab S7 FE Review",
         link: "https://www.androidworld9.com/40030/",
-        logo: "/lovable-uploads/e1d8ea68-6c79-4ca8-8729-ca7d400d103a.png"
+        logo: "/lovable-uploads/e1d8ea68-6c79-4ca8-8729-ca7d400d103a.png",
+        thumbnail: "/lovable-uploads/826770dd-3553-4f49-b17f-a2cc5d145335.png",
+        skills: ["Technology", "Blog posting", "Comparison", "Tech revision"]
       }
     ]
   },
