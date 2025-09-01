@@ -4,13 +4,6 @@ export const portfolioSections = [
     description: "Leading NVIDIA MENA news translation and tech content creation",
     items: [
       {
-        title: "Samsung Galaxy Buds 3 Pro",
-        description: "Samsung Galaxy Buds 3 Pro مراجعة - الصوتيات ليست كل شيء",
-        link: "https://www.3arrafni.com/samsung-galaxy-buds-3-pro-review/",
-        logo: "/lovable-uploads/693924e3-2bc0-456b-8afe-d100ef0390f8.png",
-        thumbnail: "/lovable-uploads/85462968-e0cb-4458-a867-ae9766cb8706.png"
-      },
-      {
         title: "UGREEN Nexode PowerBank 200W",
         description: "Comprehensive powerbank review and testing",
         link: "https://www.3arrafni.com/ugreen-nexode-powerbank-200w/",
