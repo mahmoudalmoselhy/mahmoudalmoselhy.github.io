@@ -10,6 +10,11 @@ interface FeaturedWork {
 
 const featuredWorks: FeaturedWork[] = [
   {
+    title: "Samsung Galaxy Buds 3 Pro",
+    link: "https://www.3arrafni.com/samsung-galaxy-buds-3-pro-review/",
+    image: "/lovable-uploads/85462968-e0cb-4458-a867-ae9766cb8706.png"
+  },
+  {
     title: "Samsung Galaxy Watch 4 Review",
     link: "https://www.3arrafni.com/samsung-galaxy-watch-4-review/",
     image: "/lovable-uploads/cc0ed4c2-86a5-4d8e-8065-cac902b8bc16.png"
