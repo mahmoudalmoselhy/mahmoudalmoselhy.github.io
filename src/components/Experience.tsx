@@ -6,73 +6,151 @@ export const Experience = () => {
     {
       id: 1,
       company: "Tiye Solutions",
-      logo: "/lovable-uploads/95878c89-1346-4176-bb5f-e5d4ee18d9da.png",
       positions: [
         {
           role: "Senior Content Creator and SEO Specialist",
           employmentType: "Full-time",
           period: "Sep 2025 - Present",
-          duration: "1 mo",
-          location: "Qesm El Maadi, Cairo, Egypt · On-site",
-          description: "I craft content and optimize it. Anything else?",
-          skills: ["Content Creation", "SEO Copywriting", "+1 skill"]
+          location: "Maadi, Egypt",
+          responsibilities: [
+            "Write and Improve: write and improve content for various accounts on social media and websites",
+            "Idea suggestion: Suggest ideas for social media campaigns and author campaign content",
+            "Team improvement: Help improving the team and their skills under supervision of the team leader and consultant",
+            "SEO Analysis: Full website analysis for clients' websites",
+            "Rank improvement: Work with the content team to improve website rankings on Search engines",
+            "Collaboration: Collaborate with other teams to deliver results for all accounts"
+          ]
         }
       ]
     },
     {
       id: 2,
       company: "Devolum",
-      logo: "/lovable-uploads/d7329e5d-7d35-4916-ad88-6fe3a8fa2075.png",
       positions: [
         {
-          role: "Content Team Leader",
-          employmentType: "Full-time", 
-          period: "Jan 2024 - Aug 2025",
-          duration: "1 yr 8 mos",
-          location: "المنصورة · On-site",
-          description: "Leading team of content writers, providing guidance and mentoring. Planning content strategies for clients to improve websites' blogs and traffic.",
-          skills: ["Atlassian Suite", "E-commerce SEO", "+8 skills"]
+          role: "Content team leader",
+          employmentType: "Full-time",
+          period: "Jan 2024 - present",
+          location: "Mansoura, Egypt",
+          responsibilities: [
+            "Team Leadership and Development: Leading team of content writers, providing them with guidance and mentoring, training them to improve their skills in SEO and content",
+            "Planning Content Strategies: Work on content strategies for clients to improve their websites' blogs and traffic",
+            "Quality Assurance: Follow up with the team to make sure they always give their best and their output at its best state",
+            "Content Optimization: Regularly update and optimize existing content to improve search rankings, readability, and user engagement",
+            "Project Management: Assign and manage tasks, ensuring timely delivery of content projects, maintaining clear communication and efficient workflows",
+            "Team Performance Monitoring: Keeping my team at 80% of their performance so they can always give their best to their writings without having any kind of drop",
+            "Innovative Approaches: Stay updated on SEO trends and best practices, introducing innovative strategies to maintain a competitive edge in search rankings",
+            "Reporting: Prepare detailed reports for management on content performance, team productivity, and SEO outcomes, providing insights and recommendations for future improvements",
+            "Social media content Manager: Manage a group of social media team content creators ensuring they deliver posting calendars on time with no mistakes with a suitable content for marketing and campaigns"
+          ]
+        },
+        {
+          role: "SEO Specialist",
+          employmentType: "Full-time",
+          period: "Jan 2024 - present", 
+          location: "Mansoura, Egypt",
+          responsibilities: [
+            "On Page Optimization: Implement different SEO techniques such as meta tag creation, content optimization, and internal linking to enhance website visibility",
+            "Technical Optimization: Work with developer to make sure websites have no technical problems that affect its visibility",
+            "Keyword Analysis: Conduct in-depth keyword research to identify opportunities for driving organic traffic and optimizing website content",
+            "Competitor Analysis: Conduct competitive analysis to identify industry trends and incorporate insights into SEO strategies",
+            "Content Collaboration: Work with content team that I also manage to create SEO-friendly content aligned with business goals and target audiences",
+            "Algorithm Updates: Stay updated on search engine algorithm changes and adjust strategies to maintain or improve rankings",
+            "Local SEO: Optimize local business listings and content to improve visibility in local search results",
+            "Reporting: Prepare detailed performance reports showcasing keyword rankings, traffic trends, and ROI to stakeholders"
+          ]
         }
       ]
     },
     {
       id: 3,
-      company: "عرفني دوت كوم",
-      logo: "/lovable-uploads/c4791ce9-d7ef-4eff-833e-6b17a0c7b455.png",
+      company: "3arrafni website",
       positions: [
         {
-          role: "Editor In Chief",
-          employmentType: "Part-time",
-          period: "Oct 2022 - Aug 2025",
-          duration: "2 yrs 11 mos",
-          location: "Egypt - Almansoura · On-site",
-          description: "Managing content teams and overseeing content development. Writing SEO-friendly tech articles and product reviews.",
-          skills: ["Atlassian Suite", "Technical Writing", "+9 skills"]
-        },
-        {
-          role: "Senior Editor", 
-          employmentType: "Part-time",
-          period: "Aug 2018 - Oct 2022",
-          duration: "4 yrs 3 mos",
-          location: "Egypt - Almansoura · On-site",
-          description: "NVIDIA MENA news translation and content localization. Tech gadget and product reviews.",
-          skills: ["Web Content Writing", "Presentations", "+1 skill"]
+          role: "Editor in chief",
+          employmentType: "Full-time",
+          period: "Oct 2022 - present",
+          location: "Mansoura, Egypt",
+          responsibilities: [
+            "NVIDIA MENA News Translator: Work with NVIDIA on their news translation from English to Arabic which a lot of Arabian websites copy and use on their blogs",
+            "Manage Team of Content Writers: Work with 2 teams of content creators on the website (Freelance and full time teams) to make sure they develop powerful content. Tech field",
+            "News Coverage: Cover technology news from all over the world on the website",
+            "Write Articles: Write powerful tech articles that are SEO-friendly with a lot of information which help readers",
+            "Tech Gadget/ Products/ Software Review: Try and give an honest opinion on several technological products like: Mobile phones, Accessories, Games, Applications, and Gadgets",
+            "SEO work: Follow up with latest SEO Trends and updates to improve the website performance"
+          ]
         }
       ]
     },
     {
       id: 4,
-      company: "Android World",
-      logo: "/lovable-uploads/c4791ce9-d7ef-4eff-833e-6b17a0c7b455.png",
+      company: "Reviewology YouTube channel",
       positions: [
         {
-          role: "Blogger",
+          role: "Scriptwriter",
+          employmentType: "Contract",
+          period: "Jan 2024 - Aug 2024",
+          location: "Remote",
+          responsibilities: [
+            "Search and collect information for YouTube videos about how technology works",
+            "Give full explanation on how technologies work in the script",
+            "Make sure video scripts are informative for both knowledge seeking and Consumer needs with a touch of humor",
+            "Put a full vision about the video in terms of recording scenes",
+            "Provide suitable inserts for the video",
+            "Make sure the video is easy to understand using real life examples and multiple ways to describe everything"
+          ]
+        }
+      ]
+    },
+    {
+      id: 5,
+      company: "Devolum",
+      positions: [
+        {
+          role: "SEO Specialist Intern",
+          employmentType: "Internship",
+          period: "Sep 2023 - Jan 2024",
+          location: "Mansoura, Egypt",
+          responsibilities: []
+        }
+      ]
+    },
+    {
+      id: 6,
+      company: "Freelance",
+      positions: [
+        {
+          role: "Freelance YouTube script writer",
+          employmentType: "Freelance",
+          period: "Oct 2022 - Aug 2023",
+          location: "Remote",
+          responsibilities: []
+        }
+      ]
+    },
+    {
+      id: 7,
+      company: "Android World website",
+      positions: [
+        {
+          role: "Senior Editor",
           employmentType: "Full-time",
           period: "Aug 2021 - Jan 2023",
-          duration: "1 yr 6 mos",
-          location: "El Mansoura, Ad Daqahliyah, Egypt",
-          description: "Writing technology articles and product reviews for Android-focused website.",
-          skills: ["Technical Writing", "Content Creation", "+2 skills"]
+          location: "Egypt",
+          responsibilities: []
+        }
+      ]
+    },
+    {
+      id: 8,
+      company: "3arrafni.com website", 
+      positions: [
+        {
+          role: "Senior Editor",
+          employmentType: "Full-time",
+          period: "Aug 2018 - Oct 2022",
+          location: "Egypt",
+          responsibilities: []
         }
       ]
     }
@@ -92,17 +170,10 @@ export const Experience = () => {
               <div className="relative">
                 {exp.positions.map((position, posIndex) => (
                   <div key={posIndex} className="flex gap-4 pb-8">
-                    {/* Logo Section */}
+                    {/* Logo Section - Removed for now */}
                     <div className="flex-shrink-0">
-                      <div className="w-12 h-12 rounded-lg overflow-hidden bg-background border border-border">
-                        <img
-                          src={exp.logo}
-                          alt={exp.company}
-                          className="w-full h-full object-contain p-1"
-                          onError={(e) => {
-                            e.currentTarget.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDgiIGhlaWdodD0iNDgiIHZpZXdCb3g9IjAgMCA0OCA0OCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjQ4IiBoZWlnaHQ9IjQ4IiByeD0iNCIgZmlsbD0iI0Y5RkFGQiIvPgo8L3N2Zz4K';
-                          }}
-                        />
+                      <div className="w-12 h-12 rounded-lg overflow-hidden bg-muted/20 border border-border flex items-center justify-center">
+                        <div className="w-6 h-6 bg-muted-foreground/20 rounded"></div>
                       </div>
                       
                       {/* Vertical connector line for multiple positions */}
@@ -127,9 +198,9 @@ export const Experience = () => {
                         {exp.company} · {position.employmentType}
                       </p>
                       
-                      {/* Dates & Duration */}
+                      {/* Dates */}
                       <p className="text-xs text-muted-foreground/80 mb-1">
-                        {position.period} · {position.duration}
+                        {position.period}
                       </p>
                       
                       {/* Location */}
@@ -137,18 +208,15 @@ export const Experience = () => {
                         {position.location}
                       </p>
                       
-                      {/* Description */}
-                      {position.description && (
-                        <p className="text-sm text-foreground mb-3 leading-relaxed">
-                          {position.description}
-                        </p>
-                      )}
-                      
-                      {/* Skills */}
-                      {position.skills && (
-                        <div className="flex items-start gap-2 text-xs text-muted-foreground">
-                          <Diamond className="w-3 h-3 mt-0.5 flex-shrink-0 fill-current" />
-                          <span>{position.skills.join(', ')}</span>
+                      {/* Responsibilities */}
+                      {position.responsibilities && position.responsibilities.length > 0 && (
+                        <div className="space-y-2 mb-3">
+                          {position.responsibilities.map((responsibility, respIndex) => (
+                            <div key={respIndex} className="flex items-start gap-2 text-sm text-foreground">
+                              <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                              <span className="leading-relaxed">{responsibility}</span>
+                            </div>
+                          ))}
                         </div>
                       )}
                     </div>
