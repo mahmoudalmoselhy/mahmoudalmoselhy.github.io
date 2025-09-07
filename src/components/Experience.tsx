@@ -6,11 +6,13 @@ export const Experience = () => {
     {
       id: 1,
       company: "Tiye Solutions",
+      totalDuration: "1 mo",
       positions: [
         {
           role: "Senior Content Creator and SEO Specialist",
           employmentType: "Full-time",
           period: "Sep 2025 - Present",
+          duration: "1 mo",
           location: "Maadi, Egypt",
           responsibilities: [
             "Write and Improve: write and improve content for various accounts on social media and websites",
@@ -26,11 +28,13 @@ export const Experience = () => {
     {
       id: 2,
       company: "Devolum",
+      totalDuration: "2 yrs 4 mos",
       positions: [
         {
-          role: "Content team leader",
+          role: "Content Team Leader",
           employmentType: "Full-time",
           period: "Jan 2024 - present",
+          duration: "1 yr 9 mos",
           location: "Mansoura, Egypt",
           responsibilities: [
             "Team Leadership and Development: Leading team of content writers, providing them with guidance and mentoring, training them to improve their skills in SEO and content",
@@ -48,6 +52,7 @@ export const Experience = () => {
           role: "SEO Specialist",
           employmentType: "Full-time",
           period: "Jan 2024 - present", 
+          duration: "1 yr 9 mos",
           location: "Mansoura, Egypt",
           responsibilities: [
             "On Page Optimization: Implement different SEO techniques such as meta tag creation, content optimization, and internal linking to enhance website visibility",
@@ -59,17 +64,27 @@ export const Experience = () => {
             "Local SEO: Optimize local business listings and content to improve visibility in local search results",
             "Reporting: Prepare detailed performance reports showcasing keyword rankings, traffic trends, and ROI to stakeholders"
           ]
+        },
+        {
+          role: "SEO Specialist Intern",
+          employmentType: "Internship",
+          period: "Sep 2023 - Jan 2024",
+          duration: "5 mos",
+          location: "Mansoura, Egypt",
+          responsibilities: []
         }
       ]
     },
     {
       id: 3,
       company: "3arrafni website",
+      totalDuration: "7 yrs 2 mos",
       positions: [
         {
-          role: "Editor in chief",
+          role: "Editor in Chief",
           employmentType: "Full-time",
           period: "Oct 2022 - present",
+          duration: "3 yrs 1 mo",
           location: "Mansoura, Egypt",
           responsibilities: [
             "NVIDIA MENA News Translator: Work with NVIDIA on their news translation from English to Arabic which a lot of Arabian websites copy and use on their blogs",
@@ -79,17 +94,27 @@ export const Experience = () => {
             "Tech Gadget/ Products/ Software Review: Try and give an honest opinion on several technological products like: Mobile phones, Accessories, Games, Applications, and Gadgets",
             "SEO work: Follow up with latest SEO Trends and updates to improve the website performance"
           ]
+        },
+        {
+          role: "Senior Editor",
+          employmentType: "Full-time",
+          period: "Aug 2018 - Oct 2022",
+          duration: "4 yrs 3 mos",
+          location: "Egypt",
+          responsibilities: []
         }
       ]
     },
     {
       id: 4,
       company: "Reviewology YouTube channel",
+      totalDuration: "8 mos",
       positions: [
         {
           role: "Scriptwriter",
           employmentType: "Contract",
           period: "Jan 2024 - Aug 2024",
+          duration: "8 mos",
           location: "Remote",
           responsibilities: [
             "Search and collect information for YouTube videos about how technology works",
@@ -104,51 +129,29 @@ export const Experience = () => {
     },
     {
       id: 5,
-      company: "Devolum",
-      positions: [
-        {
-          role: "SEO Specialist Intern",
-          employmentType: "Internship",
-          period: "Sep 2023 - Jan 2024",
-          location: "Mansoura, Egypt",
-          responsibilities: []
-        }
-      ]
-    },
-    {
-      id: 6,
       company: "Freelance",
+      totalDuration: "11 mos",
       positions: [
         {
           role: "Freelance YouTube script writer",
           employmentType: "Freelance",
           period: "Oct 2022 - Aug 2023",
+          duration: "11 mos",
           location: "Remote",
           responsibilities: []
         }
       ]
     },
     {
-      id: 7,
+      id: 6,
       company: "Android World website",
+      totalDuration: "1 yr 6 mos",
       positions: [
         {
           role: "Senior Editor",
           employmentType: "Full-time",
           period: "Aug 2021 - Jan 2023",
-          location: "Egypt",
-          responsibilities: []
-        }
-      ]
-    },
-    {
-      id: 8,
-      company: "3arrafni.com website", 
-      positions: [
-        {
-          role: "Senior Editor",
-          employmentType: "Full-time",
-          period: "Aug 2018 - Oct 2022",
+          duration: "1 yr 6 mos",
           location: "Egypt",
           responsibilities: []
         }
@@ -163,71 +166,74 @@ export const Experience = () => {
           <h2 className="text-4xl font-bold text-foreground mb-2">Experience</h2>
         </div>
         
-        <div className="space-y-0">
+        <div className="space-y-6">
           {experiences.map((exp, expIndex) => (
-            <div key={exp.id}>
-              {/* Company Experience Block */}
-              <div className="relative">
-                {exp.positions.map((position, posIndex) => (
-                  <div key={posIndex} className="flex gap-4 pb-8">
-                    {/* Logo Section - Removed for now */}
-                    <div className="flex-shrink-0">
-                      <div className="w-12 h-12 rounded-lg overflow-hidden bg-muted/20 border border-border flex items-center justify-center">
-                        <div className="w-6 h-6 bg-muted-foreground/20 rounded"></div>
-                      </div>
-                      
-                      {/* Vertical connector line for multiple positions */}
-                      {exp.positions.length > 1 && posIndex < exp.positions.length - 1 && (
-                        <div className="flex flex-col items-center mt-2">
-                          <div className="w-px h-8 bg-border"></div>
-                          <div className="w-2 h-2 bg-muted-foreground rounded-full"></div>
-                          <div className="w-px h-8 bg-border"></div>
-                        </div>
-                      )}
-                    </div>
+            <div key={exp.id} className="flex gap-3">
+              {/* Company Logo Section */}
+              <div className="flex-shrink-0 flex flex-col items-center">
+                <div className="w-12 h-12 rounded-lg overflow-hidden bg-muted/20 border border-border flex items-center justify-center">
+                  <div className="w-6 h-6 bg-muted-foreground/20 rounded"></div>
+                </div>
+                
+                {/* Vertical line connecting multiple positions */}
+                {exp.positions.length > 1 && (
+                  <div className="w-px bg-border flex-1 mt-2"></div>
+                )}
+              </div>
 
-                    {/* Content Section */}
-                    <div className="flex-1 min-w-0">
+              {/* Experience Content */}
+              <div className="flex-1 min-w-0">
+                {exp.positions.map((position, posIndex) => (
+                  <div key={posIndex} className="relative">
+                    {/* Position Details */}
+                    <div className="pb-4">
                       {/* Job Title */}
-                      <h3 className="text-lg font-semibold text-foreground leading-tight mb-1">
+                      <h3 className="text-base font-semibold text-foreground leading-tight">
                         {position.role}
                       </h3>
                       
                       {/* Company & Employment Type */}
-                      <p className="text-sm text-muted-foreground mb-1">
+                      <p className="text-sm text-muted-foreground mt-1">
                         {exp.company} · {position.employmentType}
                       </p>
                       
-                      {/* Dates */}
-                      <p className="text-xs text-muted-foreground/80 mb-1">
-                        {position.period}
+                      {/* Dates & Duration */}
+                      <p className="text-xs text-muted-foreground/80 mt-1">
+                        {position.period} · {position.duration}
                       </p>
                       
                       {/* Location */}
-                      <p className="text-xs text-muted-foreground/80 mb-3">
+                      <p className="text-xs text-muted-foreground/80 mt-1">
                         {position.location}
                       </p>
                       
                       {/* Responsibilities */}
                       {position.responsibilities && position.responsibilities.length > 0 && (
-                        <div className="space-y-2 mb-3">
+                        <div className="mt-3 space-y-1">
                           {position.responsibilities.map((responsibility, respIndex) => (
-                            <div key={respIndex} className="flex items-start gap-2 text-sm text-foreground">
-                              <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                              <span className="leading-relaxed">{responsibility}</span>
+                            <div key={respIndex} className="flex items-start gap-2 text-sm text-foreground leading-relaxed">
+                              <span className="text-muted-foreground mt-1.5">•</span>
+                              <span>{responsibility}</span>
                             </div>
                           ))}
                         </div>
                       )}
                     </div>
+
+                    {/* Connector dot for multiple positions */}
+                    {exp.positions.length > 1 && posIndex < exp.positions.length - 1 && (
+                      <div className="absolute -left-[47px] top-16 w-2 h-2 bg-border rounded-full"></div>
+                    )}
                   </div>
                 ))}
+                
+                {/* Total duration for company */}
+                {exp.positions.length > 1 && (
+                  <div className="text-xs text-muted-foreground/60 mt-2 font-medium">
+                    Total: {exp.totalDuration}
+                  </div>
+                )}
               </div>
-
-              {/* Separator between different companies */}
-              {expIndex < experiences.length - 1 && (
-                <div className="h-px bg-border mb-8"></div>
-              )}
             </div>
           ))}
         </div>
