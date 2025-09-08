@@ -8,6 +8,8 @@ export const Experience = () => {
         return "/lovable-uploads/1c3dfb5e-81d4-42fa-8bec-0c214221f619.png";
       case "Devolum":
         return "/lovable-uploads/a069e37b-29bd-4935-9c6e-f5b45d64b888.png";
+      case "3arrafni website":
+        return "/lovable-uploads/1f680e25-10e0-4c80-9e13-599b1a29ff7f.png";
       case "Android World website":
         return "/lovable-uploads/3ea607df-d858-4207-9230-b405980c2a5d.png";
       case "Reviewology YouTube channel":
