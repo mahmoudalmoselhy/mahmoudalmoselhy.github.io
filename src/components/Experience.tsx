@@ -2,6 +2,21 @@ import React from 'react';
 import { Calendar, MapPin, Diamond } from 'lucide-react';
 
 export const Experience = () => {
+  const getCompanyLogo = (companyName: string) => {
+    switch (companyName) {
+      case "Tiye Solutions":
+        return "/lovable-uploads/1c3dfb5e-81d4-42fa-8bec-0c214221f619.png";
+      case "Devolum":
+        return "/lovable-uploads/b751a034-d8c2-44a5-ac51-9bd38a404b09.png";
+      case "Android World website":
+        return "/lovable-uploads/3ea607df-d858-4207-9230-b405980c2a5d.png";
+      case "Reviewology YouTube channel":
+        return "/lovable-uploads/56f3b136-b633-40c0-af5a-aa3a3f85eaf5.png";
+      default:
+        return null;
+    }
+  };
+
   const experiences = [
     {
       id: 1,
@@ -171,8 +186,16 @@ export const Experience = () => {
             <div key={exp.id} className="flex gap-3">
               {/* Company Logo Section */}
               <div className="flex-shrink-0 flex flex-col items-center">
-                <div className="w-12 h-12 rounded-lg overflow-hidden bg-muted/20 border border-border flex items-center justify-center">
-                  <div className="w-6 h-6 bg-muted-foreground/20 rounded"></div>
+                <div className="w-12 h-12 rounded-lg overflow-hidden bg-white border border-border flex items-center justify-center">
+                  {getCompanyLogo(exp.company) ? (
+                    <img 
+                      src={getCompanyLogo(exp.company)} 
+                      alt={`${exp.company} logo`}
+                      className="w-full h-full object-contain"
+                    />
+                  ) : (
+                    <div className="w-6 h-6 bg-muted-foreground/20 rounded"></div>
+                  )}
                 </div>
                 
                 {/* Vertical line connecting multiple positions */}
