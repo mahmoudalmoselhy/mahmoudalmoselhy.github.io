@@ -6,13 +6,13 @@ export const Experience = () => {
     {
       id: 1,
       company: "Tiye Solutions",
-      totalDuration: "1 mo",
+      totalDuration: "3 mos",
       positions: [
         {
           role: "Senior Content Creator and SEO Specialist",
           employmentType: "Full-time",
           period: "Sep 2025 - Present",
-          duration: "1 mo",
+          duration: "3 mos",
           location: "Maadi, Egypt",
           responsibilities: [
             "Write and Improve: write and improve content for various accounts on social media and websites",
@@ -33,8 +33,8 @@ export const Experience = () => {
         {
           role: "Content Team Leader",
           employmentType: "Full-time",
-          period: "Jan 2024 - present",
-          duration: "1 yr 9 mos",
+          period: "Jan 2024 - Aug 2025",
+          duration: "1 yr 8 mos",
           location: "Mansoura, Egypt",
           responsibilities: [
             "Team Leadership and Development: Leading team of content writers, providing them with guidance and mentoring, training them to improve their skills in SEO and content",
@@ -42,20 +42,20 @@ export const Experience = () => {
             "Quality Assurance: Follow up with the team to make sure they always give their best and their output at its best state",
             "Content Optimization: Regularly update and optimize existing content to improve search rankings, readability, and user engagement",
             "Project Management: Assign and manage tasks, ensuring timely delivery of content projects, maintaining clear communication and efficient workflows",
-            "Team Performance Monitoring: Keeping my team at 80% of their performance so they can always give their best to their writings without having any kind of drop",
+            "Team Performance Monitoring: Keeping my team at 80% of their performance so they can always give their best to their writings without having any level drop",
             "Innovative Approaches: Stay updated on SEO trends and best practices, introducing innovative strategies to maintain a competitive edge in search rankings",
             "Reporting: Prepare detailed reports for management on content performance, team productivity, and SEO outcomes, providing insights and recommendations for future improvements",
-            "Social media content Manager: Manage a group of social media team content creators ensuring they deliver posting calendars on time with no mistakes with a suitable content for marketing and campaigns"
+            "Social media content: Manage a group of social media team content creators ensuring they deliver posting calendars on time with no mistakes with a suitable content for marketing and campaigns"
           ]
         },
         {
           role: "SEO Specialist",
           employmentType: "Full-time",
-          period: "Jan 2024 - present", 
-          duration: "1 yr 9 mos",
+          period: "Jan 2024 - Aug 2025",
+          duration: "1 yr 8 mos",
           location: "Mansoura, Egypt",
           responsibilities: [
-            "On Page Optimization: Implement different SEO techniques such as meta tag creation, content optimization, and internal linking to enhance website visibility",
+            "On-Page Optimization: Implement different SEO techniques such as meta tag creation, content optimization, and internal linking to enhance website visibility",
             "Technical Optimization: Work with developer to make sure websites have no technical problems that affect its visibility",
             "Keyword Analysis: Conduct in-depth keyword research to identify opportunities for driving organic traffic and optimizing website content",
             "Competitor Analysis: Conduct competitive analysis to identify industry trends and incorporate insights into SEO strategies",
@@ -78,13 +78,13 @@ export const Experience = () => {
     {
       id: 3,
       company: "3arrafni website",
-      totalDuration: "7 yrs 2 mos",
+      totalDuration: "7 yrs",
       positions: [
         {
           role: "Editor in Chief",
           employmentType: "Full-time",
-          period: "Oct 2022 - present",
-          duration: "3 yrs 1 mo",
+          period: "Oct 2022 - Aug 2025",
+          duration: "2 yrs 11 mos",
           location: "Mansoura, Egypt",
           responsibilities: [
             "NVIDIA MENA News Translator: Work with NVIDIA on their news translation from English to Arabic which a lot of Arabian websites copy and use on their blogs",
@@ -100,7 +100,7 @@ export const Experience = () => {
           employmentType: "Full-time",
           period: "Aug 2018 - Oct 2022",
           duration: "4 yrs 3 mos",
-          location: "Egypt",
+          location: "Mansoura, Egypt",
           responsibilities: []
         }
       ]
