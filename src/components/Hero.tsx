@@ -1,16 +1,11 @@
 
 import React from 'react';
 import { Linkedin, Mail, MessageCircle, FileText } from 'lucide-react';
-import { ThemeToggle } from '@/components/ThemeToggle';
 import { Link } from 'react-router-dom';
 
 export const Hero = () => {
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-background via-muted/30 to-background">
-      {/* Theme Toggle */}
-      <div className="absolute top-6 right-6 z-20">
-        <ThemeToggle />
-      </div>
       
       {/* Animated background elements */}
       <div className="absolute inset-0">
