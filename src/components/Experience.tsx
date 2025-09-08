@@ -14,6 +14,8 @@ export const Experience = () => {
         return "/lovable-uploads/3ea607df-d858-4207-9230-b405980c2a5d.png";
       case "Reviewology YouTube channel":
         return "/lovable-uploads/56f3b136-b633-40c0-af5a-aa3a3f85eaf5.png";
+      case "Freelance":
+        return "/lovable-uploads/ef62e5f7-7484-417f-9076-aeefe81b0d92.png";
       default:
         return null;
     }
