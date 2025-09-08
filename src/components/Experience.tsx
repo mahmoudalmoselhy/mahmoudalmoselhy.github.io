@@ -7,7 +7,7 @@ export const Experience = () => {
       case "Tiye Solutions":
         return "/lovable-uploads/1c3dfb5e-81d4-42fa-8bec-0c214221f619.png";
       case "Devolum":
-        return "/lovable-uploads/b751a034-d8c2-44a5-ac51-9bd38a404b09.png";
+        return "/lovable-uploads/a069e37b-29bd-4935-9c6e-f5b45d64b888.png";
       case "Android World website":
         return "/lovable-uploads/3ea607df-d858-4207-9230-b405980c2a5d.png";
       case "Reviewology YouTube channel":
