@@ -224,9 +224,9 @@ export const Experience = () => {
                         {exp.company} · {position.employmentType}
                       </p>
                       
-                      {/* Dates */}
+                      {/* Dates & Duration */}
                       <p className="text-xs text-muted-foreground/80 mt-1">
-                        {position.period}
+                        {position.period} · {position.duration}
                       </p>
                       
                       {/* Location */}
