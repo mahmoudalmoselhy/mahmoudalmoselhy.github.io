@@ -1,11 +1,8 @@
-
 import React from 'react';
 import { Linkedin, Mail, MessageCircle, FileText } from 'lucide-react';
 import { Link } from 'react-router-dom';
-
 export const Hero = () => {
-  return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-background via-muted/30 to-background">
+  return <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-background via-muted/30 to-background">
       
       {/* Animated background elements */}
       <div className="absolute inset-0">
@@ -19,12 +16,9 @@ export const Hero = () => {
           {/* Profile Image */}
           <div className="flex-shrink-0">
             <div className="relative w-64 h-80 md:w-72 md:h-96 lg:w-80 lg:h-[500px] rounded-3xl overflow-hidden liquid-glass">
-              <img
-                src="/lovable-uploads/504d32e0-6560-4ee8-938f-660d9a49b785.png"
-                alt="Mahmoud AlMoselhy"
-                className="w-full h-full object-cover object-center scale-110 hover:scale-105 transition-transform duration-700"
-                style={{ objectPosition: '50% 30%' }}
-              />
+              <img src="/lovable-uploads/504d32e0-6560-4ee8-938f-660d9a49b785.png" alt="Mahmoud AlMoselhy" className="w-full h-full object-cover object-center scale-110 hover:scale-105 transition-transform duration-700" style={{
+              objectPosition: '50% 30%'
+            }} />
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
             </div>
           </div>
@@ -39,9 +33,7 @@ export const Hero = () => {
               <span className="text-foreground">AlMoselhy</span>
             </h1>
             
-            <p className="text-lg md:text-xl text-muted-foreground mb-4 font-light">
-              Content Team Leader & SEO Specialist
-            </p>
+            <p className="text-lg md:text-xl text-muted-foreground mb-4 font-light">Content and SEO Specialist</p>
             
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start space-y-4 sm:space-y-0 sm:space-x-6 text-muted-foreground mb-6">
               <div className="flex items-center space-x-2">
@@ -61,25 +53,14 @@ export const Hero = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row justify-center lg:justify-start space-y-4 sm:space-y-0 sm:space-x-4">
-              <a 
-                href="#contact" 
-                className="bg-gradient-to-r from-gradient-start to-gradient-middle text-background px-6 py-3 rounded-full font-semibold hover:scale-105 transform transition-all duration-300 shadow-lg hover:shadow-xl"
-              >
+              <a href="#contact" className="bg-gradient-to-r from-gradient-start to-gradient-middle text-background px-6 py-3 rounded-full font-semibold hover:scale-105 transform transition-all duration-300 shadow-lg hover:shadow-xl">
                 Get In Touch
               </a>
-              <a 
-                href="https://linkedin.com/in/mahmoudalmoselhy" 
-                target="_blank"
-                rel="noopener noreferrer"
-                className="border-2 border-accent-foreground text-accent-foreground px-6 py-3 rounded-full font-semibold hover:bg-accent-foreground hover:text-background transform transition-all duration-300 flex items-center justify-center space-x-2"
-              >
+              <a href="https://linkedin.com/in/mahmoudalmoselhy" target="_blank" rel="noopener noreferrer" className="border-2 border-accent-foreground text-accent-foreground px-6 py-3 rounded-full font-semibold hover:bg-accent-foreground hover:text-background transform transition-all duration-300 flex items-center justify-center space-x-2">
                 <Linkedin className="w-5 h-5" />
                 <span>LinkedIn</span>
               </a>
-              <Link
-                to="/cv"
-                className="border-2 border-primary text-primary px-6 py-3 rounded-full font-semibold hover:bg-primary hover:text-primary-foreground transform transition-all duration-300 flex items-center justify-center space-x-2"
-              >
+              <Link to="/cv" className="border-2 border-primary text-primary px-6 py-3 rounded-full font-semibold hover:bg-primary hover:text-primary-foreground transform transition-all duration-300 flex items-center justify-center space-x-2">
                 <FileText className="w-5 h-5" />
                 <span>View CV</span>
               </Link>
@@ -88,6 +69,5 @@ export const Hero = () => {
         </div>
         
       </div>
-    </section>
-  );
+    </section>;
 };
