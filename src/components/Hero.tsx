@@ -50,7 +50,7 @@ export const Hero = () => {
               </div>
               <div className="flex items-center space-x-2">
                 <MessageCircle className="w-5 h-5 text-accent-foreground" />
-                <span className="text-sm md:text-base">+20 112 152 9292</span>
+                <span className="text-sm md:text-base">+201001321331</span>
               </div>
             </div>
             
