@@ -39,8 +39,8 @@ export const Contact = () => {
                     </div>
                     <div className="min-w-0 flex-1">
                       <p className="text-muted-foreground text-xs md:text-sm">Phone</p>
-                      <a href="tel:+201121529292" className="text-foreground hover:text-primary transition-colors text-sm md:text-base">
-                        +20 112 152 9292
+                      <a href="tel:+201001321331" className="text-foreground hover:text-primary transition-colors text-sm md:text-base">
+                        +20 100 132 1331
                       </a>
                     </div>
                   </div>
@@ -52,12 +52,12 @@ export const Contact = () => {
                     <div className="min-w-0 flex-1">
                       <p className="text-muted-foreground text-xs md:text-sm">WhatsApp</p>
                       <a 
-                        href="https://wa.me/201121529292" 
+                        href="https://wa.me/201001321331/" 
                         target="_blank" 
                         rel="noopener noreferrer"
                         className="text-foreground hover:text-primary transition-colors flex items-center space-x-1 text-sm md:text-base"
                       >
-                        <span>+20 112 152 9292</span>
+                        <span>+20 100 132 1331</span>
                         <ExternalLink className="w-3 h-3 md:w-4 md:h-4 flex-shrink-0" />
                       </a>
                     </div>
