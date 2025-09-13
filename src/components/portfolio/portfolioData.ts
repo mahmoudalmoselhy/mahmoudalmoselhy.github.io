@@ -163,12 +163,12 @@ export const portfolioSections = [
     ]
   },
   {
-    title: "Social Media Campaigns - Menusbee",
-    description: "Complete campaign management targeting diverse business sectors",
+    title: "Social Media Campaigns",
+    description: "Complete campaign management and creative content across multiple platforms and brands",
     items: [
       {
         title: "Menusbee Group Ordering Campaign Video",
-        description: "Ad campaign showcasing how Menusbee transforms food service and pricing through a real group food ordering use case—choosing a restaurant because it’s on Menusbee. Followed by a voice-over highlighting why Menusbee is great.",
+        description: "Ad campaign showcasing how Menusbee transforms food service and pricing through a real group food ordering use case—choosing a restaurant because it's on Menusbee. Followed by a voice-over highlighting why Menusbee is great.",
         link: "https://www.facebook.com/reel/1291760139289174/",
         logo: "/lovable-uploads/c8892c9f-d780-4825-a3b1-b1e017d5bd62.png",
         embed: "facebook-video",
@@ -179,6 +179,24 @@ export const portfolioSections = [
           "Choosing, training, and recording voice over",
           "Working with video editor to get the final cut"
         ]
+      },
+      {
+        title: "UCL Final Competition",
+        description: "UEFA Champions League final competition coverage",
+        link: "https://www.facebook.com/share/p/16f7QEfVF4/",
+        logo: "/lovable-uploads/684b33f4-7836-42a3-810a-395f2e74a0da.png"
+      },
+      {
+        title: "El Classico Copa Del Ray final",
+        description: "El Classico Copa del Rey final social media coverage",
+        link: "https://www.facebook.com/share/p/16RdYQQR2K/",
+        logo: "/lovable-uploads/684b33f4-7836-42a3-810a-395f2e74a0da.png"
+      },
+      {
+        title: "Egypt's Derby",
+        description: "Egyptian football derby social media campaign",
+        link: "https://www.facebook.com/share/p/12MnJq4FKrH/",
+        logo: "/lovable-uploads/684b33f4-7836-42a3-810a-395f2e74a0da.png"
       },
       {
         title: "Tourism Companies Campaign",
@@ -197,6 +215,12 @@ export const portfolioSections = [
         description: "Specialized campaign for meat retailers",
         link: "https://www.facebook.com/menusbee/posts/pfbid02yBxPnp34eVP5aZzVK2YCUAUEiMAUotMTFx31mb39QP6h7XqYYMSVRxCtqZCRCgCal",
         logo: "/lovable-uploads/c8892c9f-d780-4825-a3b1-b1e017d5bd62.png"
+      },
+      {
+        title: "Me time with Lecce",
+        description: "Personal time and lifestyle content with Lecce brand",
+        link: "https://www.facebook.com/share/p/1AmJ7uKYfq/",
+        logo: "/lovable-uploads/684b33f4-7836-42a3-810a-395f2e74a0da.png"
       },
       {
         title: "Business Promotion Campaign",
@@ -251,39 +275,9 @@ export const portfolioSections = [
         description: "Multi-platform social media campaign coordination",
         link: "https://www.facebook.com/menusbee/posts/pfbid0WiUtAsWQ9J3Uacjcd3iLtZWQkx3ic8LkFCgVGenSWioL2vMiGqGns5HHygXa4timl",
         logo: "/lovable-uploads/c8892c9f-d780-4825-a3b1-b1e017d5bd62.png"
-      }
-    ]
-  },
-  {
-    title: "Lecce Social Media Content",
-    description: "Creative social media campaigns and content creation",
-    items: [
-      {
-        title: "UCL Final Competition",
-        description: "UEFA Champions League final competition coverage",
-        link: "https://www.facebook.com/share/p/16f7QEfVF4/",
-        logo: "/lovable-uploads/684b33f4-7836-42a3-810a-395f2e74a0da.png"
       },
       {
-        title: "El Classico Copa Del Ray final",
-        description: "El Classico Copa del Rey final social media coverage",
-        link: "https://www.facebook.com/share/p/16RdYQQR2K/",
-        logo: "/lovable-uploads/684b33f4-7836-42a3-810a-395f2e74a0da.png"
-      },
-      {
-        title: "Egypt's Derby",
-        description: "Egyptian football derby social media campaign",
-        link: "https://www.facebook.com/share/p/12MnJq4FKrH/",
-        logo: "/lovable-uploads/684b33f4-7836-42a3-810a-395f2e74a0da.png"
-      },
-      {
-        title: "Me time with Lecce",
-        description: "Personal time and lifestyle content with Lecce brand",
-        link: "https://www.facebook.com/share/p/1AmJ7uKYfq/",
-        logo: "/lovable-uploads/684b33f4-7836-42a3-810a-395f2e74a0da.png"
-      },
-      {
-        title: "Egypt's Derby",
+        title: "Egypt's Derby (Alternative)",
         description: "Another Egyptian football derby social media campaign",
         link: "https://www.facebook.com/share/p/1Dwk3mVRL8/",
         logo: "/lovable-uploads/684b33f4-7836-42a3-810a-395f2e74a0da.png"
@@ -292,7 +286,6 @@ export const portfolioSections = [
   }
 ];
 
-// ... keep existing code (seoArchives)
 export const seoArchives = [
   {
     title: "3arrafni.com Archive",
