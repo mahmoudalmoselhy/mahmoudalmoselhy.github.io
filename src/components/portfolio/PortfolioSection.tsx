@@ -1,5 +1,9 @@
 
 import React, { useState } from 'react';
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import { Pagination } from "swiper/modules";
 import { YouTubePlaylistEmbed } from './YouTubePlaylistEmbed';
 import { FacebookVideoEmbed } from './FacebookVideoEmbed';
 import { PortfolioCard } from './PortfolioCard';
@@ -69,58 +73,65 @@ const visibleContentItems = showAll ? nonPlaylistItems : nonPlaylistItems.slice(
       </header>
       
       <div className="w-full max-w-none">
-<div className={`grid ${title.includes('Script Writing') ? 'grid-cols-1 lg:grid-cols-2' : gridClassName} gap-4 md:gap-6`}>
-          {title === 'Android World Articles' ? (
-            <>
-              {visibleContentItems.map((item, itemIndex) => (
+        <Swiper
+          modules={[Pagination]}
+          spaceBetween={30}
+          slidesPerView={"auto"}
+          pagination={{ clickable: true }}
+          className="!pb-12"
+        >
+          {facebookEmbeds.map((item, itemIndex) => (
+            <SwiperSlide key={`fb-${itemIndex}-${item.title}`} className="!w-[300px]">
+              <FacebookVideoEmbed
+                title={item.title}
+                description={item.description}
+                videoUrl={item.link}
+                logo={item.logo}
+                responsibilities={item.responsibilities}
+              />
+            </SwiperSlide>
+          ))}
+
+          {visibleContentItems.map((item, itemIndex) => (
+            <SwiperSlide key={`card-${itemIndex}-${item.title}`} className="!w-[280px]">
+              {title === 'Android World Articles' ? (
                 <a
-                  key={`awa-${itemIndex}-${item.title}`}
                   href={item.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group block overflow-hidden rounded-2xl border border-border bg-card hover:shadow-md transition-shadow duration-300"
+                  className="group block"
                 >
-                  <div className="relative w-full aspect-[16/9] overflow-hidden">
-                    <img
-                      src={item.thumbnail || item.logo}
-                      alt={`${item.title} thumbnail`}
-                      loading="lazy"
-                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.02]"
-                    />
-                  </div>
-                  <div className="p-4">
-                    <div className="flex flex-wrap gap-2 mb-2">
-                      {(item.skills || []).map((tag, i) => (
-                        <span
-                          key={i}
-                          className="text-[10px] md:text-xs px-2 py-1 bg-muted text-muted-foreground rounded-full"
-                        >
-                          {tag}
-                        </span>
-                      ))}
+                  <article className="group relative overflow-hidden rounded-xl bg-card border border-border transition-all duration-300 hover:shadow-xl hover:scale-[1.02]">
+                    <div className="aspect-square relative overflow-hidden bg-muted">
+                      <img
+                        src={item.thumbnail || item.logo}
+                        alt={item.title}
+                        loading="lazy"
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                      />
                     </div>
-                    <h3 className="text-sm md:text-base font-semibold mb-1 text-foreground line-clamp-2">{item.title}</h3>
-                    <p className="text-xs md:text-sm text-muted-foreground line-clamp-3">{item.description}</p>
-                  </div>
+                    <div className="p-4">
+                      <div className="flex flex-wrap gap-2 mb-3">
+                        {(item.skills || []).map((badge, i) => (
+                          <span
+                            key={i}
+                            className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold border-transparent bg-secondary text-secondary-foreground"
+                          >
+                            {badge}
+                          </span>
+                        ))}
+                      </div>
+                      <h4 className="text-base md:text-lg font-semibold text-foreground mb-1 group-hover:text-primary transition-colors duration-300 line-clamp-2">
+                        {item.title}
+                      </h4>
+                      <p className="text-muted-foreground text-xs md:text-sm leading-relaxed line-clamp-3">
+                        {item.description}
+                      </p>
+                    </div>
+                  </article>
                 </a>
-              ))}
-            </>
-          ) : (
-            <>
-              {facebookEmbeds.map((item, itemIndex) => (
-                <FacebookVideoEmbed
-                  key={`fb-${itemIndex}-${item.title}`}
-                  title={item.title}
-                  description={item.description}
-                  videoUrl={item.link}
-                  logo={item.logo}
-                  responsibilities={item.responsibilities}
-                />
-              ))}
-
-              {visibleContentItems.map((item, itemIndex) => (
+              ) : (
                 <PortfolioCard
-                  key={`card-${itemIndex}-${item.title}`}
                   title={item.title}
                   description={item.description}
                   link={item.link}
@@ -130,20 +141,21 @@ const visibleContentItems = showAll ? nonPlaylistItems : nonPlaylistItems.slice(
                   date={item.date}
                   skills={item.skills}
                 />
-              ))}
+              )}
+            </SwiperSlide>
+          ))}
 
-              {playlistItems.map((item, itemIndex) => (
-                <YouTubePlaylistEmbed
-                  key={`yt-${itemIndex}-${item.title}`}
-                  title={item.title}
-                  description={item.description}
-                  playlistUrl={item.link}
-                  logo={item.logo}
-                />
-              ))}
-            </>
-          )}
-        </div>
+          {playlistItems.map((item, itemIndex) => (
+            <SwiperSlide key={`yt-${itemIndex}-${item.title}`} className="!w-[300px]">
+              <YouTubePlaylistEmbed
+                title={item.title}
+                description={item.description}
+                playlistUrl={item.link}
+                logo={item.logo}
+              />
+            </SwiperSlide>
+          ))}
+        </Swiper>
 
         {nonPlaylistItems.length > limit && (
           <div className="mt-4 md:mt-6 flex justify-center">
