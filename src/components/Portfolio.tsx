@@ -11,6 +11,7 @@ export const Portfolio = () => {
     "grid-cols-2 sm:grid-cols-3 lg:grid-cols-4", // Content Writing - 3arrafni.com: 4-column grid
     "grid-cols-2 sm:grid-cols-3 lg:grid-cols-3", // Android World Articles: 3-column grid (3x3 on desktop)
     "grid-cols-1 sm:grid-cols-2", // Script Writing: 2-column grid (1 col mobile, 2 larger screens)
+    "grid-cols-1", // Social Media Campaigns: 1-column grid (for video embeds)
     "grid-cols-2 sm:grid-cols-3 lg:grid-cols-4", // Social Media Work: 4-column grid
   ];
 

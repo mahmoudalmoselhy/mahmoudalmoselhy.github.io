@@ -163,8 +163,8 @@ export const portfolioSections = [
     ]
   },
   {
-    title: "Social Media Work",
-    description: "Complete social media campaign management and creative content creation across multiple platforms",
+    title: "Social Media Campaigns",
+    description: "Creative video campaigns and strategic marketing content",
     items: [
       {
         title: "Menusbee Group Ordering Campaign Video",
@@ -179,7 +179,13 @@ export const portfolioSections = [
           "Choosing, training, and recording voice over",
           "Working with video editor to get the final cut"
         ]
-      },
+      }
+    ]
+  },
+  {
+    title: "Social Media Work",
+    description: "Complete social media campaign management and creative content creation across multiple platforms",
+    items: [
       {
         title: "Tourism Companies Campaign",
         description: "Targeted advertising for travel and tourism businesses",
