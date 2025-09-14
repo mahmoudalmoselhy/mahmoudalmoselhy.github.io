@@ -1,8 +1,9 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { YouTubePlaylistEmbed } from './YouTubePlaylistEmbed';
 import { FacebookVideoEmbed } from './FacebookVideoEmbed';
 import { PortfolioCard } from './PortfolioCard';
+import { Tabs, TabsList, TabsTrigger, TabsContent } from '../ui/tabs';
 
 interface PortfolioSectionItem {
   title: string;
@@ -25,6 +26,7 @@ interface PortfolioSectionProps {
 }
 
 export const PortfolioSection = ({ title, description, items, gridClassName = "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4" }: PortfolioSectionProps) => {
+  const [activeTab, setActiveTab] = useState('')
 
   const isYouTubePlaylist = (link: string) =>
     link.includes('youtube.com/playlist') || link.includes('youtu.be/playlist')
@@ -44,6 +46,48 @@ export const PortfolioSection = ({ title, description, items, gridClassName = "g
       return ['Web Design', 'Branding', 'Marketing']
     }
   }
+
+  // Map logos to client names
+  const getClientName = (logo: string): string => {
+    const logoMap: { [key: string]: string } = {
+      '/lovable-uploads/693924e3-2bc0-456b-8afe-d100ef0390f8.png': '3arrafni.com',
+      '/lovable-uploads/e1d8ea68-6c79-4ca8-8729-ca7d400d103a.png': 'Android World',
+      '/lovable-uploads/106b69a1-42a2-4bf5-9caa-e9f4a854f21a.png': 'ExVar',
+      '/lovable-uploads/b53bf9e1-ad4a-433a-984c-7c8fb6a6187d.png': 'Revieology',
+      '/lovable-uploads/c8892c9f-d780-4825-a3b1-b1e017d5bd62.png': 'Menusbee',
+      '/lovable-uploads/684b33f4-7836-42a3-810a-395f2e74a0da.png': 'Lecce'
+    }
+    return logoMap[logo] || 'Other'
+  }
+
+  // Group items by client
+  const groupItemsByClient = () => {
+    const grouped: { [key: string]: PortfolioSectionItem[] } = {}
+    
+    items.forEach((item) => {
+      const clientName = getClientName(item.logo)
+      if (!grouped[clientName]) {
+        grouped[clientName] = []
+      }
+      grouped[clientName].push({
+        ...item,
+        thumbnail: item.thumbnail || undefined,
+        skills: item.skills && item.skills.length ? item.skills : getDefaultTags(item.link, title)
+      })
+    })
+    
+    return grouped
+  }
+
+  const clientGroups = groupItemsByClient()
+  const clientNames = Object.keys(clientGroups)
+  
+  // Set default active tab to first client
+  React.useEffect(() => {
+    if (clientNames.length > 0 && !activeTab) {
+      setActiveTab(clientNames[0])
+    }
+  }, [clientNames, activeTab])
 
 const nonPlaylistItems = items
   .filter((item) => !isYouTubePlaylist(item.link) && item.embed !== 'facebook-video')
@@ -65,81 +109,183 @@ const gridCols = title.includes('Script Writing') ? 'grid-cols-1 lg:grid-cols-2'
       </header>
       
       <div className="w-full max-w-none">
-<div className={`grid ${gridCols} gap-4 md:gap-6`}>
-          {title === 'Android World Articles' ? (
-            <>
-              {nonPlaylistItems.map((item, itemIndex) => (
-                <a
-                  key={`awa-${itemIndex}-${item.title}`}
-                  href={item.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group block overflow-hidden rounded-2xl border border-border bg-card hover:shadow-md transition-shadow duration-300"
-                >
-                  <div className="relative w-full aspect-[16/9] overflow-hidden">
-                    <img
-                      src={item.thumbnail || item.logo}
-                      alt={`${item.title} thumbnail`}
-                      loading="lazy"
-                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.02]"
-                    />
+        {clientNames.length > 1 ? (
+          <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
+            <div className="flex justify-center mb-6 md:mb-8">
+              <TabsList className="grid w-full max-w-2xl" style={{ gridTemplateColumns: `repeat(${clientNames.length}, minmax(0, 1fr))` }}>
+                {clientNames.map((clientName) => (
+                  <TabsTrigger key={clientName} value={clientName} className="text-sm md:text-base">
+                    {clientName}
+                  </TabsTrigger>
+                ))}
+              </TabsList>
+            </div>
+
+            {clientNames.map((clientName) => {
+              const clientItems = clientGroups[clientName]
+              const clientNonPlaylistItems = clientItems.filter((item) => !isYouTubePlaylist(item.link) && item.embed !== 'facebook-video')
+              const clientPlaylistItems = clientItems.filter((item) => isYouTubePlaylist(item.link))
+              const clientFacebookEmbeds = clientItems.filter((item) => item.embed === 'facebook-video')
+
+              return (
+                <TabsContent key={clientName} value={clientName}>
+                  <div className={`grid ${gridCols} gap-4 md:gap-6`}>
+                    {title === 'Android World Articles' ? (
+                      <>
+                        {clientNonPlaylistItems.map((item, itemIndex) => (
+                          <a
+                            key={`awa-${itemIndex}-${item.title}`}
+                            href={item.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="group block overflow-hidden rounded-2xl border border-border bg-card hover:shadow-md transition-shadow duration-300"
+                          >
+                            <div className="relative w-full aspect-[16/9] overflow-hidden">
+                              <img
+                                src={item.thumbnail || item.logo}
+                                alt={`${item.title} thumbnail`}
+                                loading="lazy"
+                                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.02]"
+                              />
+                            </div>
+                            <div className="p-4">
+                              <div className="flex flex-wrap gap-2 mb-2">
+                                {(item.skills || []).map((tag, i) => (
+                                  <span
+                                    key={i}
+                                    className="text-[10px] md:text-xs px-2 py-1 bg-muted text-muted-foreground rounded-full"
+                                  >
+                                    {tag}
+                                  </span>
+                                ))}
+                              </div>
+                              <h3 className="text-sm md:text-base font-semibold mb-1 text-foreground line-clamp-2">{item.title}</h3>
+                              <p className="text-xs md:text-sm text-muted-foreground line-clamp-3">{item.description}</p>
+                            </div>
+                          </a>
+                        ))}
+                      </>
+                    ) : (
+                      <>
+                        {clientFacebookEmbeds.map((item, itemIndex) => (
+                          <FacebookVideoEmbed
+                            key={`fb-${itemIndex}-${item.title}`}
+                            title={item.title}
+                            description={item.description}
+                            videoUrl={item.link}
+                            logo={item.logo}
+                            responsibilities={item.responsibilities}
+                          />
+                        ))}
+
+                        {clientNonPlaylistItems.map((item, itemIndex) => (
+                          <PortfolioCard
+                            key={`card-${itemIndex}-${item.title}`}
+                            title={item.title}
+                            description={item.description}
+                            link={item.link}
+                            logo={item.logo}
+                            thumbnail={item.thumbnail}
+                            client={item.client}
+                            date={item.date}
+                            skills={item.skills}
+                          />
+                        ))}
+
+                        {clientPlaylistItems.map((item, itemIndex) => (
+                          <YouTubePlaylistEmbed
+                            key={`yt-${itemIndex}-${item.title}`}
+                            title={item.title}
+                            description={item.description}
+                            playlistUrl={item.link}
+                            logo={item.logo}
+                          />
+                        ))}
+                      </>
+                    )}
                   </div>
-                  <div className="p-4">
-                    <div className="flex flex-wrap gap-2 mb-2">
-                      {(item.skills || []).map((tag, i) => (
-                        <span
-                          key={i}
-                          className="text-[10px] md:text-xs px-2 py-1 bg-muted text-muted-foreground rounded-full"
-                        >
-                          {tag}
-                        </span>
-                      ))}
+                </TabsContent>
+              )
+            })}
+          </Tabs>
+        ) : (
+          // Fallback to original layout if only one client
+          <div className={`grid ${gridCols} gap-4 md:gap-6`}>
+            {title === 'Android World Articles' ? (
+              <>
+                {nonPlaylistItems.map((item, itemIndex) => (
+                  <a
+                    key={`awa-${itemIndex}-${item.title}`}
+                    href={item.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group block overflow-hidden rounded-2xl border border-border bg-card hover:shadow-md transition-shadow duration-300"
+                  >
+                    <div className="relative w-full aspect-[16/9] overflow-hidden">
+                      <img
+                        src={item.thumbnail || item.logo}
+                        alt={`${item.title} thumbnail`}
+                        loading="lazy"
+                        className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.02]"
+                      />
                     </div>
-                    <h3 className="text-sm md:text-base font-semibold mb-1 text-foreground line-clamp-2">{item.title}</h3>
-                    <p className="text-xs md:text-sm text-muted-foreground line-clamp-3">{item.description}</p>
-                  </div>
-                </a>
-              ))}
-            </>
-          ) : (
-            <>
-              {facebookEmbeds.map((item, itemIndex) => (
-                <FacebookVideoEmbed
-                  key={`fb-${itemIndex}-${item.title}`}
-                  title={item.title}
-                  description={item.description}
-                  videoUrl={item.link}
-                  logo={item.logo}
-                  responsibilities={item.responsibilities}
-                />
-              ))}
+                    <div className="p-4">
+                      <div className="flex flex-wrap gap-2 mb-2">
+                        {(item.skills || []).map((tag, i) => (
+                          <span
+                            key={i}
+                            className="text-[10px] md:text-xs px-2 py-1 bg-muted text-muted-foreground rounded-full"
+                          >
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+                      <h3 className="text-sm md:text-base font-semibold mb-1 text-foreground line-clamp-2">{item.title}</h3>
+                      <p className="text-xs md:text-sm text-muted-foreground line-clamp-3">{item.description}</p>
+                    </div>
+                  </a>
+                ))}
+              </>
+            ) : (
+              <>
+                {facebookEmbeds.map((item, itemIndex) => (
+                  <FacebookVideoEmbed
+                    key={`fb-${itemIndex}-${item.title}`}
+                    title={item.title}
+                    description={item.description}
+                    videoUrl={item.link}
+                    logo={item.logo}
+                    responsibilities={item.responsibilities}
+                  />
+                ))}
 
-              {nonPlaylistItems.map((item, itemIndex) => (
-                <PortfolioCard
-                  key={`card-${itemIndex}-${item.title}`}
-                  title={item.title}
-                  description={item.description}
-                  link={item.link}
-                  logo={item.logo}
-                  thumbnail={item.thumbnail}
-                  client={item.client}
-                  date={item.date}
-                  skills={item.skills}
-                />
-              ))}
+                {nonPlaylistItems.map((item, itemIndex) => (
+                  <PortfolioCard
+                    key={`card-${itemIndex}-${item.title}`}
+                    title={item.title}
+                    description={item.description}
+                    link={item.link}
+                    logo={item.logo}
+                    thumbnail={item.thumbnail}
+                    client={item.client}
+                    date={item.date}
+                    skills={item.skills}
+                  />
+                ))}
 
-              {playlistItems.map((item, itemIndex) => (
-                <YouTubePlaylistEmbed
-                  key={`yt-${itemIndex}-${item.title}`}
-                  title={item.title}
-                  description={item.description}
-                  playlistUrl={item.link}
-                  logo={item.logo}
-                />
-              ))}
-            </>
-          )}
-        </div>
+                {playlistItems.map((item, itemIndex) => (
+                  <YouTubePlaylistEmbed
+                    key={`yt-${itemIndex}-${item.title}`}
+                    title={item.title}
+                    description={item.description}
+                    playlistUrl={item.link}
+                    logo={item.logo}
+                  />
+                ))}
+              </>
+            )}
+          </div>
+        )}
       </div>
     </section>
   );
