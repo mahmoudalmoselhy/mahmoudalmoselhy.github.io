@@ -58,7 +58,7 @@ const facebookEmbeds = items.filter((item) => item.embed === 'facebook-video')
 const gridCols = title.includes('Script Writing') ? 'grid-cols-1 lg:grid-cols-2' : gridClassName
 
   return (
-    <section className="space-y-6 md:space-y-8">
+    <section className="space-y-6 md:space-y-8 mb-16 md:mb-24 pb-8 md:pb-12 border-b border-border/20 last:border-b-0 last:mb-0 last:pb-0">
       <header className="text-center px-4">
         <h3 className="text-xl md:text-3xl font-bold text-foreground mb-2 md:mb-4">{title}</h3>
         <p className="text-muted-foreground text-sm md:text-lg">{description}</p>
