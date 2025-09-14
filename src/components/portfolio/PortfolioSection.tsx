@@ -1,10 +1,8 @@
 
-import React, { useState } from 'react';
+import React from 'react';
 import { YouTubePlaylistEmbed } from './YouTubePlaylistEmbed';
 import { FacebookVideoEmbed } from './FacebookVideoEmbed';
 import { PortfolioCard } from './PortfolioCard';
-import { Button } from '../ui/button';
-import { Link } from 'react-router-dom';
 
 interface PortfolioSectionItem {
   title: string;
@@ -27,8 +25,6 @@ interface PortfolioSectionProps {
 }
 
 export const PortfolioSection = ({ title, description, items, gridClassName = "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4" }: PortfolioSectionProps) => {
-  const [showAll, setShowAll] = useState(false)
-  const limit = 4
 
   const isYouTubePlaylist = (link: string) =>
     link.includes('youtube.com/playlist') || link.includes('youtu.be/playlist')
@@ -59,7 +55,6 @@ const nonPlaylistItems = items
 
 const playlistItems = items.filter((item) => isYouTubePlaylist(item.link))
 const facebookEmbeds = items.filter((item) => item.embed === 'facebook-video')
-const visibleContentItems = showAll ? nonPlaylistItems : nonPlaylistItems.slice(0, limit)
 
   return (
     <section className="space-y-6 md:space-y-8">
@@ -72,7 +67,7 @@ const visibleContentItems = showAll ? nonPlaylistItems : nonPlaylistItems.slice(
 <div className={`grid ${title.includes('Script Writing') ? 'grid-cols-1 lg:grid-cols-2' : gridClassName} gap-4 md:gap-6`}>
           {title === 'Android World Articles' ? (
             <>
-              {visibleContentItems.map((item, itemIndex) => (
+              {nonPlaylistItems.map((item, itemIndex) => (
                 <a
                   key={`awa-${itemIndex}-${item.title}`}
                   href={item.link}
@@ -118,7 +113,7 @@ const visibleContentItems = showAll ? nonPlaylistItems : nonPlaylistItems.slice(
                 />
               ))}
 
-              {visibleContentItems.map((item, itemIndex) => (
+              {nonPlaylistItems.map((item, itemIndex) => (
                 <PortfolioCard
                   key={`card-${itemIndex}-${item.title}`}
                   title={item.title}
@@ -144,14 +139,6 @@ const visibleContentItems = showAll ? nonPlaylistItems : nonPlaylistItems.slice(
             </>
           )}
         </div>
-
-        {nonPlaylistItems.length > limit && (
-          <div className="mt-4 md:mt-6 flex justify-center">
-            <Button asChild variant="secondary" aria-label="Show all projects">
-              <Link to="/projects">Show All</Link>
-            </Button>
-          </div>
-        )}
       </div>
     </section>
   );
