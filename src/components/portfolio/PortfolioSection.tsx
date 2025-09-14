@@ -55,6 +55,7 @@ const nonPlaylistItems = items
 
 const playlistItems = items.filter((item) => isYouTubePlaylist(item.link))
 const facebookEmbeds = items.filter((item) => item.embed === 'facebook-video')
+const gridCols = title.includes('Script Writing') ? 'grid-cols-1 lg:grid-cols-2' : gridClassName
 
   return (
     <section className="space-y-6 md:space-y-8">
@@ -64,7 +65,7 @@ const facebookEmbeds = items.filter((item) => item.embed === 'facebook-video')
       </header>
       
       <div className="w-full max-w-none">
-<div className={`grid ${title.includes('Script Writing') ? 'grid-cols-1 lg:grid-cols-2' : gridClassName} gap-4 md:gap-6`}>
+<div className={`grid ${gridCols} gap-4 md:gap-6`}>
           {title === 'Android World Articles' ? (
             <>
               {nonPlaylistItems.map((item, itemIndex) => (
