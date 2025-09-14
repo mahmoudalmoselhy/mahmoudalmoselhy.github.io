@@ -163,12 +163,12 @@ export const portfolioSections = [
     ]
   },
   {
-    title: "Social Media Campaigns - Menusbee",
-    description: "Complete campaign management targeting diverse business sectors",
+    title: "Social Media Work",
+    description: "Complete social media campaign management and creative content creation across multiple platforms",
     items: [
       {
         title: "Menusbee Group Ordering Campaign Video",
-        description: "Ad campaign showcasing how Menusbee transforms food service and pricing through a real group food ordering use case—choosing a restaurant because it’s on Menusbee. Followed by a voice-over highlighting why Menusbee is great.",
+        description: "Ad campaign showcasing how Menusbee transforms food service and pricing through a real group food ordering use case—choosing a restaurant because it's on Menusbee. Followed by a voice-over highlighting why Menusbee is great.",
         link: "https://www.facebook.com/reel/1291760139289174/",
         logo: "/lovable-uploads/c8892c9f-d780-4825-a3b1-b1e017d5bd62.png",
         embed: "facebook-video",
@@ -251,13 +251,7 @@ export const portfolioSections = [
         description: "Multi-platform social media campaign coordination",
         link: "https://www.facebook.com/menusbee/posts/pfbid0WiUtAsWQ9J3Uacjcd3iLtZWQkx3ic8LkFCgVGenSWioL2vMiGqGns5HHygXa4timl",
         logo: "/lovable-uploads/c8892c9f-d780-4825-a3b1-b1e017d5bd62.png"
-      }
-    ]
-  },
-  {
-    title: "Lecce Social Media Content",
-    description: "Creative social media campaigns and content creation",
-    items: [
+      },
       {
         title: "UCL Final Competition",
         description: "UEFA Champions League final competition coverage",
