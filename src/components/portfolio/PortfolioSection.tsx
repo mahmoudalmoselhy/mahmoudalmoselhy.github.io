@@ -117,7 +117,7 @@ const gridCols = title.includes('Script Writing') ? 'grid-cols-1 lg:grid-cols-2'
                   <TabsTrigger 
                     key={clientName} 
                     value={clientName} 
-                    className="text-sm md:text-base font-medium px-6 py-3 rounded-xl bg-muted/50 border border-border/20 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-lg hover:bg-muted/70 transition-all duration-200 whitespace-nowrap min-w-[120px] text-center"
+                    className="text-sm md:text-base font-medium px-6 py-3 rounded-xl bg-gradient-to-r from-primary/80 to-primary/60 border border-border/20 text-white data-[state=active]:bg-gradient-to-r data-[state=active]:from-primary data-[state=active]:to-primary/80 data-[state=active]:text-white data-[state=active]:shadow-lg hover:from-primary/90 hover:to-primary/70 transition-all duration-200 whitespace-nowrap min-w-[120px] text-center"
                   >
                     {clientName}
                   </TabsTrigger>
