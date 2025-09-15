@@ -111,10 +111,14 @@ const gridCols = title.includes('Script Writing') ? 'grid-cols-1 lg:grid-cols-2'
       <div className="w-full max-w-none">
         {title === 'Social Media Work' && clientNames.length > 1 ? (
           <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-            <div className="flex justify-center mb-6 md:mb-8">
-              <TabsList className="grid w-full max-w-2xl" style={{ gridTemplateColumns: `repeat(${clientNames.length}, minmax(0, 1fr))` }}>
+            <div className="flex justify-center mb-8 md:mb-12">
+              <TabsList className="grid w-full max-w-4xl p-2 bg-muted/50 rounded-xl border border-border/20" style={{ gridTemplateColumns: `repeat(${clientNames.length}, minmax(0, 1fr))` }}>
                 {clientNames.map((clientName) => (
-                  <TabsTrigger key={clientName} value={clientName} className="text-sm md:text-base">
+                  <TabsTrigger 
+                    key={clientName} 
+                    value={clientName} 
+                    className="text-sm md:text-base font-medium px-4 py-3 rounded-lg data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow-sm hover:bg-background/50 transition-all duration-200 whitespace-nowrap"
+                  >
                     {clientName}
                   </TabsTrigger>
                 ))}
