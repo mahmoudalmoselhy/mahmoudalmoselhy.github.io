@@ -1,10 +1,9 @@
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { YouTubePlaylistEmbed } from './YouTubePlaylistEmbed';
 import { FacebookVideoEmbed } from './FacebookVideoEmbed';
 import { PortfolioCard } from './PortfolioCard';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '../ui/tabs';
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '../ui/carousel';
 
 interface PortfolioSectionItem {
   title: string;
@@ -27,7 +26,7 @@ interface PortfolioSectionProps {
 }
 
 export const PortfolioSection = ({ title, description, items, gridClassName = "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4" }: PortfolioSectionProps) => {
-  const [api, setApi] = useState<any>(null)
+  const [activeTab, setActiveTab] = useState('')
 
   const isYouTubePlaylist = (link: string) =>
     link.includes('youtube.com/playlist') || link.includes('youtu.be/playlist')
@@ -83,16 +82,12 @@ export const PortfolioSection = ({ title, description, items, gridClassName = "g
   const clientGroups = groupItemsByClient()
   const clientNames = Object.keys(clientGroups)
   
-  // Auto-scroll functionality for Social Media Work
-  useEffect(() => {
-    if (!api || title !== 'Social Media Work') return
-
-    const interval = setInterval(() => {
-      api.scrollNext()
-    }, 5000) // Auto-scroll every 5 seconds
-
-    return () => clearInterval(interval)
-  }, [api, title])
+  // Set default active tab to first client
+  React.useEffect(() => {
+    if (clientNames.length > 0 && !activeTab) {
+      setActiveTab(clientNames[0])
+    }
+  }, [clientNames, activeTab])
 
 const nonPlaylistItems = items
   .filter((item) => !isYouTubePlaylist(item.link) && item.embed !== 'facebook-video')
@@ -115,74 +110,69 @@ const gridCols = title.includes('Script Writing') ? 'grid-cols-1 lg:grid-cols-2'
       
       <div className="w-full max-w-none">
         {title === 'Social Media Work' && clientNames.length > 1 ? (
-          <Carousel 
-            setApi={setApi}
-            className="w-full max-w-7xl mx-auto"
-            opts={{
-              align: "start",
-              loop: true
-            }}
-          >
-            <div className="flex justify-center mb-8">
-              <CarouselPrevious className="relative left-auto top-auto -translate-y-0 mr-4" />
-              <CarouselNext className="relative right-auto top-auto -translate-y-0" />
+          <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
+            <div className="flex justify-center gap-4 mb-8 md:mb-12">
+              <TabsList className="flex gap-4 bg-transparent p-0">
+                {clientNames.map((clientName) => (
+                  <TabsTrigger 
+                    key={clientName} 
+                    value={clientName} 
+                    className="text-sm md:text-base font-medium px-6 py-3 rounded-xl bg-gradient-to-r from-primary/80 to-primary/60 border border-border/20 text-white data-[state=active]:bg-gradient-to-r data-[state=active]:from-primary data-[state=active]:to-primary/80 data-[state=active]:text-white data-[state=active]:shadow-lg hover:from-primary/90 hover:to-primary/70 transition-all duration-200 whitespace-nowrap min-w-[120px] text-center"
+                  >
+                    {clientName}
+                  </TabsTrigger>
+                ))}
+              </TabsList>
             </div>
-            
-            <CarouselContent className="-ml-2 md:-ml-4">
-              {clientNames.map((clientName) => {
-                const clientItems = clientGroups[clientName]
-                const clientNonPlaylistItems = clientItems.filter((item) => !isYouTubePlaylist(item.link) && item.embed !== 'facebook-video')
-                const clientPlaylistItems = clientItems.filter((item) => isYouTubePlaylist(item.link))
-                const clientFacebookEmbeds = clientItems.filter((item) => item.embed === 'facebook-video')
 
-                return (
-                  <CarouselItem key={clientName} className="pl-2 md:pl-4">
-                    <div className="text-center mb-6">
-                      <h4 className="text-2xl font-bold text-foreground mb-2">{clientName}</h4>
-                      <div className="w-20 h-1 bg-primary mx-auto rounded-full"></div>
-                    </div>
-                    
-                    <div className={`grid ${gridCols} gap-4 md:gap-6`}>
-                      {clientFacebookEmbeds.map((item, itemIndex) => (
-                        <FacebookVideoEmbed
-                          key={`fb-${itemIndex}-${item.title}`}
-                          title={item.title}
-                          description={item.description}
-                          videoUrl={item.link}
-                          logo={item.logo}
-                          responsibilities={item.responsibilities}
-                        />
-                      ))}
+            {clientNames.map((clientName) => {
+              const clientItems = clientGroups[clientName]
+              const clientNonPlaylistItems = clientItems.filter((item) => !isYouTubePlaylist(item.link) && item.embed !== 'facebook-video')
+              const clientPlaylistItems = clientItems.filter((item) => isYouTubePlaylist(item.link))
+              const clientFacebookEmbeds = clientItems.filter((item) => item.embed === 'facebook-video')
 
-                      {clientNonPlaylistItems.map((item, itemIndex) => (
-                        <PortfolioCard
-                          key={`card-${itemIndex}-${item.title}`}
-                          title={item.title}
-                          description={item.description}
-                          link={item.link}
-                          logo={item.logo}
-                          thumbnail={item.thumbnail}
-                          client={item.client}
-                          date={item.date}
-                          skills={item.skills}
-                        />
-                      ))}
+              return (
+                <TabsContent key={clientName} value={clientName}>
+                  <div className={`grid ${gridCols} gap-4 md:gap-6`}>
+                    {clientFacebookEmbeds.map((item, itemIndex) => (
+                      <FacebookVideoEmbed
+                        key={`fb-${itemIndex}-${item.title}`}
+                        title={item.title}
+                        description={item.description}
+                        videoUrl={item.link}
+                        logo={item.logo}
+                        responsibilities={item.responsibilities}
+                      />
+                    ))}
 
-                      {clientPlaylistItems.map((item, itemIndex) => (
-                        <YouTubePlaylistEmbed
-                          key={`yt-${itemIndex}-${item.title}`}
-                          title={item.title}
-                          description={item.description}
-                          playlistUrl={item.link}
-                          logo={item.logo}
-                        />
-                      ))}
-                    </div>
-                  </CarouselItem>
-                )
-              })}
-            </CarouselContent>
-          </Carousel>
+                    {clientNonPlaylistItems.map((item, itemIndex) => (
+                      <PortfolioCard
+                        key={`card-${itemIndex}-${item.title}`}
+                        title={item.title}
+                        description={item.description}
+                        link={item.link}
+                        logo={item.logo}
+                        thumbnail={item.thumbnail}
+                        client={item.client}
+                        date={item.date}
+                        skills={item.skills}
+                      />
+                    ))}
+
+                    {clientPlaylistItems.map((item, itemIndex) => (
+                      <YouTubePlaylistEmbed
+                        key={`yt-${itemIndex}-${item.title}`}
+                        title={item.title}
+                        description={item.description}
+                        playlistUrl={item.link}
+                        logo={item.logo}
+                      />
+                    ))}
+                  </div>
+                </TabsContent>
+              )
+            })}
+          </Tabs>
         ) : (
           <div className={`grid ${gridCols} gap-4 md:gap-6`}>
             {title === 'Android World Articles' ? (
