@@ -19,18 +19,16 @@ export const Hero = () => {
               <img src="/lovable-uploads/504d32e0-6560-4ee8-938f-660d9a49b785.png" alt="Mahmoud AlMoselhy" className="w-full h-full object-cover object-center scale-110 hover:scale-105 transition-transform duration-700" style={{
               objectPosition: '50% 30%'
             }} />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+              
             </div>
           </div>
           
           {/* Text content */}
           <div className="text-center lg:text-left animate-fade-in max-w-2xl">
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6">
-              <span className="bg-gradient-to-r from-gradient-start via-gradient-middle to-gradient-end bg-clip-text text-transparent animate-gradient">
-                Mahmoud
-              </span>
+              
               <br />
-              <span className="text-foreground">AlMoselhy</span>
+              
             </h1>
             
             <p className="text-lg md:text-xl text-muted-foreground mb-4 font-light">Content and SEO Specialist</p>
