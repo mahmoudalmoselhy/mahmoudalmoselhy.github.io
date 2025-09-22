@@ -11,16 +11,11 @@ export const Hero = () => {
         <div className="absolute bottom-20 left-1/2 w-80 h-80 bg-secondary/20 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-pulse animation-delay-2000 dark:mix-blend-lighten"></div>
       </div>
       
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto relative z-10 px-[20px] bg-inherit">
         <div className="flex flex-col lg:flex-row justify-center items-center gap-12 lg:gap-16">
           {/* Profile Image */}
           <div className="flex-shrink-0">
-            <div className="relative w-64 h-80 md:w-72 md:h-96 lg:w-80 lg:h-[500px] rounded-3xl overflow-hidden liquid-glass">
-              <img src="/lovable-uploads/504d32e0-6560-4ee8-938f-660d9a49b785.png" alt="Mahmoud AlMoselhy" className="w-full h-full object-cover object-center scale-110 hover:scale-105 transition-transform duration-700" style={{
-              objectPosition: '50% 30%'
-            }} />
-              
-            </div>
+            
           </div>
           
           {/* Text content */}
