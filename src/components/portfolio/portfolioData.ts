@@ -229,7 +229,7 @@ export const portfolioSections = [
         logo: "/lovable-uploads/c8892c9f-d780-4825-a3b1-b1e017d5bd62.png"
       },
       {
-        title: "Market Expansion Strategy",
+        title: "Restaurant and Cafe Post",
         description: "Strategic approach to expanding market reach",
         link: "https://www.facebook.com/share/p/1696ahYCzP/",
         logo: "/lovable-uploads/c8892c9f-d780-4825-a3b1-b1e017d5bd62.png"
