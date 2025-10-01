@@ -25,7 +25,11 @@ export const Hero = () => {
         <div className="flex flex-col lg:flex-row justify-center items-center gap-12 lg:gap-16">
           {/* Profile Image */}
           <div className="flex-shrink-0">
-            
+            <img 
+              src="/hero-profile.png" 
+              alt="Mahmoud AlMoselhy - Content and SEO Specialist" 
+              className="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full object-cover shadow-2xl ring-4 ring-primary/20"
+            />
           </div>
           
           {/* Text content */}
