@@ -44,9 +44,7 @@ export const Hero = () => {
             </div>
             
             <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto lg:mx-0 mb-8 leading-relaxed">
-              "Like Albus Dumbledore said: 'words in my humble opinion are the most inexhaustible source of magic' 
-              I do believe in the power of words where a man can invent a whole new world just with his pencil. 
-              Working for 13 years now as a content creator."
+              My name is Mahmoud AlMoselhy, and like every true engineer, I can't go five minutes without mentioning my profession, so yes, I'm an engineer. But beyond equations and designs, I've been a content creator since the age of 13, driven by a passion for storytelling and the belief that words carry real power. As Albus Dumbledore wisely said: "Words are, in my not-so-humble opinion, our most inexhaustible source of magic." And that's the kind of magic I aim to create, every day, with every piece of content.
             </p>
             
             <div className="flex flex-col sm:flex-row justify-center lg:justify-start space-y-4 sm:space-y-0 sm:space-x-4">
