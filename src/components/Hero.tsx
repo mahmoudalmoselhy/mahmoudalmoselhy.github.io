@@ -5,18 +5,14 @@ export const Hero = () => {
   return <>
       {/* Full-width portfolio cover image */}
       <div className="w-full">
-        <img 
-          src="/portfolio-cover.png" 
-          alt="Mahmoud AlMoselhy Portfolio Cover" 
-          className="w-full h-auto object-cover"
-        />
+        <img src="/portfolio-cover.png" alt="Mahmoud AlMoselhy Portfolio Cover" className="w-full h-auto object-cover" />
       </div>
       
       <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-background via-muted/30 to-background">
       
       {/* Animated background elements */}
       <div className="absolute inset-0">
-        <div className="absolute top-20 left-20 w-72 h-72 bg-primary/20 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-pulse dark:mix-blend-lighten"></div>
+        
         <div className="absolute top-40 right-20 w-96 h-96 bg-accent/30 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-pulse animation-delay-1000 dark:mix-blend-lighten"></div>
         <div className="absolute bottom-20 left-1/2 w-80 h-80 bg-secondary/20 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-pulse animation-delay-2000 dark:mix-blend-lighten"></div>
       </div>
@@ -24,13 +20,7 @@ export const Hero = () => {
       <div className="container mx-auto relative z-10 px-[20px] bg-inherit">
         <div className="flex flex-col lg:flex-row justify-center items-center gap-12 lg:gap-16">
           {/* Profile Image */}
-          <div className="flex-shrink-0">
-            <img 
-              src="/hero-profile.png" 
-              alt="Mahmoud AlMoselhy - Content and SEO Specialist" 
-              className="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full object-cover shadow-2xl ring-4 ring-primary/20"
-            />
-          </div>
+          
           
           {/* Text content */}
           <div className="text-center lg:text-left animate-fade-in max-w-2xl">
