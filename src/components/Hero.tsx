@@ -2,7 +2,17 @@ import React from 'react';
 import { Linkedin, Mail, MessageCircle, FileText } from 'lucide-react';
 import { Link } from 'react-router-dom';
 export const Hero = () => {
-  return <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-background via-muted/30 to-background">
+  return <>
+      {/* Full-width portfolio cover image */}
+      <div className="w-full">
+        <img 
+          src="/portfolio-cover.png" 
+          alt="Mahmoud AlMoselhy Portfolio Cover" 
+          className="w-full h-auto object-cover"
+        />
+      </div>
+      
+      <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-background via-muted/30 to-background">
       
       {/* Animated background elements */}
       <div className="absolute inset-0">
@@ -62,5 +72,6 @@ export const Hero = () => {
         </div>
         
       </div>
-    </section>;
+    </section>
+  </>;
 };

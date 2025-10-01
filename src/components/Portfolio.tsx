@@ -17,15 +17,6 @@ export const Portfolio = () => {
 
   return (
     <section className="relative overflow-hidden">
-      {/* Full-width portfolio cover image */}
-      <div className="w-full">
-        <img 
-          src="/portfolio-cover.png" 
-          alt="Mahmoud AlMoselhy Portfolio Cover" 
-          className="w-full h-auto object-cover"
-        />
-      </div>
-
       {/* Main portfolio content */}
       <div className="py-12 md:py-20 px-4 md:px-6 relative">
         {/* Subtle geometric pattern background */}
