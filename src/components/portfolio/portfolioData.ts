@@ -259,34 +259,44 @@ export const portfolioSections = [
         logo: "/lovable-uploads/c8892c9f-d780-4825-a3b1-b1e017d5bd62.png"
       },
       {
-        title: "UCL Final Competition",
-        description: "UEFA Champions League final competition coverage",
-        link: "https://www.facebook.com/share/p/16f7QEfVF4/",
-        logo: "/lovable-uploads/684b33f4-7836-42a3-810a-395f2e74a0da.png"
+        title: "Lecce Post 1",
+        description: "Social media content",
+        link: "https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fshare%2Fp%2F1B7RZJktAi%2F&width=500",
+        logo: "/lovable-uploads/684b33f4-7836-42a3-810a-395f2e74a0da.png",
+        embed: "facebook-post",
+        tag: "Static"
       },
       {
-        title: "El Classico Copa Del Ray final",
-        description: "El Classico Copa del Rey final social media coverage",
-        link: "https://www.facebook.com/share/p/16RdYQQR2K/",
-        logo: "/lovable-uploads/684b33f4-7836-42a3-810a-395f2e74a0da.png"
+        title: "Lecce Post 2",
+        description: "Social media content",
+        link: "https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FLecce.egy%2Fposts%2Fpfbid02t4DXCU1n78wXC9gy83nvvagbZSWNhpdNmHydBQBPtBJzZmFrnKVUnxKxiyxkNaz5l&width=500",
+        logo: "/lovable-uploads/684b33f4-7836-42a3-810a-395f2e74a0da.png",
+        embed: "facebook-post",
+        tag: "Static"
       },
       {
-        title: "Egypt's Derby",
-        description: "Egyptian football derby social media campaign",
-        link: "https://www.facebook.com/share/p/12MnJq4FKrH/",
-        logo: "/lovable-uploads/684b33f4-7836-42a3-810a-395f2e74a0da.png"
+        title: "Lecce Post 3",
+        description: "Social media content",
+        link: "https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fshare%2Fp%2F17dtUgg8ck%2F&width=500",
+        logo: "/lovable-uploads/684b33f4-7836-42a3-810a-395f2e74a0da.png",
+        embed: "facebook-post",
+        tag: "Static"
       },
       {
-        title: "Me time with Lecce",
-        description: "Personal time and lifestyle content with Lecce brand",
-        link: "https://www.facebook.com/share/p/1AmJ7uKYfq/",
-        logo: "/lovable-uploads/684b33f4-7836-42a3-810a-395f2e74a0da.png"
+        title: "Lecce Post 4",
+        description: "Social media content",
+        link: "https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fshare%2Fp%2F1Rq293Bj4X%2F&width=500",
+        logo: "/lovable-uploads/684b33f4-7836-42a3-810a-395f2e74a0da.png",
+        embed: "facebook-post",
+        tag: "Static"
       },
       {
-        title: "Egypt's Derby",
-        description: "Another Egyptian football derby social media campaign",
-        link: "https://www.facebook.com/share/p/1Dwk3mVRL8/",
-        logo: "/lovable-uploads/684b33f4-7836-42a3-810a-395f2e74a0da.png"
+        title: "Lecce Post 5",
+        description: "Social media content",
+        link: "https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fshare%2Fp%2F1FMfbVZLZL%2F&width=500",
+        logo: "/lovable-uploads/684b33f4-7836-42a3-810a-395f2e74a0da.png",
+        embed: "facebook-post",
+        tag: "Static"
       }
     ]
   }

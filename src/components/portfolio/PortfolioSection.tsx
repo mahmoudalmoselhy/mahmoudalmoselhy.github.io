@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { YouTubePlaylistEmbed } from './YouTubePlaylistEmbed';
 import { FacebookVideoEmbed } from './FacebookVideoEmbed';
+import { FacebookPostEmbed } from './FacebookPostEmbed';
 import { PortfolioCard } from './PortfolioCard';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '../ui/tabs';
 
@@ -16,6 +17,7 @@ interface PortfolioSectionItem {
   date?: string; // ISO date for age
   embed?: string;
   responsibilities?: string[];
+  tag?: string;
 }
 
 interface PortfolioSectionProps {
@@ -90,7 +92,7 @@ export const PortfolioSection = ({ title, description, items, gridClassName = "g
   }, [clientNames, activeTab])
 
 const nonPlaylistItems = items
-  .filter((item) => !isYouTubePlaylist(item.link) && item.embed !== 'facebook-video')
+  .filter((item) => !isYouTubePlaylist(item.link) && item.embed !== 'facebook-video' && item.embed !== 'facebook-post')
   .map((item) => ({
     ...item,
     thumbnail: item.thumbnail || undefined, // PortfolioCard will auto-screenshot when missing
@@ -99,6 +101,7 @@ const nonPlaylistItems = items
 
 const playlistItems = items.filter((item) => isYouTubePlaylist(item.link))
 const facebookEmbeds = items.filter((item) => item.embed === 'facebook-video')
+const facebookPosts = items.filter((item) => item.embed === 'facebook-post')
 const gridCols = title.includes('Script Writing') ? 'grid-cols-1 lg:grid-cols-2' : gridClassName
 
   return (
@@ -127,9 +130,10 @@ const gridCols = title.includes('Script Writing') ? 'grid-cols-1 lg:grid-cols-2'
 
             {clientNames.map((clientName) => {
               const clientItems = clientGroups[clientName]
-              const clientNonPlaylistItems = clientItems.filter((item) => !isYouTubePlaylist(item.link) && item.embed !== 'facebook-video')
+              const clientNonPlaylistItems = clientItems.filter((item) => !isYouTubePlaylist(item.link) && item.embed !== 'facebook-video' && item.embed !== 'facebook-post')
               const clientPlaylistItems = clientItems.filter((item) => isYouTubePlaylist(item.link))
               const clientFacebookEmbeds = clientItems.filter((item) => item.embed === 'facebook-video')
+              const clientFacebookPosts = clientItems.filter((item) => item.embed === 'facebook-post')
 
               return (
                 <TabsContent key={clientName} value={clientName}>
@@ -142,6 +146,16 @@ const gridCols = title.includes('Script Writing') ? 'grid-cols-1 lg:grid-cols-2'
                         videoUrl={item.link}
                         logo={item.logo}
                         responsibilities={item.responsibilities}
+                      />
+                    ))}
+
+                    {clientFacebookPosts.map((item, itemIndex) => (
+                      <FacebookPostEmbed
+                        key={`fbpost-${itemIndex}-${item.title}`}
+                        title={item.title}
+                        iframeUrl={item.link}
+                        logo={item.logo}
+                        tag={item.tag || 'Post'}
                       />
                     ))}
 
@@ -220,6 +234,16 @@ const gridCols = title.includes('Script Writing') ? 'grid-cols-1 lg:grid-cols-2'
                     videoUrl={item.link}
                     logo={item.logo}
                     responsibilities={item.responsibilities}
+                  />
+                ))}
+
+                {facebookPosts.map((item, itemIndex) => (
+                  <FacebookPostEmbed
+                    key={`fbpost-${itemIndex}-${item.title}`}
+                    title={item.title}
+                    iframeUrl={item.link}
+                    logo={item.logo}
+                    tag={item.tag || 'Post'}
                   />
                 ))}
 
