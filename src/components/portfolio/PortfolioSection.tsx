@@ -166,10 +166,7 @@ const gridCols = title.includes('Script Writing') ? 'grid-cols-1 lg:grid-cols-2'
                     {clientInstagramPosts.map((item, itemIndex) => (
                       <InstagramPostEmbed
                         key={`igpost-${itemIndex}-${item.title}`}
-                        title={item.title}
                         postUrl={item.link}
-                        logo={item.logo}
-                        tag={item.tag || 'Post'}
                       />
                     ))}
 
@@ -264,10 +261,7 @@ const gridCols = title.includes('Script Writing') ? 'grid-cols-1 lg:grid-cols-2'
                 {instagramPosts.map((item, itemIndex) => (
                   <InstagramPostEmbed
                     key={`igpost-${itemIndex}-${item.title}`}
-                    title={item.title}
                     postUrl={item.link}
-                    logo={item.logo}
-                    tag={item.tag || 'Post'}
                   />
                 ))}
 
