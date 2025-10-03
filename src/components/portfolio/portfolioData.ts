@@ -259,6 +259,30 @@ export const portfolioSections = [
         logo: "/lovable-uploads/c8892c9f-d780-4825-a3b1-b1e017d5bd62.png"
       },
       {
+        title: "Evolve Post 1",
+        description: "Social media content",
+        link: "https://www.instagram.com/p/DPO3juMjZd8/",
+        logo: "/lovable-uploads/8ef3ab80-42b8-4ce4-b280-e4a0c812617b.png",
+        embed: "instagram-post",
+        tag: "Static"
+      },
+      {
+        title: "Evolve Post 2",
+        description: "Social media content",
+        link: "https://www.instagram.com/reel/DPJgWQ0kqmj/",
+        logo: "/lovable-uploads/8ef3ab80-42b8-4ce4-b280-e4a0c812617b.png",
+        embed: "instagram-post",
+        tag: "Static"
+      },
+      {
+        title: "Evolve Post 3",
+        description: "Social media content",
+        link: "https://www.instagram.com/p/DPB_ktJDTvf/",
+        logo: "/lovable-uploads/8ef3ab80-42b8-4ce4-b280-e4a0c812617b.png",
+        embed: "instagram-post",
+        tag: "Static"
+      },
+      {
         title: "Lecce Post 1",
         description: "Social media content",
         link: "https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fshare%2Fp%2F1B7RZJktAi%2F&width=500",

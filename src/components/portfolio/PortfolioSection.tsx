@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { YouTubePlaylistEmbed } from './YouTubePlaylistEmbed';
 import { FacebookVideoEmbed } from './FacebookVideoEmbed';
 import { FacebookPostEmbed } from './FacebookPostEmbed';
+import { InstagramPostEmbed } from './InstagramPostEmbed';
 import { PortfolioCard } from './PortfolioCard';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '../ui/tabs';
 
@@ -57,7 +58,8 @@ export const PortfolioSection = ({ title, description, items, gridClassName = "g
       '/lovable-uploads/106b69a1-42a2-4bf5-9caa-e9f4a854f21a.png': 'ExVar',
       '/lovable-uploads/b53bf9e1-ad4a-433a-984c-7c8fb6a6187d.png': 'Revieology',
       '/lovable-uploads/c8892c9f-d780-4825-a3b1-b1e017d5bd62.png': 'Menusbee',
-      '/lovable-uploads/684b33f4-7836-42a3-810a-395f2e74a0da.png': 'Lecce'
+      '/lovable-uploads/684b33f4-7836-42a3-810a-395f2e74a0da.png': 'Lecce',
+      '/lovable-uploads/8ef3ab80-42b8-4ce4-b280-e4a0c812617b.png': 'Evolve'
     }
     return logoMap[logo] || 'Other'
   }
@@ -92,7 +94,7 @@ export const PortfolioSection = ({ title, description, items, gridClassName = "g
   }, [clientNames, activeTab])
 
 const nonPlaylistItems = items
-  .filter((item) => !isYouTubePlaylist(item.link) && item.embed !== 'facebook-video' && item.embed !== 'facebook-post')
+  .filter((item) => !isYouTubePlaylist(item.link) && item.embed !== 'facebook-video' && item.embed !== 'facebook-post' && item.embed !== 'instagram-post')
   .map((item) => ({
     ...item,
     thumbnail: item.thumbnail || undefined, // PortfolioCard will auto-screenshot when missing
@@ -102,6 +104,7 @@ const nonPlaylistItems = items
 const playlistItems = items.filter((item) => isYouTubePlaylist(item.link))
 const facebookEmbeds = items.filter((item) => item.embed === 'facebook-video')
 const facebookPosts = items.filter((item) => item.embed === 'facebook-post')
+const instagramPosts = items.filter((item) => item.embed === 'instagram-post')
 const gridCols = title.includes('Script Writing') ? 'grid-cols-1 lg:grid-cols-2' : gridClassName
 
   return (
@@ -130,10 +133,11 @@ const gridCols = title.includes('Script Writing') ? 'grid-cols-1 lg:grid-cols-2'
 
             {clientNames.map((clientName) => {
               const clientItems = clientGroups[clientName]
-              const clientNonPlaylistItems = clientItems.filter((item) => !isYouTubePlaylist(item.link) && item.embed !== 'facebook-video' && item.embed !== 'facebook-post')
+              const clientNonPlaylistItems = clientItems.filter((item) => !isYouTubePlaylist(item.link) && item.embed !== 'facebook-video' && item.embed !== 'facebook-post' && item.embed !== 'instagram-post')
               const clientPlaylistItems = clientItems.filter((item) => isYouTubePlaylist(item.link))
               const clientFacebookEmbeds = clientItems.filter((item) => item.embed === 'facebook-video')
               const clientFacebookPosts = clientItems.filter((item) => item.embed === 'facebook-post')
+              const clientInstagramPosts = clientItems.filter((item) => item.embed === 'instagram-post')
 
               return (
                 <TabsContent key={clientName} value={clientName}>
@@ -154,6 +158,16 @@ const gridCols = title.includes('Script Writing') ? 'grid-cols-1 lg:grid-cols-2'
                         key={`fbpost-${itemIndex}-${item.title}`}
                         title={item.title}
                         iframeUrl={item.link}
+                        logo={item.logo}
+                        tag={item.tag || 'Post'}
+                      />
+                    ))}
+
+                    {clientInstagramPosts.map((item, itemIndex) => (
+                      <InstagramPostEmbed
+                        key={`igpost-${itemIndex}-${item.title}`}
+                        title={item.title}
+                        postUrl={item.link}
                         logo={item.logo}
                         tag={item.tag || 'Post'}
                       />
@@ -242,6 +256,16 @@ const gridCols = title.includes('Script Writing') ? 'grid-cols-1 lg:grid-cols-2'
                     key={`fbpost-${itemIndex}-${item.title}`}
                     title={item.title}
                     iframeUrl={item.link}
+                    logo={item.logo}
+                    tag={item.tag || 'Post'}
+                  />
+                ))}
+
+                {instagramPosts.map((item, itemIndex) => (
+                  <InstagramPostEmbed
+                    key={`igpost-${itemIndex}-${item.title}`}
+                    title={item.title}
+                    postUrl={item.link}
                     logo={item.logo}
                     tag={item.tag || 'Post'}
                   />
