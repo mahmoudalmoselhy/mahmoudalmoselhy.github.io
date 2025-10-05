@@ -119,7 +119,7 @@ export const PortfolioSection = ({
       
       <div className="w-full max-w-none">
         {title === 'Social Media Work' && clientNames.length > 1 ? <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-            <div className="flex justify-center gap-4 mb-8 md:mb-12">
+            <div className="flex gap-4 bg-transparent p-0">
               <TabsList className="grid grid-cols-5 grid-rows-5 gap-x-4 gap-y-20 bg-transparent p-0\n">
                 {clientNames.map(clientName => <TabsTrigger key={clientName} value={clientName} className="text-sm md:text-base font-medium px-6 py-3 rounded-xl bg-muted/50 border border-border/20 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-lg hover:bg-muted/70 transition-all duration-200 whitespace-nowrap min-w-[120px] text-center">
                     {clientName}
