@@ -1,28 +1,45 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 
 interface InstagramPostEmbedProps {
   postUrl: string;
 }
 
 export const InstagramPostEmbed = ({ postUrl }: InstagramPostEmbedProps) => {
+  const containerRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
-    // Load Instagram embed script if not already loaded
+    const loadInstagramEmbed = () => {
+      if ((window as any).instgrm) {
+        (window as any).instgrm.Embeds.process();
+      }
+    };
+
     if (!(window as any).instgrm) {
       const script = document.createElement('script');
-      script.src = '//www.instagram.com/embed.js';
+      script.src = 'https://www.instagram.com/embed.js';
       script.async = true;
+      script.onload = loadInstagramEmbed;
       document.body.appendChild(script);
     } else {
-      // If script already loaded, process embeds
-      (window as any).instgrm.Embeds.process();
+      loadInstagramEmbed();
     }
   }, [postUrl]);
 
   return (
-    <blockquote
-      className="instagram-media"
-      data-instgrm-permalink={postUrl}
-      data-instgrm-version="14"
-    />
+    <div ref={containerRef} style={{ display: 'flex', justifyContent: 'center' }}>
+      <blockquote
+        className="instagram-media"
+        data-instgrm-permalink={postUrl}
+        data-instgrm-version="14"
+        style={{
+          background: '#fff',
+          border: 0,
+          margin: '1rem auto',
+          maxWidth: '540px',
+          minWidth: '326px',
+          width: '100%',
+        }}
+      />
+    </div>
   );
 };
