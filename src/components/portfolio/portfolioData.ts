@@ -293,7 +293,7 @@ export const portfolioSections = [
       {
         title: "Evolve Post 5",
         description: "Social media content",
-        link: "https://www.instagram.com/reel/DOdTUwlj4FT/",
+        link: "https://www.instagram.com/reel/DOdTUwlj4FT/embed",
         logo: "/lovable-uploads/8ef3ab80-42b8-4ce4-b280-e4a0c812617b.png",
         embed: "instagram-post",
         tag: "Reel"
