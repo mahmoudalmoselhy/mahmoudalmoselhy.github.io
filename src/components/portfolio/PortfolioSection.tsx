@@ -59,7 +59,16 @@ export const PortfolioSection = ({ title, description, items, gridClassName = "g
       '/lovable-uploads/b53bf9e1-ad4a-433a-984c-7c8fb6a6187d.png': 'Revieology',
       '/lovable-uploads/c8892c9f-d780-4825-a3b1-b1e017d5bd62.png': 'Menusbee',
       '/lovable-uploads/684b33f4-7836-42a3-810a-395f2e74a0da.png': 'Lecce',
-      '/lovable-uploads/8ef3ab80-42b8-4ce4-b280-e4a0c812617b.png': 'Evolve'
+      '/lovable-uploads/8ef3ab80-42b8-4ce4-b280-e4a0c812617b.png': 'Evolve',
+      '/lovable-uploads/50a63b2f-f4a6-4af1-b9fa-180df9e12233.png': 'Intellijoy',
+      '/lovable-uploads/56f3b136-b633-40c0-af5a-aa3a3f85eaf5.png': 'Dr Azza Ibrahim',
+      '/lovable-uploads/5f845450-ce56-4116-9df2-14701f0412bc.png': 'TBA',
+      '/lovable-uploads/6134c47d-6131-4d1f-ba02-e6aa71b2d036.png': 'Insta',
+      '/lovable-uploads/66dec386-84b2-43af-b57b-a9919a4a9926.png': 'CMG',
+      '/lovable-uploads/7e6d1a1b-60ce-445d-9c6a-26cc95a62421.png': 'Tiye Academy',
+      '/lovable-uploads/8cd0ad5b-d116-4da8-a678-fabadb04760b.png': 'Mega Kitchens',
+      '/lovable-uploads/8d0694e8-3941-4769-8e2d-5f1c6e79bb8a.png': 'Cocobolo',
+      '/lovable-uploads/8f31c28a-f551-44b9-9cc6-a8aed95e6fe4.png': 'Various Hub'
     }
     return logoMap[logo] || 'Other'
   }
