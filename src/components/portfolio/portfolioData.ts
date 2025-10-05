@@ -293,7 +293,7 @@ export const portfolioSections = [
       {
         title: "Evolve Post 5",
         description: "Social media content",
-        link: "https://www.instagram.com/reel/DOdTUwlj4FT/embed",
+        link: "https://www.instagram.com/reel/DOdTUwlj4FT/",
         logo: "/lovable-uploads/8ef3ab80-42b8-4ce4-b280-e4a0c812617b.png",
         embed: "instagram-post",
         tag: "Reel"
@@ -345,60 +345,6 @@ export const portfolioSections = [
         logo: "/lovable-uploads/684b33f4-7836-42a3-810a-395f2e74a0da.png",
         embed: "facebook-post",
         tag: "Static"
-      },
-      {
-        title: "Intellijoy Campaign",
-        description: "Social media marketing and content strategy",
-        link: "#",
-        logo: "/lovable-uploads/693924e3-2bc0-456b-8afe-d100ef0390f8.png"
-      },
-      {
-        title: "Dr Azza Ibrahim Campaign",
-        description: "Social media marketing and content strategy",
-        link: "#",
-        logo: "/lovable-uploads/693924e3-2bc0-456b-8afe-d100ef0390f8.png"
-      },
-      {
-        title: "TBA Campaign",
-        description: "Social media marketing and content strategy",
-        link: "#",
-        logo: "/lovable-uploads/693924e3-2bc0-456b-8afe-d100ef0390f8.png"
-      },
-      {
-        title: "Insta Campaign",
-        description: "Social media marketing and content strategy",
-        link: "#",
-        logo: "/lovable-uploads/693924e3-2bc0-456b-8afe-d100ef0390f8.png"
-      },
-      {
-        title: "CMG Campaign",
-        description: "Social media marketing and content strategy",
-        link: "#",
-        logo: "/lovable-uploads/693924e3-2bc0-456b-8afe-d100ef0390f8.png"
-      },
-      {
-        title: "Tiye Academy Campaign",
-        description: "Social media marketing and content strategy",
-        link: "#",
-        logo: "/lovable-uploads/693924e3-2bc0-456b-8afe-d100ef0390f8.png"
-      },
-      {
-        title: "Mega Kitchens Campaign",
-        description: "Social media marketing and content strategy",
-        link: "#",
-        logo: "/lovable-uploads/693924e3-2bc0-456b-8afe-d100ef0390f8.png"
-      },
-      {
-        title: "Cocobolo Campaign",
-        description: "Social media marketing and content strategy",
-        link: "#",
-        logo: "/lovable-uploads/693924e3-2bc0-456b-8afe-d100ef0390f8.png"
-      },
-      {
-        title: "Various Hub Campaign",
-        description: "Social media marketing and content strategy",
-        link: "#",
-        logo: "/lovable-uploads/693924e3-2bc0-456b-8afe-d100ef0390f8.png"
       }
     ]
   }
