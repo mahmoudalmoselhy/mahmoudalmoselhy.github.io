@@ -100,6 +100,13 @@ export const PortfolioSection = ({
       setActiveTab(clientNames[0]);
     }
   }, [clientNames, activeTab]);
+  // re-process Instagram embeds when tab changes
+React.useEffect(() => {
+  if ((window as any).instgrm && typeof (window as any).instgrm.Embeds?.process === "function") {
+    (window as any).instgrm.Embeds.process();
+  }
+}, [activeTab]);
+
   const nonPlaylistItems = items.filter(item => !isYouTubePlaylist(item.link) && item.embed !== 'facebook-video' && item.embed !== 'facebook-post' && item.embed !== 'instagram-post').map(item => ({
     ...item,
     thumbnail: item.thumbnail || undefined,
