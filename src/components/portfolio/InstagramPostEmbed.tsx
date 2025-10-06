@@ -26,7 +26,7 @@ export const InstagramPostEmbed = ({ postUrl }: InstagramPostEmbedProps) => {
   }, [postUrl]);
 
   return (
-    <div ref={containerRef} style={{ display: 'flex', justifyContent: 'center' }}>
+    <div ref={containerRef} className="w-full flex justify-center">
       <blockquote
         className="instagram-media"
         data-instgrm-permalink={postUrl}
@@ -34,9 +34,9 @@ export const InstagramPostEmbed = ({ postUrl }: InstagramPostEmbedProps) => {
         style={{
           background: '#fff',
           border: 0,
-          margin: '1rem auto',
-          maxWidth: '540px',
-          minWidth: '326px',
+          margin: '0.5rem auto',
+          maxWidth: '100%',
+          minWidth: '280px',
           width: '100%',
         }}
       />

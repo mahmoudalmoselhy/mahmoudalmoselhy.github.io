@@ -29,9 +29,9 @@ export const FacebookPostEmbed = ({ title, iframeUrl, logo, tag }: FacebookPostE
       <div className="w-full flex justify-center">
         <iframe
           src={iframeUrl}
-          width="500"
-          height="680"
-          style={{ border: 'none', overflow: 'hidden', maxWidth: '100%' }}
+          className="w-full max-w-md"
+          height="600"
+          style={{ border: 'none', overflow: 'hidden' }}
           scrolling="no"
           frameBorder="0"
           allowFullScreen={true}
