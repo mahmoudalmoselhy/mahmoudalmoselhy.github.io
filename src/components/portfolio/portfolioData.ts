@@ -309,7 +309,7 @@ export const portfolioSections = [
       {
         title: "Lecce Post 1",
         description: "Social media content",
-        link: "https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fshare%2Fp%2F1B7RZJktAi%2F&width=500",
+        link: "https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FLecce.egy%2Fposts%2Fpfbid021pbxqNZJrGDHVAjiMQEwGVTjd2JPpmXTzLJGqj6McFvkRan8bSrExHLubFvqdzfDl&show_text=true&width=500",
         logo: "/lovable-uploads/684b33f4-7836-42a3-810a-395f2e74a0da.png",
         embed: "facebook-post",
         tag: "Static"
@@ -317,7 +317,7 @@ export const portfolioSections = [
       {
         title: "Lecce Post 2",
         description: "Social media content",
-        link: "https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FLecce.egy%2Fposts%2Fpfbid02t4DXCU1n78wXC9gy83nvvagbZSWNhpdNmHydBQBPtBJzZmFrnKVUnxKxiyxkNaz5l&width=500",
+        link: "https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FLecce.egy%2Fposts%2Fpfbid02wFrvaG3suDs6ph7VHinnY2vP7WTeZCu2pg7V4JXXyz8o6J71bXzVuvZvyEWqyKol&show_text=true&width=500",
         logo: "/lovable-uploads/684b33f4-7836-42a3-810a-395f2e74a0da.png",
         embed: "facebook-post",
         tag: "Static"
@@ -325,7 +325,7 @@ export const portfolioSections = [
       {
         title: "Lecce Post 3",
         description: "Social media content",
-        link: "https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fshare%2Fp%2F17dtUgg8ck%2F&width=500",
+        link: "https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FLecce.egy%2Fposts%2Fpfbid024PnSJytMASSpu2aPf1nWQjD3h2k5XMN9vZRmV97MRZYZ1GMYuCdTuXsT9WpSTWw7l&show_text=true&width=500",
         logo: "/lovable-uploads/684b33f4-7836-42a3-810a-395f2e74a0da.png",
         embed: "facebook-post",
         tag: "Static"
@@ -333,7 +333,7 @@ export const portfolioSections = [
       {
         title: "Lecce Post 4",
         description: "Social media content",
-        link: "https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fshare%2Fp%2F1Rq293Bj4X%2F&width=500",
+        link: "https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FLecce.egy%2Fposts%2Fpfbid02t1i2sgmmUAKXjHsYuTNnDok22jR7cscdw8Pg6sPEiUMGWVqmzyXm9c2mx3kfKMMKl&show_text=true&width=500",
         logo: "/lovable-uploads/684b33f4-7836-42a3-810a-395f2e74a0da.png",
         embed: "facebook-post",
         tag: "Static"
@@ -341,7 +341,7 @@ export const portfolioSections = [
       {
         title: "Lecce Post 5",
         description: "Social media content",
-        link: "https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fshare%2Fp%2F1FMfbVZLZL%2F&width=500",
+        link: "https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FLecce.egy%2Fposts%2Fpfbid0jrPgQ5NVfrjfAp5JuhSVdrNodd7hG8S9nwm6vh7R2TbFrhBrzyW3SenEf6LHZm5El&show_text=true&width=500",
         logo: "/lovable-uploads/684b33f4-7836-42a3-810a-395f2e74a0da.png",
         embed: "facebook-post",
         tag: "Static"
