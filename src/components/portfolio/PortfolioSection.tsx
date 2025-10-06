@@ -147,7 +147,7 @@ React.useEffect(() => {
 
                     {clientFacebookPosts.map((item, itemIndex) => <FacebookPostEmbed key={`fbpost-${itemIndex}-${item.title}`} title={item.title} iframeUrl={item.link} logo={item.logo} tag={item.tag || 'Post'} />)}
 
-                    {clientInstagramPosts.map((item, itemIndex) => <InstagramPostEmbed key={`igpost-${itemIndex}-${item.title}`} postUrl={item.link} />)}
+                    {clientInstagramPosts.map((item, itemIndex) => <InstagramPostEmbed key={`igpost-${itemIndex}-${item.title}`} title={item.title} postUrl={item.link} logo={item.logo} tag={item.tag || 'Post'} />)}
 
                     {clientNonPlaylistItems.map((item, itemIndex) => <PortfolioCard key={`card-${itemIndex}-${item.title}`} title={item.title} description={item.description} link={item.link} logo={item.logo} thumbnail={item.thumbnail} client={item.client} date={item.date} skills={item.skills} />)}
 
@@ -176,7 +176,7 @@ React.useEffect(() => {
 
                 {facebookPosts.map((item, itemIndex) => <FacebookPostEmbed key={`fbpost-${itemIndex}-${item.title}`} title={item.title} iframeUrl={item.link} logo={item.logo} tag={item.tag || 'Post'} />)}
 
-                {instagramPosts.map((item, itemIndex) => <InstagramPostEmbed key={`igpost-${itemIndex}-${item.title}`} postUrl={item.link} />)}
+                {instagramPosts.map((item, itemIndex) => <InstagramPostEmbed key={`igpost-${itemIndex}-${item.title}`} title={item.title} postUrl={item.link} logo={item.logo} tag={item.tag || 'Post'} />)}
 
                 {nonPlaylistItems.map((item, itemIndex) => <PortfolioCard key={`card-${itemIndex}-${item.title}`} title={item.title} description={item.description} link={item.link} logo={item.logo} thumbnail={item.thumbnail} client={item.client} date={item.date} skills={item.skills} />)}
 
