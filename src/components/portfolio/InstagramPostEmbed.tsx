@@ -12,25 +12,34 @@ export const InstagramPostEmbed = ({ title, postUrl, logo, tag }: InstagramPostE
 
   useEffect(() => {
     const loadInstagramEmbed = () => {
-      if ((window as any).instgrm) {
+      if ((window as any).instgrm && typeof (window as any).instgrm.Embeds?.process === 'function') {
         (window as any).instgrm.Embeds.process();
       }
     };
 
-    // Add a small delay to ensure DOM is ready
-    const timer = setTimeout(() => {
-      if (!(window as any).instgrm) {
-        const script = document.createElement('script');
-        script.src = 'https://www.instagram.com/embed.js';
-        script.async = true;
-        script.onload = loadInstagramEmbed;
-        document.body.appendChild(script);
-      } else {
-        loadInstagramEmbed();
-      }
-    }, 100);
+    // Load script if not already loaded
+    if (!(window as any).instgrm) {
+      const script = document.createElement('script');
+      script.src = '//www.instagram.com/embed.js';
+      script.async = true;
+      script.onload = () => {
+        setTimeout(loadInstagramEmbed, 200);
+      };
+      document.body.appendChild(script);
+    } else {
+      // If script already loaded, process embeds after a delay
+      setTimeout(loadInstagramEmbed, 200);
+    }
 
-    return () => clearTimeout(timer);
+    // Also try to process after component mounts
+    const processTimer = setInterval(() => {
+      if ((window as any).instgrm) {
+        loadInstagramEmbed();
+        clearInterval(processTimer);
+      }
+    }, 500);
+
+    return () => clearInterval(processTimer);
   }, [postUrl]);
 
   return (
