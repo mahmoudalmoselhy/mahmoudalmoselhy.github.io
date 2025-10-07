@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect } from 'react';
 
 interface InstagramPostEmbedProps {
   title: string;
@@ -8,38 +8,43 @@ interface InstagramPostEmbedProps {
 }
 
 export const InstagramPostEmbed = ({ title, postUrl, logo, tag }: InstagramPostEmbedProps) => {
-  const containerRef = useRef<HTMLDivElement>(null);
-
   useEffect(() => {
-    const loadInstagramEmbed = () => {
+    // Remove any existing Instagram script
+    const existingScripts = document.querySelectorAll('script[src*="instagram.com/embed.js"]');
+    existingScripts.forEach(script => {
+      if (script.parentNode) {
+        script.parentNode.removeChild(script);
+      }
+    });
+
+    // Load fresh Instagram embed script
+    const script = document.createElement('script');
+    script.src = 'https://www.instagram.com/embed.js';
+    script.async = true;
+    script.onload = () => {
+      // Process embeds after script loads
       if ((window as any).instgrm && typeof (window as any).instgrm.Embeds?.process === 'function') {
         (window as any).instgrm.Embeds.process();
       }
     };
+    document.body.appendChild(script);
 
-    // Load script if not already loaded
-    if (!(window as any).instgrm) {
-      const script = document.createElement('script');
-      script.src = '//www.instagram.com/embed.js';
-      script.async = true;
-      script.onload = () => {
-        setTimeout(loadInstagramEmbed, 200);
-      };
-      document.body.appendChild(script);
-    } else {
-      // If script already loaded, process embeds after a delay
-      setTimeout(loadInstagramEmbed, 200);
-    }
-
-    // Also try to process after component mounts
-    const processTimer = setInterval(() => {
-      if ((window as any).instgrm) {
-        loadInstagramEmbed();
-        clearInterval(processTimer);
+    // Retry processing every second for up to 5 seconds
+    let attempts = 0;
+    const maxAttempts = 5;
+    const retryInterval = setInterval(() => {
+      attempts++;
+      if ((window as any).instgrm && typeof (window as any).instgrm.Embeds?.process === 'function') {
+        (window as any).instgrm.Embeds.process();
+        clearInterval(retryInterval);
+      } else if (attempts >= maxAttempts) {
+        clearInterval(retryInterval);
       }
-    }, 500);
+    }, 1000);
 
-    return () => clearInterval(processTimer);
+    return () => {
+      clearInterval(retryInterval);
+    };
   }, [postUrl]);
 
   return (
@@ -60,7 +65,7 @@ export const InstagramPostEmbed = ({ title, postUrl, logo, tag }: InstagramPostE
         </span>
       </div>
       
-      <div ref={containerRef} className="w-full flex justify-center rounded-2xl overflow-hidden bg-background/5">
+      <div className="w-full flex justify-center rounded-2xl overflow-hidden bg-background/5">
         <blockquote
           className="instagram-media"
           data-instgrm-permalink={postUrl}
