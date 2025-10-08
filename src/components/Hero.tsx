@@ -18,12 +18,9 @@ export const Hero = () => {
       </div>
       
       <div className="container mx-auto relative z-10 px-[20px] bg-inherit">
-        <div className="flex flex-col lg:flex-row justify-center items-center gap-12 lg:gap-16">
-          {/* Profile Image */}
-          
-          
-          {/* Text content */}
-          <div className="text-center lg:text-left animate-fade-in max-w-2xl">
+        <div className="flex flex-col lg:flex-row justify-between items-start gap-12 lg:gap-16">
+          {/* Text content - Left side */}
+          <div className="text-center lg:text-left animate-fade-in flex-1">
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6">
               
               <br />
@@ -43,23 +40,24 @@ export const Hero = () => {
               </div>
             </div>
             
-            <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto lg:mx-0 mb-8 leading-relaxed">
+            <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto lg:mx-0 leading-relaxed">
               My name is Mahmoud AlMoselhy, and like every true engineer, I can't go five minutes without mentioning my profession, so yes, I'm an engineer. But beyond equations and designs, I've been a content creator since the age of 13, driven by a passion for storytelling and the belief that words carry real power. As Albus Dumbledore wisely said: "Words are, in my not-so-humble opinion, our most inexhaustible source of magic." And that's the kind of magic I aim to create, every day, with every piece of content.
             </p>
-            
-            <div className="flex flex-col sm:flex-row justify-center lg:justify-start space-y-4 sm:space-y-0 sm:space-x-4">
-              <a href="#contact" className="bg-gradient-to-r from-gradient-start to-gradient-middle text-background px-6 py-3 rounded-full font-semibold hover:scale-105 transform transition-all duration-300 shadow-lg hover:shadow-xl">
-                Get In Touch
-              </a>
-              <a href="https://linkedin.com/in/mahmoudalmoselhy" target="_blank" rel="noopener noreferrer" className="border-2 border-accent-foreground text-accent-foreground px-6 py-3 rounded-full font-semibold hover:bg-accent-foreground hover:text-background transform transition-all duration-300 flex items-center justify-center space-x-2">
-                <Linkedin className="w-5 h-5" />
-                <span>LinkedIn</span>
-              </a>
-              <Link to="/cv" className="border-2 border-primary text-primary px-6 py-3 rounded-full font-semibold hover:bg-primary hover:text-primary-foreground transform transition-all duration-300 flex items-center justify-center space-x-2">
-                <FileText className="w-5 h-5" />
-                <span>View CV</span>
-              </Link>
-            </div>
+          </div>
+          
+          {/* Buttons - Right side */}
+          <div className="flex flex-col space-y-4 lg:min-w-[250px]">
+            <a href="#contact" className="bg-gradient-to-r from-gradient-start to-gradient-middle text-background px-6 py-3 rounded-full font-semibold hover:scale-105 transform transition-all duration-300 shadow-lg hover:shadow-xl text-center">
+              Get In Touch
+            </a>
+            <a href="https://linkedin.com/in/mahmoudalmoselhy" target="_blank" rel="noopener noreferrer" className="border-2 border-accent-foreground text-accent-foreground px-6 py-3 rounded-full font-semibold hover:bg-accent-foreground hover:text-background transform transition-all duration-300 flex items-center justify-center space-x-2">
+              <Linkedin className="w-5 h-5" />
+              <span>LinkedIn</span>
+            </a>
+            <Link to="/cv" className="border-2 border-primary text-primary px-6 py-3 rounded-full font-semibold hover:bg-primary hover:text-primary-foreground transform transition-all duration-300 flex items-center justify-center space-x-2">
+              <FileText className="w-5 h-5" />
+              <span>View CV</span>
+            </Link>
           </div>
         </div>
         
