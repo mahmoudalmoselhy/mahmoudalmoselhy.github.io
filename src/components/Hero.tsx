@@ -8,7 +8,7 @@ export const Hero = () => {
         <img src="/portfolio-cover.png" alt="Mahmoud AlMoselhy Portfolio Cover" className="w-full h-auto object-cover" />
       </div>
       
-      <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-background via-muted/30 to-background">
+      <section className="py-16 md:py-24 flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-background via-muted/30 to-background">
       
       {/* Animated background elements */}
       <div className="absolute inset-0">
