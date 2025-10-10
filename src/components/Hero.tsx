@@ -21,13 +21,9 @@ export const Hero = () => {
         <div className="flex flex-col lg:flex-row justify-between items-start gap-12 lg:gap-16">
           {/* Text content - Left side */}
           <div className="text-center lg:text-left animate-fade-in flex-1">
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6">
-              
-              <br />
-              
-            </h1>
             
-            <p className="text-lg md:text-xl text-muted-foreground mb-4 font-light">Content and SEO Specialist</p>
+            
+            <p className="text-lg text-muted-foreground mb-4 font-light md:text-5xl">Content and SEO Specialist</p>
             
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start space-y-4 sm:space-y-0 sm:space-x-6 text-muted-foreground mb-6">
               <div className="flex items-center space-x-2">
