@@ -9,10 +9,10 @@ interface FacebookPostEmbedProps {
 
 export const FacebookPostEmbed = ({ title, iframeUrl, logo, tag }: FacebookPostEmbedProps) => {
   return (
-    <div className="group liquid-glass liquid-glass-hover rounded-3xl p-6 overflow-hidden border border-border/10 shadow-sm hover:shadow-lg transition-all duration-300">
+    <div className="group rounded-2xl p-6 overflow-hidden border-2 border-border transition-all duration-300">
       <div className="flex items-center justify-between mb-6">
         <div className="flex items-center gap-3">
-          <div className="w-12 h-12 liquid-button rounded-full flex items-center justify-center p-2 shadow-sm">
+          <div className="w-12 h-12 rounded-full flex items-center justify-center p-2 border border-border">
             <img
               src={logo}
               alt={title}
@@ -26,7 +26,7 @@ export const FacebookPostEmbed = ({ title, iframeUrl, logo, tag }: FacebookPostE
         </span>
       </div>
       
-      <div className="w-full flex justify-center rounded-2xl overflow-hidden bg-background/5">
+      <div className="w-full flex justify-center rounded-xl overflow-hidden">
         <iframe
           src={iframeUrl}
           className="w-full max-w-lg"
