@@ -43,15 +43,15 @@ export const Hero = () => {
           
           {/* Buttons - Right side */}
           <div className="flex flex-col space-y-4 lg:min-w-[250px]">
-            <a href="#contact" className="bg-gradient-to-r from-gradient-start to-gradient-middle text-background px-6 py-3 rounded-full font-semibold hover:scale-105 transform transition-all duration-300 shadow-lg hover:shadow-xl text-center">
+            <a href="#contact" className="bg-gradient-to-r from-gradient-start to-gradient-middle text-background px-10 py-5 rounded-full font-semibold hover:scale-105 transform transition-all duration-300 shadow-lg hover:shadow-xl text-center text-lg">
               Get In Touch
             </a>
-            <a href="https://linkedin.com/in/mahmoudalmoselhy" target="_blank" rel="noopener noreferrer" className="border-2 border-accent-foreground text-accent-foreground px-6 py-3 rounded-full font-semibold hover:bg-accent-foreground hover:text-background transform transition-all duration-300 flex items-center justify-center space-x-2">
-              <Linkedin className="w-5 h-5" />
+            <a href="https://linkedin.com/in/mahmoudalmoselhy" target="_blank" rel="noopener noreferrer" className="border-2 border-accent-foreground text-accent-foreground px-10 py-5 rounded-full font-semibold hover:bg-accent-foreground hover:text-background transform transition-all duration-300 flex items-center justify-center space-x-2 text-lg">
+              <Linkedin className="w-6 h-6" />
               <span>LinkedIn</span>
             </a>
-            <Link to="/cv" className="border-2 border-primary text-primary px-6 py-3 rounded-full font-semibold hover:bg-primary hover:text-primary-foreground transform transition-all duration-300 flex items-center justify-center space-x-2">
-              <FileText className="w-5 h-5" />
+            <Link to="/cv" className="border-2 border-primary text-primary px-10 py-5 rounded-full font-semibold hover:bg-primary hover:text-primary-foreground transform transition-all duration-300 flex items-center justify-center space-x-2 text-lg">
+              <FileText className="w-6 h-6" />
               <span>View CV</span>
             </Link>
           </div>
