@@ -43,7 +43,7 @@ export const FloatingNav = () => {
   };
 
   return (
-    <nav className="fixed left-6 top-1/2 -translate-y-1/2 z-50 hidden lg:block">
+    <nav className="fixed left-6 top-6 z-50 hidden lg:block">
       {/* Toggle Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
