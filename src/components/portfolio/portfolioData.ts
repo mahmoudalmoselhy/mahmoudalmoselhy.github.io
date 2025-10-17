@@ -376,12 +376,6 @@ export const portfolioSections = [
         link: "#",
         logo: "/lovable-uploads/66dec386-84b2-43af-b57b-a9919a4a9926.png"
       },
-    ]
-  },
-  {
-    title: "Tiye Academy",
-    description: "Educational content and social media marketing",
-    items: [
       {
         title: "LinkedIn Post 1",
         description: "Professional educational content",
