@@ -376,12 +376,78 @@ export const portfolioSections = [
         link: "#",
         logo: "/lovable-uploads/66dec386-84b2-43af-b57b-a9919a4a9926.png"
       },
+    ]
+  },
+  {
+    title: "Tiye Academy",
+    description: "Educational content and social media marketing",
+    items: [
       {
-        title: "Tiye Academy Campaign",
-        description: "Social media marketing and content strategy",
-        link: "#",
-        logo: "/lovable-uploads/7e6d1a1b-60ce-445d-9c6a-26cc95a62421.png"
+        title: "LinkedIn Post 1",
+        description: "Professional educational content",
+        link: "https://www.linkedin.com/embed/feed/update/urn:li:share:7383798456076759040",
+        logo: "/lovable-uploads/7e6d1a1b-60ce-445d-9c6a-26cc95a62421.png",
+        embed: "linkedin-post",
+        tag: "LinkedIn",
+        embedHeight: 741,
+        embedWidth: 504
       },
+      {
+        title: "LinkedIn Post 2",
+        description: "Professional educational content",
+        link: "https://www.linkedin.com/embed/feed/update/urn:li:share:7383109525416960000",
+        logo: "/lovable-uploads/7e6d1a1b-60ce-445d-9c6a-26cc95a62421.png",
+        embed: "linkedin-post",
+        tag: "LinkedIn",
+        embedHeight: 670,
+        embedWidth: 504
+      },
+      {
+        title: "LinkedIn Post 3",
+        description: "Professional educational content",
+        link: "https://www.linkedin.com/embed/feed/update/urn:li:share:7380923843860717569",
+        logo: "/lovable-uploads/7e6d1a1b-60ce-445d-9c6a-26cc95a62421.png",
+        embed: "linkedin-post",
+        tag: "LinkedIn",
+        embedHeight: 1321,
+        embedWidth: 504
+      },
+      {
+        title: "Facebook Video 1",
+        description: "Social media video content",
+        link: "https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1123843696612991%2F&show_text=true&width=267&t=0",
+        logo: "/lovable-uploads/7e6d1a1b-60ce-445d-9c6a-26cc95a62421.png",
+        embed: "facebook-post",
+        tag: "Reel",
+        embedHeight: 591,
+        embedWidth: 267
+      },
+      {
+        title: "Facebook Post",
+        description: "Social media content",
+        link: "https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FTiyeacademy%2Fposts%2Fpfbid032iUxrUUQJpfVNXhJKveDDKezLWttmaXWwVjbLDhs3xvoGpW7GPKWWrQXrPNmQeEal&show_text=true&width=500",
+        logo: "/lovable-uploads/7e6d1a1b-60ce-445d-9c6a-26cc95a62421.png",
+        embed: "facebook-post",
+        tag: "Static",
+        embedHeight: 562,
+        embedWidth: 500
+      },
+      {
+        title: "Facebook Video 2",
+        description: "Social media video content",
+        link: "https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1493737248969400%2F&show_text=true&width=267&t=0",
+        logo: "/lovable-uploads/7e6d1a1b-60ce-445d-9c6a-26cc95a62421.png",
+        embed: "facebook-post",
+        tag: "Reel",
+        embedHeight: 591,
+        embedWidth: 267
+      }
+    ]
+  },
+  {
+    title: "Other Social Media Work",
+    description: "Additional social media campaigns",
+    items: [
       {
         title: "Mega Kitchens Campaign",
         description: "Social media marketing and content strategy",

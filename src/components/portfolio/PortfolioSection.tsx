@@ -3,6 +3,7 @@ import { YouTubePlaylistEmbed } from './YouTubePlaylistEmbed';
 import { FacebookVideoEmbed } from './FacebookVideoEmbed';
 import { FacebookPostEmbed } from './FacebookPostEmbed';
 import { InstagramPostEmbed } from './InstagramPostEmbed';
+import { LinkedInPostEmbed } from './LinkedInPostEmbed';
 import { PortfolioCard } from './PortfolioCard';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '../ui/tabs';
 interface PortfolioSectionItem {
@@ -17,6 +18,8 @@ interface PortfolioSectionItem {
   embed?: string;
   responsibilities?: string[];
   tag?: string;
+  embedHeight?: number;
+  embedWidth?: number;
 }
 interface PortfolioSectionProps {
   title: string;
@@ -107,7 +110,7 @@ React.useEffect(() => {
   }
 }, [activeTab]);
 
-  const nonPlaylistItems = items.filter(item => !isYouTubePlaylist(item.link) && item.embed !== 'facebook-video' && item.embed !== 'facebook-post' && item.embed !== 'instagram-post').map(item => ({
+  const nonPlaylistItems = items.filter(item => !isYouTubePlaylist(item.link) && item.embed !== 'facebook-video' && item.embed !== 'facebook-post' && item.embed !== 'instagram-post' && item.embed !== 'linkedin-post').map(item => ({
     ...item,
     thumbnail: item.thumbnail || undefined,
     // PortfolioCard will auto-screenshot when missing
@@ -117,6 +120,7 @@ React.useEffect(() => {
   const facebookEmbeds = items.filter(item => item.embed === 'facebook-video');
   const facebookPosts = items.filter(item => item.embed === 'facebook-post');
   const instagramPosts = items.filter(item => item.embed === 'instagram-post');
+  const linkedInPosts = items.filter(item => item.embed === 'linkedin-post');
   const gridCols = title.includes('Script Writing') ? 'grid-cols-1 lg:grid-cols-2' : gridClassName;
   return <section className="space-y-6 md:space-y-8 mb-16 md:mb-24 pb-8 md:pb-12 border-b border-border/20 last:border-b-0 last:mb-0 last:pb-0">
       <header className="text-center px-4">
@@ -136,13 +140,16 @@ React.useEffect(() => {
 
             {clientNames.map(clientName => {
           const clientItems = clientGroups[clientName];
-          const clientNonPlaylistItems = clientItems.filter(item => !isYouTubePlaylist(item.link) && item.embed !== 'facebook-video' && item.embed !== 'facebook-post' && item.embed !== 'instagram-post');
+          const clientNonPlaylistItems = clientItems.filter(item => !isYouTubePlaylist(item.link) && item.embed !== 'facebook-video' && item.embed !== 'facebook-post' && item.embed !== 'instagram-post' && item.embed !== 'linkedin-post');
           const clientPlaylistItems = clientItems.filter(item => isYouTubePlaylist(item.link));
           const clientFacebookEmbeds = clientItems.filter(item => item.embed === 'facebook-video');
           const clientFacebookPosts = clientItems.filter(item => item.embed === 'facebook-post');
           const clientInstagramPosts = clientItems.filter(item => item.embed === 'instagram-post');
+          const clientLinkedInPosts = clientItems.filter(item => item.embed === 'linkedin-post');
           return <TabsContent key={clientName} value={clientName}>
                   <div className={`grid ${gridCols} gap-4 md:gap-6`}>
+                    {clientLinkedInPosts.map((item, itemIndex) => <LinkedInPostEmbed key={`li-${itemIndex}-${item.title}`} title={item.title} iframeUrl={item.link} logo={item.logo} tag={item.tag || 'LinkedIn'} height={item.embedHeight || 600} width={item.embedWidth || 504} />)}
+
                     {clientFacebookEmbeds.map((item, itemIndex) => <FacebookVideoEmbed key={`fb-${itemIndex}-${item.title}`} title={item.title} description={item.description} videoUrl={item.link} logo={item.logo} responsibilities={item.responsibilities} />)}
 
                     {clientFacebookPosts.map((item, itemIndex) => <FacebookPostEmbed key={`fbpost-${itemIndex}-${item.title}`} title={item.title} iframeUrl={item.link} logo={item.logo} tag={item.tag || 'Post'} />)}
@@ -173,6 +180,8 @@ React.useEffect(() => {
                   </a>)}
               </> : <>
                 {facebookEmbeds.map((item, itemIndex) => <FacebookVideoEmbed key={`fb-${itemIndex}-${item.title}`} title={item.title} description={item.description} videoUrl={item.link} logo={item.logo} responsibilities={item.responsibilities} />)}
+
+                {linkedInPosts.map((item, itemIndex) => <LinkedInPostEmbed key={`li-${itemIndex}-${item.title}`} title={item.title} iframeUrl={item.link} logo={item.logo} tag={item.tag || 'LinkedIn'} height={item.embedHeight || 600} width={item.embedWidth || 504} />)}
 
                 {facebookPosts.map((item, itemIndex) => <FacebookPostEmbed key={`fbpost-${itemIndex}-${item.title}`} title={item.title} iframeUrl={item.link} logo={item.logo} tag={item.tag || 'Post'} />)}
 
