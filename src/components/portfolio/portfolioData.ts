@@ -260,47 +260,23 @@ export const portfolioSections = [
       },
       {
         title: "Evolve Post 1",
-        description: "Social media content",
-        link: "https://www.instagram.com/p/DPO3juMjZd8/",
-        logo: "/lovable-uploads/8ef3ab80-42b8-4ce4-b280-e4a0c812617b.png",
-        embed: "instagram-post",
-        tag: "Static"
-      },
-      {
-        title: "Evolve Post 2",
-        description: "Social media content",
-        link: "https://www.instagram.com/reel/DPJgWQ0kqmj/",
-        logo: "/lovable-uploads/8ef3ab80-42b8-4ce4-b280-e4a0c812617b.png",
-        embed: "instagram-post",
-        tag: "Static"
-      },
-      {
-        title: "Evolve Post 3",
-        description: "Social media content",
-        link: "https://www.instagram.com/p/DPB_ktJDTvf/",
-        logo: "/lovable-uploads/8ef3ab80-42b8-4ce4-b280-e4a0c812617b.png",
-        embed: "instagram-post",
-        tag: "Static"
-      },
-      {
-        title: "Evolve Post 4",
-        description: "Social media content",
+        description: "Evolve Cosmetic Clinics content",
         link: "https://www.instagram.com/p/DO3s3zUD-xz/",
         logo: "/lovable-uploads/8ef3ab80-42b8-4ce4-b280-e4a0c812617b.png",
         embed: "instagram-post",
         tag: "Static"
       },
       {
-        title: "Evolve Post 5",
-        description: "Social media content",
+        title: "Evolve Post 2",
+        description: "Evolve Cosmetic Clinics content",
         link: "https://www.instagram.com/reel/DOdTUwlj4FT/",
         logo: "/lovable-uploads/8ef3ab80-42b8-4ce4-b280-e4a0c812617b.png",
         embed: "instagram-post",
         tag: "Reel"
       },
       {
-        title: "Evolve Post 6",
-        description: "Social media content",
+        title: "Evolve Post 3",
+        description: "Evolve Cosmetic Clinics content",
         link: "https://www.instagram.com/p/DOYlRcSEcZJ/",
         logo: "/lovable-uploads/8ef3ab80-42b8-4ce4-b280-e4a0c812617b.png",
         embed: "instagram-post",
