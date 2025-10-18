@@ -413,30 +413,6 @@ export const portfolioSections = [
         embedWidth: 267
       }
     ]
-  },
-  {
-    title: "Other Social Media Work",
-    description: "Additional social media campaigns",
-    items: [
-      {
-        title: "Mega Kitchens Campaign",
-        description: "Social media marketing and content strategy",
-        link: "#",
-        logo: "/lovable-uploads/8cd0ad5b-d116-4da8-a678-fabadb04760b.png"
-      },
-      {
-        title: "Cocobolo Campaign",
-        description: "Social media marketing and content strategy",
-        link: "#",
-        logo: "/lovable-uploads/8d0694e8-3941-4769-8e2d-5f1c6e79bb8a.png"
-      },
-      {
-        title: "Various Hub Campaign",
-        description: "Social media marketing and content strategy",
-        link: "#",
-        logo: "/lovable-uploads/8f31c28a-f551-44b9-9cc6-a8aed95e6fe4.png"
-      }
-    ]
   }
 ];
 
