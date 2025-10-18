@@ -48,40 +48,42 @@ export const InstagramPostEmbed = ({ title, postUrl, logo, tag }: InstagramPostE
   }, [postUrl]);
 
   return (
-    <div className="group liquid-glass liquid-glass-hover rounded-3xl p-6 overflow-hidden border border-border/10 shadow-sm hover:shadow-lg transition-all duration-300">
-      <div className="flex items-center justify-between mb-6">
-        <div className="flex items-center gap-3">
-          <div className="w-12 h-12 liquid-button rounded-full flex items-center justify-center p-2 shadow-sm">
-            <img
-              src={logo}
-              alt={title}
-              className="w-full h-full object-contain"
-            />
+    <div className="group flex justify-center">
+      <div className="w-full max-w-[540px] rounded-2xl overflow-hidden border border-border/50 bg-gradient-to-br from-background to-muted/20 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+        <div className="flex items-center justify-between p-5 border-b border-border/50 bg-card/50 backdrop-blur-sm">
+          <div className="flex items-center gap-3">
+            <div className="w-11 h-11 rounded-xl flex items-center justify-center p-2 bg-gradient-to-br from-primary/10 to-primary/5 border border-primary/20 shadow-sm">
+              <img
+                src={logo}
+                alt={title}
+                className="w-full h-full object-contain"
+              />
+            </div>
+            <h4 className="text-sm font-semibold text-foreground tracking-tight">{title}</h4>
           </div>
-          <h4 className="text-lg font-semibold text-foreground">{title}</h4>
+          <span className="text-xs px-3 py-1.5 bg-primary/15 text-primary rounded-full font-medium border border-primary/30 shadow-sm">
+            {tag}
+          </span>
         </div>
-        <span className="text-xs px-3 py-1.5 bg-primary/10 text-primary rounded-full font-medium border border-primary/20">
-          {tag}
-        </span>
-      </div>
-      
-      <div className="w-full flex justify-center rounded-2xl overflow-hidden bg-background/5">
-        <blockquote
-          className="instagram-media"
-          data-instgrm-permalink={postUrl}
-          data-instgrm-version="14"
-          style={{
-            background: '#FFF',
-            border: 0,
-            borderRadius: '3px',
-            boxShadow: '0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15)',
-            margin: '1px',
-            maxWidth: '540px',
-            minWidth: '326px',
-            padding: 0,
-            width: 'calc(100% - 2px)',
-          }}
-        />
+        
+        <div className="w-full flex justify-center p-4 bg-muted/10">
+          <blockquote
+            className="instagram-media"
+            data-instgrm-permalink={postUrl}
+            data-instgrm-version="14"
+            style={{
+              background: '#FFF',
+              border: 0,
+              borderRadius: '12px',
+              boxShadow: '0 2px 8px rgba(0,0,0,0.08)',
+              margin: '0',
+              maxWidth: '540px',
+              minWidth: '326px',
+              padding: 0,
+              width: '100%',
+            }}
+          />
+        </div>
       </div>
     </div>
   );
