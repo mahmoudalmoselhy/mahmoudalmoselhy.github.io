@@ -7,7 +7,7 @@ interface LinkedInPostEmbedProps {
   tag: string;
   height: number;
   width: number;
-  shortHeight: number; // الإرتفاع المختصر
+  shortHeight?: number; // الإرتفاع المختصر
 }
 
 export const LinkedInPostEmbed = ({
