@@ -187,76 +187,84 @@ export const portfolioSections = [
     description: "Complete social media campaign management and creative content creation across multiple platforms",
     items: [
       {
-        title: "Tourism Companies Campaign",
-        description: "Targeted advertising for travel and tourism businesses",
-        link: "https://www.facebook.com/menusbee/posts/pfbid0sUPtVyCZPXH1ZZ17tpsSgv4WrG6Stwq83AoKDZQ2zdkmTrcS7RacRqEcJejE1u1Ll",
-        logo: "/lovable-uploads/c8892c9f-d780-4825-a3b1-b1e017d5bd62.png"
+        title: "Tourism Companies - Menusbee",
+        description: "رحلاتك السياحية أبسط مع منيوز بي",
+        link: "https://www.facebook.com/share/p/1RNioAU9Fx/",
+        logo: "/lovable-uploads/c8892c9f-d780-4825-a3b1-b1e017d5bd62.png",
+        thumbnail: "/lovable-uploads/menusbee-1.jpg",
+        embed: "image-post"
       },
       {
-        title: "Cafes & Restaurants Campaign",
-        description: "Food service industry social media strategy",
-        link: "https://www.facebook.com/menusbee/posts/pfbid0gYKbwHD5H4hGLoJtoYVAAfk7iunBid9G5MAHLG1ny47PYHEqmP8p7GhZGn3tatV8l",
-        logo: "/lovable-uploads/c8892c9f-d780-4825-a3b1-b1e017d5bd62.png"
+        title: "Cafes Campaign - Menusbee",
+        description: "خلي طلبك أسهل مع منيوز بي",
+        link: "https://www.facebook.com/share/p/1C9d12VqhK/",
+        logo: "/lovable-uploads/c8892c9f-d780-4825-a3b1-b1e017d5bd62.png",
+        thumbnail: "/lovable-uploads/menusbee-2.jpg",
+        embed: "image-post"
       },
       {
-        title: "Butcher Shops Campaign",
-        description: "Specialized campaign for meat retailers",
-        link: "https://www.facebook.com/menusbee/posts/pfbid02yBxPnp34eVP5aZzVK2YCUAUEiMAUotMTFx31mb39QP6h7XqYYMSVRxCtqZCRCgCal",
-        logo: "/lovable-uploads/c8892c9f-d780-4825-a3b1-b1e017d5bd62.png"
+        title: "Butcher Shops - Menusbee",
+        description: "أصل الجزارة شطارة مع منيوز بي",
+        link: "https://www.facebook.com/share/p/1Z1CDzAQtb/",
+        logo: "/lovable-uploads/c8892c9f-d780-4825-a3b1-b1e017d5bd62.png",
+        thumbnail: "/lovable-uploads/menusbee-3.jpg",
+        embed: "image-post"
       },
       {
-        title: "Business Promotion Campaign",
-        description: "Strategic business promotion and marketing campaign",
-        link: "https://www.facebook.com/share/p/19J24XMdu4/",
-        logo: "/lovable-uploads/c8892c9f-d780-4825-a3b1-b1e017d5bd62.png"
+        title: "Spices & Herbs - Menusbee",
+        description: "البهارات بتتباع أسرع مع منيوز بي",
+        link: "https://www.facebook.com/share/p/1D9hyvQtnb/",
+        logo: "/lovable-uploads/c8892c9f-d780-4825-a3b1-b1e017d5bd62.png",
+        thumbnail: "/lovable-uploads/menusbee-4.jpg",
+        embed: "image-post"
       },
       {
-        title: "Digital Marketing Strategy",
-        description: "Comprehensive digital marketing approach for businesses",
-        link: "https://www.facebook.com/menusbee/posts/pfbid02moagYrwRaNxLrF6LQzTdy2eP9NqPWoYA5RzRvvuKx2KcaTUG36Jhmj16LJZEYJ2xl",
-        logo: "/lovable-uploads/c8892c9f-d780-4825-a3b1-b1e017d5bd62.png"
+        title: "Coffee Shops - Menusbee",
+        description: "كافيه كامل على الموبايل مع منيوز بي",
+        link: "https://www.facebook.com/share/p/17ckzpKnk7/",
+        logo: "/lovable-uploads/c8892c9f-d780-4825-a3b1-b1e017d5bd62.png",
+        thumbnail: "/lovable-uploads/menusbee-5.jpg",
+        embed: "image-post"
       },
       {
-        title: "Brand Visibility Campaign",
-        description: "Enhanced brand visibility through targeted social media",
-        link: "https://www.facebook.com/menusbee/posts/pfbid02d974q9mGJxWVwJVGGUhi2hAe7LmiTcjFhuPvB8GtKQrWZcNBVk6ovt56CEHgpHbpl",
-        logo: "/lovable-uploads/c8892c9f-d780-4825-a3b1-b1e017d5bd62.png"
+        title: "Restaurants - Menusbee",
+        description: "أنت أفضل مطعم وكافيه مع منيوز بي",
+        link: "https://www.facebook.com/share/p/1BaFwNnuMb/",
+        logo: "/lovable-uploads/c8892c9f-d780-4825-a3b1-b1e017d5bd62.png",
+        thumbnail: "/lovable-uploads/menusbee-6.jpg",
+        embed: "image-post"
       },
       {
-        title: "Customer Engagement Campaign",
-        description: "Building customer relationships through social media",
-        link: "https://www.facebook.com/share/p/16SmfZfReK/",
-        logo: "/lovable-uploads/c8892c9f-d780-4825-a3b1-b1e017d5bd62.png"
+        title: "Full Menu Experience - Menusbee",
+        description: "وجباتك شهية أكتر مع منيوز بي",
+        link: "https://www.facebook.com/share/p/15k9FWFztz/",
+        logo: "/lovable-uploads/c8892c9f-d780-4825-a3b1-b1e017d5bd62.png",
+        thumbnail: "/lovable-uploads/menusbee-7.jpg",
+        embed: "image-post"
       },
       {
-        title: "Restaurant and Cafe Post",
-        description: "Strategic approach to expanding market reach",
-        link: "https://www.facebook.com/share/p/1696ahYCzP/",
-        logo: "/lovable-uploads/c8892c9f-d780-4825-a3b1-b1e017d5bd62.png"
+        title: "Livestock Sales - Menusbee",
+        description: "وزع الأضحية بسهولة مع منيوز بي",
+        link: "https://www.facebook.com/share/p/17aS5BytSB/",
+        logo: "/lovable-uploads/c8892c9f-d780-4825-a3b1-b1e017d5bd62.png",
+        thumbnail: "/lovable-uploads/menusbee-8.jpg",
+        embed: "image-post"
       },
       {
-        title: "Community Building Initiative",
-        description: "Building strong business communities through social media",
-        link: "https://www.facebook.com/share/p/1Dkkr1VrtT/",
-        logo: "/lovable-uploads/c8892c9f-d780-4825-a3b1-b1e017d5bd62.png"
+        title: "Fresh Produce - Menusbee",
+        description: "أسعارك دايمًا محدثة مع منيوز بي",
+        link: "https://www.facebook.com/share/p/16Kf1Bfpod/",
+        logo: "/lovable-uploads/c8892c9f-d780-4825-a3b1-b1e017d5bd62.png",
+        thumbnail: "/lovable-uploads/menusbee-9.jpg",
+        embed: "image-post"
       },
       {
-        title: "Local Business Support Campaign",
-        description: "Supporting local businesses through targeted campaigns",
-        link: "https://www.facebook.com/share/p/1C9e7h1pCx/",
-        logo: "/lovable-uploads/c8892c9f-d780-4825-a3b1-b1e017d5bd62.png"
-      },
-      {
-        title: "Industry-Specific Marketing",
-        description: "Tailored marketing solutions for specific industries",
-        link: "https://www.facebook.com/share/p/16Z3SRTBLg/",
-        logo: "/lovable-uploads/c8892c9f-d780-4825-a3b1-b1e017d5bd62.png"
-      },
-      {
-        title: "Cross-Platform Campaign Management",
-        description: "Multi-platform social media campaign coordination",
-        link: "https://www.facebook.com/menusbee/posts/pfbid0WiUtAsWQ9J3Uacjcd3iLtZWQkx3ic8LkFCgVGenSWioL2vMiGqGns5HHygXa4timl",
-        logo: "/lovable-uploads/c8892c9f-d780-4825-a3b1-b1e017d5bd62.png"
+        title: "Beauty Products - Menusbee",
+        description: "بقت سهلة عليكي مع منيوز بي",
+        link: "https://www.facebook.com/share/p/1ZM44KVbKR/",
+        logo: "/lovable-uploads/c8892c9f-d780-4825-a3b1-b1e017d5bd62.png",
+        thumbnail: "/lovable-uploads/menusbee-10.jpg",
+        embed: "image-post"
       },
       {
        title: "Evolve Post 1",
