@@ -9,7 +9,7 @@ export const Hero = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background pointer-events-none"></div>
       </div>
       
-      <section className="py-16 md:py-24 flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-background via-muted/30 to-background">
+      <section className="py-16 md:py-24 flex items-center justify-center relative overflow-hidden">
       
       {/* Animated background elements */}
       <div className="absolute inset-0">
