@@ -8,7 +8,7 @@ import { FloatingNav } from '@/components/FloatingNav';
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen">
       <FloatingNav />
       <div id="home">
         <Hero />

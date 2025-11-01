@@ -78,7 +78,7 @@ const Projects = () => {
   const clients = useMemo(() => Object.keys(grouped).sort((a, b) => a.localeCompare(b)), [grouped])
 
   return (
-    <main className="min-h-screen bg-background">
+    <main className="min-h-screen">
       <section className="max-w-6xl mx-auto px-4 py-10 md:py-14">
         <header className="text-center mb-6 md:mb-8">
           <h1 className="text-2xl md:text-4xl font-bold text-foreground mb-2">Projects</h1>
