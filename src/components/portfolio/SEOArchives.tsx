@@ -28,7 +28,7 @@ export const SEOArchives = ({ archives }: SEOArchivesProps) => {
             href={archive.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="group liquid-glass liquid-glass-hover rounded-3xl p-6 md:p-8 cursor-pointer transform"
+            className="group bg-card/30 backdrop-blur-lg border border-border hover:border-accent rounded-3xl p-6 md:p-8 cursor-pointer transform hover:scale-105 transition-all duration-300"
           >
             <div className="w-16 h-16 md:w-20 md:h-20 liquid-button rounded-full flex items-center justify-center mb-4 md:mb-6 group-hover:scale-110 transition-transform duration-500 p-3 mx-auto">
               <img
