@@ -16,46 +16,49 @@ export const Portfolio = () => {
   ];
 
   return (
-    <section className="bg-card/30 backdrop-blur-lg rounded-3xl border border-border p-8 md:p-12 relative overflow-hidden">
-      {/* Subtle geometric pattern background */}
-      <div className="absolute inset-0 opacity-[0.02] pointer-events-none">
-        <div className="absolute inset-0 light-subtle-pattern"></div>
+    <div className="space-y-8 md:space-y-12">
+      {/* Main Portfolio Header */}
+      <div className="text-center">
+        <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-4 md:mb-6">
+          Top <span className="bg-gradient-to-r from-gradient-start via-gradient-middle to-gradient-end bg-clip-text text-transparent animate-gradient">Work</span>
+        </h2>
+        <p className="text-muted-foreground text-sm md:text-lg max-w-3xl mx-auto px-4">
+          A showcase of my diverse content creation work across multiple platforms and industries
+        </p>
       </div>
-      
-      <div className="container mx-auto max-w-7xl relative z-10">
-        <div className="text-center mb-12 md:mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-4 md:mb-6">
-            Top <span className="bg-gradient-to-r from-gradient-start via-gradient-middle to-gradient-end bg-clip-text text-transparent animate-gradient">Work</span>
-          </h2>
-          <p className="text-muted-foreground text-sm md:text-lg max-w-3xl mx-auto px-4">
-            A showcase of my diverse content creation work across multiple platforms and industries
-          </p>
-        </div>
 
-        <div className="space-y-12 md:space-y-16">
-          {portfolioSections.map((section, sectionIndex) => (
-            <div key={sectionIndex}>
-              {sectionIndex === 0 && (
-                <div className="space-y-6 md:space-y-8">
-                  <div className="text-center px-4">
-                    <h3 className="text-xl md:text-3xl font-bold text-foreground mb-2 md:mb-4">{section.title}</h3>
-                    <p className="text-muted-foreground text-sm md:text-lg">{section.description}</p>
-                  </div>
-                  <FeaturedWorkStack />
+      {/* Each section in its own frame */}
+      {portfolioSections.map((section, sectionIndex) => (
+        <section key={sectionIndex} className="bg-card/30 backdrop-blur-lg rounded-3xl border border-border p-8 md:p-12 relative overflow-hidden">
+          {/* Subtle geometric pattern background */}
+          <div className="absolute inset-0 opacity-[0.02] pointer-events-none">
+            <div className="absolute inset-0 light-subtle-pattern"></div>
+          </div>
+          
+          <div className="relative z-10">
+            {sectionIndex === 0 && (
+              <div className="space-y-6 md:space-y-8 mb-8">
+                <div className="text-center px-4">
+                  <h3 className="text-xl md:text-3xl font-bold text-foreground mb-2 md:mb-4">{section.title}</h3>
+                  <p className="text-muted-foreground text-sm md:text-lg">{section.description}</p>
                 </div>
-              )}
-              <PortfolioSection
-                title={sectionIndex === 0 ? "" : section.title}
-                description={sectionIndex === 0 ? "" : section.description}
-                items={section.items}
-                gridClassName={sectionGridLayouts[sectionIndex]}
-              />
-            </div>
-          ))}
+                <FeaturedWorkStack />
+              </div>
+            )}
+            <PortfolioSection
+              title={sectionIndex === 0 ? "" : section.title}
+              description={sectionIndex === 0 ? "" : section.description}
+              items={section.items}
+              gridClassName={sectionGridLayouts[sectionIndex]}
+            />
+          </div>
+        </section>
+      ))}
 
-          <SEOArchives archives={seoArchives} />
-        </div>
-      </div>
-    </section>
+      {/* SEO Archives in its own frame */}
+      <section className="bg-card/30 backdrop-blur-lg rounded-3xl border border-border p-8 md:p-12">
+        <SEOArchives archives={seoArchives} />
+      </section>
+    </div>
   );
 };
