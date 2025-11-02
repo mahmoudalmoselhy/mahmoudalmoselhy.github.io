@@ -22,7 +22,7 @@ export const About = () => {
   ];
 
   return (
-    <section className="py-20 px-6 bg-muted/20">
+    <section className="bg-card/30 backdrop-blur-lg rounded-3xl border border-border p-8 md:p-12">
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-5xl font-bold text-foreground mb-6">

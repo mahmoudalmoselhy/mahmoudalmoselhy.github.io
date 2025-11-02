@@ -69,7 +69,7 @@ export const Clients = () => {
   ];
 
   return (
-    <section className="py-6 md:py-8 px-4 md:px-6 bg-muted/10">
+    <section className="bg-card/30 backdrop-blur-lg rounded-3xl border border-border p-8 md:p-12">
       <div className="container mx-auto max-w-5xl">
         <div className="text-center mb-6 md:mb-8">
           <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-2 md:mb-3 animate-fade-in">

@@ -4,7 +4,7 @@ import { Mail, Phone, MapPin, Linkedin, ExternalLink, MessageCircle } from 'luci
 
 export const Contact = () => {
   return (
-    <section id="contact" className="py-12 md:py-20 px-4 md:px-6 bg-muted/10">
+    <section id="contact" className="bg-card/30 backdrop-blur-lg rounded-3xl border border-border p-8 md:p-12">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-12 md:mb-16">
           <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-4 md:mb-6">

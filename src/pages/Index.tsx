@@ -10,20 +10,22 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       <FloatingNav />
-      <div id="home">
-        <Hero />
-      </div>
-      <div id="about">
-        <About />
-      </div>
-      <div id="portfolio">
-        <Portfolio />
-      </div>
-      <div id="clients">
-        <Clients />
-      </div>
-      <div id="contact">
-        <Contact />
+      <div className="space-y-8 md:space-y-12 px-4 md:px-6 py-8">
+        <div id="home">
+          <Hero />
+        </div>
+        <div id="about">
+          <About />
+        </div>
+        <div id="portfolio">
+          <Portfolio />
+        </div>
+        <div id="clients">
+          <Clients />
+        </div>
+        <div id="contact">
+          <Contact />
+        </div>
       </div>
     </div>
   );
