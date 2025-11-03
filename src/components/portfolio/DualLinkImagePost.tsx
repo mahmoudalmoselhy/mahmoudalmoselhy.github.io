@@ -54,7 +54,7 @@ export const DualLinkImagePost = ({
         </p>
 
         {/* Link Buttons */}
-        <div className="flex gap-2">
+        <div className="flex flex-nowrap gap-2">
           <Button
             asChild
             variant="default"
