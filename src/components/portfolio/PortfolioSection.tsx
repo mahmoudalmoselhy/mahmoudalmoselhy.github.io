@@ -38,7 +38,7 @@ export const PortfolioSection = ({
   gridClassName = "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
 }: PortfolioSectionProps) => {
   const [activeTab, setActiveTab] = useState('');
-  const isYouTubePlaylist = (link: string) => link.includes('youtube.com/playlist') || link.includes('youtu.be/playlist');
+  const isYouTubePlaylist = (link?: string) => link?.includes('youtube.com/playlist') || link?.includes('youtu.be/playlist');
   const getDefaultTags = (link: string, sectionTitle: string): string[] => {
     try {
       const host = new URL(link).hostname.replace(/^www\./, '');
