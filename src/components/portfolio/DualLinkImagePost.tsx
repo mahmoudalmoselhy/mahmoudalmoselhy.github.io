@@ -54,38 +54,39 @@ export const DualLinkImagePost = ({
         </p>
 
         {/* Link Buttons */}
-        <div className="flex flex-nowrap gap-2">
-          <Button
-            asChild
-            variant="default"
-            className="flex-1 group/btn"
-          >
-            <a
-              href={facebookLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2"
-            >
-              <Facebook className="w-4 h-4" />
-              <span className="hidden sm:inline">Facebook</span>
-            </a>
-          </Button>
-          <Button
-            asChild
-            variant="default"
-            className="flex-1 group/btn"
-          >
-            <a
-              href={instagramLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2"
-            >
-              <Instagram className="w-4 h-4" />
-              <span className="hidden sm:inline">Instagram</span>
-            </a>
-          </Button>
-        </div>
+<div className="flex flex-col gap-2">
+  <Button
+    asChild
+    variant="default"
+    className="flex-1 group/btn"
+  >
+    <a
+      href={facebookLink}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="flex items-center justify-center gap-2"
+    >
+      <Facebook className="w-4 h-4" />
+      <span className="hidden sm:inline">Facebook</span>
+    </a>
+  </Button>
+  <Button
+    asChild
+    variant="default"
+    className="flex-1 group/btn"
+  >
+    <a
+      href={instagramLink}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="flex items-center justify-center gap-2"
+    >
+      <Instagram className="w-4 h-4" />
+      <span className="hidden sm:inline">Instagram</span>
+    </a>
+  </Button>
+</div>
+
       </div>
     </div>
   );
