@@ -267,29 +267,59 @@ export const portfolioSections = [
         embed: "image-post"
       },
       {
-       title: "Evolve Post 1",
-      description: "Evolve Cosmetic Clinics content",
-      link: "https://www.instagram.com/p/DO3s3zUD-xz/",
-      logo: "/lovable-uploads/evolveclinic.jpg",
-     embed: "instagram-post",
-     tag: "Static"
-     },
-{
-  title: "Evolve Post 2",
-  description: "Evolve Cosmetic Clinics content",
-  link: "https://www.instagram.com/reel/DOdTUwlj4FT/",
-  logo: "/lovable-uploads/evolveclinic.jpg",
-  embed: "instagram-post",
-  tag: "Reel"
-},
-{
-  title: "Evolve Post 3",
-  description: "Evolve Cosmetic Clinics content",
-  link: "https://www.instagram.com/p/DOYlRcSEcZJ/",
-  logo: "/lovable-uploads/evolveclinic.jpg",
-  embed: "instagram-post",
-  tag: "Carousel"
-},
+        title: "Restore Your Hair",
+        description: "Hair restoration treatment solutions",
+        thumbnail: "/lovable-uploads/evolve-1.jpg",
+        facebookLink: "https://www.facebook.com/share/p/1EfwjpsZ5E/",
+        instagramLink: "https://www.instagram.com/p/DQbnivPDouR",
+        logo: "/lovable-uploads/evolveclinic.jpg",
+        embed: "dual-link-post"
+      },
+      {
+        title: "Exosomes Skin Rejuvenation",
+        description: "Advanced skin rejuvenation with exosome therapy",
+        thumbnail: "/lovable-uploads/evolve-2.jpg",
+        facebookLink: "https://www.facebook.com/share/p/19E3R8Zrz5/",
+        instagramLink: "https://www.instagram.com/evolvecosmeticclinics/p/DQRYtzhDFcK/",
+        logo: "/lovable-uploads/evolveclinic.jpg",
+        embed: "dual-link-post"
+      },
+      {
+        title: "Be Young Again",
+        description: "NAD+ anti-aging therapy",
+        thumbnail: "/lovable-uploads/evolve-3.jpg",
+        facebookLink: "https://www.facebook.com/share/p/1DaA9NU5qL/",
+        instagramLink: "https://www.instagram.com/evolvecosmeticclinics/p/DQERp10jlTa/",
+        logo: "/lovable-uploads/evolveclinic.jpg",
+        embed: "dual-link-post"
+      },
+      {
+        title: "4 Plus Benefits",
+        description: "Multiple benefits for skin tightening and body sculpture",
+        thumbnail: "/lovable-uploads/evolve-4.jpg",
+        facebookLink: "https://www.facebook.com/share/p/1GY4RvA9xC/",
+        instagramLink: "https://www.instagram.com/p/DPO3juMjZd8/",
+        logo: "/lovable-uploads/evolveclinic.jpg",
+        embed: "dual-link-post"
+      },
+      {
+        title: "Life + Power + NAD+",
+        description: "Boost metabolism and improve overall wellness",
+        thumbnail: "/lovable-uploads/evolve-5.jpg",
+        facebookLink: "https://www.facebook.com/share/p/1Bk9t3iN5v/",
+        instagramLink: "https://www.instagram.com/p/DPB_ktJDTvf/",
+        logo: "/lovable-uploads/evolveclinic.jpg",
+        embed: "dual-link-post"
+      },
+      {
+        title: "Professional Filler",
+        description: "Professional dermal filler treatments",
+        thumbnail: "/lovable-uploads/evolve-6.jpg",
+        facebookLink: "https://www.facebook.com/share/p/17mjpvTnyd/",
+        instagramLink: "https://www.instagram.com/p/DO3s3zUD-xz/",
+        logo: "/lovable-uploads/evolveclinic.jpg",
+        embed: "dual-link-post"
+      },
 
       {
         title: "Lecce Post 1",
