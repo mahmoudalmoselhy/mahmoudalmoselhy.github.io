@@ -392,6 +392,77 @@ export const portfolioSections = [
         logo: "/lovable-uploads/66dec386-84b2-43af-b57b-a9919a4a9926.png"
       },
       {
+        title: "Tiye Academy - Post 1",
+        description: "استعملوا الـ AI صح",
+        thumbnail: "/lovable-uploads/tiye-1.jpg",
+        facebookLink: "https://www.facebook.com/share/p/1BEDkAbFKT/",
+        instagramLink: "https://www.instagram.com/p/DQjytU7jrka/",
+        linkedinLink: "https://www.linkedin.com/posts/tiyeacademy_%D8%A3%D9%87%D9%84%D8%A7-%D8%A8%D9%8A%D9%83%D9%85-%D9%81%D9%8A-%D8%A8%D9%8A%D8%A7%D9%86%D9%88%D9%84%D8%A7-%D9%85%D8%A7%D8%B1%D9%83%D9%8A%D8%AA%D9%8A%D9%86%D8%AC-%D8%A7%D9%84%D9%86%D9%87%D8%A7%D8%B1%D8%AF%D8%A9-activity-7390776035782410241-r5bu",
+        logo: "/lovable-uploads/tiyeacademy.jpg",
+        embed: "triple-link-post"
+      },
+      {
+        title: "Tiye Academy - Post 2",
+        description: "Learn by Involving",
+        thumbnail: "/lovable-uploads/tiye-2.jpg",
+        facebookLink: "https://www.facebook.com/Tiyeacademy/posts/pfbid025DCSRSFE2AuEikYPUZWk9tAfAiwft9WRDW3joGAwDfYfqPhee9294cCy7yHiE3LMl",
+        instagramLink: "https://www.instagram.com/p/DQWgoIkjL0n/",
+        linkedinLink: "https://www.linkedin.com/posts/tiyeacademy_tiyeacademy-yourownmentor-learnbyinvolving-activity-7388900604653223959-O3Va",
+        logo: "/lovable-uploads/tiyeacademy.jpg",
+        embed: "triple-link-post"
+      },
+      {
+        title: "Tiye Academy - Post 3",
+        description: "تختار ايه يكسب؟",
+        thumbnail: "/lovable-uploads/tiye-3.jpg",
+        facebookLink: "https://www.facebook.com/Tiyeacademy/posts/pfbid0zRFwBeSoKWz9QUi56oATbFdimKCDTYgiStt8XtuwC1nkbfv1V83Nwdvth2fZ63fol",
+        instagramLink: "https://www.instagram.com/p/DQRY1H8AaZL/",
+        linkedinLink: "https://www.linkedin.com/posts/tiyeacademy_%D8%A7%D9%87%D9%84%D8%A7-%D8%A8%D9%8A%D9%83%D9%85-%D9%81%D9%8A-%D8%A8%D9%8A%D8%A7%D9%86%D9%88%D9%84%D8%A7-%D9%85%D8%A7%D8%B1%D9%83%D8%AA%D9%8A%D9%86%D8%AC-%D8%B3%D9%84%D8%B3%D9%84%D8%A9-%D9%87%D9%86%D8%A7%D8%AE%D8%AF%D9%83%D9%85-activity-7388190250176512000-TUN0",
+        logo: "/lovable-uploads/tiyeacademy.jpg",
+        embed: "triple-link-post"
+      },
+      {
+        title: "Tiye Academy - Post 4",
+        description: "سقوط YOUTUBE REWIND",
+        thumbnail: "/lovable-uploads/tiye-4.jpg",
+        facebookLink: "https://www.facebook.com/share/p/17JiBiJjyq/",
+        instagramLink: "https://www.instagram.com/p/DP_kA9wjDzy/",
+        linkedinLink: "https://www.linkedin.com/posts/tiyeacademy_%D8%A3%D9%87%D9%84%D8%A7-%D8%A8%D9%8A%D9%83%D9%85-%D9%81%D9%8A-%D8%A8%D9%8A%D8%A7%D9%86%D9%88%D9%84%D8%A7-%D9%85%D8%A7%D8%B1%D9%83%D8%AA%D9%8A%D9%86%D8%AC-%D8%B3%D9%84%D8%B3%D9%84%D8%A9-%D9%87%D9%86%D8%A7%D8%AE%D8%AF%D9%83%D9%85-activity-7385674979524292608-jkxt",
+        logo: "/lovable-uploads/tiyeacademy.jpg",
+        embed: "triple-link-post"
+      },
+      {
+        title: "Tiye Academy - Post 5",
+        description: "مين هو ال MEDIA BUYER؟",
+        thumbnail: "/lovable-uploads/tiye-5.jpg",
+        facebookLink: "https://www.facebook.com/Tiyeacademy/posts/pfbid0QB44gVSZDxqja9nZssgoNgsk3EnjBZEw4SHmADMpdnyqBYyWmDQYwAhcuKoiRA92l",
+        instagramLink: "https://www.instagram.com/p/DPyO0kejOup/",
+        linkedinLink: "https://www.linkedin.com/posts/tiyeacademy_tiyeacademy-yourownmentor-learnbyinvolving-activity-7383798457238536192-7YA8",
+        logo: "/lovable-uploads/tiyeacademy.jpg",
+        embed: "triple-link-post"
+      },
+      {
+        title: "Tiye Academy - Post 6",
+        description: "والسوشيال ميديا!",
+        thumbnail: "/lovable-uploads/tiye-6.jpg",
+        facebookLink: "https://www.facebook.com/share/p/18rL5Twx7z/",
+        instagramLink: "https://www.instagram.com/p/DPtVrd9jL0U/",
+        linkedinLink: "https://www.linkedin.com/posts/tiyeacademy_%D8%A3%D9%87%D9%84%D8%A7-%D8%A8%D9%8A%D9%83%D9%85-%D9%81%D9%8A-%D8%A8%D9%8A%D8%A7%D9%86%D9%88%D9%84%D8%A7-%D9%85%D8%A7%D8%B1%D9%83%D8%AA%D9%86%D8%AC-%D8%B3%D9%84%D8%B3%D9%84%D8%A9-%D9%87%D9%86%D8%A7%D8%AE%D8%AF%D9%83%D9%85-activity-7383109526771793920-UsKQ",
+        logo: "/lovable-uploads/tiyeacademy.jpg",
+        embed: "triple-link-post"
+      },
+      {
+        title: "Tiye Academy - Post 7",
+        description: "أسهل طريقة لنشر رسالتك!",
+        thumbnail: "/lovable-uploads/tiye-7.jpg",
+        facebookLink: "https://www.facebook.com/share/p/1GyxpHCuGD/",
+        instagramLink: "https://www.instagram.com/p/DPdzomijKyR/",
+        linkedinLink: "https://www.linkedin.com/posts/tiyeacademy_%D8%A3%D9%87%D9%84%D8%A7-%D8%A8%D9%8A%D9%83%D9%85-%D9%81%D9%8A-%D8%A8%D9%8A%D8%A7%D9%86%D9%88%D9%84%D8%A7-%D9%85%D8%A7%D8%B1%D9%83%D9%8A%D8%AA%D9%8A%D9%86%D8%AC-%D8%B3%D9%84%D8%B3%D9%84%D8%A9-%D9%87%D9%86%D8%A7%D8%AE%D8%AF%D9%83%D9%85-activity-7380923845274198016-HXLO",
+        logo: "/lovable-uploads/tiyeacademy.jpg",
+        embed: "triple-link-post"
+      },
+
+      {
         title: "LinkedIn Post 1",
         description: "Professional educational content",
         link: "https://www.linkedin.com/embed/feed/update/urn:li:share:7383798456076759040",

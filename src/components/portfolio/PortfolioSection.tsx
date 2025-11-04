@@ -6,6 +6,7 @@ import { InstagramPostEmbed } from './InstagramPostEmbed';
 import { LinkedInPostEmbed } from './LinkedInPostEmbed';
 import { ImagePostEmbed } from './ImagePostEmbed';
 import { DualLinkImagePost } from './DualLinkImagePost';
+import { TripleLinkImagePost } from './TripleLinkImagePost';
 import { PortfolioCard } from './PortfolioCard';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '../ui/tabs';
 interface PortfolioSectionItem {
@@ -24,6 +25,7 @@ interface PortfolioSectionItem {
   embedWidth?: number;
   facebookLink?: string;
   instagramLink?: string;
+  linkedinLink?: string;
 }
 interface PortfolioSectionProps {
   title: string;
@@ -146,7 +148,7 @@ React.useEffect(() => {
 
             {clientNames.map(clientName => {
           const clientItems = clientGroups[clientName];
-          const clientNonPlaylistItems = clientItems.filter(item => !isYouTubePlaylist(item.link) && item.embed !== 'facebook-video' && item.embed !== 'facebook-post' && item.embed !== 'instagram-post' && item.embed !== 'linkedin-post' && item.embed !== 'image-post' && item.embed !== 'dual-link-post');
+          const clientNonPlaylistItems = clientItems.filter(item => !isYouTubePlaylist(item.link) && item.embed !== 'facebook-video' && item.embed !== 'facebook-post' && item.embed !== 'instagram-post' && item.embed !== 'linkedin-post' && item.embed !== 'image-post' && item.embed !== 'dual-link-post' && item.embed !== 'triple-link-post');
           const clientPlaylistItems = clientItems.filter(item => isYouTubePlaylist(item.link));
           const clientFacebookEmbeds = clientItems.filter(item => item.embed === 'facebook-video');
           const clientFacebookPosts = clientItems.filter(item => item.embed === 'facebook-post');
@@ -154,11 +156,14 @@ React.useEffect(() => {
           const clientLinkedInPosts = clientItems.filter(item => item.embed === 'linkedin-post');
           const clientImagePosts = clientItems.filter(item => item.embed === 'image-post');
           const clientDualLinkPosts = clientItems.filter(item => item.embed === 'dual-link-post');
+          const clientTripleLinkPosts = clientItems.filter(item => item.embed === 'triple-link-post');
           return <TabsContent key={clientName} value={clientName}>
                   <div className={`grid ${gridCols} gap-4 md:gap-6`}>
                     {clientImagePosts.map((item, itemIndex) => <ImagePostEmbed key={`img-${itemIndex}-${item.title}`} title={item.title} description={item.description} thumbnail={item.thumbnail!} link={item.link!} logo={item.logo} />)}
 
                     {clientDualLinkPosts.map((item, itemIndex) => <DualLinkImagePost key={`dual-${itemIndex}-${item.title}`} title={item.title} description={item.description} thumbnail={item.thumbnail!} facebookLink={item.facebookLink!} instagramLink={item.instagramLink!} logo={item.logo} />)}
+
+                    {clientTripleLinkPosts.map((item, itemIndex) => <TripleLinkImagePost key={`triple-${itemIndex}-${item.title}`} title={item.title} description={item.description} thumbnail={item.thumbnail!} facebookLink={item.facebookLink!} instagramLink={item.instagramLink!} linkedinLink={item.linkedinLink!} logo={item.logo} />)}
 
                     {clientLinkedInPosts.map((item, itemIndex) => <LinkedInPostEmbed key={`li-${itemIndex}-${item.title}`} title={item.title} iframeUrl={item.link!} logo={item.logo} tag={item.tag || 'LinkedIn'} height={item.embedHeight || 600} width={item.embedWidth || 504} />)}
 
