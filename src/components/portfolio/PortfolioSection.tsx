@@ -101,7 +101,7 @@ export const PortfolioSection = ({
     return grouped;
   };
   const clientGroups = groupItemsByClient();
-  const clientNames = Object.keys(clientGroups);
+  const clientNames = Object.keys(clientGroups).filter(name => name !== 'Other');
 
   // Set default active tab to first client
   React.useEffect(() => {
