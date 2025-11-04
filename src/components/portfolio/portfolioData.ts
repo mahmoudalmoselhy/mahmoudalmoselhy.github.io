@@ -460,7 +460,7 @@ export const portfolioSections = [
         embed: "dual-link-post"
       },
       {
-        title: "Greek or Normal yoghurt",
+        title: "Greek or Normal yogurt",
         description: "عادي ولا يوناني؟",
         thumbnail: "/lovable-uploads/drazza-4.jpg",
         facebookLink: "https://www.facebook.com/share/p/1A7NFYFgct/",
