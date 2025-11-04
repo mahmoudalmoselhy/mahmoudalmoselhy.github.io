@@ -140,7 +140,7 @@ React.useEffect(() => {
         {title === 'Social Media Work' && clientNames.length > 1 ? <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
             <div className="w-full mb-8">
               <TabsList className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 bg-transparent p-0 w-full h-auto">
-                {clientNames.map(clientName => <TabsTrigger key={clientName} value={clientName} className="text-xs sm:text-sm md:text-base font-medium px-4 md:px-6 py-2.5 md:py-3 rounded-xl bg-muted/50 border border-border/20 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-lg hover:bg-muted/70 transition-all duration-200 whitespace-nowrap text-center">
+                {clientNames.map(clientName => <TabsTrigger key={clientName} value={clientName} className="text-xs sm:text-sm md:text-base font-semibold px-4 md:px-6 py-3 md:py-3.5 rounded-2xl bg-card border-2 border-border/50 data-[state=active]:bg-gradient-to-br data-[state=active]:from-primary data-[state=active]:to-primary/80 data-[state=active]:text-primary-foreground data-[state=active]:border-primary data-[state=active]:shadow-xl data-[state=active]:shadow-primary/20 hover:border-primary/50 hover:shadow-md transition-all duration-300 whitespace-nowrap text-center">
                     {clientName}
                   </TabsTrigger>)}
               </TabsList>
