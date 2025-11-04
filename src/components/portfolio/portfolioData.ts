@@ -463,6 +463,52 @@ export const portfolioSections = [
       },
 
       {
+        title: "Dr Azza Ibrahim - Post 1",
+        description: "تخلصي من دهون البطن",
+        thumbnail: "/lovable-uploads/drazza-1.jpg",
+        facebookLink: "https://www.facebook.com/share/p/19z8DgN6K9/",
+        instagramLink: "https://www.instagram.com/p/DPtVlBViOLi/",
+        logo: "/lovable-uploads/DrAzzaIbrahim.jpg",
+        embed: "dual-link-post"
+      },
+      {
+        title: "Dr Azza Ibrahim - Post 2",
+        description: "لانش بوكس المدرسة",
+        thumbnail: "/lovable-uploads/drazza-2.jpg",
+        facebookLink: "https://www.facebook.com/share/p/1A3GtcBChA/",
+        instagramLink: "https://www.instagram.com/p/DP04WX7iEjj/",
+        logo: "/lovable-uploads/DrAzzaIbrahim.jpg",
+        embed: "dual-link-post"
+      },
+      {
+        title: "Dr Azza Ibrahim - Post 3",
+        description: "Anorexia Nervosa",
+        thumbnail: "/lovable-uploads/drazza-3.jpg",
+        facebookLink: "https://www.facebook.com/share/p/1JnFmKNYNe/",
+        instagramLink: "https://www.instagram.com/p/DQYoreLjmZP/",
+        logo: "/lovable-uploads/DrAzzaIbrahim.jpg",
+        embed: "dual-link-post"
+      },
+      {
+        title: "Dr Azza Ibrahim - Post 4",
+        description: "عادي ولا يوناني؟",
+        thumbnail: "/lovable-uploads/drazza-4.jpg",
+        facebookLink: "https://www.facebook.com/share/p/1A7NFYFgct/",
+        instagramLink: "https://www.instagram.com/p/DPgghvsCDHS/",
+        logo: "/lovable-uploads/DrAzzaIbrahim.jpg",
+        embed: "dual-link-post"
+      },
+      {
+        title: "Dr Azza Ibrahim - Post 5",
+        description: "التحكم في مستويات الكورتيزول",
+        thumbnail: "/lovable-uploads/drazza-5.jpg",
+        facebookLink: "https://www.facebook.com/share/p/1BxqUyVujt/",
+        instagramLink: "https://www.instagram.com/p/DOv-AO4Dia7/",
+        logo: "/lovable-uploads/DrAzzaIbrahim.jpg",
+        embed: "dual-link-post"
+      },
+
+      {
         title: "LinkedIn Post 1",
         description: "Professional educational content",
         link: "https://www.linkedin.com/embed/feed/update/urn:li:share:7383798456076759040",
