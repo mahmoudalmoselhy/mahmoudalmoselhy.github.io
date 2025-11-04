@@ -362,7 +362,7 @@ export const portfolioSections = [
         tag: "Static"
       },
       {
-        title: "Tiye Academy - Post 1",
+        title: "Pianola Marketing and AI Ads",
         description: "استعملوا الـ AI صح",
         thumbnail: "/lovable-uploads/tiye-1.jpg",
         facebookLink: "https://www.facebook.com/share/p/1BEDkAbFKT/",
@@ -372,7 +372,7 @@ export const portfolioSections = [
         embed: "triple-link-post"
       },
       {
-        title: "Tiye Academy - Post 2",
+        title: "Tiye Hero",
         description: "Learn by Involving",
         thumbnail: "/lovable-uploads/tiye-2.jpg",
         facebookLink: "https://www.facebook.com/Tiyeacademy/posts/pfbid025DCSRSFE2AuEikYPUZWk9tAfAiwft9WRDW3joGAwDfYfqPhee9294cCy7yHiE3LMl",
@@ -382,7 +382,7 @@ export const portfolioSections = [
         embed: "triple-link-post"
       },
       {
-        title: "Tiye Academy - Post 3",
+        title: "Pianola Marketing and Interactive Ads",
         description: "تختار ايه يكسب؟",
         thumbnail: "/lovable-uploads/tiye-3.jpg",
         facebookLink: "https://www.facebook.com/Tiyeacademy/posts/pfbid0zRFwBeSoKWz9QUi56oATbFdimKCDTYgiStt8XtuwC1nkbfv1V83Nwdvth2fZ63fol",
@@ -392,7 +392,7 @@ export const portfolioSections = [
         embed: "triple-link-post"
       },
       {
-        title: "Tiye Academy - Post 4",
+        title: "Pianola Marketing and YouTube Rewind",
         description: "سقوط YOUTUBE REWIND",
         thumbnail: "/lovable-uploads/tiye-4.jpg",
         facebookLink: "https://www.facebook.com/share/p/17JiBiJjyq/",
@@ -402,7 +402,7 @@ export const portfolioSections = [
         embed: "triple-link-post"
       },
       {
-        title: "Tiye Academy - Post 5",
+        title: "Media Buyer explained",
         description: "مين هو ال MEDIA BUYER؟",
         thumbnail: "/lovable-uploads/tiye-5.jpg",
         facebookLink: "https://www.facebook.com/Tiyeacademy/posts/pfbid0QB44gVSZDxqja9nZssgoNgsk3EnjBZEw4SHmADMpdnyqBYyWmDQYwAhcuKoiRA92l",
@@ -412,8 +412,8 @@ export const portfolioSections = [
         embed: "triple-link-post"
       },
       {
-        title: "Tiye Academy - Post 6",
-        description: "والسوشيال ميديا!",
+        title: "Pianola Marketing and Spotify Wrapped",
+        description: "Spotify Wrapped and Social media!",
         thumbnail: "/lovable-uploads/tiye-6.jpg",
         facebookLink: "https://www.facebook.com/share/p/18rL5Twx7z/",
         instagramLink: "https://www.instagram.com/p/DPtVrd9jL0U/",
@@ -422,7 +422,7 @@ export const portfolioSections = [
         embed: "triple-link-post"
       },
       {
-        title: "Tiye Academy - Post 7",
+        title: "Pianola Marketing and NBE Ad",
         description: "أسهل طريقة لنشر رسالتك!",
         thumbnail: "/lovable-uploads/tiye-7.jpg",
         facebookLink: "https://www.facebook.com/share/p/1GyxpHCuGD/",
@@ -433,7 +433,7 @@ export const portfolioSections = [
       },
 
       {
-        title: "Dr Azza Ibrahim - Post 1",
+        title: "Get rid of tummy fat",
         description: "تخلصي من دهون البطن",
         thumbnail: "/lovable-uploads/drazza-1.jpg",
         facebookLink: "https://www.facebook.com/share/p/19z8DgN6K9/",
@@ -442,7 +442,7 @@ export const portfolioSections = [
         embed: "dual-link-post"
       },
       {
-        title: "Dr Azza Ibrahim - Post 2",
+        title: "School lunvch box",
         description: "لانش بوكس المدرسة",
         thumbnail: "/lovable-uploads/drazza-2.jpg",
         facebookLink: "https://www.facebook.com/share/p/1A3GtcBChA/",
@@ -451,7 +451,7 @@ export const portfolioSections = [
         embed: "dual-link-post"
       },
       {
-        title: "Dr Azza Ibrahim - Post 3",
+        title: "Anorexia Nervosa Explained",
         description: "Anorexia Nervosa",
         thumbnail: "/lovable-uploads/drazza-3.jpg",
         facebookLink: "https://www.facebook.com/share/p/1JnFmKNYNe/",
@@ -460,7 +460,7 @@ export const portfolioSections = [
         embed: "dual-link-post"
       },
       {
-        title: "Dr Azza Ibrahim - Post 4",
+        title: "Greek or Normal yoghurt",
         description: "عادي ولا يوناني؟",
         thumbnail: "/lovable-uploads/drazza-4.jpg",
         facebookLink: "https://www.facebook.com/share/p/1A7NFYFgct/",
@@ -469,7 +469,7 @@ export const portfolioSections = [
         embed: "dual-link-post"
       },
       {
-        title: "Dr Azza Ibrahim - Post 5",
+        title: "Control your Cortisol",
         description: "التحكم في مستويات الكورتيزول",
         thumbnail: "/lovable-uploads/drazza-5.jpg",
         facebookLink: "https://www.facebook.com/share/p/1BxqUyVujt/",
