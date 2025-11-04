@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 interface YouTubePlaylistEmbedProps {
   title: string;
@@ -8,6 +8,9 @@ interface YouTubePlaylistEmbedProps {
 }
 
 export const YouTubePlaylistEmbed = ({ title, description, playlistUrl, logo }: YouTubePlaylistEmbedProps) => {
+  const [isLoaded, setIsLoaded] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
+
   // Extract playlist ID from YouTube URL
   const getPlaylistId = (url: string) => {
     const match = url.match(/[?&]list=([^&]+)/);
@@ -15,6 +18,23 @@ export const YouTubePlaylistEmbed = ({ title, description, playlistUrl, logo }: 
   };
 
   const playlistId = getPlaylistId(playlistUrl);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setIsLoaded(true);
+        }
+      },
+      { rootMargin: '100px' }
+    );
+
+    if (containerRef.current) {
+      observer.observe(containerRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
 
   if (!playlistId) {
     return (
@@ -43,14 +63,23 @@ export const YouTubePlaylistEmbed = ({ title, description, playlistUrl, logo }: 
         </div>
       </div>
 
-      <div className="aspect-video rounded-2xl overflow-hidden mb-4 md:mb-6 bg-background/50">
-        <iframe
-          src={embedUrl}
-          title={title}
-          className="w-full h-full border-0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowFullScreen
-        />
+      <div ref={containerRef} className="aspect-video rounded-2xl overflow-hidden mb-4 md:mb-6 bg-background/50">
+        {isLoaded ? (
+          <iframe
+            src={embedUrl}
+            title={title}
+            className="w-full h-full border-0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+            loading="lazy"
+          />
+        ) : (
+          <div className="w-full h-full flex items-center justify-center bg-muted">
+            <svg className="w-16 h-16 text-muted-foreground" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M10 16.5l6-4.5-6-4.5v9zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+            </svg>
+          </div>
+        )}
       </div>
 
       <p className="text-muted-foreground text-xs md:text-sm leading-relaxed transition-colors duration-500">
