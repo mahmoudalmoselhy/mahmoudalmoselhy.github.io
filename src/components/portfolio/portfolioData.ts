@@ -362,36 +362,6 @@ export const portfolioSections = [
         tag: "Static"
       },
       {
-        title: "Intellijoy Campaign",
-        description: "Social media marketing and content strategy",
-        link: "#",
-        logo: "/lovable-uploads/50a63b2f-f4a6-4af1-b9fa-180df9e12233.png"
-      },
-      {
-        title: "Dr Azza Ibrahim Campaign",
-        description: "Social media marketing and content strategy",
-        link: "#",
-        logo: "/lovable-uploads/56f3b136-b633-40c0-af5a-aa3a3f85eaf5.png"
-      },
-      {
-        title: "TBA Campaign",
-        description: "Social media marketing and content strategy",
-        link: "#",
-        logo: "/lovable-uploads/5f845450-ce56-4116-9df2-14701f0412bc.png"
-      },
-      {
-        title: "Insta Campaign",
-        description: "Social media marketing and content strategy",
-        link: "#",
-        logo: "/lovable-uploads/6134c47d-6131-4d1f-ba02-e6aa71b2d036.png"
-      },
-      {
-        title: "CMG Campaign",
-        description: "Social media marketing and content strategy",
-        link: "#",
-        logo: "/lovable-uploads/66dec386-84b2-43af-b57b-a9919a4a9926.png"
-      },
-      {
         title: "Tiye Academy - Post 1",
         description: "استعملوا الـ AI صح",
         thumbnail: "/lovable-uploads/tiye-1.jpg",
@@ -507,67 +477,6 @@ export const portfolioSections = [
         logo: "/lovable-uploads/DrAzzaIbrahim.jpg",
         embed: "dual-link-post"
       },
-
-      {
-        title: "LinkedIn Post 1",
-        description: "Professional educational content",
-        link: "https://www.linkedin.com/embed/feed/update/urn:li:share:7383798456076759040",
-        logo: "/lovable-uploads/7e6d1a1b-60ce-445d-9c6a-26cc95a62421.png",
-        embed: "linkedin-post",
-        tag: "LinkedIn",
-        embedHeight: 741,
-        embedWidth: 504
-      },
-      {
-        title: "LinkedIn Post 2",
-        description: "Professional educational content",
-        link: "https://www.linkedin.com/embed/feed/update/urn:li:share:7383109525416960000",
-        logo: "/lovable-uploads/7e6d1a1b-60ce-445d-9c6a-26cc95a62421.png",
-        embed: "linkedin-post",
-        tag: "LinkedIn",
-        embedHeight: 670,
-        embedWidth: 504
-      },
-      {
-        title: "LinkedIn Post 3",
-        description: "Professional educational content",
-        link: "https://www.linkedin.com/embed/feed/update/urn:li:share:7380923843860717569",
-        logo: "/lovable-uploads/7e6d1a1b-60ce-445d-9c6a-26cc95a62421.png",
-        embed: "linkedin-post",
-        tag: "LinkedIn",
-        embedHeight: 1321,
-        embedWidth: 504
-      },
-      {
-        title: "Facebook Video 1",
-        description: "Social media video content",
-        link: "https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1123843696612991%2F&show_text=true&width=267&t=0",
-        logo: "/lovable-uploads/7e6d1a1b-60ce-445d-9c6a-26cc95a62421.png",
-        embed: "facebook-post",
-        tag: "Reel",
-        embedHeight: 591,
-        embedWidth: 267
-      },
-      {
-        title: "Facebook Post",
-        description: "Social media content",
-        link: "https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FTiyeacademy%2Fposts%2Fpfbid032iUxrUUQJpfVNXhJKveDDKezLWttmaXWwVjbLDhs3xvoGpW7GPKWWrQXrPNmQeEal&show_text=true&width=500",
-        logo: "/lovable-uploads/7e6d1a1b-60ce-445d-9c6a-26cc95a62421.png",
-        embed: "facebook-post",
-        tag: "Static",
-        embedHeight: 562,
-        embedWidth: 500
-      },
-      {
-        title: "Facebook Video 2",
-        description: "Social media video content",
-        link: "https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1493737248969400%2F&show_text=true&width=267&t=0",
-        logo: "/lovable-uploads/7e6d1a1b-60ce-445d-9c6a-26cc95a62421.png",
-        embed: "facebook-post",
-        tag: "Reel",
-        embedHeight: 591,
-        embedWidth: 267
-      }
     ]
   }
 ];
