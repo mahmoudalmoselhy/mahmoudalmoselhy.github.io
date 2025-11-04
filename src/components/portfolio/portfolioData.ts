@@ -321,13 +321,14 @@ export const portfolioSections = [
         embed: "dual-link-post"
       },
 
-      {
-        title: "Lecce Post 1",
-        description: "Social media content",
-        link: "https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FLecce.egy%2Fposts%2Fpfbid021pbxqNZJrGDHVAjiMQEwGVTjd2JPpmXTzLJGqj6McFvkRan8bSrExHLubFvqdzfDl&show_text=true&width=500",
+         {
+        title: "Egyptian Derby",
+        description: "90 دقيقة أشغال كروية شاقة",
+        thumbnail: "/lovable-uploads/lecce-2.jpg",
+        facebookLink: "https://www.facebook.com/share/p/16XxSagHxP/",
+        instagramLink: "https://www.instagram.com/p/DGT40T2PcLt/",
         logo: "/lovable-uploads/684b33f4-7836-42a3-810a-395f2e74a0da.png",
-        embed: "facebook-post",
-        tag: "Static"
+        embed: "dual-link-post"
       },
       {
         title: "Lecce Post 2",
