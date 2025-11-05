@@ -41,14 +41,14 @@ export const Hero = () => {
             
             {/* Buttons - Right side */}
             <div className="flex flex-col space-y-4 lg:min-w-[250px]">
-              <a href="#contact" className="bg-gradient-to-r from-gradient-start to-gradient-middle text-background px-10 py-5 rounded-full font-semibold hover:scale-105 transform transition-all duration-300 shadow-lg hover:shadow-xl text-center text-lg">
+              <a href="#contact" className="bg-gradient-to-br from-primary to-primary/80 text-primary-foreground px-10 py-5 rounded-2xl font-semibold border-2 border-primary shadow-xl shadow-primary/20 hover:shadow-2xl hover:shadow-primary/30 hover:scale-105 transform transition-all duration-300 text-center text-lg">
                 Get In Touch
               </a>
-              <a href="https://linkedin.com/in/mahmoudalmoselhy" target="_blank" rel="noopener noreferrer" className="border-2 border-accent-foreground text-accent-foreground px-10 py-5 rounded-full font-semibold hover:bg-accent-foreground hover:text-background transform transition-all duration-300 flex items-center justify-center space-x-2 text-lg">
+              <a href="https://linkedin.com/in/mahmoudalmoselhy" target="_blank" rel="noopener noreferrer" className="bg-card border-2 border-border/50 text-foreground px-10 py-5 rounded-2xl font-semibold hover:border-primary/50 hover:shadow-md shadow-sm hover:scale-105 transform transition-all duration-300 flex items-center justify-center space-x-2 text-lg">
                 <Linkedin className="w-6 h-6" />
                 <span>LinkedIn</span>
               </a>
-              <Link to="/cv" className="border-2 border-primary text-primary px-10 py-5 rounded-full font-semibold hover:bg-primary hover:text-primary-foreground transform transition-all duration-300 flex items-center justify-center space-x-2 text-lg">
+              <Link to="/cv" className="bg-card border-2 border-border/50 text-foreground px-10 py-5 rounded-2xl font-semibold hover:border-primary/50 hover:shadow-md shadow-sm hover:scale-105 transform transition-all duration-300 flex items-center justify-center space-x-2 text-lg">
                 <FileText className="w-6 h-6" />
                 <span>View CV</span>
               </Link>
