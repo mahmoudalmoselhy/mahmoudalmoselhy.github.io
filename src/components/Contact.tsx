@@ -23,8 +23,8 @@ export const Contact = () => {
                   <h3 className="text-xl md:text-2xl font-semibold text-foreground mb-6 md:mb-8">Get In Touch</h3>
                   <div className="space-y-4 md:space-y-6">
                     <div className="flex items-center space-x-3 md:space-x-4">
-                      <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-r from-gradient-start to-gradient-middle rounded-full flex items-center justify-center flex-shrink-0">
-                        <Mail className="w-5 h-5 md:w-6 md:h-6 text-background" />
+                      <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-red-500 to-red-600 rounded-full flex items-center justify-center flex-shrink-0 transition-all duration-300 hover:scale-110 hover:rotate-6 hover:shadow-lg hover:shadow-red-500/50 cursor-pointer">
+                        <Mail className="w-5 h-5 md:w-6 md:h-6 text-white" />
                       </div>
                       <div className="min-w-0 flex-1">
                         <p className="text-muted-foreground text-xs md:text-sm">Email</p>
@@ -35,8 +35,8 @@ export const Contact = () => {
                     </div>
                     
                     <div className="flex items-center space-x-3 md:space-x-4">
-                      <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-r from-gradient-start to-gradient-middle rounded-full flex items-center justify-center flex-shrink-0">
-                        <Phone className="w-5 h-5 md:w-6 md:h-6 text-background" />
+                      <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center flex-shrink-0 transition-all duration-300 hover:scale-110 hover:rotate-6 hover:shadow-lg hover:shadow-purple-500/50 cursor-pointer">
+                        <Phone className="w-5 h-5 md:w-6 md:h-6 text-white" />
                       </div>
                       <div className="min-w-0 flex-1">
                         <p className="text-muted-foreground text-xs md:text-sm">Phone</p>
@@ -47,8 +47,8 @@ export const Contact = () => {
                     </div>
                     
                     <div className="flex items-center space-x-3 md:space-x-4">
-                      <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-r from-gradient-start to-gradient-middle rounded-full flex items-center justify-center flex-shrink-0">
-                        <MessageCircle className="w-5 h-5 md:w-6 md:h-6 text-background" />
+                      <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center flex-shrink-0 transition-all duration-300 hover:scale-110 hover:rotate-6 hover:shadow-lg hover:shadow-green-500/50 cursor-pointer">
+                        <MessageCircle className="w-5 h-5 md:w-6 md:h-6 text-white" />
                       </div>
                       <div className="min-w-0 flex-1">
                         <p className="text-muted-foreground text-xs md:text-sm">WhatsApp</p>
@@ -65,8 +65,8 @@ export const Contact = () => {
                     </div>
                     
                     <div className="flex items-center space-x-3 md:space-x-4">
-                      <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-r from-gradient-start to-gradient-middle rounded-full flex items-center justify-center flex-shrink-0">
-                        <Linkedin className="w-5 h-5 md:w-6 md:h-6 text-background" />
+                      <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-blue-600 to-blue-700 rounded-full flex items-center justify-center flex-shrink-0 transition-all duration-300 hover:scale-110 hover:rotate-6 hover:shadow-lg hover:shadow-blue-600/50 cursor-pointer">
+                        <Linkedin className="w-5 h-5 md:w-6 md:h-6 text-white" />
                       </div>
                       <div className="min-w-0 flex-1">
                         <p className="text-muted-foreground text-xs md:text-sm">LinkedIn</p>
