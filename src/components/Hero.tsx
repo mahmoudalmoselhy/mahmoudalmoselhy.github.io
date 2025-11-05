@@ -44,11 +44,11 @@ export const Hero = () => {
               <a href="#contact" className="bg-gradient-to-br from-primary to-primary/80 text-primary-foreground px-10 py-5 rounded-2xl font-semibold border-2 border-primary shadow-xl shadow-primary/20 hover:shadow-2xl hover:shadow-primary/30 hover:scale-105 transform transition-all duration-300 text-center text-lg">
                 Get In Touch
               </a>
-              <a href="https://linkedin.com/in/mahmoudalmoselhy" target="_blank" rel="noopener noreferrer" className="bg-card border-2 border-border/50 text-foreground px-10 py-5 rounded-2xl font-semibold hover:border-primary/50 hover:shadow-md shadow-sm hover:scale-105 transform transition-all duration-300 flex items-center justify-center space-x-2 text-lg">
+              <a href="https://linkedin.com/in/mahmoudalmoselhy" target="_blank" rel="noopener noreferrer" className="bg-gradient-to-br from-blue-600 to-blue-700 text-white px-10 py-5 rounded-2xl font-semibold border-2 border-blue-600 shadow-xl shadow-blue-600/20 hover:shadow-2xl hover:shadow-blue-600/30 hover:scale-105 transform transition-all duration-300 flex items-center justify-center space-x-2 text-lg">
                 <Linkedin className="w-6 h-6" />
                 <span>LinkedIn</span>
               </a>
-              <Link to="/cv" className="bg-card border-2 border-border/50 text-foreground px-10 py-5 rounded-2xl font-semibold hover:border-primary/50 hover:shadow-md shadow-sm hover:scale-105 transform transition-all duration-300 flex items-center justify-center space-x-2 text-lg">
+              <Link to="/cv" className="bg-gradient-to-br from-accent to-accent/80 text-accent-foreground px-10 py-5 rounded-2xl font-semibold border-2 border-accent shadow-xl shadow-accent/20 hover:shadow-2xl hover:shadow-accent/30 hover:scale-105 transform transition-all duration-300 flex items-center justify-center space-x-2 text-lg">
                 <FileText className="w-6 h-6" />
                 <span>View CV</span>
               </Link>
