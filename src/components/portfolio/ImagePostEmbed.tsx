@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from '../ui/button';
-import { ExternalLink } from 'lucide-react';
+import { Facebook } from 'lucide-react';
 
 interface ImagePostEmbedProps {
   title: string;
@@ -51,23 +51,21 @@ export const ImagePostEmbed = ({
         </p>
 
         {/* Link Button */}
-       <Button
-  asChild
-  variant="default"
-  className="w-full group/btn"
->
-  <a
-    href={link}
-    target="_blank"
-    rel="noopener noreferrer"
-    className="flex items-center justify-center gap-2"
-  >
-    <span className="truncate overflow-hidden text-xs sm:text-sm max-w-full">
-      View on Facebook
-    </span>
-    <ExternalLink className="w-4 h-4 transition-transform group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5" />
-  </a>
-</Button>
+        <Button
+          asChild
+          variant="default"
+          className="w-full group/btn"
+        >
+          <a
+            href={link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-center gap-2"
+          >
+            <Facebook className="w-4 h-4" />
+            <span className="hidden sm:inline">Facebook</span>
+          </a>
+        </Button>
 
       </div>
     </div>
