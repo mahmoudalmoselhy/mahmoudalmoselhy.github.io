@@ -321,46 +321,39 @@ export const portfolioSections = [
         embed: "dual-link-post"
       },
 
-         {
-        title: "Egyptian Derby",
-        description: "90 دقيقة أشغال كروية شاقة",
+       {
+        title: "UCL Final Campaign",
+        description: "نهائي دوري أبطال أوروبا 31-May",
+        thumbnail: "/lovable-uploads/lecce-1.jpg",
+        link: "https://www.facebook.com/share/p/1BB1VZEUqC/",
+        logo: "/lovable-uploads/684b33f4-7836-42a3-810a-395f2e74a0da.png",
+        embed: "image-post"
+      },
+      {
+        title: "El Clasico Final",
+        description: "Copa del Rey Final 26-April",
         thumbnail: "/lovable-uploads/lecce-2.jpg",
-        facebookLink: "https://www.facebook.com/share/p/16XxSagHxP/",
-        instagramLink: "https://www.instagram.com/p/DGT40T2PcLt/",
+        link: "https://www.facebook.com/share/p/1KiySYo2tH/",
+        logo: "/lovable-uploads/684b33f4-7836-42a3-810a-395f2e74a0da.png",
+        embed: "image-post"
+      },
+      {
+        title: "Me Time Vibes",
+        description: "Multipurpose freshener for a refreshing experience",
+        thumbnail: "/lovable-uploads/lecce-3.jpg",
+        facebookLink: "https://www.facebook.com/share/p/1BUphhA3j6/",
+        instagramLink: "https://www.instagram.com/lecce_eg/p/DF8Ga6OqZO7/",
         logo: "/lovable-uploads/684b33f4-7836-42a3-810a-395f2e74a0da.png",
         embed: "dual-link-post"
       },
       {
-        title: "Lecce Post 2",
-        description: "Social media content",
-        link: "https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FLecce.egy%2Fposts%2Fpfbid02wFrvaG3suDs6ph7VHinnY2vP7WTeZCu2pg7V4JXXyz8o6J71bXzVuvZvyEWqyKol&show_text=true&width=500",
+        title: "Guess the Winner",
+        description: "Egyptian football league championship",
+        thumbnail: "/lovable-uploads/lecce-4.jpg",
+        facebookLink: "https://www.facebook.com/share/p/17XKWEDF8u/",
+        instagramLink: "https://www.instagram.com/lecce_eg/p/DGT40T2PcLt/",
         logo: "/lovable-uploads/684b33f4-7836-42a3-810a-395f2e74a0da.png",
-        embed: "facebook-post",
-        tag: "Static"
-      },
-      {
-        title: "Lecce Post 3",
-        description: "Social media content",
-        link: "https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FLecce.egy%2Fposts%2Fpfbid024PnSJytMASSpu2aPf1nWQjD3h2k5XMN9vZRmV97MRZYZ1GMYuCdTuXsT9WpSTWw7l&show_text=true&width=500",
-        logo: "/lovable-uploads/684b33f4-7836-42a3-810a-395f2e74a0da.png",
-        embed: "facebook-post",
-        tag: "Static"
-      },
-      {
-        title: "Lecce Post 4",
-        description: "Social media content",
-        link: "https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FLecce.egy%2Fposts%2Fpfbid02t1i2sgmmUAKXjHsYuTNnDok22jR7cscdw8Pg6sPEiUMGWVqmzyXm9c2mx3kfKMMKl&show_text=true&width=500",
-        logo: "/lovable-uploads/684b33f4-7836-42a3-810a-395f2e74a0da.png",
-        embed: "facebook-post",
-        tag: "Static"
-      },
-      {
-        title: "Lecce Post 5",
-        description: "Social media content",
-        link: "https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FLecce.egy%2Fposts%2Fpfbid0jrPgQ5NVfrjfAp5JuhSVdrNodd7hG8S9nwm6vh7R2TbFrhBrzyW3SenEf6LHZm5El&show_text=true&width=500",
-        logo: "/lovable-uploads/684b33f4-7836-42a3-810a-395f2e74a0da.png",
-        embed: "facebook-post",
-        tag: "Static"
+        embed: "dual-link-post"
       },
       {
         title: "Pianola Marketing and AI Ads",
