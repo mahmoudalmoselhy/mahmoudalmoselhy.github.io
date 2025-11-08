@@ -4,12 +4,6 @@ import { Link } from 'react-router-dom';
 export const Hero = () => {
   return (
     <div className="bg-card/30 backdrop-blur-lg rounded-3xl border border-border overflow-hidden">
-      {/* Full-width portfolio cover image */}
-      <div className="relative w-full">
-        <img src="/portfolio-cover.png" alt="Mahmoud AlMoselhy Portfolio Cover" className="w-full h-auto object-cover mix-blend-multiply dark:mix-blend-lighten opacity-90" />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background pointer-events-none"></div>
-      </div>
-      
       <section className="py-16 md:py-24 flex items-center justify-center relative overflow-hidden">
         {/* Animated background elements */}
         <div className="absolute inset-0">
