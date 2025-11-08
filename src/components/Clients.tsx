@@ -99,6 +99,9 @@ export const Clients = () => {
                     <img
                       src={client.logo}
                       alt={client.name}
+                      loading="lazy"
+                      width={160}
+                      height={128}
                       className="max-w-full max-h-full object-contain filter brightness-90 group-hover:brightness-110 transition-all duration-300"
                     />
                   </div>
@@ -125,6 +128,9 @@ export const Clients = () => {
                     <img
                       src={client.logo}
                       alt={client.name}
+                      loading="lazy"
+                      width={160}
+                      height={128}
                       className="max-w-full max-h-full object-contain filter brightness-90 group-hover:brightness-110 transition-all duration-300"
                     />
                   </div>

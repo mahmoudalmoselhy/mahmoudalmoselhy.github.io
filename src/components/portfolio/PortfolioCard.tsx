@@ -53,6 +53,8 @@ export const PortfolioCard = ({ title, description, link, logo, thumbnail, clien
                 src={imageSrc}
                 alt={`${title} thumbnail`}
                 loading="lazy"
+                width={1200}
+                height={675}
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.02]"
                 onError={(e) => {
                   try {

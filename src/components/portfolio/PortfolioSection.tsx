@@ -183,7 +183,7 @@ React.useEffect(() => {
             {title === 'Android World Articles' ? <>
                 {nonPlaylistItems.map((item, itemIndex) => <a key={`awa-${itemIndex}-${item.title}`} href={item.link} target="_blank" rel="noopener noreferrer" className="group block overflow-hidden rounded-2xl border border-border bg-card hover:shadow-md transition-shadow duration-300">
                     <div className="relative w-full aspect-[16/9] overflow-hidden">
-                      <img src={item.thumbnail || item.logo} alt={`${item.title} thumbnail`} loading="lazy" className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.02]" />
+                      <img src={item.thumbnail || item.logo} alt={`${item.title} thumbnail`} loading="lazy" width={800} height={450} className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.02]" />
                     </div>
                     <div className="p-4">
                       <div className="flex flex-wrap gap-2 mb-2">

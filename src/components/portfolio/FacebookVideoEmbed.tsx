@@ -85,7 +85,7 @@ export const FacebookVideoEmbed = ({ title, description, videoUrl, logo, respons
         <aside className="md:col-span-2 mt-4 md:mt-0">
           <div className="flex items-center mb-3 md:mb-4">
             <div className="w-8 h-8 md:w-10 md:h-10 liquid-button rounded-full flex items-center justify-center mr-3 group-hover:scale-110 transition-transform duration-500 p-1.5">
-              <img src={logo} alt={`${title} logo`} className="w-full h-full object-contain" />
+              <img src={logo} alt={`${title} logo`} loading="lazy" width={40} height={40} className="w-full h-full object-contain" />
             </div>
             <h4 className="text-base md:text-lg font-semibold text-foreground group-hover:text-primary transition-all duration-500 line-clamp-1 leading-tight">
               {title}
