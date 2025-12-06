@@ -5,6 +5,7 @@ import { Portfolio } from '@/components/Portfolio';
 import { Clients } from '@/components/Clients';
 import { Contact } from '@/components/Contact';
 import { FloatingNav } from '@/components/FloatingNav';
+import portfolioCover from '@/assets/portfolio-cover.png?optimize';
 
 const Index = () => {
   return (
@@ -12,7 +13,7 @@ const Index = () => {
       {/* Full-width portfolio cover at the top */}
       <div className="relative w-full">
         <img 
-          src="/portfolio-cover.png" 
+          src={portfolioCover} 
           alt="Mahmoud AlMoselhy Portfolio Cover" 
           className="w-full h-auto object-cover mix-blend-multiply dark:mix-blend-lighten opacity-90"
           width={1779}

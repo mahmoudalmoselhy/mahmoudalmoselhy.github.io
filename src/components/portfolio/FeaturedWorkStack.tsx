@@ -2,6 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
+// Import optimized images
+import samsungBudsPro from '@/assets/samsung-buds-pro.png?optimize';
+import samsungBudsFe from '@/assets/samsung-buds-fe.png?optimize';
+import ugreenCharger from '@/assets/ugreen-charger.png?optimize';
+
 interface FeaturedWork {
   title: string;
   link: string;
@@ -12,7 +17,7 @@ const featuredWorks: FeaturedWork[] = [
   {
     title: "Samsung Galaxy Buds 3 Pro",
     link: "https://www.3arrafni.com/samsung-galaxy-buds-3-pro-review/",
-    image: "/lovable-uploads/85462968-e0cb-4458-a867-ae9766cb8706.png"
+    image: samsungBudsPro
   },
   {
     title: "Samsung Galaxy Watch 4 Review",
@@ -27,12 +32,12 @@ const featuredWorks: FeaturedWork[] = [
   {
     title: "Samsung Galaxy Buds FE Review",
     link: "https://www.3arrafni.com/samsung-galaxy-buds-fe-review/",
-    image: "/lovable-uploads/50a63b2f-f4a6-4af1-b9fa-180df9e12233.png"
+    image: samsungBudsFe
   },
   {
     title: "UGREEN Nexode 65W GaN Charging Station",
     link: "https://www.3arrafni.com/ugreen-nexode-65w-gan-charging-station/",
-    image: "/lovable-uploads/c35b2cfe-9a8a-4ec2-830c-214900066582.png"
+    image: ugreenCharger
   },
   {
     title: "Black Myth Wukong Review",
