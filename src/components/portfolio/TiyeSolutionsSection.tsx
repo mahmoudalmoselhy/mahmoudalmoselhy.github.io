@@ -26,6 +26,13 @@ const bigServicePageImages = [
   '/lovable-uploads/tiye-service-8.png',
 ];
 
+const smallServicePageImages = [
+  '/lovable-uploads/tiye-small-1.png',
+  '/lovable-uploads/tiye-small-2.png',
+  '/lovable-uploads/tiye-small-3.png',
+  '/lovable-uploads/tiye-small-4.png',
+];
+
 export const TiyeSolutionsSection = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
@@ -97,12 +104,18 @@ export const TiyeSolutionsSection = () => {
           {/* Right Column: Tabbed Gallery */}
           <div className="space-y-4">
             <Tabs defaultValue="big-service" className="w-full">
-              <TabsList className="w-full grid grid-cols-1 bg-background/50 border border-border/50 rounded-xl p-1">
+              <TabsList className="w-full grid grid-cols-2 bg-background/50 border border-border/50 rounded-xl p-1">
                 <TabsTrigger 
                   value="big-service" 
                   className="rounded-lg data-[state=active]:bg-gradient-to-r data-[state=active]:from-gradient-start data-[state=active]:to-gradient-end data-[state=active]:text-white"
                 >
                   Big Service Page
+                </TabsTrigger>
+                <TabsTrigger 
+                  value="small-service" 
+                  className="rounded-lg data-[state=active]:bg-gradient-to-r data-[state=active]:from-gradient-start data-[state=active]:to-gradient-end data-[state=active]:text-white"
+                >
+                  Small Service Page
                 </TabsTrigger>
               </TabsList>
               
@@ -130,6 +143,38 @@ export const TiyeSolutionsSection = () => {
                         <img
                           src={image}
                           alt={`Tiye Solutions screenshot ${index + 1}`}
+                          className="w-full h-auto rounded-lg"
+                        />
+                      </DialogContent>
+                    </Dialog>
+                  ))}
+                </div>
+              </TabsContent>
+
+              <TabsContent value="small-service" className="mt-4">
+                <div className="grid grid-cols-2 gap-3">
+                  {smallServicePageImages.map((image, index) => (
+                    <Dialog key={index}>
+                      <DialogTrigger asChild>
+                        <button
+                          className="relative aspect-video rounded-xl overflow-hidden border border-border/50 hover:border-primary/50 transition-all duration-300 group cursor-pointer"
+                          onClick={() => setSelectedImage(image)}
+                        >
+                          <img
+                            src={image}
+                            alt={`Tiye Solutions small service ${index + 1}`}
+                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                            loading="lazy"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-2">
+                            <span className="text-white text-xs font-medium">View</span>
+                          </div>
+                        </button>
+                      </DialogTrigger>
+                      <DialogContent className="max-w-4xl w-full p-2 bg-background/95 backdrop-blur-xl border-border">
+                        <img
+                          src={image}
+                          alt={`Tiye Solutions small service ${index + 1}`}
                           className="w-full h-auto rounded-lg"
                         />
                       </DialogContent>
