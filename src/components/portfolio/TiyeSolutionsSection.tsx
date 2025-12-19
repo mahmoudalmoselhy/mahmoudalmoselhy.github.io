@@ -31,6 +31,7 @@ const services = [{
 
 const bigServicePageImages = ['/lovable-uploads/tiye-service-1.png', '/lovable-uploads/tiye-service-2.png', '/lovable-uploads/tiye-service-3.png', '/lovable-uploads/tiye-service-4.png', '/lovable-uploads/tiye-service-5.png', '/lovable-uploads/tiye-service-6.png', '/lovable-uploads/tiye-service-7.png', '/lovable-uploads/tiye-service-8.png'];
 const smallServicePageImages = ['/lovable-uploads/tiye-small-1.png', '/lovable-uploads/tiye-small-2.png', '/lovable-uploads/tiye-small-3.png', '/lovable-uploads/tiye-small-4.png'];
+const allClientsPageImages = ['/lovable-uploads/tiye-clients-1.png', '/lovable-uploads/tiye-clients-2.png', '/lovable-uploads/tiye-clients-3.png', '/lovable-uploads/tiye-clients-4.png', '/lovable-uploads/tiye-clients-5.png', '/lovable-uploads/tiye-clients-6.png', '/lovable-uploads/tiye-clients-7.png', '/lovable-uploads/tiye-clients-8.png', '/lovable-uploads/tiye-clients-9.png', '/lovable-uploads/tiye-clients-10.png'];
 
 // Fullscreen Lightbox Component
 const Lightbox = ({ 
@@ -132,6 +133,7 @@ const Lightbox = ({
 export const TiyeSolutionsSection = () => {
   const [bigCurrentIndex, setBigCurrentIndex] = useState(0);
   const [smallCurrentIndex, setSmallCurrentIndex] = useState(0);
+  const [clientsCurrentIndex, setClientsCurrentIndex] = useState(0);
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [lightboxImages, setLightboxImages] = useState<string[]>([]);
   const [lightboxIndex, setLightboxIndex] = useState(0);
@@ -153,6 +155,13 @@ export const TiyeSolutionsSection = () => {
     setSmallCurrentIndex(prev => {
       if (direction === 'prev') return prev === 0 ? smallServicePageImages.length - 1 : prev - 1;
       return prev === smallServicePageImages.length - 1 ? 0 : prev + 1;
+    });
+  };
+
+  const navigateClients = (direction: 'prev' | 'next') => {
+    setClientsCurrentIndex(prev => {
+      if (direction === 'prev') return prev === 0 ? allClientsPageImages.length - 1 : prev - 1;
+      return prev === allClientsPageImages.length - 1 ? 0 : prev + 1;
     });
   };
 
@@ -323,12 +332,15 @@ export const TiyeSolutionsSection = () => {
             {/* Right Column: Tabbed Gallery */}
             <div className="space-y-4">
               <Tabs defaultValue="big-service" className="w-full">
-                <TabsList className="w-full grid grid-cols-2 bg-background/50 border border-[#BE1522]/20 rounded-xl p-1">
-                  <TabsTrigger value="big-service" className="rounded-lg data-[state=active]:bg-[#BE1522] data-[state=active]:text-white data-[state=active]:shadow-lg">
+                <TabsList className="w-full grid grid-cols-3 bg-background/50 border border-[#BE1522]/20 rounded-xl p-1">
+                  <TabsTrigger value="big-service" className="rounded-lg text-xs md:text-sm data-[state=active]:bg-[#BE1522] data-[state=active]:text-white data-[state=active]:shadow-lg">
                     Big Service Page
                   </TabsTrigger>
-                  <TabsTrigger value="small-service" className="rounded-lg data-[state=active]:bg-[#BE1522] data-[state=active]:text-white data-[state=active]:shadow-lg">
+                  <TabsTrigger value="small-service" className="rounded-lg text-xs md:text-sm data-[state=active]:bg-[#BE1522] data-[state=active]:text-white data-[state=active]:shadow-lg">
                     Small Service Page
+                  </TabsTrigger>
+                  <TabsTrigger value="all-clients" className="rounded-lg text-xs md:text-sm data-[state=active]:bg-[#BE1522] data-[state=active]:text-white data-[state=active]:shadow-lg">
+                    All Clients Page
                   </TabsTrigger>
                 </TabsList>
                 
@@ -347,6 +359,15 @@ export const TiyeSolutionsSection = () => {
                     currentIndex={smallCurrentIndex} 
                     setCurrentIndex={setSmallCurrentIndex}
                     onNavigate={navigateSmall} 
+                  />
+                </TabsContent>
+
+                <TabsContent value="all-clients" className="mt-4">
+                  <ImageGallery 
+                    images={allClientsPageImages} 
+                    currentIndex={clientsCurrentIndex} 
+                    setCurrentIndex={setClientsCurrentIndex}
+                    onNavigate={navigateClients} 
                   />
                 </TabsContent>
               </Tabs>
