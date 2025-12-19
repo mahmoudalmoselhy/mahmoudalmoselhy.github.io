@@ -3,6 +3,7 @@ import React from 'react';
 import { PortfolioSection } from './portfolio/PortfolioSection';
 import { SEOArchives } from './portfolio/SEOArchives';
 import { FeaturedWorkStack } from './portfolio/FeaturedWorkStack';
+import { TiyeSolutionsSection } from './portfolio/TiyeSolutionsSection';
 import { portfolioSections, seoArchives } from './portfolio/portfolioData';
 
 export const Portfolio = () => {
@@ -26,6 +27,9 @@ export const Portfolio = () => {
           A showcase of my diverse content creation work across multiple platforms and industries
         </p>
       </div>
+
+      {/* Tiye Solutions Section - First */}
+      <TiyeSolutionsSection />
 
       {/* Each section in its own frame */}
       {portfolioSections.map((section, sectionIndex) => (
