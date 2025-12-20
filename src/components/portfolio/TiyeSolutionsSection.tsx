@@ -332,14 +332,14 @@ export const TiyeSolutionsSection = () => {
             {/* Right Column: Tabbed Gallery */}
             <div className="space-y-4">
               <Tabs defaultValue="big-service" className="w-full">
-                <TabsList className="w-full grid grid-cols-3 bg-background/50 border border-[#BE1522]/20 rounded-xl p-1">
-                  <TabsTrigger value="big-service" className="rounded-lg text-xs md:text-sm data-[state=active]:bg-[#BE1522] data-[state=active]:text-white data-[state=active]:shadow-lg">
+                <TabsList className="w-full flex flex-col sm:grid sm:grid-cols-3 gap-1 bg-background/50 border border-[#BE1522]/20 rounded-xl p-1 h-auto">
+                  <TabsTrigger value="big-service" className="rounded-lg text-xs sm:text-sm py-2.5 sm:py-2 data-[state=active]:bg-[#BE1522] data-[state=active]:text-white data-[state=active]:shadow-lg">
                     Big Service Page
                   </TabsTrigger>
-                  <TabsTrigger value="small-service" className="rounded-lg text-xs md:text-sm data-[state=active]:bg-[#BE1522] data-[state=active]:text-white data-[state=active]:shadow-lg">
+                  <TabsTrigger value="small-service" className="rounded-lg text-xs sm:text-sm py-2.5 sm:py-2 data-[state=active]:bg-[#BE1522] data-[state=active]:text-white data-[state=active]:shadow-lg">
                     Small Service Page
                   </TabsTrigger>
-                  <TabsTrigger value="all-clients" className="rounded-lg text-xs md:text-sm data-[state=active]:bg-[#BE1522] data-[state=active]:text-white data-[state=active]:shadow-lg">
+                  <TabsTrigger value="all-clients" className="rounded-lg text-xs sm:text-sm py-2.5 sm:py-2 data-[state=active]:bg-[#BE1522] data-[state=active]:text-white data-[state=active]:shadow-lg">
                     All Clients Page
                   </TabsTrigger>
                 </TabsList>
