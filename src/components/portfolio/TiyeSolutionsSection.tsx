@@ -96,6 +96,7 @@ const Lightbox = ({
                 src={image} 
                 alt={`Screenshot ${index + 1}`} 
                 className="max-h-[85vh] w-auto max-w-full object-contain rounded-lg shadow-2xl"
+                loading="lazy"
               />
             </div>
           ))}
@@ -193,7 +194,8 @@ export const TiyeSolutionsSection = () => {
                 <img 
                   src={image} 
                   alt={`Screenshot ${index + 1}`} 
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-4">
                   <span className="text-white text-sm font-medium px-4 py-2 bg-[#BE1522] rounded-full">
