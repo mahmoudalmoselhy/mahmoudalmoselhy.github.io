@@ -29,6 +29,7 @@ const services = [{
   textColor: 'text-emerald-500'
 }];
 
+const homePageImages = ['/lovable-uploads/tiye-home-1.png', '/lovable-uploads/tiye-home-2.png', '/lovable-uploads/tiye-home-3.png', '/lovable-uploads/tiye-home-4.png', '/lovable-uploads/tiye-home-5.png', '/lovable-uploads/tiye-home-6.png', '/lovable-uploads/tiye-home-7.png', '/lovable-uploads/tiye-home-8.png', '/lovable-uploads/tiye-home-9.png', '/lovable-uploads/tiye-home-10.png'];
 const bigServicePageImages = ['/lovable-uploads/tiye-service-1.png', '/lovable-uploads/tiye-service-2.png', '/lovable-uploads/tiye-service-3.png', '/lovable-uploads/tiye-service-4.png', '/lovable-uploads/tiye-service-5.png', '/lovable-uploads/tiye-service-6.png', '/lovable-uploads/tiye-service-7.png', '/lovable-uploads/tiye-service-8.png'];
 const smallServicePageImages = ['/lovable-uploads/tiye-small-1.png', '/lovable-uploads/tiye-small-2.png', '/lovable-uploads/tiye-small-3.png', '/lovable-uploads/tiye-small-4.png'];
 const allClientsPageImages = ['/lovable-uploads/tiye-clients-1.png', '/lovable-uploads/tiye-clients-2.png', '/lovable-uploads/tiye-clients-3.png', '/lovable-uploads/tiye-clients-4.png', '/lovable-uploads/tiye-clients-5.png', '/lovable-uploads/tiye-clients-6.png', '/lovable-uploads/tiye-clients-7.png', '/lovable-uploads/tiye-clients-8.png', '/lovable-uploads/tiye-clients-9.png', '/lovable-uploads/tiye-clients-10.png'];
@@ -132,6 +133,7 @@ const Lightbox = ({
 };
 
 export const TiyeSolutionsSection = () => {
+  const [homeCurrentIndex, setHomeCurrentIndex] = useState(0);
   const [bigCurrentIndex, setBigCurrentIndex] = useState(0);
   const [smallCurrentIndex, setSmallCurrentIndex] = useState(0);
   const [clientsCurrentIndex, setClientsCurrentIndex] = useState(0);
@@ -143,6 +145,13 @@ export const TiyeSolutionsSection = () => {
     setLightboxImages(images);
     setLightboxIndex(index);
     setLightboxOpen(true);
+  };
+
+  const navigateHome = (direction: 'prev' | 'next') => {
+    setHomeCurrentIndex(prev => {
+      if (direction === 'prev') return prev === 0 ? homePageImages.length - 1 : prev - 1;
+      return prev === homePageImages.length - 1 ? 0 : prev + 1;
+    });
   };
 
   const navigateBig = (direction: 'prev' | 'next') => {
@@ -333,8 +342,11 @@ export const TiyeSolutionsSection = () => {
 
             {/* Right Column: Tabbed Gallery */}
             <div className="space-y-4">
-              <Tabs defaultValue="big-service" className="w-full">
-                <TabsList className="w-full flex flex-col sm:grid sm:grid-cols-3 gap-1 bg-background/50 border border-[#BE1522]/20 rounded-xl p-1 h-auto">
+              <Tabs defaultValue="home-page" className="w-full">
+                <TabsList className="w-full flex flex-col sm:grid sm:grid-cols-4 gap-1 bg-background/50 border border-[#BE1522]/20 rounded-xl p-1 h-auto">
+                  <TabsTrigger value="home-page" className="rounded-lg text-xs sm:text-sm py-2.5 sm:py-2 data-[state=active]:bg-[#BE1522] data-[state=active]:text-white data-[state=active]:shadow-lg">
+                    Home Page
+                  </TabsTrigger>
                   <TabsTrigger value="big-service" className="rounded-lg text-xs sm:text-sm py-2.5 sm:py-2 data-[state=active]:bg-[#BE1522] data-[state=active]:text-white data-[state=active]:shadow-lg">
                     Big Service Page
                   </TabsTrigger>
@@ -346,6 +358,15 @@ export const TiyeSolutionsSection = () => {
                   </TabsTrigger>
                 </TabsList>
                 
+                <TabsContent value="home-page" className="mt-4">
+                  <ImageGallery 
+                    images={homePageImages} 
+                    currentIndex={homeCurrentIndex} 
+                    setCurrentIndex={setHomeCurrentIndex}
+                    onNavigate={navigateHome} 
+                  />
+                </TabsContent>
+
                 <TabsContent value="big-service" className="mt-4">
                   <ImageGallery 
                     images={bigServicePageImages} 
