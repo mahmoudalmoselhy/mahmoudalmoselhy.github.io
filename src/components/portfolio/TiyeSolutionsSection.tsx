@@ -186,10 +186,42 @@ export const TiyeSolutionsSection = () => {
     setCurrentIndex: (index: number) => void;
     onNavigate: (direction: 'prev' | 'next') => void;
   }) => {
+    const [touchStart, setTouchStart] = useState<number | null>(null);
+    const [touchEnd, setTouchEnd] = useState<number | null>(null);
+
+    const minSwipeDistance = 50;
+
+    const onTouchStart = (e: React.TouchEvent) => {
+      setTouchEnd(null);
+      setTouchStart(e.targetTouches[0].clientX);
+    };
+
+    const onTouchMove = (e: React.TouchEvent) => {
+      setTouchEnd(e.targetTouches[0].clientX);
+    };
+
+    const onTouchEnd = () => {
+      if (!touchStart || !touchEnd) return;
+      const distance = touchStart - touchEnd;
+      const isLeftSwipe = distance > minSwipeDistance;
+      const isRightSwipe = distance < -minSwipeDistance;
+      
+      if (isLeftSwipe) {
+        onNavigate('next');
+      } else if (isRightSwipe) {
+        onNavigate('prev');
+      }
+    };
+
     return (
       <div className="space-y-4">
-        {/* Featured Large Image with slide animation */}
-        <div className="relative group overflow-hidden rounded-2xl border-2 border-[#BE1522]/30 hover:border-[#BE1522] transition-all duration-300 shadow-lg hover:shadow-[#BE1522]/20">
+        {/* Featured Large Image with slide animation and swipe support */}
+        <div 
+          className="relative group overflow-hidden rounded-2xl border-2 border-[#BE1522]/30 hover:border-[#BE1522] transition-all duration-300 shadow-lg hover:shadow-[#BE1522]/20 touch-pan-y"
+          onTouchStart={onTouchStart}
+          onTouchMove={onTouchMove}
+          onTouchEnd={onTouchEnd}
+        >
           <div 
             className="flex transition-transform duration-500 ease-out"
             style={{ transform: `translateX(-${currentIndex * 100}%)` }}
@@ -203,8 +235,9 @@ export const TiyeSolutionsSection = () => {
                 <img 
                   src={image} 
                   alt={`Screenshot ${index + 1}`} 
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 pointer-events-none"
                   loading="lazy"
+                  draggable={false}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-4">
                   <span className="text-white text-sm font-medium px-4 py-2 bg-[#BE1522] rounded-full">
