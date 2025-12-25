@@ -11,6 +11,11 @@ declare module '*?format=webp' {
   export default src;
 }
 
+declare module '*?format=webp&quality=80' {
+  const src: string;
+  export default src;
+}
+
 declare module '*.png?optimize' {
   const src: string;
   export default src;
