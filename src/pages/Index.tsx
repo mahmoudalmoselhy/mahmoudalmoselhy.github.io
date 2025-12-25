@@ -5,7 +5,7 @@ import { Portfolio } from '@/components/Portfolio';
 import { Clients } from '@/components/Clients';
 import { Contact } from '@/components/Contact';
 import { FloatingNav } from '@/components/FloatingNav';
-import portfolioCover from '@/assets/portfolio-cover.png?optimize';
+import portfolioCover from '@/assets/portfolio-cover.png?format=webp&quality=80';
 
 const Index = () => {
   return (
