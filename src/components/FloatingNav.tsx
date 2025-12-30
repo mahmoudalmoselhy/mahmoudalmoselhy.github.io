@@ -51,26 +51,26 @@ export const FloatingNav = () => {
   };
 
   return (
-    <nav className="fixed left-6 top-6 z-50 hidden lg:block">
+    <nav className="fixed left-4 top-4 z-50 hidden lg:block">
       {/* Toggle Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="bg-card/80 backdrop-blur-lg border-2 border-border rounded-full p-3 shadow-xl hover:scale-105 transition-all duration-300 hover:bg-card"
+        className="bg-card border border-border rounded-2xl p-3 shadow-m3-2 hover:shadow-m3-3 transition-all duration-200 ease-m3-standard state-layer"
         aria-label="Toggle navigation menu"
       >
-        {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+        {isOpen ? <X className="w-5 h-5 text-foreground" /> : <Menu className="w-5 h-5 text-foreground" />}
       </button>
 
       {/* Menu Items */}
       <div 
-        className={`absolute left-0 top-16 transition-all duration-300 origin-top ${
+        className={`absolute left-0 top-14 transition-all duration-300 ease-m3-emphasized origin-top ${
           isOpen 
             ? 'opacity-100 scale-100 translate-y-0' 
-            : 'opacity-0 scale-95 -translate-y-4 pointer-events-none'
+            : 'opacity-0 scale-95 -translate-y-2 pointer-events-none'
         }`}
       >
-        <div className="bg-card/80 backdrop-blur-lg border-2 border-border rounded-3xl p-3 shadow-xl">
-          <ul className="flex flex-col gap-4">
+        <div className="bg-card border border-border rounded-2xl p-2 shadow-m3-3">
+          <ul className="flex flex-col gap-1">
             {navItems.map((item) => {
               const isActive = activeSection === item.href.substring(1);
               return (
@@ -81,15 +81,15 @@ export const FloatingNav = () => {
                       handleClick(e, item.href);
                       setIsOpen(false);
                     }}
-                    className={`group relative flex items-center justify-center w-12 h-12 rounded-full transition-all duration-300 ${
+                    className={`group relative flex items-center justify-center w-11 h-11 rounded-xl transition-all duration-200 ease-m3-standard ${
                       isActive
-                        ? 'bg-primary text-primary-foreground scale-110'
-                        : 'hover:bg-muted hover:scale-105'
+                        ? 'bg-primary text-primary-foreground'
+                        : 'hover:bg-secondary text-foreground'
                     }`}
                     title={item.label}
                   >
                     <item.icon className="w-5 h-5" />
-                    <span className="absolute left-full ml-4 px-3 py-1.5 bg-card border border-border rounded-lg text-sm font-medium whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
+                    <span className="absolute left-full ml-3 px-3 py-1.5 bg-card border border-border rounded-lg text-sm font-medium whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none shadow-m3-2">
                       {item.label}
                     </span>
                   </a>

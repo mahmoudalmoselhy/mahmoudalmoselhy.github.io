@@ -20,7 +20,7 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				'advercase': ['Advercase', 'sans-serif'],
+				'advercase': ['Advercase', 'system-ui', 'sans-serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
@@ -66,14 +66,30 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Custom gradient colors for enhanced light mode
-				'gradient-start': 'hsl(var(--gradient-start))',
-				'gradient-middle': 'hsl(var(--gradient-middle))',
-				'gradient-end': 'hsl(var(--gradient-end))',
-				'shadow-light': 'hsl(var(--shadow-light))',
-				'shadow-medium': 'hsl(var(--shadow-medium))'
+				// M3 Surface containers
+				surface: {
+					container: 'hsl(var(--surface-container))',
+					'container-low': 'hsl(var(--surface-container-low))',
+					'container-high': 'hsl(var(--surface-container-high))',
+					'container-highest': 'hsl(var(--surface-container-highest))',
+				},
+				// Tertiary color
+				tertiary: {
+					DEFAULT: 'hsl(var(--tertiary))',
+					foreground: 'hsl(var(--tertiary-foreground))'
+				},
+				// Status colors
+				success: {
+					DEFAULT: 'hsl(var(--success))',
+					foreground: 'hsl(var(--success-foreground))'
+				},
+				warning: {
+					DEFAULT: 'hsl(var(--warning))',
+					foreground: 'hsl(var(--warning-foreground))'
+				}
 			},
 			borderRadius: {
+				'4xl': '2rem',
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
 				sm: 'calc(var(--radius) - 4px)'
@@ -125,6 +141,26 @@ export default {
 					'100%': {
 						transform: 'translateX(calc(-6 * (8rem + 1rem)))'
 					}
+				},
+				'fade-in-up': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateY(16px)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateY(0)'
+					}
+				},
+				'scale-in': {
+					'0%': {
+						opacity: '0',
+						transform: 'scale(0.95)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'scale(1)'
+					}
 				}
 			},
 			animation: {
@@ -132,7 +168,19 @@ export default {
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'infinite-scroll': 'infinite-scroll 30s linear infinite',
 				'step-scroll': 'step-scroll 18s ease-in-out infinite',
-				'pause': 'none'
+				'fade-in-up': 'fade-in-up 0.5s cubic-bezier(0.2, 0, 0, 1) forwards',
+				'scale-in': 'scale-in 0.4s cubic-bezier(0.2, 0, 0, 1) forwards',
+			},
+			transitionTimingFunction: {
+				'm3-standard': 'cubic-bezier(0.2, 0, 0, 1)',
+				'm3-emphasized': 'cubic-bezier(0.2, 0, 0, 1)',
+				'm3-decelerate': 'cubic-bezier(0, 0, 0, 1)',
+				'm3-accelerate': 'cubic-bezier(0.3, 0, 1, 1)',
+			},
+			boxShadow: {
+				'm3-1': '0 1px 2px hsl(var(--foreground) / 0.05), 0 1px 3px hsl(var(--foreground) / 0.08)',
+				'm3-2': '0 2px 4px hsl(var(--foreground) / 0.05), 0 4px 8px hsl(var(--foreground) / 0.08)',
+				'm3-3': '0 4px 8px hsl(var(--foreground) / 0.05), 0 8px 16px hsl(var(--foreground) / 0.08)',
 			}
 		}
 	},
