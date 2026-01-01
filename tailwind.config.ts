@@ -86,7 +86,23 @@ export default {
 				warning: {
 					DEFAULT: 'hsl(var(--warning))',
 					foreground: 'hsl(var(--warning-foreground))'
-				}
+				},
+				// Colorful palette
+				rose: 'hsl(var(--color-rose))',
+				orange: 'hsl(var(--color-orange))',
+				amber: 'hsl(var(--color-amber))',
+				emerald: 'hsl(var(--color-emerald))',
+				teal: 'hsl(var(--color-teal))',
+				cyan: 'hsl(var(--color-cyan))',
+				blue: 'hsl(var(--color-blue))',
+				indigo: 'hsl(var(--color-indigo))',
+				violet: 'hsl(var(--color-violet))',
+				purple: 'hsl(var(--color-purple))',
+				pink: 'hsl(var(--color-pink))',
+				lime: 'hsl(var(--color-lime))',
+				// Gradient
+				'gradient-start': 'hsl(var(--gradient-start))',
+				'gradient-end': 'hsl(var(--gradient-end))'
 			},
 			borderRadius: {
 				'4xl': '2rem',

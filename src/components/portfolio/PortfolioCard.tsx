@@ -2,7 +2,7 @@
 import React from 'react';
 import { AspectRatio } from '../ui/aspect-ratio';
 import { Card, CardContent } from '../ui/card';
-import { Badge } from '../ui/badge';
+import { Badge, getColorVariant } from '../ui/badge';
 
 interface PortfolioCardProps {
   title: string;
@@ -71,7 +71,7 @@ export const PortfolioCard = ({ title, description, link, logo, thumbnail, clien
             {skills.length > 0 && (
               <div className="flex flex-wrap gap-2 mb-3 md:mb-4">
                 {skills.map((skill, idx) => (
-                  <Badge key={idx} variant="secondary">
+                  <Badge key={idx} variant={getColorVariant(skill, idx)}>
                     {skill}
                   </Badge>
                 ))}
