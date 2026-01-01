@@ -15,13 +15,13 @@ export const Portfolio = () => {
     "grid-cols-2 sm:grid-cols-3 lg:grid-cols-4", // Social Media Work: 4-column grid
   ];
 
-  // Color schemes for each section
+  // Color schemes for each section - diverse and vibrant
   const sectionColors = [
-    { border: 'border-violet/30', accent: 'text-violet' },
-    { border: 'border-blue/30', accent: 'text-blue' },
-    { border: 'border-emerald/30', accent: 'text-emerald' },
-    { border: 'border-orange/30', accent: 'text-orange' },
-    { border: 'border-pink/30', accent: 'text-pink' },
+    { border: 'border-rose/40', accent: 'text-rose', bg: 'from-rose/5 to-transparent' },
+    { border: 'border-blue/40', accent: 'text-blue', bg: 'from-blue/5 to-transparent' },
+    { border: 'border-orange/40', accent: 'text-orange', bg: 'from-orange/5 to-transparent' },
+    { border: 'border-violet/40', accent: 'text-violet', bg: 'from-violet/5 to-transparent' },
+    { border: 'border-pink/40', accent: 'text-pink', bg: 'from-pink/5 to-transparent' },
   ];
 
   return (
@@ -29,7 +29,7 @@ export const Portfolio = () => {
       {/* Main Portfolio Header */}
       <div className="text-center">
         <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-4">
-          Top <span className="bg-gradient-to-r from-violet via-blue to-emerald bg-clip-text text-transparent">Work</span>
+          Top <span className="bg-gradient-to-r from-rose via-violet to-blue bg-clip-text text-transparent">Work</span>
         </h2>
         <p className="text-muted-foreground text-sm md:text-base max-w-2xl mx-auto px-4">
           A showcase of my diverse content creation work across multiple platforms and industries
@@ -43,7 +43,7 @@ export const Portfolio = () => {
       {portfolioSections.map((section, sectionIndex) => {
         const colorScheme = sectionColors[sectionIndex % sectionColors.length];
         return (
-          <section key={sectionIndex} className={`bg-card rounded-3xl border ${colorScheme.border} p-6 md:p-10 shadow-m3-1`}>
+          <section key={sectionIndex} className={`bg-gradient-to-br ${colorScheme.bg} bg-card rounded-3xl border-2 ${colorScheme.border} p-6 md:p-10 shadow-m3-1`}>
             <div className="relative z-10">
               {sectionIndex === 0 && (
                 <div className="space-y-6 mb-8">
@@ -65,8 +65,8 @@ export const Portfolio = () => {
         );
       })}
 
-      {/* SEO Archives in its own frame with rose accent */}
-      <section className="bg-card rounded-3xl border border-rose/30 p-6 md:p-10 shadow-m3-1">
+      {/* SEO Archives in its own frame with amber accent */}
+      <section className="bg-gradient-to-br from-amber/5 to-transparent bg-card rounded-3xl border-2 border-amber/40 p-6 md:p-10 shadow-m3-1">
         <SEOArchives archives={seoArchives} />
       </section>
     </div>
