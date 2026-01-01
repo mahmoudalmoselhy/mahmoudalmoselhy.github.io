@@ -313,13 +313,13 @@ export const TiyeSolutionsSection = () => {
           onNavigate={setLightboxIndex} 
         />
       )}
-      <section className="bg-gradient-to-br from-card/50 via-card/30 to-[#BE1522]/5 backdrop-blur-lg rounded-3xl border p-8 md:p-12 relative overflow-hidden border-secondary">
+      <section className="bg-gradient-to-br from-[#BE1522]/5 via-card/50 to-orange/5 backdrop-blur-lg rounded-3xl border-2 border-[#BE1522]/40 p-8 md:p-12 relative overflow-hidden">
         {/* Colorful geometric pattern background */}
         <div className="absolute inset-0 opacity-[0.03] pointer-events-none">
           <div className="absolute inset-0 light-subtle-pattern"></div>
         </div>
-        <div className="absolute top-0 right-0 w-64 h-64 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 bg-secondary"></div>
-        <div className="absolute bottom-0 left-0 w-48 h-48 bg-[#BE1522]/5 rounded-full blur-2xl translate-y-1/2 -translate-x-1/2"></div>
+        <div className="absolute top-0 right-0 w-64 h-64 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 bg-[#BE1522]/10"></div>
+        <div className="absolute bottom-0 left-0 w-48 h-48 bg-orange/10 rounded-full blur-2xl translate-y-1/2 -translate-x-1/2"></div>
         
         <div className="relative z-10 space-y-8">
           {/* Section Title */}
