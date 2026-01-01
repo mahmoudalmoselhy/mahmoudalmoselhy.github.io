@@ -15,12 +15,21 @@ export const Portfolio = () => {
     "grid-cols-2 sm:grid-cols-3 lg:grid-cols-4", // Social Media Work: 4-column grid
   ];
 
+  // Color schemes for each section
+  const sectionColors = [
+    { border: 'border-violet/30', accent: 'text-violet' },
+    { border: 'border-blue/30', accent: 'text-blue' },
+    { border: 'border-emerald/30', accent: 'text-emerald' },
+    { border: 'border-orange/30', accent: 'text-orange' },
+    { border: 'border-pink/30', accent: 'text-pink' },
+  ];
+
   return (
     <div className="space-y-8 md:space-y-10">
       {/* Main Portfolio Header */}
       <div className="text-center">
         <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-4">
-          Top <span className="text-primary">Work</span>
+          Top <span className="bg-gradient-to-r from-violet via-blue to-emerald bg-clip-text text-transparent">Work</span>
         </h2>
         <p className="text-muted-foreground text-sm md:text-base max-w-2xl mx-auto px-4">
           A showcase of my diverse content creation work across multiple platforms and industries
@@ -30,31 +39,34 @@ export const Portfolio = () => {
       {/* Tiye Solutions Section - First */}
       <TiyeSolutionsSection />
 
-      {/* Each section in its own frame */}
-      {portfolioSections.map((section, sectionIndex) => (
-        <section key={sectionIndex} className="bg-card rounded-3xl border border-border p-6 md:p-10 shadow-m3-1">
-          <div className="relative z-10">
-            {sectionIndex === 0 && (
-              <div className="space-y-6 mb-8">
-                <div className="text-center px-4">
-                  <h3 className="text-xl md:text-2xl font-bold text-foreground mb-2">{section.title}</h3>
-                  <p className="text-muted-foreground text-sm md:text-base">{section.description}</p>
+      {/* Each section in its own frame with colorful borders */}
+      {portfolioSections.map((section, sectionIndex) => {
+        const colorScheme = sectionColors[sectionIndex % sectionColors.length];
+        return (
+          <section key={sectionIndex} className={`bg-card rounded-3xl border ${colorScheme.border} p-6 md:p-10 shadow-m3-1`}>
+            <div className="relative z-10">
+              {sectionIndex === 0 && (
+                <div className="space-y-6 mb-8">
+                  <div className="text-center px-4">
+                    <h3 className={`text-xl md:text-2xl font-bold text-foreground mb-2`}>{section.title}</h3>
+                    <p className="text-muted-foreground text-sm md:text-base">{section.description}</p>
+                  </div>
+                  <FeaturedWorkStack />
                 </div>
-                <FeaturedWorkStack />
-              </div>
-            )}
-            <PortfolioSection
-              title={sectionIndex === 0 ? "" : section.title}
-              description={sectionIndex === 0 ? "" : section.description}
-              items={section.items}
-              gridClassName={sectionGridLayouts[sectionIndex]}
-            />
-          </div>
-        </section>
-      ))}
+              )}
+              <PortfolioSection
+                title={sectionIndex === 0 ? "" : section.title}
+                description={sectionIndex === 0 ? "" : section.description}
+                items={section.items}
+                gridClassName={sectionGridLayouts[sectionIndex]}
+              />
+            </div>
+          </section>
+        );
+      })}
 
-      {/* SEO Archives in its own frame */}
-      <section className="bg-card rounded-3xl border border-border p-6 md:p-10 shadow-m3-1">
+      {/* SEO Archives in its own frame with rose accent */}
+      <section className="bg-card rounded-3xl border border-rose/30 p-6 md:p-10 shadow-m3-1">
         <SEOArchives archives={seoArchives} />
       </section>
     </div>

@@ -68,6 +68,24 @@
     --success-foreground: 0 0% 100%;
     --warning: 35 90% 50%;
     --warning-foreground: 35 90% 15%;
+    
+    /* Colorful Palette for Portfolio */
+    --color-rose: 350 89% 60%;
+    --color-orange: 25 95% 53%;
+    --color-amber: 38 92% 50%;
+    --color-emerald: 160 84% 39%;
+    --color-teal: 174 62% 40%;
+    --color-cyan: 192 91% 40%;
+    --color-blue: 217 91% 60%;
+    --color-indigo: 239 84% 67%;
+    --color-violet: 262 83% 58%;
+    --color-purple: 280 73% 55%;
+    --color-pink: 330 81% 60%;
+    --color-lime: 85 85% 35%;
+    
+    /* Gradient colors */
+    --gradient-start: 175 60% 40%;
+    --gradient-end: 195 80% 50%;
   }
 
   .dark {
@@ -121,6 +139,24 @@
     --success-foreground: 0 0% 100%;
     --warning: 35 85% 55%;
     --warning-foreground: 35 90% 15%;
+    
+    /* Colorful Palette for Portfolio - lighter for dark mode */
+    --color-rose: 350 89% 65%;
+    --color-orange: 25 95% 58%;
+    --color-amber: 38 92% 55%;
+    --color-emerald: 160 84% 45%;
+    --color-teal: 174 62% 48%;
+    --color-cyan: 192 91% 48%;
+    --color-blue: 217 91% 65%;
+    --color-indigo: 239 84% 72%;
+    --color-violet: 262 83% 68%;
+    --color-purple: 280 73% 62%;
+    --color-pink: 330 81% 65%;
+    --color-lime: 85 85% 42%;
+    
+    /* Gradient colors */
+    --gradient-start: 175 55% 55%;
+    --gradient-end: 195 75% 60%;
   }
 }
 

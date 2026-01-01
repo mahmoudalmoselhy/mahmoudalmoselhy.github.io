@@ -197,7 +197,7 @@ export const FeaturedWorkStack = () => {
                       {work.title}
                     </h3>
                     <div 
-                      className="bg-gradient-to-r from-gradient-start to-gradient-end rounded-full transition-all duration-1000 group-hover:w-32"
+                      className="bg-gradient-to-r from-violet via-blue to-emerald rounded-full transition-all duration-1000 group-hover:w-32"
                       style={{
                         width: isActive ? '64px' : `${Math.max(24, 64 - absOffset * 12)}px`,
                         height: isActive ? '6px' : `${Math.max(2, 6 - absOffset * 1.5)}px`,
@@ -217,7 +217,7 @@ export const FeaturedWorkStack = () => {
             type="button"
             onClick={handlePreviousClick}
             onTouchEnd={handlePreviousClick}
-            className="h-16 w-16 bg-background/95 backdrop-blur-md hover:bg-primary hover:text-primary-foreground border-2 border-primary/20 hover:border-primary shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 rounded-md flex items-center justify-center touch-manipulation active:scale-95"
+            className="h-16 w-16 bg-background/95 backdrop-blur-md hover:bg-violet hover:text-white border-2 border-violet/30 hover:border-violet shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 rounded-md flex items-center justify-center touch-manipulation active:scale-95"
             aria-label="Previous work"
             style={{ touchAction: 'manipulation' }}
           >
@@ -227,7 +227,7 @@ export const FeaturedWorkStack = () => {
             type="button"
             onClick={handleNextClick}
             onTouchEnd={handleNextClick}
-            className="h-16 w-16 bg-background/95 backdrop-blur-md hover:bg-primary hover:text-primary-foreground border-2 border-primary/20 hover:border-primary shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 rounded-md flex items-center justify-center touch-manipulation active:scale-95"
+            className="h-16 w-16 bg-background/95 backdrop-blur-md hover:bg-violet hover:text-white border-2 border-violet/30 hover:border-violet shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 rounded-md flex items-center justify-center touch-manipulation active:scale-95"
             aria-label="Next work"
             style={{ touchAction: 'manipulation' }}
           >
@@ -243,7 +243,7 @@ export const FeaturedWorkStack = () => {
             type="button"
             onClick={handlePreviousClick}
             onTouchEnd={handlePreviousClick}
-            className="h-14 w-14 bg-background/95 backdrop-blur-md hover:bg-primary hover:text-primary-foreground border-2 border-primary/20 hover:border-primary shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 rounded-md flex items-center justify-center touch-manipulation active:scale-95"
+            className="h-14 w-14 bg-background/95 backdrop-blur-md hover:bg-violet hover:text-white border-2 border-violet/30 hover:border-violet shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 rounded-md flex items-center justify-center touch-manipulation active:scale-95"
             aria-label="Previous work"
             style={{ touchAction: 'manipulation' }}
           >
@@ -253,7 +253,7 @@ export const FeaturedWorkStack = () => {
             type="button"
             onClick={handleNextClick}
             onTouchEnd={handleNextClick}
-            className="h-14 w-14 bg-background/95 backdrop-blur-md hover:bg-primary hover:text-primary-foreground border-2 border-primary/20 hover:border-primary shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 rounded-md flex items-center justify-center touch-manipulation active:scale-95"
+            className="h-14 w-14 bg-background/95 backdrop-blur-md hover:bg-violet hover:text-white border-2 border-violet/30 hover:border-violet shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 rounded-md flex items-center justify-center touch-manipulation active:scale-95"
             aria-label="Next work"
             style={{ touchAction: 'manipulation' }}
           >
