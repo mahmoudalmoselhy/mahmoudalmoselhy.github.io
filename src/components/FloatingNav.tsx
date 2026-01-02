@@ -71,8 +71,22 @@ export const FloatingNav = () => {
       >
         <div className="bg-card border border-border rounded-2xl p-2 shadow-m3-3">
           <ul className="flex flex-col gap-1">
-            {navItems.map((item) => {
+            {navItems.map((item, idx) => {
               const isActive = activeSection === item.href.substring(1);
+              const activeColors = [
+                'bg-rose text-white',
+                'bg-blue text-white',
+                'bg-violet text-white',
+                'bg-emerald text-white',
+                'bg-orange text-white',
+              ];
+              const hoverColors = [
+                'hover:bg-rose/15 hover:text-rose',
+                'hover:bg-blue/15 hover:text-blue',
+                'hover:bg-violet/15 hover:text-violet',
+                'hover:bg-emerald/15 hover:text-emerald',
+                'hover:bg-orange/15 hover:text-orange',
+              ];
               return (
                 <li key={item.href}>
                   <a
@@ -81,10 +95,10 @@ export const FloatingNav = () => {
                       handleClick(e, item.href);
                       setIsOpen(false);
                     }}
-                    className={`group relative flex items-center justify-center w-11 h-11 rounded-xl transition-all duration-200 ease-m3-standard ${
+                    className={`group relative flex items-center justify-center w-11 h-11 rounded-xl transition-all duration-300 ease-m3-standard ${
                       isActive
-                        ? 'bg-primary text-primary-foreground'
-                        : 'hover:bg-secondary text-foreground'
+                        ? activeColors[idx % activeColors.length]
+                        : `text-foreground ${hoverColors[idx % hoverColors.length]}`
                     }`}
                     title={item.label}
                   >

@@ -38,7 +38,7 @@ export const Hero = () => {
             <div className="flex flex-col space-y-3 lg:min-w-[240px] w-full lg:w-auto">
               <a 
                 href="#contact" 
-                className="m3-button m3-button-filled px-8 py-4 text-base font-medium"
+                className="m3-button m3-button-rose px-8 py-4 text-base font-medium"
               >
                 Get In Touch
               </a>
@@ -46,14 +46,14 @@ export const Hero = () => {
                 href="https://linkedin.com/in/mahmoudalmoselhy" 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="m3-button m3-button-tonal px-8 py-4 text-base font-medium"
+                className="m3-button m3-button-tonal-blue px-8 py-4 text-base font-medium"
               >
                 <Linkedin className="w-5 h-5" />
                 <span>LinkedIn</span>
               </a>
               <Link 
                 to="/cv" 
-                className="m3-button m3-button-outlined px-8 py-4 text-base font-medium"
+                className="m3-button m3-button-outlined-violet px-8 py-4 text-base font-medium"
               >
                 <FileText className="w-5 h-5" />
                 <span>View CV</span>
