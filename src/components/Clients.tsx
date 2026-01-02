@@ -55,7 +55,7 @@ export const Clients = () => {
                   </div>
                   
                   {/* Hover overlay with client name */}
-                  <div className="absolute inset-x-0 bottom-0 bg-card/95 p-1.5 transform translate-y-full group-hover:translate-y-0 transition-transform duration-200 ease-m3-standard rounded-b-xl border-t border-border">
+                  <div className="absolute inset-x-0 bottom-0 bg-card p-1.5 transform translate-y-full group-hover:translate-y-0 transition-transform duration-200 ease-m3-standard rounded-b-xl border-t border-border">
                     <p className="text-foreground text-xs font-medium text-center truncate">
                       {client.name}
                     </p>
@@ -79,7 +79,7 @@ export const Clients = () => {
                     />
                   </div>
                   
-                  <div className="absolute inset-x-0 bottom-0 bg-card/95 p-1.5 transform translate-y-full group-hover:translate-y-0 transition-transform duration-200 ease-m3-standard rounded-b-xl border-t border-border">
+                  <div className="absolute inset-x-0 bottom-0 bg-card p-1.5 transform translate-y-full group-hover:translate-y-0 transition-transform duration-200 ease-m3-standard rounded-b-xl border-t border-border">
                     <p className="text-foreground text-xs font-medium text-center truncate">
                       {client.name}
                     </p>
