@@ -217,7 +217,7 @@ export const FeaturedWorkStack = () => {
             type="button"
             onClick={handlePreviousClick}
             onTouchEnd={handlePreviousClick}
-            className="h-16 w-16 bg-background/95 backdrop-blur-md hover:bg-rose hover:text-white border-2 border-rose/30 hover:border-rose shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 rounded-md flex items-center justify-center touch-manipulation active:scale-95"
+            className="h-16 w-16 bg-card hover:bg-rose hover:text-white border-2 border-rose/30 hover:border-rose shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 rounded-md flex items-center justify-center touch-manipulation active:scale-95"
             aria-label="Previous work"
             style={{ touchAction: 'manipulation' }}
           >
@@ -227,7 +227,7 @@ export const FeaturedWorkStack = () => {
             type="button"
             onClick={handleNextClick}
             onTouchEnd={handleNextClick}
-            className="h-16 w-16 bg-background/95 backdrop-blur-md hover:bg-blue hover:text-white border-2 border-blue/30 hover:border-blue shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 rounded-md flex items-center justify-center touch-manipulation active:scale-95"
+            className="h-16 w-16 bg-card hover:bg-blue hover:text-white border-2 border-blue/30 hover:border-blue shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 rounded-md flex items-center justify-center touch-manipulation active:scale-95"
             aria-label="Next work"
             style={{ touchAction: 'manipulation' }}
           >
@@ -243,7 +243,7 @@ export const FeaturedWorkStack = () => {
             type="button"
             onClick={handlePreviousClick}
             onTouchEnd={handlePreviousClick}
-            className="h-14 w-14 bg-background/95 backdrop-blur-md hover:bg-rose hover:text-white border-2 border-rose/30 hover:border-rose shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 rounded-md flex items-center justify-center touch-manipulation active:scale-95"
+            className="h-14 w-14 bg-card hover:bg-rose hover:text-white border-2 border-rose/30 hover:border-rose shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 rounded-md flex items-center justify-center touch-manipulation active:scale-95"
             aria-label="Previous work"
             style={{ touchAction: 'manipulation' }}
           >
@@ -253,7 +253,7 @@ export const FeaturedWorkStack = () => {
             type="button"
             onClick={handleNextClick}
             onTouchEnd={handleNextClick}
-            className="h-14 w-14 bg-background/95 backdrop-blur-md hover:bg-blue hover:text-white border-2 border-blue/30 hover:border-blue shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 rounded-md flex items-center justify-center touch-manipulation active:scale-95"
+            className="h-14 w-14 bg-card hover:bg-blue hover:text-white border-2 border-blue/30 hover:border-blue shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 rounded-md flex items-center justify-center touch-manipulation active:scale-95"
             aria-label="Next work"
             style={{ touchAction: 'manipulation' }}
           >

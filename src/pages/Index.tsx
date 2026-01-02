@@ -25,19 +25,19 @@ const Index = () => {
       </div>
       <FloatingNav />
       <div className="max-w-6xl mx-auto space-y-10 md:space-y-14 px-4 md:px-6 py-8">
-        <div id="home">
+        <div id="home" className="rounded-3xl bg-gradient-to-br from-rose/10 via-pink/5 to-transparent p-1">
           <Hero />
         </div>
-        <div id="about">
+        <div id="about" className="rounded-3xl bg-gradient-to-br from-blue/10 via-cyan/5 to-transparent p-1">
           <About />
         </div>
-        <div id="portfolio">
+        <div id="portfolio" className="rounded-3xl bg-gradient-to-br from-violet/10 via-purple/5 to-transparent p-1">
           <Portfolio />
         </div>
-        <div id="clients">
+        <div id="clients" className="rounded-3xl bg-gradient-to-br from-emerald/10 via-teal/5 to-transparent p-1">
           <Clients />
         </div>
-        <div id="contact">
+        <div id="contact" className="rounded-3xl bg-gradient-to-br from-orange/10 via-amber/5 to-transparent p-1">
           <Contact />
         </div>
       </div>

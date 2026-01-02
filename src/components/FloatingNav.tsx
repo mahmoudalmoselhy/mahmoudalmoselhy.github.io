@@ -55,7 +55,7 @@ export const FloatingNav = () => {
       {/* Toggle Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="bg-card border border-border rounded-2xl p-3 shadow-m3-2 hover:shadow-m3-3 transition-all duration-200 ease-m3-standard state-layer"
+        className="bg-card border border-border rounded-2xl p-3 shadow-m3-2 hover:shadow-m3-3 transition-all duration-200 ease-m3-standard"
         aria-label="Toggle navigation menu"
       >
         {isOpen ? <X className="w-5 h-5 text-foreground" /> : <Menu className="w-5 h-5 text-foreground" />}
