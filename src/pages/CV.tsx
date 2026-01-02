@@ -14,7 +14,7 @@ const CV = () => {
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <Link to="/">
-              <Button variant="ghost" size="sm" className="gap-2">
+              <Button variant="tonal-violet" size="sm" className="gap-2">
                 <ArrowLeft className="w-4 h-4" />
                 Back to Portfolio
               </Button>

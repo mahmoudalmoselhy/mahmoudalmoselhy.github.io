@@ -256,7 +256,7 @@
   border-radius: var(--radius);
 }
 
-/* M3 Button Styles */
+/* M3 Button Styles - Colorful with hover transitions */
 .m3-button {
   display: inline-flex;
   align-items: center;
@@ -265,62 +265,221 @@
   padding: 0.75rem 1.5rem;
   border-radius: 9999px;
   font-weight: 500;
-  transition: all 0.2s cubic-bezier(0.2, 0, 0, 1);
+  transition: all 0.3s cubic-bezier(0.2, 0, 0, 1);
   position: relative;
   overflow: hidden;
 }
 
-.m3-button::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  opacity: 0;
-  transition: opacity 0.2s ease;
-  pointer-events: none;
+/* Rose Button - Hover to Pink */
+.m3-button-rose {
+  background-color: hsl(var(--color-rose));
+  color: white;
 }
 
+.m3-button-rose:hover {
+  background-color: hsl(var(--color-pink));
+  box-shadow: 0 4px 16px hsl(var(--color-pink) / 0.4);
+  transform: translateY(-2px);
+}
+
+/* Violet Button - Hover to Indigo */
+.m3-button-violet {
+  background-color: hsl(var(--color-violet));
+  color: white;
+}
+
+.m3-button-violet:hover {
+  background-color: hsl(var(--color-indigo));
+  box-shadow: 0 4px 16px hsl(var(--color-indigo) / 0.4);
+  transform: translateY(-2px);
+}
+
+/* Blue Button - Hover to Cyan */
+.m3-button-blue {
+  background-color: hsl(var(--color-blue));
+  color: white;
+}
+
+.m3-button-blue:hover {
+  background-color: hsl(var(--color-cyan));
+  box-shadow: 0 4px 16px hsl(var(--color-cyan) / 0.4);
+  transform: translateY(-2px);
+}
+
+/* Orange Button - Hover to Amber */
+.m3-button-orange {
+  background-color: hsl(var(--color-orange));
+  color: white;
+}
+
+.m3-button-orange:hover {
+  background-color: hsl(var(--color-amber));
+  box-shadow: 0 4px 16px hsl(var(--color-amber) / 0.4);
+  transform: translateY(-2px);
+}
+
+/* Emerald Button - Hover to Teal */
+.m3-button-emerald {
+  background-color: hsl(var(--color-emerald));
+  color: white;
+}
+
+.m3-button-emerald:hover {
+  background-color: hsl(var(--color-teal));
+  box-shadow: 0 4px 16px hsl(var(--color-teal) / 0.4);
+  transform: translateY(-2px);
+}
+
+/* Pink Button - Hover to Purple */
+.m3-button-pink {
+  background-color: hsl(var(--color-pink));
+  color: white;
+}
+
+.m3-button-pink:hover {
+  background-color: hsl(var(--color-purple));
+  box-shadow: 0 4px 16px hsl(var(--color-purple) / 0.4);
+  transform: translateY(-2px);
+}
+
+/* Teal Button - Hover to Emerald */
+.m3-button-teal {
+  background-color: hsl(var(--color-teal));
+  color: white;
+}
+
+.m3-button-teal:hover {
+  background-color: hsl(var(--color-emerald));
+  box-shadow: 0 4px 16px hsl(var(--color-emerald) / 0.4);
+  transform: translateY(-2px);
+}
+
+/* Indigo Button - Hover to Violet */
+.m3-button-indigo {
+  background-color: hsl(var(--color-indigo));
+  color: white;
+}
+
+.m3-button-indigo:hover {
+  background-color: hsl(var(--color-violet));
+  box-shadow: 0 4px 16px hsl(var(--color-violet) / 0.4);
+  transform: translateY(-2px);
+}
+
+/* Tonal Variants - Soft backgrounds with color hover */
+.m3-button-tonal-rose {
+  background-color: hsl(var(--color-rose) / 0.12);
+  color: hsl(var(--color-rose));
+}
+
+.m3-button-tonal-rose:hover {
+  background-color: hsl(var(--color-rose));
+  color: white;
+  box-shadow: 0 4px 16px hsl(var(--color-rose) / 0.3);
+  transform: translateY(-2px);
+}
+
+.m3-button-tonal-blue {
+  background-color: hsl(var(--color-blue) / 0.12);
+  color: hsl(var(--color-blue));
+}
+
+.m3-button-tonal-blue:hover {
+  background-color: hsl(var(--color-blue));
+  color: white;
+  box-shadow: 0 4px 16px hsl(var(--color-blue) / 0.3);
+  transform: translateY(-2px);
+}
+
+.m3-button-tonal-violet {
+  background-color: hsl(var(--color-violet) / 0.12);
+  color: hsl(var(--color-violet));
+}
+
+.m3-button-tonal-violet:hover {
+  background-color: hsl(var(--color-violet));
+  color: white;
+  box-shadow: 0 4px 16px hsl(var(--color-violet) / 0.3);
+  transform: translateY(-2px);
+}
+
+/* Outlined Variants - Border with fill on hover */
+.m3-button-outlined-rose {
+  background-color: transparent;
+  border: 2px solid hsl(var(--color-rose));
+  color: hsl(var(--color-rose));
+}
+
+.m3-button-outlined-rose:hover {
+  background-color: hsl(var(--color-rose));
+  color: white;
+  box-shadow: 0 4px 16px hsl(var(--color-rose) / 0.3);
+  transform: translateY(-2px);
+}
+
+.m3-button-outlined-blue {
+  background-color: transparent;
+  border: 2px solid hsl(var(--color-blue));
+  color: hsl(var(--color-blue));
+}
+
+.m3-button-outlined-blue:hover {
+  background-color: hsl(var(--color-blue));
+  color: white;
+  box-shadow: 0 4px 16px hsl(var(--color-blue) / 0.3);
+  transform: translateY(-2px);
+}
+
+.m3-button-outlined-violet {
+  background-color: transparent;
+  border: 2px solid hsl(var(--color-violet));
+  color: hsl(var(--color-violet));
+}
+
+.m3-button-outlined-violet:hover {
+  background-color: hsl(var(--color-violet));
+  color: white;
+  box-shadow: 0 4px 16px hsl(var(--color-violet) / 0.3);
+  transform: translateY(-2px);
+}
+
+/* Legacy filled button - now uses rose */
 .m3-button-filled {
-  background-color: hsl(var(--primary));
-  color: hsl(var(--primary-foreground));
-}
-
-.m3-button-filled::before {
-  background-color: hsl(var(--primary-foreground));
-}
-
-.m3-button-filled:hover::before {
-  opacity: 0.08;
+  background-color: hsl(var(--color-rose));
+  color: white;
 }
 
 .m3-button-filled:hover {
-  box-shadow: 0 2px 8px hsl(var(--primary) / 0.3);
+  background-color: hsl(var(--color-pink));
+  box-shadow: 0 4px 16px hsl(var(--color-pink) / 0.4);
+  transform: translateY(-2px);
 }
 
+/* Legacy tonal button - now uses blue */
 .m3-button-tonal {
-  background-color: hsl(var(--accent));
-  color: hsl(var(--primary));
+  background-color: hsl(var(--color-blue) / 0.12);
+  color: hsl(var(--color-blue));
 }
 
-.m3-button-tonal::before {
-  background-color: hsl(var(--primary));
+.m3-button-tonal:hover {
+  background-color: hsl(var(--color-blue));
+  color: white;
+  box-shadow: 0 4px 16px hsl(var(--color-blue) / 0.3);
+  transform: translateY(-2px);
 }
 
-.m3-button-tonal:hover::before {
-  opacity: 0.08;
-}
-
+/* Legacy outlined button - now uses violet */
 .m3-button-outlined {
   background-color: transparent;
-  border: 1px solid hsl(var(--border));
-  color: hsl(var(--primary));
+  border: 2px solid hsl(var(--color-violet));
+  color: hsl(var(--color-violet));
 }
 
-.m3-button-outlined::before {
-  background-color: hsl(var(--primary));
-}
-
-.m3-button-outlined:hover::before {
-  opacity: 0.08;
+.m3-button-outlined:hover {
+  background-color: hsl(var(--color-violet));
+  color: white;
+  box-shadow: 0 4px 16px hsl(var(--color-violet) / 0.3);
+  transform: translateY(-2px);
 }
 
 /* M3 Text accent - no gradient, solid color */

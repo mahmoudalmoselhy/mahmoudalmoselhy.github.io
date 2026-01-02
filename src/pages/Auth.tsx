@@ -93,7 +93,7 @@ const Auth = () => {
             />
           </div>
 
-          <Button type="submit" className="w-full" disabled={loading}>
+          <Button type="submit" variant="violet" className="w-full" disabled={loading}>
             {loading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
             {isLogin ? 'Sign In' : 'Sign Up'}
           </Button>
@@ -104,7 +104,7 @@ const Auth = () => {
           <button
             type="button"
             onClick={() => setIsLogin(!isLogin)}
-            className="text-primary hover:underline"
+            className="text-rose hover:text-pink transition-colors font-medium hover:underline"
           >
             {isLogin ? 'Sign up' : 'Sign in'}
           </button>
