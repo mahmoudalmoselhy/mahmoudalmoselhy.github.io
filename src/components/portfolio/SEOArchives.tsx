@@ -22,46 +22,36 @@ export const SEOArchives = ({ archives }: SEOArchivesProps) => {
       </div>
       
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 max-w-4xl mx-auto">
-        {archives.map((archive, archiveIndex) => {
-          const colors = [
-            { bg: 'bg-rose/10', border: 'border-rose/30 hover:border-rose', text: 'group-hover:text-rose' },
-            { bg: 'bg-blue/10', border: 'border-blue/30 hover:border-blue', text: 'group-hover:text-blue' },
-            { bg: 'bg-emerald/10', border: 'border-emerald/30 hover:border-emerald', text: 'group-hover:text-emerald' },
-            { bg: 'bg-violet/10', border: 'border-violet/30 hover:border-violet', text: 'group-hover:text-violet' },
-          ];
-          const color = colors[archiveIndex % colors.length];
-          
-          return (
-            <a
-              key={archiveIndex}
-              href={archive.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`group ${color.bg} backdrop-blur-lg border ${color.border} rounded-3xl p-6 md:p-8 cursor-pointer transform hover:scale-105 transition-all duration-300`}
-            >
-              <div className="w-16 h-16 md:w-20 md:h-20 bg-card rounded-full flex items-center justify-center mb-4 md:mb-6 group-hover:scale-110 transition-transform duration-500 p-3 mx-auto border border-border">
-                <img
-                  src={archive.logo}
-                  alt={archive.title}
-                  className="w-full h-full object-contain"
-                />
-              </div>
-              
-              <h4 className={`text-lg md:text-xl font-semibold text-foreground mb-3 md:mb-4 ${color.text} transition-all duration-500 text-center`}>
-                {archive.title}
-              </h4>
-              
-              <p className="text-muted-foreground text-sm md:text-base leading-relaxed mb-4 md:mb-6 text-center transition-colors duration-500">
-                {archive.description}
-              </p>
-              
-              <div className={`flex items-center justify-center text-foreground text-sm md:text-base font-medium ${color.text} transition-all duration-500`}>
-                <span>View Archive</span>
-                <ExternalLink className="w-4 h-4 md:w-5 md:h-5 ml-2 group-hover:translate-x-1 group-hover:scale-110 transition-all duration-500" />
-              </div>
-            </a>
-          );
-        })}
+        {archives.map((archive, archiveIndex) => (
+          <a
+            key={archiveIndex}
+            href={archive.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group bg-card/30 backdrop-blur-lg border border-border hover:border-accent rounded-3xl p-6 md:p-8 cursor-pointer transform hover:scale-105 transition-all duration-300"
+          >
+            <div className="w-16 h-16 md:w-20 md:h-20 liquid-button rounded-full flex items-center justify-center mb-4 md:mb-6 group-hover:scale-110 transition-transform duration-500 p-3 mx-auto">
+              <img
+                src={archive.logo}
+                alt={archive.title}
+                className="w-full h-full object-contain"
+              />
+            </div>
+            
+            <h4 className="text-lg md:text-xl font-semibold text-foreground mb-3 md:mb-4 group-hover:text-primary transition-all duration-500 text-center">
+              {archive.title}
+            </h4>
+            
+            <p className="text-muted-foreground text-sm md:text-base leading-relaxed mb-4 md:mb-6 text-center transition-colors duration-500">
+              {archive.description}
+            </p>
+            
+            <div className="flex items-center justify-center text-accent-foreground text-sm md:text-base font-medium group-hover:text-primary transition-all duration-500">
+              <span>View Archive</span>
+              <ExternalLink className="w-4 h-4 md:w-5 md:h-5 ml-2 group-hover:translate-x-1 group-hover:scale-110 transition-all duration-500" />
+            </div>
+          </a>
+        ))}
       </div>
     </div>
   );

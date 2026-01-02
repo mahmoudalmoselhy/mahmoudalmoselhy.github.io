@@ -10,11 +10,11 @@ const CV = () => {
   return (
     <div className="min-h-screen">
       {/* Navigation Header */}
-      <header className="sticky top-0 z-50 bg-background border-b border-border">
+      <header className="sticky top-0 z-50 bg-background/20 backdrop-blur-lg border-b border-border">
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <Link to="/">
-              <Button variant="tonal-violet" size="sm" className="gap-2">
+              <Button variant="ghost" size="sm" className="gap-2">
                 <ArrowLeft className="w-4 h-4" />
                 Back to Portfolio
               </Button>

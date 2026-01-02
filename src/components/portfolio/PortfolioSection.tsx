@@ -140,13 +140,9 @@ React.useEffect(() => {
         {title === 'Social Media Work' && clientNames.length > 1 ? <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
             <div className="w-full mb-8">
               <TabsList className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 bg-transparent p-0 w-full h-auto">
-                {clientNames.map((clientName, idx) => {
-                  const colors = ['from-rose to-pink', 'from-orange to-amber', 'from-emerald to-teal', 'from-blue to-cyan', 'from-violet to-purple'];
-                  const bgColor = colors[idx % colors.length];
-                  return <TabsTrigger key={clientName} value={clientName} className={`text-xs sm:text-sm md:text-base font-semibold px-4 md:px-6 py-3 md:py-3.5 rounded-2xl bg-card border-2 border-border/50 data-[state=active]:bg-gradient-to-br data-[state=active]:${bgColor} data-[state=active]:text-white data-[state=active]:border-transparent data-[state=active]:shadow-xl hover:border-violet/50 hover:shadow-md transition-all duration-300 whitespace-nowrap text-center`}>
+                {clientNames.map(clientName => <TabsTrigger key={clientName} value={clientName} className="text-xs sm:text-sm md:text-base font-semibold px-4 md:px-6 py-3 md:py-3.5 rounded-2xl bg-card border-2 border-border/50 data-[state=active]:bg-gradient-to-br data-[state=active]:from-primary data-[state=active]:to-primary/80 data-[state=active]:text-primary-foreground data-[state=active]:border-primary data-[state=active]:shadow-xl data-[state=active]:shadow-primary/20 hover:border-primary/50 hover:shadow-md transition-all duration-300 whitespace-nowrap text-center">
                     {clientName}
-                  </TabsTrigger>;
-                })}
+                  </TabsTrigger>)}
               </TabsList>
             </div>
 
@@ -184,19 +180,16 @@ React.useEffect(() => {
                 </TabsContent>;
         })}
           </Tabs> : <div className={`grid ${gridCols} gap-4 md:gap-6`}>
-          {title === 'Android World Articles' ? <>
+            {title === 'Android World Articles' ? <>
                 {nonPlaylistItems.map((item, itemIndex) => <a key={`awa-${itemIndex}-${item.title}`} href={item.link} target="_blank" rel="noopener noreferrer" className="group block overflow-hidden rounded-2xl border border-border bg-card hover:shadow-md transition-shadow duration-300">
                     <div className="relative w-full aspect-[16/9] overflow-hidden">
                       <img src={item.thumbnail || item.logo} alt={`${item.title} thumbnail`} loading="lazy" width={800} height={450} className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.02]" />
                     </div>
                     <div className="p-4">
                       <div className="flex flex-wrap gap-2 mb-2">
-                        {(item.skills || []).map((tag, i) => {
-                          const colors = ['bg-rose/15 text-rose', 'bg-orange/15 text-orange', 'bg-emerald/15 text-emerald', 'bg-blue/15 text-blue', 'bg-violet/15 text-violet', 'bg-pink/15 text-pink'];
-                          return <span key={i} className={`text-[10px] md:text-xs px-2 py-1 rounded-full font-medium ${colors[i % colors.length]}`}>
+                        {(item.skills || []).map((tag, i) => <span key={i} className="text-[10px] md:text-xs px-2 py-1 bg-muted text-muted-foreground rounded-full">
                             {tag}
-                          </span>;
-                        })}
+                          </span>)}
                       </div>
                       <h3 className="text-sm md:text-base font-semibold mb-1 text-foreground line-clamp-2">{item.title}</h3>
                       <p className="text-xs md:text-sm text-muted-foreground line-clamp-3">{item.description}</p>

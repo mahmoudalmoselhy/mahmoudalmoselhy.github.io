@@ -18,7 +18,7 @@ export const ImagePostEmbed = ({
   logo,
 }: ImagePostEmbedProps) => {
   return (
-    <div className="group flex flex-col overflow-hidden rounded-2xl border border-border bg-card hover:shadow-xl hover:border-blue/50 transition-all duration-300">
+    <div className="group flex flex-col overflow-hidden rounded-2xl border border-border bg-card hover:shadow-xl transition-all duration-300">
       {/* Image Container */}
       <div className="relative w-full aspect-[3/4] overflow-hidden">
         <img
@@ -33,10 +33,10 @@ export const ImagePostEmbed = ({
       </div>
 
       {/* Content Container */}
-      <div className="p-4 md:p-5 space-y-3 bg-gradient-to-br from-card to-blue/5">
+      <div className="p-4 md:p-5 space-y-3 bg-gradient-to-br from-card to-muted/20">
         {/* Logo and Title */}
         <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-xl flex items-center justify-center p-2 bg-blue/10 border border-blue/20 flex-shrink-0">
+          <div className="w-10 h-10 rounded-xl flex items-center justify-center p-2 bg-gradient-to-br from-primary/10 to-primary/5 border border-primary/20 flex-shrink-0">
             <img
               src={logo}
               alt={title}
