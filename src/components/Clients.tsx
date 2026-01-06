@@ -82,78 +82,35 @@ export const Clients = () => {
       
       <section className="bg-card/30 backdrop-blur-lg rounded-3xl border border-border p-8 md:p-12">
         <div className="container mx-auto max-w-5xl">
-          {/* Infinite scrolling slider */}
-          <div className="overflow-hidden relative">
-            <div className="flex animate-step-scroll">
-              {/* First set of clients */}
-              {clients.map((client, index) => (
-                <div
-                  key={`first-${index}`}
-                  className="group relative bg-card/30 backdrop-blur-sm rounded-lg md:rounded-xl p-2 md:p-3 hover:bg-card/50 transition-all duration-300 hover:scale-105 hover:shadow-lg border border-border hover:border-accent flex-shrink-0 w-32 md:w-40 h-24 md:h-32 mx-2 flex items-center justify-center overflow-hidden"
-                >
-                  {/* Subtle animated background glow */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-accent/10 via-transparent to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg md:rounded-xl"></div>
-                  
-                  {/* Logo container */}
-                  <div className="relative z-10 w-full h-full flex items-center justify-center p-1">
-                    <img
-                      src={client.logo}
-                      alt={client.name}
-                      loading="lazy"
-                      width={160}
-                      height={128}
-                      className="max-w-full max-h-full object-contain filter brightness-90 group-hover:brightness-110 transition-all duration-300"
-                    />
-                  </div>
-                  
-                  {/* Hover overlay with client name */}
-                  <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-background/90 via-background/60 to-transparent p-1.5 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 rounded-b-lg md:rounded-b-xl">
-                    <p className="text-foreground text-xs font-medium text-center truncate">
-                      {client.name}
-                    </p>
-                  </div>
-                </div>
-              ))}
-              {/* Second set of clients for seamless loop */}
-              {clients.map((client, index) => (
-                <div
-                  key={`second-${index}`}
-                  className="group relative bg-card/30 backdrop-blur-sm rounded-lg md:rounded-xl p-2 md:p-3 hover:bg-card/50 transition-all duration-300 hover:scale-105 hover:shadow-lg border border-border hover:border-accent flex-shrink-0 w-32 md:w-40 h-24 md:h-32 mx-2 flex items-center justify-center overflow-hidden"
-                >
-                  {/* Subtle animated background glow */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-accent/10 via-transparent to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg md:rounded-xl"></div>
-                  
-                  {/* Logo container */}
-                  <div className="relative z-10 w-full h-full flex items-center justify-center p-1">
-                    <img
-                      src={client.logo}
-                      alt={client.name}
-                      loading="lazy"
-                      width={160}
-                      height={128}
-                      className="max-w-full max-h-full object-contain filter brightness-90 group-hover:brightness-110 transition-all duration-300"
-                    />
-                  </div>
-                  
-                  {/* Hover overlay with client name */}
-                  <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-background/90 via-background/60 to-transparent p-1.5 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 rounded-b-lg md:rounded-b-xl">
-                    <p className="text-foreground text-xs font-medium text-center truncate">
-                      {client.name}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-          
-          {/* Decorative elements */}
-          <div className="flex justify-center mt-4 md:mt-6 space-x-1">
-            {[...Array(5)].map((_, i) => (
+          {/* Grid layout */}
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 md:gap-6">
+            {clients.map((client, index) => (
               <div
-                key={i}
-                className={`w-1 h-1 rounded-full bg-gradient-to-r from-gradient-start to-gradient-end animate-pulse`}
-                style={{ animationDelay: `${i * 200}ms` }}
-              ></div>
+                key={index}
+                className="group relative bg-card/30 backdrop-blur-sm rounded-lg md:rounded-xl p-4 md:p-6 hover:bg-card/50 transition-all duration-300 border border-border hover:border-accent flex items-center justify-center aspect-square overflow-hidden"
+              >
+                {/* Subtle animated background glow */}
+                <div className="absolute inset-0 bg-gradient-to-br from-accent/10 via-transparent to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg md:rounded-xl"></div>
+                
+                {/* Logo container */}
+                <div className="relative z-10 w-full h-full flex items-center justify-center p-2">
+                  <img
+                    src={client.logo}
+                    alt={client.name}
+                    loading="lazy"
+                    width={160}
+                    height={128}
+                    className="max-w-full max-h-full object-contain filter brightness-90 group-hover:brightness-110 group-hover:scale-110 transition-all duration-300"
+                  />
+                </div>
+                
+                {/* Hover overlay with client name */}
+                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-background/90 via-background/60 to-transparent p-2 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 rounded-b-lg md:rounded-b-xl">
+                  <p className="text-foreground text-xs md:text-sm font-medium text-center truncate">
+                    {client.name}
+                  </p>
+                </div>
+              </div>
             ))}
           </div>
         </div>
