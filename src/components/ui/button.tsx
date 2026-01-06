@@ -9,16 +9,16 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-foreground text-primary-foreground shadow-md hover:bg-primary-foreground hover:text-foreground hover:shadow-lg",
+        default: "bg-gradient-to-r from-[hsl(175,85%,50%)] via-[hsl(200,90%,55%)] to-[hsl(280,85%,65%)] text-primary-foreground shadow-md hover:from-[hsl(185,90%,55%)] hover:via-[hsl(280,85%,65%)] hover:to-[hsl(320,90%,60%)] hover:shadow-[0_0_25px_hsl(175,85%,50%,0.5)] hover:scale-105",
         outline:
-          "border-2 border-primary-foreground bg-transparent text-primary-foreground hover:bg-primary-foreground hover:text-foreground",
-        glow: "bg-primary-foreground text-foreground hover:shadow-[0_0_20px_hsl(var(--primary-foreground))] hover:scale-105",
+          "border-2 border-[hsl(175,85%,50%)] bg-transparent text-[hsl(175,85%,50%)] hover:bg-gradient-to-r hover:from-[hsl(175,85%,50%)] hover:to-[hsl(200,90%,55%)] hover:text-primary-foreground hover:border-transparent hover:shadow-[0_0_20px_hsl(175,85%,50%,0.4)]",
+        glow: "bg-gradient-to-r from-[hsl(175,85%,50%)] to-[hsl(200,90%,55%)] text-primary-foreground hover:from-[hsl(200,90%,55%)] hover:to-[hsl(280,85%,65%)] hover:shadow-[0_0_30px_hsl(200,90%,55%,0.6)] hover:scale-105",
         destructive:
-          "bg-destructive text-destructive-foreground hover:bg-destructive/90",
+          "bg-destructive text-destructive-foreground hover:bg-destructive/90 hover:shadow-[0_0_15px_hsl(0,62.8%,50%,0.5)]",
         secondary:
-          "bg-secondary text-secondary-foreground hover:bg-secondary/80",
-        ghost: "hover:bg-accent hover:text-accent-foreground",
-        link: "text-primary underline-offset-4 hover:underline",
+          "bg-secondary text-secondary-foreground hover:bg-gradient-to-r hover:from-[hsl(175,85%,50%,0.2)] hover:to-[hsl(280,85%,65%,0.2)] hover:text-[hsl(175,85%,50%)]",
+        ghost: "hover:bg-gradient-to-r hover:from-[hsl(175,85%,50%,0.1)] hover:to-[hsl(200,90%,55%,0.1)] hover:text-[hsl(175,85%,50%)]",
+        link: "text-[hsl(175,85%,50%)] underline-offset-4 hover:underline hover:text-[hsl(200,90%,55%)]",
       },
       size: {
         default: "h-auto px-8 py-3",
