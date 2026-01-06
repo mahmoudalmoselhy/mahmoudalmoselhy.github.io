@@ -18,14 +18,14 @@ export const Hero = () => {
               <p className="text-lg text-muted-foreground mb-4 font-light md:text-5xl">Content and SEO Specialist</p>
               
               <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start space-y-4 sm:space-y-0 sm:space-x-6 text-muted-foreground mb-6">
-                <div className="flex items-center space-x-2">
+                <a href="mailto:mahmoudalmoselhy@gmail.com" className="flex items-center space-x-2 hover:text-primary transition-colors">
                   <AtSign className="w-5 h-5 text-primary" />
                   <span className="text-sm md:text-base">mahmoudalmoselhy@gmail.com</span>
-                </div>
-                <div className="flex items-center space-x-2">
+                </a>
+                <a href="tel:+201001321331" className="flex items-center space-x-2 hover:text-primary transition-colors">
                   <Smartphone className="w-5 h-5 text-primary" />
                   <span className="text-sm md:text-base">+201001321331</span>
-                </div>
+                </a>
               </div>
               
               <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto lg:mx-0 leading-relaxed">
