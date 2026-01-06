@@ -1,8 +1,68 @@
 
-import React from 'react';
-import { Mail, Phone, MapPin, Linkedin, ExternalLink, MessageCircle } from 'lucide-react';
+import React, { useState } from 'react';
+import { Mail, Phone, MapPin, Linkedin, ExternalLink, MessageCircle, Send } from 'lucide-react';
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { z } from 'zod';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+import { useToast } from '@/hooks/use-toast';
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from '@/components/ui/form';
+
+const contactFormSchema = z.object({
+  name: z.string().trim().min(2, { message: "Name must be at least 2 characters" }).max(100),
+  email: z.string().trim().email({ message: "Please enter a valid email" }).max(255),
+  phone: z.string().trim().min(8, { message: "Please enter a valid phone number" }).max(20),
+  countryCode: z.string().trim().min(1, { message: "Required" }).max(5),
+  message: z.string().trim().min(10, { message: "Message must be at least 10 characters" }).max(1000),
+});
+
+type ContactFormValues = z.infer<typeof contactFormSchema>;
 
 export const Contact = () => {
+  const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const form = useForm<ContactFormValues>({
+    resolver: zodResolver(contactFormSchema),
+    defaultValues: {
+      name: '',
+      email: '',
+      phone: '',
+      countryCode: '+20',
+      message: '',
+    },
+  });
+
+  const onSubmit = async (data: ContactFormValues) => {
+    setIsSubmitting(true);
+    try {
+      // For now, just show success - can integrate with backend later
+      console.log('Form submitted:', data);
+      toast({
+        title: "Message sent!",
+        description: "Thank you for reaching out. I'll get back to you soon.",
+      });
+      form.reset();
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Something went wrong. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <div>
       <div className="text-center mb-8">
@@ -16,9 +76,129 @@ export const Contact = () => {
       
       <section id="contact" className="bg-card/30 backdrop-blur-lg rounded-3xl border border-border p-8 md:p-12">
         <div className="container mx-auto max-w-6xl">
-          <div className="max-w-4xl mx-auto px-2">
+          <div className="max-w-5xl mx-auto px-2">
             <div className="bg-card/50 backdrop-blur-lg rounded-2xl md:rounded-3xl p-4 md:p-12 hover:bg-card/70 transition-all duration-500 border border-border">
-              <div className="grid md:grid-cols-2 gap-6 md:gap-12">
+              <div className="grid md:grid-cols-2 gap-8 md:gap-12">
+                {/* Contact Form */}
+                <div>
+                  <h3 className="text-xl md:text-2xl font-semibold text-foreground mb-6 md:mb-8">Send a Message</h3>
+                  <Form {...form}>
+                    <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+                      <FormField
+                        control={form.control}
+                        name="name"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel className="text-foreground">Name</FormLabel>
+                            <FormControl>
+                              <Input 
+                                placeholder="Your name" 
+                                {...field} 
+                                className="bg-muted/30 border-border focus:border-primary"
+                              />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+                      
+                      <FormField
+                        control={form.control}
+                        name="email"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel className="text-foreground">Email</FormLabel>
+                            <FormControl>
+                              <Input 
+                                type="email"
+                                placeholder="your@email.com" 
+                                {...field} 
+                                className="bg-muted/30 border-border focus:border-primary"
+                              />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+                      
+                      <div className="flex gap-3">
+                        <FormField
+                          control={form.control}
+                          name="countryCode"
+                          render={({ field }) => (
+                            <FormItem className="w-24">
+                              <FormLabel className="text-foreground">Code</FormLabel>
+                              <FormControl>
+                                <Input 
+                                  placeholder="+20" 
+                                  {...field} 
+                                  className="bg-muted/30 border-border focus:border-primary"
+                                />
+                              </FormControl>
+                              <FormMessage />
+                            </FormItem>
+                          )}
+                        />
+                        
+                        <FormField
+                          control={form.control}
+                          name="phone"
+                          render={({ field }) => (
+                            <FormItem className="flex-1">
+                              <FormLabel className="text-foreground">Phone Number</FormLabel>
+                              <FormControl>
+                                <Input 
+                                  type="tel"
+                                  placeholder="1001234567" 
+                                  {...field} 
+                                  className="bg-muted/30 border-border focus:border-primary"
+                                />
+                              </FormControl>
+                              <FormMessage />
+                            </FormItem>
+                          )}
+                        />
+                      </div>
+                      
+                      <FormField
+                        control={form.control}
+                        name="message"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel className="text-foreground">Message</FormLabel>
+                            <FormControl>
+                              <Textarea 
+                                placeholder="Tell me about your project..." 
+                                rows={4}
+                                {...field} 
+                                className="bg-muted/30 border-border focus:border-primary resize-none"
+                              />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+                      
+                      <Button 
+                        type="submit" 
+                        disabled={isSubmitting}
+                        className="w-full"
+                        size="lg"
+                      >
+                        {isSubmitting ? (
+                          "Sending..."
+                        ) : (
+                          <>
+                            <Send className="w-4 h-4 mr-2" />
+                            Send Message
+                          </>
+                        )}
+                      </Button>
+                    </form>
+                  </Form>
+                </div>
+                
+                {/* Contact Info */}
                 <div>
                   <h3 className="text-xl md:text-2xl font-semibold text-foreground mb-6 md:mb-8">Get In Touch</h3>
                   <div className="space-y-4 md:space-y-6">
@@ -82,32 +262,29 @@ export const Contact = () => {
                       </div>
                     </div>
                   </div>
-                </div>
-                
-                <div className="bg-muted/20 rounded-xl md:rounded-2xl p-4 md:p-8 border border-border">
-                  <h4 className="text-lg md:text-xl font-semibold text-foreground mb-4 md:mb-6">What I Offer</h4>
-                  <ul className="space-y-3 md:space-y-4 text-muted-foreground">
-                    <li className="flex items-start space-x-2 md:space-x-3">
-                      <div className="w-2 h-2 bg-gradient-to-r from-gradient-start to-gradient-middle rounded-full mt-1.5 md:mt-2 flex-shrink-0"></div>
-                      <span className="text-sm md:text-base">Content Strategy & Planning</span>
-                    </li>
-                    <li className="flex items-start space-x-2 md:space-x-3">
-                      <div className="w-2 h-2 bg-gradient-to-r from-gradient-start to-gradient-middle rounded-full mt-1.5 md:mt-2 flex-shrink-0"></div>
-                      <span className="text-sm md:text-base">SEO Optimization & Analysis</span>
-                    </li>
-                    <li className="flex items-start space-x-2 md:space-x-3">
-                      <div className="w-2 h-2 bg-gradient-to-r from-gradient-start to-gradient-middle rounded-full mt-1.5 md:mt-2 flex-shrink-0"></div>
-                      <span className="text-sm md:text-base">Team Leadership & Training</span>
-                    </li>
-                    <li className="flex items-start space-x-2 md:space-x-3">
-                      <div className="w-2 h-2 bg-gradient-to-r from-gradient-start to-gradient-middle rounded-full mt-1.5 md:mt-2 flex-shrink-0"></div>
-                      <span className="text-sm md:text-base">Content Creation & Copywriting</span>
-                    </li>
-                    <li className="flex items-start space-x-2 md:space-x-3">
-                      <div className="w-2 h-2 bg-gradient-to-r from-gradient-start to-gradient-middle rounded-full mt-1.5 md:mt-2 flex-shrink-0"></div>
-                      <span className="text-sm md:text-base">Performance Analytics & Reporting</span>
-                    </li>
-                  </ul>
+                  
+                  {/* What I Offer section */}
+                  <div className="bg-muted/20 rounded-xl md:rounded-2xl p-4 md:p-6 border border-border mt-6">
+                    <h4 className="text-lg font-semibold text-foreground mb-4">What I Offer</h4>
+                    <ul className="space-y-2 text-muted-foreground text-sm">
+                      <li className="flex items-start space-x-2">
+                        <div className="w-2 h-2 bg-gradient-to-r from-gradient-start to-gradient-middle rounded-full mt-1.5 flex-shrink-0"></div>
+                        <span>Content Strategy & Planning</span>
+                      </li>
+                      <li className="flex items-start space-x-2">
+                        <div className="w-2 h-2 bg-gradient-to-r from-gradient-start to-gradient-middle rounded-full mt-1.5 flex-shrink-0"></div>
+                        <span>SEO Optimization & Analysis</span>
+                      </li>
+                      <li className="flex items-start space-x-2">
+                        <div className="w-2 h-2 bg-gradient-to-r from-gradient-start to-gradient-middle rounded-full mt-1.5 flex-shrink-0"></div>
+                        <span>Team Leadership & Training</span>
+                      </li>
+                      <li className="flex items-start space-x-2">
+                        <div className="w-2 h-2 bg-gradient-to-r from-gradient-start to-gradient-middle rounded-full mt-1.5 flex-shrink-0"></div>
+                        <span>Content Creation & Copywriting</span>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
