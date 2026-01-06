@@ -1,5 +1,5 @@
 import React from 'react';
-import { Linkedin, Mail, MessageCircle, FileText } from 'lucide-react';
+import { Linkedin, AtSign, Smartphone, FileText } from 'lucide-react';
 import { Link } from 'react-router-dom';
 export const Hero = () => {
   return (
@@ -19,11 +19,11 @@ export const Hero = () => {
               
               <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start space-y-4 sm:space-y-0 sm:space-x-6 text-muted-foreground mb-6">
                 <div className="flex items-center space-x-2">
-                  <Mail className="w-5 h-5 text-primary" />
+                  <AtSign className="w-5 h-5 text-primary" />
                   <span className="text-sm md:text-base">mahmoudalmoselhy@gmail.com</span>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <MessageCircle className="w-5 h-5 text-accent-foreground" />
+                  <Smartphone className="w-5 h-5 text-primary" />
                   <span className="text-sm md:text-base">+201001321331</span>
                 </div>
               </div>
