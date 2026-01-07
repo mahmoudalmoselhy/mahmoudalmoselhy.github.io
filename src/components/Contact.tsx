@@ -48,6 +48,7 @@ export const Contact = () => {
     try {
       const fullPhone = `${data.countryCode} ${data.phone}`;
       
+      // Save to database
       const { error } = await supabase
         .from('contact_submissions')
         .insert({
@@ -58,6 +59,16 @@ export const Contact = () => {
         });
 
       if (error) throw error;
+
+      // Send email notifications (non-blocking)
+      supabase.functions.invoke('send-contact-notification', {
+        body: {
+          name: data.name,
+          email: data.email,
+          phone: fullPhone,
+          message: data.message,
+        },
+      }).catch(console.error);
 
       toast({
         title: "Message sent!",
