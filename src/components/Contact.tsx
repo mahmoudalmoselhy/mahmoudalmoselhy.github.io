@@ -1,6 +1,7 @@
 
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Linkedin, ExternalLink, MessageCircle, Send } from 'lucide-react';
+import { supabase } from '@/integrations/supabase/client';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
@@ -45,8 +46,19 @@ export const Contact = () => {
   const onSubmit = async (data: ContactFormValues) => {
     setIsSubmitting(true);
     try {
-      // For now, just show success - can integrate with backend later
-      console.log('Form submitted:', data);
+      const fullPhone = `${data.countryCode} ${data.phone}`;
+      
+      const { error } = await supabase
+        .from('contact_submissions')
+        .insert({
+          name: data.name,
+          email: data.email,
+          phone: fullPhone,
+          message: data.message,
+        });
+
+      if (error) throw error;
+
       toast({
         title: "Message sent!",
         description: "Thank you for reaching out. I'll get back to you soon.",
