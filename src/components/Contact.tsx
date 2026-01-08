@@ -97,10 +97,10 @@ export const Contact = () => {
         </p>
       </div>
       
-      <section id="contact" className="bg-card/30 backdrop-blur-lg rounded-3xl border border-border p-8 md:p-12">
+      <section id="contact" className="md:bg-card/30 md:backdrop-blur-lg md:rounded-3xl md:border md:border-border md:p-12">
         <div className="container mx-auto max-w-6xl">
-          <div className="max-w-5xl mx-auto px-2">
-            <div className="bg-card/50 backdrop-blur-lg rounded-2xl md:rounded-3xl p-4 md:p-12 hover:bg-card/70 transition-all duration-500 border border-border">
+          <div className="max-w-5xl mx-auto">
+            <div className="bg-card/50 backdrop-blur-lg rounded-2xl md:rounded-3xl p-6 md:p-12 hover:bg-card/70 transition-all duration-500 border border-border">
               <div className="grid md:grid-cols-2 gap-8 md:gap-12">
                 {/* Contact Form */}
                 <div>
