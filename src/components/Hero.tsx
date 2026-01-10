@@ -34,7 +34,7 @@ export const Hero = () => {
             </div>
             
             {/* Buttons - Right side */}
-            <div className="flex flex-col space-y-4 lg:min-w-[250px]">
+            <div className="flex flex-col items-center lg:items-start space-y-4 lg:min-w-[250px]">
               <a href="#contact" className="bg-gradient-to-br from-primary to-primary/80 text-primary-foreground px-10 py-5 rounded-2xl font-semibold border-2 border-primary shadow-xl shadow-primary/20 hover:shadow-2xl hover:shadow-primary/30 hover:scale-105 transform transition-all duration-300 text-center text-lg">
                 Get In Touch
               </a>
