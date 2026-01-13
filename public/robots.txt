@@ -56,3 +56,6 @@ Disallow: /auth
 
 # Crawl delay
 Crawl-delay: 1
+
+# Sitemap
+Sitemap: https://mahmoudalmoselhy.com/sitemap.xml
