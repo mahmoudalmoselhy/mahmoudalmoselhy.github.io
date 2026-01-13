@@ -3,6 +3,14 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Button } from '@/components/ui/button';
 import { ExternalLink, Search, FileText, Palette, Code, ChevronLeft, ChevronRight, X } from 'lucide-react';
 
+// Import tiye-home images with WebP optimization
+import tiyeHome1 from '@/assets/tiye-home-1.png?format=webp&quality=80';
+import tiyeHome2 from '@/assets/tiye-home-2.png?format=webp&quality=80';
+import tiyeHome3 from '@/assets/tiye-home-3.png?format=webp&quality=80';
+import tiyeHome4 from '@/assets/tiye-home-4.png?format=webp&quality=80';
+import tiyeHome5 from '@/assets/tiye-home-5.png?format=webp&quality=80';
+import tiyeHome6 from '@/assets/tiye-home-6.png?format=webp&quality=80';
+
 const services = [{
   icon: Search,
   label: 'SEO',
@@ -29,7 +37,7 @@ const services = [{
   textColor: 'text-emerald-500'
 }];
 
-const homePageImages = ['/lovable-uploads/tiye-home-1.png', '/lovable-uploads/tiye-home-2.png', '/lovable-uploads/tiye-home-3.png', '/lovable-uploads/tiye-home-4.png', '/lovable-uploads/tiye-home-5.png', '/lovable-uploads/tiye-home-6.png', '/lovable-uploads/tiye-home-7.png', '/lovable-uploads/tiye-home-8.png', '/lovable-uploads/tiye-home-9.png', '/lovable-uploads/tiye-home-10.png'];
+const homePageImages = [tiyeHome1, tiyeHome2, tiyeHome3, tiyeHome4, tiyeHome5, tiyeHome6, '/lovable-uploads/tiye-home-7.png', '/lovable-uploads/tiye-home-8.png', '/lovable-uploads/tiye-home-9.png', '/lovable-uploads/tiye-home-10.png'];
 const bigServicePageImages = ['/lovable-uploads/tiye-service-1.png', '/lovable-uploads/tiye-service-2.png', '/lovable-uploads/tiye-service-3.png', '/lovable-uploads/tiye-service-4.png', '/lovable-uploads/tiye-service-5.png', '/lovable-uploads/tiye-service-6.png', '/lovable-uploads/tiye-service-7.png', '/lovable-uploads/tiye-service-8.png'];
 const smallServicePageImages = ['/lovable-uploads/tiye-small-1.png', '/lovable-uploads/tiye-small-2.png', '/lovable-uploads/tiye-small-3.png', '/lovable-uploads/tiye-small-4.png'];
 const allClientsPageImages = ['/lovable-uploads/tiye-clients-1.png', '/lovable-uploads/tiye-clients-2.png', '/lovable-uploads/tiye-clients-3.png', '/lovable-uploads/tiye-clients-4.png', '/lovable-uploads/tiye-clients-5.png', '/lovable-uploads/tiye-clients-6.png', '/lovable-uploads/tiye-clients-7.png', '/lovable-uploads/tiye-clients-8.png', '/lovable-uploads/tiye-clients-9.png', '/lovable-uploads/tiye-clients-10.png'];

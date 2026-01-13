@@ -6,6 +6,9 @@ import { Clients } from '@/components/Clients';
 import { Contact } from '@/components/Contact';
 import { FloatingNav } from '@/components/FloatingNav';
 import portfolioCover from '@/assets/portfolio-cover.png?format=webp&quality=80';
+import portfolioCover720 from '@/assets/portfolio-cover.png?format=webp&quality=80&w=720';
+import portfolioCover1080 from '@/assets/portfolio-cover.png?format=webp&quality=80&w=1080';
+import portfolioCover1440 from '@/assets/portfolio-cover.png?format=webp&quality=80&w=1440';
 
 const Index = () => {
   return (
@@ -14,6 +17,8 @@ const Index = () => {
       <div className="relative w-full">
         <img 
           src={portfolioCover} 
+          srcSet={`${portfolioCover720} 720w, ${portfolioCover1080} 1080w, ${portfolioCover1440} 1440w, ${portfolioCover} 1779w`}
+          sizes="100vw"
           alt="Mahmoud AlMoselhy Portfolio Cover" 
           className="w-full h-auto object-cover mix-blend-multiply dark:mix-blend-lighten opacity-90"
           width={1779}
