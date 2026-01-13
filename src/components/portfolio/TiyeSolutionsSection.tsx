@@ -15,6 +15,34 @@ import tiyeHome8 from '@/assets/tiye-home-8.png?format=webp&quality=80';
 import tiyeHome9 from '@/assets/tiye-home-9.png?format=webp&quality=80';
 import tiyeHome10 from '@/assets/tiye-home-10.png?format=webp&quality=80';
 
+// Import tiye-service images with WebP optimization
+import tiyeService1 from '@/assets/tiye-service-1.png?format=webp&quality=80';
+import tiyeService2 from '@/assets/tiye-service-2.png?format=webp&quality=80';
+import tiyeService3 from '@/assets/tiye-service-3.png?format=webp&quality=80';
+import tiyeService4 from '@/assets/tiye-service-4.png?format=webp&quality=80';
+import tiyeService5 from '@/assets/tiye-service-5.png?format=webp&quality=80';
+import tiyeService6 from '@/assets/tiye-service-6.png?format=webp&quality=80';
+import tiyeService7 from '@/assets/tiye-service-7.png?format=webp&quality=80';
+import tiyeService8 from '@/assets/tiye-service-8.png?format=webp&quality=80';
+
+// Import tiye-small images with WebP optimization
+import tiyeSmall1 from '@/assets/tiye-small-1.png?format=webp&quality=80';
+import tiyeSmall2 from '@/assets/tiye-small-2.png?format=webp&quality=80';
+import tiyeSmall3 from '@/assets/tiye-small-3.png?format=webp&quality=80';
+import tiyeSmall4 from '@/assets/tiye-small-4.png?format=webp&quality=80';
+
+// Import tiye-clients images with WebP optimization
+import tiyeClients1 from '@/assets/tiye-clients-1.png?format=webp&quality=80';
+import tiyeClients2 from '@/assets/tiye-clients-2.png?format=webp&quality=80';
+import tiyeClients3 from '@/assets/tiye-clients-3.png?format=webp&quality=80';
+import tiyeClients4 from '@/assets/tiye-clients-4.png?format=webp&quality=80';
+import tiyeClients5 from '@/assets/tiye-clients-5.png?format=webp&quality=80';
+import tiyeClients6 from '@/assets/tiye-clients-6.png?format=webp&quality=80';
+import tiyeClients7 from '@/assets/tiye-clients-7.png?format=webp&quality=80';
+import tiyeClients8 from '@/assets/tiye-clients-8.png?format=webp&quality=80';
+import tiyeClients9 from '@/assets/tiye-clients-9.png?format=webp&quality=80';
+import tiyeClients10 from '@/assets/tiye-clients-10.png?format=webp&quality=80';
+
 const services = [{
   icon: Search,
   label: 'SEO',
@@ -42,9 +70,9 @@ const services = [{
 }];
 
 const homePageImages = [tiyeHome1, tiyeHome2, tiyeHome3, tiyeHome4, tiyeHome5, tiyeHome6, tiyeHome7, tiyeHome8, tiyeHome9, tiyeHome10];
-const bigServicePageImages = ['/lovable-uploads/tiye-service-1.png', '/lovable-uploads/tiye-service-2.png', '/lovable-uploads/tiye-service-3.png', '/lovable-uploads/tiye-service-4.png', '/lovable-uploads/tiye-service-5.png', '/lovable-uploads/tiye-service-6.png', '/lovable-uploads/tiye-service-7.png', '/lovable-uploads/tiye-service-8.png'];
-const smallServicePageImages = ['/lovable-uploads/tiye-small-1.png', '/lovable-uploads/tiye-small-2.png', '/lovable-uploads/tiye-small-3.png', '/lovable-uploads/tiye-small-4.png'];
-const allClientsPageImages = ['/lovable-uploads/tiye-clients-1.png', '/lovable-uploads/tiye-clients-2.png', '/lovable-uploads/tiye-clients-3.png', '/lovable-uploads/tiye-clients-4.png', '/lovable-uploads/tiye-clients-5.png', '/lovable-uploads/tiye-clients-6.png', '/lovable-uploads/tiye-clients-7.png', '/lovable-uploads/tiye-clients-8.png', '/lovable-uploads/tiye-clients-9.png', '/lovable-uploads/tiye-clients-10.png'];
+const bigServicePageImages = [tiyeService1, tiyeService2, tiyeService3, tiyeService4, tiyeService5, tiyeService6, tiyeService7, tiyeService8];
+const smallServicePageImages = [tiyeSmall1, tiyeSmall2, tiyeSmall3, tiyeSmall4];
+const allClientsPageImages = [tiyeClients1, tiyeClients2, tiyeClients3, tiyeClients4, tiyeClients5, tiyeClients6, tiyeClients7, tiyeClients8, tiyeClients9, tiyeClients10];
 
 // Fullscreen Lightbox Component
 const Lightbox = ({ 
