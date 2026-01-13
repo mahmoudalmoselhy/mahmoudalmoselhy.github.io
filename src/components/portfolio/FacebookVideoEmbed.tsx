@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 interface FacebookVideoEmbedProps {
@@ -7,44 +7,15 @@ interface FacebookVideoEmbedProps {
   videoUrl: string;
   logo: string;
   responsibilities?: string[];
-  accessToken?: string; // Optional: Facebook Graph API token to fetch video dimensions
 }
 
-export const FacebookVideoEmbed = ({ title, description, videoUrl, logo, responsibilities = [], accessToken }: FacebookVideoEmbedProps) => {
+export const FacebookVideoEmbed = ({ title, description, videoUrl, logo, responsibilities = [] }: FacebookVideoEmbedProps) => {
   const embedUrl = videoUrl.includes('facebook.com/plugins/video.php')
     ? videoUrl
     : `https://www.facebook.com/plugins/video.php?href=${encodeURIComponent(videoUrl)}&show_text=false&width=1280&height=720`;
 
-  const [aspect, setAspect] = useState<number>(16 / 9);
-
-  const extractVideoId = (url: string): string | null => {
-    try {
-      let u = url;
-      if (u.includes('plugins/video.php')) {
-        const parsed = new URL(u);
-        const href = parsed.searchParams.get('href');
-        if (href) u = href;
-      }
-      const match = u.match(/videos\/(\d+)/);
-      return match ? match[1] : null;
-    } catch {
-      return null;
-    }
-  };
-
-  useEffect(() => {
-    if (!accessToken) return;
-    const id = extractVideoId(videoUrl);
-    if (!id) return;
-    fetch(`https://graph.facebook.com/v20.0/${id}?fields=width,height&access_token=${accessToken}`)
-      .then(res => res.json())
-      .then(data => {
-        if (data?.width && data?.height) {
-          setAspect(data.width / data.height);
-        }
-      })
-      .catch(() => {});
-  }, [videoUrl, accessToken]);
+  // Use standard 16:9 aspect ratio for video embeds
+  const aspect = 16 / 9;
 
   return (
     <article className="group liquid-glass liquid-glass-hover rounded-3xl p-6 md:p-8 transform col-span-full md:col-span-full">
