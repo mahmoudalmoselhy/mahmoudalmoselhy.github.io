@@ -33,7 +33,7 @@ export const Portfolio = () => {
 
       {/* Each section in its own frame */}
       {portfolioSections.map((section, sectionIndex) => (
-        <section key={sectionIndex} className="bg-card/30 backdrop-blur-lg rounded-3xl border border-border p-8 md:p-12 relative overflow-hidden">
+        <section key={sectionIndex} className="bg-card rounded-3xl border border-border p-8 md:p-12 relative overflow-hidden transition-all duration-300 hover:shadow-xl hover:border-primary/20">
           {/* Subtle geometric pattern background */}
           <div className="absolute inset-0 opacity-[0.02] pointer-events-none">
             <div className="absolute inset-0 light-subtle-pattern"></div>
@@ -60,7 +60,7 @@ export const Portfolio = () => {
       ))}
 
       {/* SEO Archives in its own frame */}
-      <section className="bg-card/30 backdrop-blur-lg rounded-3xl border border-border p-8 md:p-12">
+      <section className="bg-card rounded-3xl border border-border p-8 md:p-12 transition-all duration-300 hover:shadow-xl hover:border-primary/20">
         <SEOArchives archives={seoArchives} />
       </section>
     </div>
