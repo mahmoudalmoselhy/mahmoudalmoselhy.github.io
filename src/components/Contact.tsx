@@ -100,7 +100,7 @@ export const Contact = () => {
       <section id="contact" className="md:bg-card md:rounded-3xl md:border md:border-border md:p-12">
         <div className="container mx-auto max-w-6xl">
           <div className="max-w-5xl mx-auto">
-            <div className="bg-secondary rounded-2xl md:rounded-3xl p-6 md:p-12 transition-all duration-300 border border-border hover:-translate-y-1 hover:shadow-lg hover:border-primary/30">
+            <div className="bg-secondary rounded-2xl md:rounded-3xl p-6 md:p-12 transition-all duration-300 border border-border hover:-translate-y-1 hover:shadow-lg hover:border-primary/30 hover:bg-gradient-to-br hover:from-secondary hover:to-primary/8">
               <div className="grid md:grid-cols-2 gap-8 md:gap-12">
                 {/* Contact Form */}
                 <div>

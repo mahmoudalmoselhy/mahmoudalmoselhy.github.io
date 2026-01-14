@@ -353,7 +353,7 @@ export const TiyeSolutionsSection = () => {
           onNavigate={setLightboxIndex} 
         />
       )}
-      <section className="bg-card rounded-3xl border border-border p-8 md:p-12 relative overflow-hidden transition-all duration-300 hover:shadow-xl hover:border-primary/20">
+      <section className="bg-card rounded-3xl border border-border p-8 md:p-12 relative overflow-hidden transition-all duration-300 hover:shadow-xl hover:border-primary/20 hover:bg-gradient-to-br hover:from-card hover:to-primary/5">
         {/* Colorful geometric pattern background */}
         <div className="absolute inset-0 opacity-[0.03] pointer-events-none">
           <div className="absolute inset-0 light-subtle-pattern"></div>
