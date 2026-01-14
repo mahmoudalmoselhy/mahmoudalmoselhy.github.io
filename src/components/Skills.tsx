@@ -49,7 +49,7 @@ export const Skills = () => {
           {skillCategories.map((category, index) => (
             <div 
               key={index}
-              className="bg-card rounded-2xl p-8 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl group border border-border hover:border-primary/30"
+              className="bg-card rounded-2xl p-8 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl group border border-border hover:border-primary/30 hover:bg-gradient-to-br hover:from-card hover:to-primary/10"
               style={{ animationDelay: `${index * 150}ms` }}
             >
               <div className="w-16 h-16 bg-gradient-to-r from-gradient-start to-gradient-end rounded-full flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">
