@@ -29,13 +29,13 @@ export const About = () => {
         </h2>
       </div>
       
-      <section className="bg-card/30 backdrop-blur-lg rounded-3xl border border-border p-8 md:p-12">
+      <section className="bg-card rounded-3xl border border-border p-8 md:p-12">
         <div className="container mx-auto">
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {highlights.map((item, index) => (
               <div 
                 key={index}
-                className="bg-card/50 backdrop-blur-lg rounded-2xl p-8 hover:bg-card/70 transition-all duration-300 hover:scale-105 hover:shadow-2xl border border-border hover:border-accent"
+                className="bg-secondary rounded-2xl p-8 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl border border-border hover:border-primary/30"
                 style={{ animationDelay: `${index * 200}ms` }}
               >
                 <div className="w-16 h-16 bg-gradient-to-r from-gradient-start to-gradient-middle rounded-full flex items-center justify-center mb-6 mx-auto">

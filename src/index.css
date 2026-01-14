@@ -94,65 +94,31 @@
   }
 }
 
-/* Modern Glass Morphism System */
-.glass {
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(20px) saturate(180%);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 
-    0 8px 32px rgba(0, 0, 0, 0.3),
-    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+/* Flat Card System with Hover Effects */
+.flat-card {
+  background: hsl(var(--card));
+  border: 1px solid hsl(var(--border));
+  transition: all 0.3s ease;
 }
 
-.glass-hover {
-  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+.flat-card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px hsl(var(--shadow-dark) / 0.4);
+  border-color: hsl(var(--primary) / 0.3);
 }
 
-.glass-hover:hover {
-  background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(25px) saturate(200%);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  box-shadow: 
-    0 12px 40px rgba(0, 0, 0, 0.4),
-    0 0 20px hsl(var(--primary) / 0.3),
-    inset 0 1px 0 rgba(255, 255, 255, 0.15);
-  transform: translateY(-2px) scale(1.02);
-}
-
-/* Enhanced Button Styles */
-.glass-button {
-  background: linear-gradient(135deg, 
-    rgba(255, 255, 255, 0.15) 0%, 
-    rgba(255, 255, 255, 0.05) 100%);
-  backdrop-filter: blur(15px) saturate(150%);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+/* Flat Button Styles */
+.flat-button {
+  background: hsl(var(--secondary));
+  border: 1px solid hsl(var(--border));
+  transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
 }
 
-.glass-button:before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-  transition: left 0.5s;
-}
-
-.glass-button:hover:before {
-  left: 100%;
-}
-
-.glass-button:hover {
-  background: linear-gradient(135deg, 
-    rgba(255, 255, 255, 0.25) 0%, 
-    rgba(255, 255, 255, 0.1) 100%);
-  backdrop-filter: blur(20px) saturate(180%);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  box-shadow: 0 0 25px hsl(var(--primary) / 0.4);
+.flat-button:hover {
+  background: hsl(var(--secondary-hover));
+  border-color: hsl(var(--primary) / 0.5);
   transform: scale(1.05);
 }
 
@@ -172,25 +138,17 @@
   animation: gradient-shift 3s ease infinite;
 }
 
-/* Enhanced Card Styles */
+/* Enhanced Flat Card Styles */
 .dark-card {
-  background: linear-gradient(135deg,
-    rgba(255, 255, 255, 0.1) 0%,
-    rgba(255, 255, 255, 0.05) 100%);
-  backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 
-    0 8px 32px rgba(0, 0, 0, 0.3),
-    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  background: hsl(var(--card));
+  border: 1px solid hsl(var(--border));
+  transition: all 0.3s ease;
 }
 
 .dark-card-hover:hover {
-  box-shadow: 
-    0 20px 40px rgba(0, 0, 0, 0.4),
-    0 0 30px hsl(var(--primary) / 0.2),
-    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  box-shadow: 0 16px 32px hsl(var(--shadow-dark) / 0.5);
   transform: translateY(-4px);
-  transition: all 0.3s ease;
+  border-color: hsl(var(--primary) / 0.3);
 }
 
 /* Glow Effects */
