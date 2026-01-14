@@ -15,7 +15,7 @@ export const PortfolioItem = ({ title, description, link, logo }: PortfolioItemP
       href={link}
       target="_blank"
       rel="noopener noreferrer"
-      className="group bg-card rounded-3xl p-4 md:p-6 cursor-pointer transform border border-border transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:border-primary/30 hover:bg-gradient-to-br hover:from-card hover:to-primary/10"
+      className="group bg-card rounded-3xl p-4 md:p-6 cursor-pointer transform border border-border transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:border-primary/30 hover:bg-gradient-to-br hover:from-card hover:to-primary/5"
     >
       <div className="w-10 h-10 md:w-12 md:h-12 bg-secondary rounded-full flex items-center justify-center mb-3 md:mb-4 group-hover:scale-110 transition-transform duration-300 p-2">
         <img
