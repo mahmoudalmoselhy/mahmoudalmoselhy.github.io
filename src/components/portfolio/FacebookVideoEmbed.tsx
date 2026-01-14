@@ -18,7 +18,7 @@ export const FacebookVideoEmbed = ({ title, description, videoUrl, logo, respons
   const aspect = 16 / 9;
 
   return (
-    <article className="group bg-card rounded-3xl p-6 md:p-8 transform col-span-full md:col-span-full border border-border transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:border-primary/30 hover:bg-gradient-to-br hover:from-card hover:to-primary/10">
+    <article className="group bg-card rounded-3xl p-6 md:p-8 transform col-span-full md:col-span-full border border-border transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:border-primary/30 hover:bg-gradient-to-br hover:from-card hover:to-primary/5">
       <div className="grid gap-4 md:gap-6 md:grid-cols-5 items-start">
         {/* Left: Video */}
         <div className="md:col-span-3">
